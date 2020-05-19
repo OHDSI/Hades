@@ -1,0 +1,15 @@
+order,name,section,description,inCran,pages
+1,CohortMethod,Population-level estimation,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE
+2,SelfControlledCaseSeries,Population-level estimation,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE
+3,SelfControlledCohort,Population-level estimation,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE
+4,CaseControl,Population-level estimation,"Case-control studies, matching controls on age, gender, provider, and visit date. Allows nesting of the study in another cohort.",FALSE,TRUE
+5,CaseCrossover,Population-level estimation,Case-crossover design including the option to adjust for time-trends in exposures (so-called case-time-control).,FALSE,TRUE
+6,PatientLevelPrediction,Patient-level prediction,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE
+7,EmpiricalCalibration,Method characterization,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE
+8,MethodEvaluation,Method characterization,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE
+9,Cyclops,Supporting packages,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE
+10,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE
+11,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE
+12,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE
+13,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE
+14,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE

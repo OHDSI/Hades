@@ -1,0 +1,9 @@
+---
+title: 'Packages'
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+Below are the packages included in HADES. For each package a link is provided with more information, including instructions on how to install and use the package.

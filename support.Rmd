@@ -1,0 +1,44 @@
+---
+title: "Questions and Bug Reports"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# Forums
+
+Questions about HADES can be asked on the [OHDSI Forums](http://forums.ohdsi.org/).
+
+# Bug reports
+
+Bug reports should be files using the issue tracker of the misbehaving package:
+
+- [CohortMethod issue tracker](https://github.com/OHDSI/CohortMethod/issues)
+
+- [SelfControlledCaseSeries issue tracker](https://github.com/OHDSI/SelfControlledCaseSeries/issues)
+
+- [SelfControlledCohort issue tracker](https://github.com/OHDSI/SelfControlledCohort/issues)
+
+- [CaseControl issue tracker](https://github.com/OHDSI/CaseControl/issues)
+
+- [CaseCrossover issue tracker](https://github.com/OHDSI/CaseCrossover/issues)
+
+- [PatientLevelPrediction issue tracker](https://github.com/OHDSI/PatientLevelPrediction/issues)
+
+- [EmpiricalCalibration issue tracker](https://github.com/OHDSI/EmpiricalCalibration/issues)
+
+- [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
+
+- [Cyclops issue tracker](https://github.com/OHDSI/Cyclops/issues)
+
+- [DatabaseConnector issue tracker](https://github.com/OHDSI/DatabaseConnector/issues)
+
+- [SqlRender issue tracker](https://github.com/OHDSI/SqlRender/issues)
+
+- [ParallelLogger issue tracker](https://github.com/OHDSI/ParallelLogger/issues)
+
+- [FeatureExtraction issue tracker](https://github.com/OHDSI/FeatureExtraction/issues)
+
+- [Andromeda issue tracker](https://github.com/OHDSI/Andromeda/issues)
+

@@ -1,0 +1,22 @@
+---
+title: "Contribute"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+HADES is built by the community for the community. No matter what you skill level, there is always a way for you to contribute:
+
+# File bug reports
+
+If you've found a bug you can help out by filing a bug report. Each package has an issue tracker where you can create a new issue. Try and be as specific as possible. What error message occurs? Can you provide a simple example to reproduce the problem? What versions of the various packages are you running?
+
+# Write help files
+
+If you're a bit more experienced with HADES and are looking to improve your open source development skills, the next step up is to contribute a pull request to a HADES package. The most important thing to know is that HADES packages use [roxygen2](https://github.com/klutometis/roxygen): this means that documentation is found in the R code close to the source of each function. 
+
+# Write unit tests
+
+An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are [several unit tests](https://github.com/OHDSI/CohortMethod/blob/master/tests/testthat/test-psFunctions.R#L5) that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how HADES packages work under the hood. Make sure you read through the Develops section first!
+

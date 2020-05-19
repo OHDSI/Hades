@@ -1,0 +1,119 @@
+---
+title: "Developer Guidelines"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# Pull requests
+
+Before you do a pull request, you should always **file an issue** and make sure the package maintainer agrees that it’s a problem, and is happy with your basic proposal for fixing it. We don’t want you to spend a bunch of time on something that we don’t think is a good idea.
+
+Additional requirements for pull requests:
+
+- Adhere to the Developer Guidelines posted here, as well as the [OHDSI Code Style](codeStyle.html).
+
+- If possible, add unit tests for new functionality you add.
+
+- Restrict your pull request to solving the issue at hand. Do not try to 'improve' parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.
+
+- Make sure you pass R check without errors and warnings before submitting.
+
+- Always target the `develop` branch, and make sure you are up-to-date with the develop branch.
+
+
+# Package organization
+
+All HADES R package follow the basic structure of R packages. See [R packages](http://r-pkgs.had.co.nz/) for a thorough discussion on R packages.
+
+## Documentation
+
+We use R's default package documentation features:
+
+- Functions and data are documented in a package manual. We use [`roxygen2`](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) to document each function / data where they are defined in the code. 
+
+- Detailed explanations of how to use a package are provides in vignettes. 
+
+The package manual and vignettes are available
+
+- Through R (e.g. by typing `?createPs`)
+
+- As PDFs on the repo GitHub site.
+
+- In the package documentation website.
+
+All of these should be generated when releasing a new version, as discussed in the [Release Process](releaseProcess.html) section.
+
+### README.md
+
+In addition, the README.md file forms the main page of the package repo. This page has a standard structure, as for example can be seen [here](https://github.com/OHDSI/FeatureExtraction/blob/master/README.md).
+
+## extras folder
+
+The `extras` folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is `PackageMaintenance.R`, which contains the code executed when releasing a package.
+
+## Unit tests
+
+OHDSI unit testing for R follows the standard R practice using `test_that`: A folder named 'tests' is created in the root of the package, and this folder contains
+
+- A sub-folder called 'testthat`
+- A file called 'testthat.R'
+- The file 'testthat.R' should have the following content:
+
+```r
+library(testthat)
+library(<package name>)
+test_check("<package name>")
+```
+
+The sub-folder 'testthat' should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more `test_that` blocks, for example
+
+```r
+test_that("Function x returns 2", {
+  expect_equal(x(), 2)
+})
+```
+
+### When unit tests are performed
+
+Unit tests are triggered when
+
+- You manually perform a check of the R package (see the Build tab in R-Studio)
+
+- When the OHDSI Travis CI Server automatically builds the package after a push to the repository
+
+You should only push changes to the GitHub repository if they pass R check locally.
+
+### Code coverage
+
+We use `codecov` in combination with the `covr` package to measure which lines of codes are covered by at least one unit test. 
+
+### Testing functions requiring database access
+
+On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you'll need to specify several environmental variables. These environmental variables should also be available on the OHDSI Travis CI Server.
+
+Some example code in the DatabaseConnector package can be found [here](https://github.com/OHDSI/DatabaseConnector/blob/master/tests/testthat/test-connection.R).
+
+
+# Coding guidelines
+
+Some general coding guidelines:
+
+## Function calls must not have invisible side effects
+
+When a user calls a function, the effect of that call should be aparent to the user. This means:
+
+- Do not call `library` or `require` in a function, as this changes the user's search path.
+
+- Do not set options.
+
+- Do not write to files other than those specified by the user in the function call.
+
+- Do not use global variables.
+
+## Avoid unnecessary dependencies
+
+Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.
+
+We have more or less accepted we need to depend on the [`tidyverse`](https://www.tidyverse.org/), so any of those packages are allowed. 

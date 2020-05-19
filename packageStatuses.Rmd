@@ -1,0 +1,47 @@
+---
+title: "Package statuses"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+| Package                        | Maintainer(s)               | Status          |
+| :----------------------------- | :-------------------------- | :-------------: |
+| CohortMethod                   | Martijn Schuemie            | HADES |
+| SelfControlledCaseSeries       | Martijn Schuemie            | HADES |
+| SelfControlledCohort           | Martijn Schuemie            | HADES |
+| CaseControl                    | Martijn Schuemie            | HADES |
+| CaseCrossover                  | Martijn Schuemie            | HADES |
+| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | HADES |
+| EmpiricalCalibration           | Martijn Schuemie            | CRAN            |
+| MethodEvaluation               | Martijn Schuemie            | HADES |
+| Cyclops                        | Marc Suchard                | CRAN            |
+| DatabaseConnector              | Chris Knoll & Martijn Schuemie | CRAN            |
+| SqlRender                      | Chris Knoll & Martijn Schuemie | CRAN            |
+| ParallelLogger                 | Martijn Schuemie            | CRAN            |
+| FeatureExtraction              | Martijn Schuemie            | HADES |
+| Andromeda                      | Martijn Schuemie            | HADES |
+
+# Maintainers
+
+The package maintainers have final responsibility and authority over their respective packages. Only a maintainer may create a new release (following the [release process](releaseProcess.html)), accept pull requests, and push to the master branch.
+
+# Package life cycle
+
+We currently distinguish the following stages in a package life cycle:
+
+1. **Candidate**: The R package is being considered for inclusion in HADES, but does not yet meet all requirements.
+2. **HADES**: The package meets all requirements for inclusion in HADES, and is recommended for use in OHDSI community studies.
+3. **CRAN**: The package is available in CRAN.
+
+## Requirements for packages in HADES
+
+For a package to be eligible for admission to HADES, it should meet the following criteria:
+
+1. Adhere to all guidelines documented on this site.
+
+2. For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)
+
+3. For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.
+
+The final decision for including a package in HADES lies with the leaders of the OHDSI [Patient-Level Prediction Workgroup](https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:patient-level_prediction) and [Population-Level Estimation Workgroup](https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:est-methods).

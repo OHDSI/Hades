@@ -1,0 +1,19 @@
+---
+title: "Validation & Evaluation"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# Validation
+
+Coming soon...
+
+# Evaluation
+
+The population-level estimation methods have been extensively evaluated using the OHDSI Methods Benchmark. The results are published in:
+
+- Schuemie MJ, Cepeda MS, Suchard MA, et al. [How Confident Are We About Observational Findings in Health Care: A Benchmark Study](https://hdsr.mitpress.mit.edu/pub/fxz7kr65) Harvard Data Science Review, 2(1).
+
+The results of the evaluation can be reviewed in [an interactive web application](https://data.ohdsi.org/MethodEvalViewer/).

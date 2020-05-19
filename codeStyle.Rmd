@@ -1,0 +1,358 @@
+---
+title: "Developer Guidelines"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# OHDSI code style for R
+
+(Adapted from http://r-pkgs.had.co.nz/r.html#style)
+
+## Case
+We use camelCase in R. Function and variable names all start with lowercase. Package names start with uppercase. 
+
+Examples:
+
+  * `cohortData <- loadCohortData("myFolder")`
+  * The `SqlRender` package
+
+## Naming conventions
+
+Function names typically start with a verb. Variable names are typically nouns. Do not encode the data type in the variable names. Also, everything is data, so no need to say that unless unavoidable.
+
+**Good**
+
+- The `fitOutcomeModel` function.
+- The `computeCovariateBalance` function.
+- The `population` argument.
+
+**Bad**
+
+- `sampling` as variable name (not a noun)
+- `namesVector`, `covariatesDf` (encodes the data type)
+- `getResultData` (everything is data)
+
+## Spacing
+
+Place spaces around all infix operators (`=`, `+`, `-`, `<-`, etc.). The same rule applies when using `=` in function calls. Always put a space after a comma, and never before (just like in regular English).
+
+**Good**
+
+```r
+average <- mean(feet / 12 + inches, na.rm = TRUE)
+```
+
+**Bad**
+
+```r
+average<-mean(feet/12+inches,na.rm=TRUE)
+```
+
+There’s a small exception to this rule: `:`, `::` and `:::` don’t need spaces around them. 
+
+**Good**
+
+```r
+x <- 1:10
+```
+
+```r
+base::get
+```
+
+**Bad**
+
+```r
+x <- 1 : 10
+base :: get
+```
+
+Place a space before left parentheses, except in a function call.
+
+**Good**
+
+```r
+if (debug) {
+  do(x)
+}
+
+plot(x, y)
+```
+
+**Bad**
+
+```r
+if(debug){
+  do(x)
+}
+
+plot (x, y)
+```
+
+Extra spacing (i.e., more than one space in a row) is ok if it improves alignment of equal signs or assignments (`<-`).
+
+Do not place spaces around code in parentheses or square brackets (unless there’s a comma, in which case see above).
+
+**Good**
+
+```r
+if (debug) {
+  do(x)
+}
+
+diamonds[5, ]
+```
+
+**Bad**
+
+```r
+if ( debug ) {  # No spaces around debug
+  do(x)
+}
+
+x[1,]   # Needs a space after the comma
+x[1 ,]  # Space goes after comma not beforeCurly braces
+```
+
+An opening curly brace should never go on its own line and should always be followed by a new line. A closing curly brace should always go on its own line, unless it’s followed by else.
+
+## Indentation
+
+Always indent the code inside curly braces. It’s ok to leave very short statements on the same line:
+
+```r
+if (y < 0 && debug) {
+  message("Y is negative")
+}
+```
+
+Strive to limit your code to 100 characters per line. This fits comfortably on a printed page with a reasonably sized font. If you find yourself running out of room, this is a good indication that you should encapsulate some of the work in a separate function.
+
+When indenting your code, use tabs. Never use spaces or mix tabs and spaces. 
+
+Hint: In RStudio you can use ctrl-i to automatically indent the code for you. 
+
+
+## Assignment
+
+Use <-, not =, for assignment.
+
+**Good**
+
+```r
+x <- 5
+```
+
+**Bad**
+
+```r
+x = 5
+```
+## If-then-else
+
+If-then-else clauses should always use curly brackets, even if there's only one clause and it's one statement.
+
+**Good**
+
+```r
+if (a == b) {
+  doSomething()
+}
+```
+
+**Bad**
+
+```r
+if (a == b) doSomething()
+```
+
+## Use named arguments
+
+When calling a function that has more than one argument, make sure to refer to each argument by name instead of relying on the order of arguments. 
+
+**Good**
+
+```r
+translateSql(sql = "COMMIT", targetDialect = "PDW")
+```
+
+**Bad**
+
+```r
+translateSql("COMMIT", "PDW")
+```
+
+## Commenting guidelines
+
+Comment your code only where the intent is not immediately obvious. Each line of a comment should begin with the comment symbol and a single space: `# `. Comments should explain the why, not the what. 
+
+Use commented lines of `-` to break up your file into easily readable chunks, for example:
+
+```r
+## Load data ---------------------------
+x <- readRDS("data.rds")
+
+## Plot data ---------------------------
+plot(x)
+```
+
+## Curly brackets and new line
+
+Opening curly brackets should precede a new line. A closing curly bracket should be followed by a new line except when it is followed by `else` or a closing parenthesis.
+
+**Good**
+
+```r
+if (a == b) {
+  doSomething()
+} else {
+  doSomethingElse()
+}
+```
+
+**Bad**
+
+```r
+if (a == b) 
+{
+  doSomething()
+} 
+else 
+{
+  doSomethingElse()
+}
+```
+
+
+
+
+
+
+# OHDSI code style for SQL
+
+The OHDSI code style for SQL is heavily inspired by the [Poor Man's T-SQL Formatter](http://architectshack.com/PoorMansTSqlFormatter.ashx), which is available as a [NotePad++](https://notepad-plus-plus.org/) plugin. The only difference with the default settings is that in OHDSI, commas are trailing. You can automatically format your SQL correctly by using the [Poor Man's T-SQL Formatter Online Tool](http://poorsql.com/) (but don't forget to set Trailing Commas).
+
+
+## Case
+
+Because several database platforms are case-insensitive and tend to convert table and field names to either uppercase (e.g. Oracle) or lowercase (e.g. PostgreSQL), we use snake_case. All names should be in lowercase. Reserved words should be in upper case.
+
+**Good**
+
+```sql
+SELECT COUNT(*) AS person_count FROM person
+```
+
+**Bad**
+
+```sql
+SELECT COUNT(*) AS personCount FROM person
+
+SELECT COUNT(*) AS Person_Count FROM person
+
+SELECT COUNT(*) AS PERSON_COUNT FROM person
+
+select count(*) as person_count from person
+```
+
+## Commas
+
+Commas should be trailing.
+
+**Good**
+
+```sql
+SELECT COUNT(*) AS person_count,
+	condition_concept_id,
+	condition_type_concept_id
+FROM condition_era
+GROUP BY condition_concept_id,
+	condition_type_concept_id
+```
+
+**Bad**
+
+```sql
+SELECT COUNT(*) AS person_count
+	,condition_concept_id
+	,condition_type_concept_id
+FROM condition_era
+GROUP BY condition_concept_id
+	,condition_type_concept_id
+```
+
+## Indentation and new lines
+
+Indentation is done using tabs. Field definitions are followed by a new line.
+
+**Good**
+
+```sql
+SELECT COUNT(*) AS person_count,
+  condition_type_concept_id
+FROM (
+  SELECT * 
+  FROM condition_era
+  WHERE condition_concept_id = 123
+  ) tmp
+GROUP BY condition_type_concept_id;
+```
+
+**Bad**
+
+```sql
+SELECT COUNT(*) AS person_count, condition_type_concept_id
+FROM (SELECT * FROM condition_era WHERE condition_concept_id = 123) tmp
+GROUP BY condition_type_concept_id;
+```
+
+# Interfacing between R and SQL
+
+In R we use camel case, and in SQL we use snake case. Therefore, on the interface between the two languages we must convert from one convention to the other. To facilitate this, the OHDSI [`SqlRender`](https://ohdsi.github.io/SqlRender/) and [`DatabaseConnector`](https://ohdsi.github.io/DatabaseConnector/) packages provide various features. 
+
+In general, in R we can convert from one case to another using the `camelCaseToSnakeCase` and `snakeCaseToCamelcase` functions in the `SqlRender` package:
+
+```r
+data <- data.frame(cohortId = 1,
+                   cohortName = "test")
+				   
+colnames(data) <- camelCaseToSnakeCase(colnames(data))
+colnames(data)
+# [1] "cohort_id" "cohort name"
+
+colnames(data) <- snakeCaseToCamelcase(colnames(data))
+colnames(data)
+# [1] "cohortId" "cohortName"
+``` 
+
+## When downloading data from the database
+
+When downloading data, a shortcut is to use the `snakeCaseToCamelcase` argument of the `querySql` function in the `DatabaseConnector` package:
+
+```r
+sql <- "SELECT cohort_definition_id, subject_id  FROM cdm.cohort;"
+cohort <- querySql(connection = connection,
+                   sql = sql,
+				   snakeCaseToCamelcase = TRUE)
+```
+
+Where `cohort` will be a data frame with columns `cohortDefinitionId` and `subjectId`.
+
+## When inserting data in the database
+
+When uploading data, a shortcut is to use the `camelCaseToSnakeCase` argument of the `insertTable` in the `DatabaseConnector` package:
+
+```r
+dataToInsert <- data.frame(cohortId = 1,
+                           cohortName = "test")
+
+insertTable(connection = connection,
+            tableName = "my_table",
+            data = dataToInsert,
+            camelCaseToSnakeCase = TRUE)
+```
+
+Where the table called 	`my_table` will have columns named `cohort_id` and `cohort_name`.
+

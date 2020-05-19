@@ -1,0 +1,61 @@
+---
+title: "Release Process"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+# The develop branch
+
+All development should be done in the `develop` branch of the package GithHub repository. The aim should be to have a workable version in `develop` branch, so **make sure your package passes R check locally before pushing to the `develop` branch**.
+
+# The master branch
+
+The head of the `master` branch should be the latest released version of the package. No changes should be directly pushed to the `master` branch.
+
+# Continuous integration
+
+All branches are monitored by [travis](https://travis-ci.org/github/OHDSI). Travis is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers.
+
+# Version numbering
+
+Each package has a three-digit version number.
+
+- New micro versions (e.g. from 4.3.2 to 4.3.3) indicate bug fixes only. No new functionality, and forward and backward compatibility are guaranteed
+
+- New minor versions (e.g. from 4.3.3 to 4.4.0) indicate added functionality. Only backward compatibility is guaranteed
+
+- New major versions (e.g. from 4.4.0 to 5.0.0) indicate major revisions. All bets are off in terms of compatibility
+
+# Creating a release
+
+Only the package maintainer may create a new release. The release should be prepared in the `develop` branch. The following steps are mandatory:
+
+1. Update the package version number in the DESCRIPTION file.
+
+2. Update the documentation. This includes the following steps. Note that the `extras/PackageMaintenance.R` file should contain the code needed to perform most of these steps:
+
+	- Run roxygen to regenerate the manual files.
+	- Updating the `NEWS.md` file to reflect all the changes and bugfixes included in the new version.
+	- Perform a spellcheck using `devtools::spellcheck()`
+	- Regenerate the package manual PDF.
+	- Regenerate any vignette PDFs. 
+	- Regerate the package website using `pkgdown`.
+
+
+3. Make sure the package passes R check, both locally and on travis.
+
+For those packages that go into CRAN, the following additional step must be taken:
+
+4. Check the package using `devtools::check_win_devel()` and `devtools::check_rhub()`.
+
+
+Once all these steps are completed and commited to the `develop` branch, the package can be released by merging `develop` into `master`. 
+
+Pushing changes to the `master` branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:
+
+1. A new tag is created in the GitHub repo with the version number.
+
+2. The package is pushed to the [OHDSI `drat` repo](https://github.com/OHDSI/drat).
+
+For those packages that go into CRAN, the package can be submitted to CRAN using `devtools::release()`.

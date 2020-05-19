@@ -1,0 +1,46 @@
+name: "HADES"
+output_dir: "docs"
+output:
+  html_document:
+    theme: cosmo
+    css: style.css
+    includes:
+      in_header: "favicon.html" 
+exclude: ["extras"]
+navbar:
+  title: '<div><img src="images/hadesMini.png" /></div>'  
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Packages"
+      icon: fa-cube
+      href: packages.html
+    - text: "Validation"
+      icon: fa-clipboard-check
+      href: validation.html  
+    - text: "Publications"
+      icon: fa-pen-alt
+      href: publications.html
+    - text: "Support"
+      icon: fa-life-ring
+      menu: 
+        - text: "Questions and Bug reports"
+          href: support.html   
+        - text: "R setup"
+          href: rSetup.html  
+    - text: "Contribute"
+      icon: fa-hand-paper
+      href: contribute.html
+    - text: "Developers"
+      icon: fa-wrench
+      menu: 
+        - text: "Developer Guidelines"
+          href: developerGuidelines.html   
+        - text: "Code Style"
+          href: codeStyle.html 
+        - text: "Release Process"
+          href: releaseProcess.html 
+        - text: "Package Statuses"
+          href: packageStatuses.html 
+        - text: "Development Roadmap"
+          href: "developmentRoadmap.html"

@@ -1,0 +1,15 @@
+---
+title: "Questions and Bug Reports"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# Forums
+
+Questions about HADES can be asked on the [OHDSI Forums](http://forums.ohdsi.org/).
+
+# Bug reports
+
+Bug reports should be files using the issue tracker of the misbehaving package:
