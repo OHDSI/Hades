@@ -8,7 +8,7 @@ output:
       in_header: "favicon.html" 
 exclude: ["extras"]
 navbar:
-  title: '<div><img src="images/hadesMini.png" /></div>'  
+  title: '<img src="images/hadesMini.png" width = 80 height = 17/>'  
   left:
     - icon: fa-home
       href: index.html

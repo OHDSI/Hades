@@ -20,7 +20,7 @@ output:
 | SqlRender                      | Chris Knoll & Martijn Schuemie | CRAN            |
 | ParallelLogger                 | Martijn Schuemie            | CRAN            |
 | FeatureExtraction              | Martijn Schuemie            | HADES |
-| Andromeda                      | Martijn Schuemie            | HADES |
+| Andromeda                      | Martijn Schuemie            | CRAN |
 
 # Maintainers
 
