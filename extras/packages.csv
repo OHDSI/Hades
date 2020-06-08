@@ -13,3 +13,4 @@ order,name,section,description,inCran,pages
 12,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE
 13,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE
 14,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE
+14,BigKnn,Supporting packages," A large scale k-nearest neighbor classifier using the Lucene search engine.",FALSE,TRUE

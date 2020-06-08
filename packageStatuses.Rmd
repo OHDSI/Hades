@@ -21,6 +21,7 @@ output:
 | ParallelLogger                 | Martijn Schuemie            | CRAN            |
 | FeatureExtraction              | Martijn Schuemie            | HADES |
 | Andromeda                      | Martijn Schuemie            | CRAN |
+| BigKnn                         | Martijn Schuemie            | HADES |
 
 # Maintainers
 

@@ -42,3 +42,5 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [Andromeda issue tracker](https://github.com/OHDSI/Andromeda/issues)
 
+- [BigKnn issue tracker](https://github.com/OHDSI/BigKnn/issues)
+

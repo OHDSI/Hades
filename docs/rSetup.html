@@ -454,7 +454,6 @@ div.tocify {
 </ol>
 <div id="instructions-for-windows" class="section level1">
 <h1>Instructions for Windows</h1>
-<p>A video version of these instructions can be found at <a href="https://youtu.be/K9_0s2Rchbo">https://youtu.be/K9_0s2Rchbo</a>.</p>
 
 <div class="rmdimportant">
 In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you <strong>must</strong> also install Java in both architectures. It is recommended to only install the 64-bit version of R.
@@ -475,6 +474,8 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 <ol style="list-style-type: decimal">
 <li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘Rtools’, and select the very latest version of RTools to download.</p></li>
 <li><p>After downloading has completed run the installer. Select the default options everywhere.</p></li>
+<li><p>Since R v4.0.0 you also need to add the following line to your .Renviron file, as described on the RTools page:</p>
+<pre><code>PATH=&quot;${RTOOLS40_HOME}\usr\bin;${PATH}&quot;</code></pre></li>
 </ol>
 </div>
 <div id="installing-rstudio" class="section level2">

@@ -14,8 +14,6 @@ Here are the steps for installing the required environment to run the OHDSI R pa
 
 # Instructions for Windows
 
-A video version of these instructions can be found at [https://youtu.be/K9_0s2Rchbo](https://youtu.be/K9_0s2Rchbo).
-
 ```{block2, type='rmdimportant'}
 In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you **must** also install Java in both architectures. It is recommended to only install the 64-bit version of R.
 ```
@@ -39,6 +37,12 @@ Once completed, you should be able to select R from your Start Menu.
 
 2. After downloading has completed run the installer. Select the default options everywhere.
 
+3. Since R v4.0.0 you also need to add the following line to your .Renviron file, as described on the RTools page:
+
+    ```
+    PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
+    ```
+	
 ## Installing RStudio
 
 1. Go to [https://www.rstudio.com/](https://www.rstudio.com/), select 'Download RStudio' (or the 'Download' button under 'RStudio'), opt for the free version, and download the installer for Windows as highlighted below.
