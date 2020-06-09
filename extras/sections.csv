@@ -1,5 +1,5 @@
 section,description
 Population-level estimation,These packages implement methods for estimating the average causal effect of an exposure on an outcome.
 Patient-level prediction,This package implements a wide array of algorithms aimed at estimating the probability that someone will have the outcome in the future.
-Method characterization,"Packages that characterize the performance of methods, or combine multiple estimates into one."
+Evidence Quality,"Packages that aim to establish the quality of the evidence being generated."
 Supporting packages,Packages that provide various essential functionality needed in the packages listed above.

@@ -30,6 +30,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
 
+- [CohortDiagnostics issue tracker](https://github.com/OHDSI/CohortDiagnostics/issues)
+
 - [Cyclops issue tracker](https://github.com/OHDSI/Cyclops/issues)
 
 - [DatabaseConnector issue tracker](https://github.com/OHDSI/DatabaseConnector/issues)
