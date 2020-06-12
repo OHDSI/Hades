@@ -14,35 +14,39 @@ Questions about HADES can be asked on the [OHDSI Forums](http://forums.ohdsi.org
 
 Bug reports should be files using the issue tracker of the misbehaving package:
 
-- [CohortMethod issue tracker](https://github.com/OHDSI/CohortMethod/issues)
+- [Andromeda issue tracker](https://github.com/OHDSI/Andromeda/issues)
 
-- [SelfControlledCaseSeries issue tracker](https://github.com/OHDSI/SelfControlledCaseSeries/issues)
-
-- [SelfControlledCohort issue tracker](https://github.com/OHDSI/SelfControlledCohort/issues)
+- [BigKnn issue tracker](https://github.com/OHDSI/BigKnn/issues)
 
 - [CaseControl issue tracker](https://github.com/OHDSI/CaseControl/issues)
 
 - [CaseCrossover issue tracker](https://github.com/OHDSI/CaseCrossover/issues)
 
-- [PatientLevelPrediction issue tracker](https://github.com/OHDSI/PatientLevelPrediction/issues)
-
-- [EmpiricalCalibration issue tracker](https://github.com/OHDSI/EmpiricalCalibration/issues)
-
-- [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
-
 - [CohortDiagnostics issue tracker](https://github.com/OHDSI/CohortDiagnostics/issues)
+
+- [CohortMethod issue tracker](https://github.com/OHDSI/CohortMethod/issues)
 
 - [Cyclops issue tracker](https://github.com/OHDSI/Cyclops/issues)
 
 - [DatabaseConnector issue tracker](https://github.com/OHDSI/DatabaseConnector/issues)
 
-- [SqlRender issue tracker](https://github.com/OHDSI/SqlRender/issues)
-
-- [ParallelLogger issue tracker](https://github.com/OHDSI/ParallelLogger/issues)
+- [EmpiricalCalibration issue tracker](https://github.com/OHDSI/EmpiricalCalibration/issues)
 
 - [FeatureExtraction issue tracker](https://github.com/OHDSI/FeatureExtraction/issues)
 
-- [Andromeda issue tracker](https://github.com/OHDSI/Andromeda/issues)
+- [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
 
-- [BigKnn issue tracker](https://github.com/OHDSI/BigKnn/issues)
+- [OhdsiSharing issue tracker](https://github.com/OHDSI/OhdsiSharing/issues)
+
+- [ParallelLogger issue tracker](https://github.com/OHDSI/ParallelLogger/issues)
+
+- [PatientLevelPrediction issue tracker](https://github.com/OHDSI/PatientLevelPrediction/issues)
+
+- [ROhdsiWebApi issue tracker](https://github.com/OHDSI/ROhdsiWebApi/issues)
+
+- [SelfControlledCaseSeries issue tracker](https://github.com/OHDSI/SelfControlledCaseSeries/issues)
+
+- [SelfControlledCohort issue tracker](https://github.com/OHDSI/SelfControlledCohort/issues)
+
+- [SqlRender issue tracker](https://github.com/OHDSI/SqlRender/issues)
 

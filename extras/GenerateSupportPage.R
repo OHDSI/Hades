@@ -1,5 +1,6 @@
 setwd("C:/Git/Hades")
 packages <- read.csv("extras/packages.csv", stringsAsFactors = FALSE)
+packages <- packages[order(packages$name), ]
 
 headerFile <- "extras/supportHeader.Rmd"
 lines <- gsub("\r", "", readChar(headerFile, file.info(headerFile)$size))

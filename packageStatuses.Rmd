@@ -23,6 +23,8 @@ output:
 | FeatureExtraction              | Martijn Schuemie            | HADES |
 | Andromeda                      | Martijn Schuemie            | CRAN |
 | BigKnn                         | Martijn Schuemie            | HADES |
+| ROhdsiWebApi                   | Gowtham Rao                 | HADES |
+| OhdsiSharing                   | Martijn Schuemie            | HADES |
 
 # Maintainers
 
