@@ -17,3 +17,4 @@ order,name,section,description,inCran,pages
 14,BigKnn,Supporting packages,"A large scale k-nearest neighbor classifier using the Lucene search engine.",FALSE,TRUE
 15,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE
 16,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE
+17,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE

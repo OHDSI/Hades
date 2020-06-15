@@ -463,6 +463,7 @@ div.tocify {
 <li><p><a href="https://github.com/OHDSI/DatabaseConnector/issues">DatabaseConnector issue tracker</a></p></li>
 <li><p><a href="https://github.com/OHDSI/EmpiricalCalibration/issues">EmpiricalCalibration issue tracker</a></p></li>
 <li><p><a href="https://github.com/OHDSI/FeatureExtraction/issues">FeatureExtraction issue tracker</a></p></li>
+<li><p><a href="https://github.com/OHDSI/Hydra/issues">Hydra issue tracker</a></p></li>
 <li><p><a href="https://github.com/OHDSI/MethodEvaluation/issues">MethodEvaluation issue tracker</a></p></li>
 <li><p><a href="https://github.com/OHDSI/OhdsiSharing/issues">OhdsiSharing issue tracker</a></p></li>
 <li><p><a href="https://github.com/OHDSI/ParallelLogger/issues">ParallelLogger issue tracker</a></p></li>
@@ -524,7 +525,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

@@ -25,6 +25,7 @@ output:
 | BigKnn                         | Martijn Schuemie            | HADES |
 | ROhdsiWebApi                   | Gowtham Rao                 | HADES |
 | OhdsiSharing                   | Martijn Schuemie            | HADES |
+| Hydra                          | Martijn Schuemie            | HADES |
 
 # Maintainers
 

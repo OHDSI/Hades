@@ -34,6 +34,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [FeatureExtraction issue tracker](https://github.com/OHDSI/FeatureExtraction/issues)
 
+- [Hydra issue tracker](https://github.com/OHDSI/Hydra/issues)
+
 - [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
 
 - [OhdsiSharing issue tracker](https://github.com/OHDSI/OhdsiSharing/issues)
