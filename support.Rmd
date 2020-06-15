@@ -32,6 +32,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [EmpiricalCalibration issue tracker](https://github.com/OHDSI/EmpiricalCalibration/issues)
 
+- [Eunomia issue tracker](https://github.com/OHDSI/Eunomia/issues)
+
 - [FeatureExtraction issue tracker](https://github.com/OHDSI/FeatureExtraction/issues)
 
 - [Hydra issue tracker](https://github.com/OHDSI/Hydra/issues)
