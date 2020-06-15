@@ -450,22 +450,19 @@ div.tocify {
 <h1>Short term</h1>
 <p>These taska are in progress, and should be finished within the next two months:</p>
 <ul>
-<li>Replace ff. The <code>bit</code> package, one of the dependencies of <code>ff</code>, has been orphaned, effectively orphaning <code>ff</code> as well. For storing large data objects, a new package called <code>Andromeda</code> is being developed. <code>Andromeda</code> will need to be integrated into every package currently depending on <code>ff</code>.</li>
-<li>Add the <code>PheValuator</code> package to HADES.</li>
-<li>Add the <code>CohortDiagnostics</code> package to HADES.</li>
+<li>Update the <code>SelfControlledCaseSeries</code> package to the same standards at the <code>CohortMehod</code> package. The <code>createSccsEras</code> function curently does too many things at once, like impose the naive period, select the outcome, define the eras, etc. We may want to have a <code>createStudyPopulation</code> function like in <code>CohortMethod</code> that performs some of these steps while keeping track of how many subjects are lost at each step. This could then also feed into the several diagnostics functions, and allow us to generate a detailed attrition table. We could then add a Shiny app to view the results.</li>
 </ul>
 </div>
 <div id="medium-term" class="section level1">
 <h1>Medium term</h1>
 <p>These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:</p>
 <ul>
-<li>Add the <code>ROhdsiWebApi</code> package to HADES.</li>
+<li>Add the <code>PheValuator</code> package to HADES.</li>
 <li>Add the <code>DataQualityDashboard</code> package to HADES.</li>
-<li>Add the <code>OhdsiSharing</code> package to HADES.<br />
+<li>Add the <code>Achilles</code> package to HADES.<br />
 </li>
 <li>Add support for CDM version 6 to all packages in HADES.</li>
 <li>Move <code>FeatureExtraction</code> into CRAN.</li>
-<li>Update the <code>SelfControlledCaseSeries</code> package to the same standards at the <code>CohortMehod</code> package. The <code>createSccsEras</code> function curently does too many things at once, like impose the naive period, select the outcome, define the eras, etc. We may want to have a <code>createStudyPopulation</code> function like in <code>CohortMethod</code> that performs some of these steps while keeping track of how many subjects are lost at each step. This could then also feed into the several diagnostics functions, and allow us to generate a detailed attrition table. We could then add a Shiny app to view the results.</li>
 </ul>
 </div>
 <div id="long-term" class="section level1">
