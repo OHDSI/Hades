@@ -18,10 +18,6 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [BigKnn issue tracker](https://github.com/OHDSI/BigKnn/issues)
 
-- [CaseControl issue tracker](https://github.com/OHDSI/CaseControl/issues)
-
-- [CaseCrossover issue tracker](https://github.com/OHDSI/CaseCrossover/issues)
-
 - [CohortDiagnostics issue tracker](https://github.com/OHDSI/CohortDiagnostics/issues)
 
 - [CohortMethod issue tracker](https://github.com/OHDSI/CohortMethod/issues)

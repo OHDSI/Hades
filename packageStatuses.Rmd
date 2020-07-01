@@ -10,8 +10,6 @@ output:
 | CohortMethod                   | Martijn Schuemie            | HADES |
 | SelfControlledCaseSeries       | Martijn Schuemie            | HADES |
 | SelfControlledCohort           | Martijn Schuemie            | HADES |
-| CaseControl                    | Martijn Schuemie            | HADES |
-| CaseCrossover                  | Martijn Schuemie            | HADES |
 | PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | HADES |
 | EmpiricalCalibration           | Martijn Schuemie            | CRAN            |
 | MethodEvaluation               | Martijn Schuemie            | HADES |

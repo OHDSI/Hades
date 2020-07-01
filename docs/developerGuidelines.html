@@ -530,11 +530,19 @@ test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
 <li><p>Do not write to files other than those specified by the user in the function call.</p></li>
 <li><p>Do not use global variables.</p></li>
 </ul>
+<p>Intead of using <code>library</code>, always explicitly reference the packge a function belongs to, for example <code>SqlRender::translate()</code>.</p>
 </div>
 <div id="avoid-unnecessary-dependencies" class="section level2">
 <h2>Avoid unnecessary dependencies</h2>
 <p>Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.</p>
 <p>We have more or less accepted we need to depend on the <a href="https://www.tidyverse.org/"><code>tidyverse</code></a>, so any of those packages are allowed.</p>
+</div>
+<div id="use-named-arguments" class="section level2">
+<h2>Use named arguments</h2>
+<p>Except for very simple function calls (e.g. <code>print(x)</code>), use named arguments, for example:</p>
+<pre class="r"><code>sql &lt;- SqlRender::translate(sql = &quot;SELECT * FROM my_table;&quot;, targetDialect = &quot;postgresql&quot;)</code></pre>
+<p>instead of</p>
+<pre class="r"><code>sql &lt;- SqlRender::translate(&quot;SELECT * FROM my_table;&quot;, &quot;postgresql&quot;)</code></pre>
 </div>
 </div>
 

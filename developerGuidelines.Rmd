@@ -112,8 +112,24 @@ When a user calls a function, the effect of that call should be aparent to the u
 
 - Do not use global variables.
 
+Intead of using `library`, always explicitly reference the packge a function belongs to, for example `SqlRender::translate()`.
+
 ## Avoid unnecessary dependencies
 
 Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.
 
 We have more or less accepted we need to depend on the [`tidyverse`](https://www.tidyverse.org/), so any of those packages are allowed. 
+
+## Use named arguments
+
+Except for very simple function calls (e.g. `print(x)`), use named arguments, for example:
+
+```r
+sql <- SqlRender::translate(sql = "SELECT * FROM my_table;", targetDialect = "postgresql")
+```
+
+instead of 
+
+```r
+sql <- SqlRender::translate("SELECT * FROM my_table;", "postgresql")
+```
