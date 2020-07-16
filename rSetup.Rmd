@@ -14,6 +14,8 @@ Here are the steps for installing the required environment to run the OHDSI R pa
 
 # Instructions for Windows
 
+These instructions are also demonstrated in [this video](https://youtu.be/DjVgbBGK4jM), showing a step-by-step guide to installing the required software.
+
 ```{block2, type='rmdimportant'}
 In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you **must** also install Java in both architectures. It is recommended to only install the 64-bit version of R.
 ```
