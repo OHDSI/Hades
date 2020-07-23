@@ -27,4 +27,4 @@ for (i in 1:nrow(packages)) {
                             url, name, pd, url))
 }
 lines <- c(lines, "</ul>")
-write(lines, "packages.Rmd")
+write(lines, "Rmd/packages.Rmd")

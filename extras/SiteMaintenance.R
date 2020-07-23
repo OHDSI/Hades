@@ -4,7 +4,7 @@
 devtools::install_github("ropenscilabs/icon")
 
 
-setwd("C:/Git/Hades")
+setwd("C:/Git/Hades/Rmd")
 
 # Generate packages markdown file
 source("extras/GeneratePackagesPage.R")

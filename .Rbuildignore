@@ -1,0 +1,12 @@
+extras
+LICENSE
+^.*\.Rproj$
+^\.Rproj\.user$
+.travis.yml
+^cran-comments.md$
+deploy.sh
+extras/
+docs
+Rmd
+compare_versions
+_pkgdown.yml

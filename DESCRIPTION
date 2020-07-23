@@ -1,0 +1,49 @@
+Package: Hades
+Type: Package
+Title: Health Analytics Data-to-Evidence Suite
+Version: 0.0.1
+Date: 2020-07-23
+Authors@R: c(
+  person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
+  person("Observational Health Data Science and Informatics", role = c("cph"))
+  )
+Maintainer: Martijn Schuemie <schuemie@ohdsi.org>
+Description: A collection of packages for executing data-analytics against the OMOP Common Data Model.
+License: Apache License 2.0
+URL: https://ohdsi.github.io/Hades/, https://github.com/OHDSI/Hades
+BugReports: https://github.com/OHDSI/Hades/issues
+Imports:
+  SqlRender,
+  Andromeda,
+  DatabaseConnector,
+  ParallelLogger,
+  Cyclops,
+  EmpiricalCalibration,
+  Eunomia,
+  BigKnn,
+  ROhdsiWebApi,
+  FeatureExtraction,
+  CohortDiagnostics,
+  CohortMethod,
+  SelfControlledCaseSeries,
+  SelfControlledCohort,
+  PatientLevelPrediction,
+  MethodEvaluation,
+  OhdsiSharing,
+  Hydra
+Remotes:
+  ohdsi/Eunomia,
+  ohdsi/BigKnn,
+  ohdsi/ROhdsiWebApi,
+  ohdsi/FeatureExtraction,
+  ohdsi/CohortDiagnostics,
+  ohdsi/CohortMethod,
+  ohdsi/SelfControlledCaseSeries,
+  ohdsi/SelfControlledCohort,
+  ohdsi/PatientLevelPrediction,
+  ohdsi/MethodEvaluation,
+  ohdsi/OhdsiSharing,
+  ohdsi/Hydra
+LazyData: false
+RoxygenNote: 7.1.0
+Encoding: UTF-8

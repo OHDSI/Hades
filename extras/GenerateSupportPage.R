@@ -9,4 +9,4 @@ for (i in 1:nrow(packages)) {
   lines <- c(lines, sprintf("- [%s issue tracker](https://github.com/OHDSI/%s/issues)", name, name))
   lines <- c(lines, "")
 }
-write(lines, "support.Rmd")
+write(lines, "Rmd/support.Rmd")
