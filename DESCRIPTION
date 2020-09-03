@@ -45,5 +45,5 @@ Remotes:
   ohdsi/OhdsiSharing,
   ohdsi/Hydra
 LazyData: false
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Encoding: UTF-8
