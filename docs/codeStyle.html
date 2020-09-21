@@ -415,6 +415,9 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="community.html">Developer Community</a>
+    </li>
+    <li>
       <a href="developerGuidelines.html">Developer Guidelines</a>
     </li>
     <li>
@@ -584,6 +587,16 @@ else
 {
   doSomethingElse()
 }</code></pre>
+</div>
+<div id="dplyr-joins-and-merges" class="section level2">
+<h2>Dplyr joins and merges</h2>
+<p>Dplyr joins and merge statements should always have a ‘by’ argument.</p>
+<p><strong>Good</strong></p>
+<pre class="r"><code>foo %&gt;% 
+  inner_join(bar, by = &quot;covariateId&quot;)</code></pre>
+<p><strong>Bad</strong></p>
+<pre class="r"><code>foo %&gt;% 
+  inner_join(bar)</code></pre>
 </div>
 </div>
 <div id="ohdsi-code-style-for-sql" class="section level1">

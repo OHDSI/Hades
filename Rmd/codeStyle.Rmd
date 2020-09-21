@@ -225,9 +225,23 @@ else
 }
 ```
 
+## Dplyr joins and merges
 
+Dplyr joins and merge statements should always have a 'by' argument.
 
+**Good**
 
+```r
+foo %>% 
+  inner_join(bar, by = "covariateId")
+```
+
+**Bad**
+
+```r
+foo %>% 
+  inner_join(bar)
+```
 
 
 # OHDSI code style for SQL

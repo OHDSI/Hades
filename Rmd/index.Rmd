@@ -22,6 +22,10 @@ HADES is a set of R packages that execute against data in a database server. The
 
 All packages in HADES are licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), which allows users to use the software for any purpose, to distribute it, to modify it, and to distribute modified versions of the software under the terms of the license, without concern for royalties.
 
+# Installation
+
+See the Support section for instructions on [setting up the R environment](rSetup.html), including Java and RTools. Each package in HADES can be installed independently, but it is also possible to install all HADES packages at once, as described [here](installingHades.html).
+
 # Learn How to Use HADES
 
 <a href="http://book.ohdsi.org"><img src="images/book.png" width="250" height="400" alt="Cover image" align="right" style="margin: 0 1em 0 1em" /></a> Learn how to use HADES to produce reliable evidence from real-world data with The Book of OHDSI. Read it <a href="http://book.ohdsi.org">online</a>.

@@ -36,6 +36,8 @@ navbar:
     - text: "Developers"
       icon: fa-wrench
       menu: 
+        - text: "Developer Community"
+          href: community.html   
         - text: "Developer Guidelines"
           href: developerGuidelines.html   
         - text: "Code Style"

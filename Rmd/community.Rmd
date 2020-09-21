@@ -1,0 +1,34 @@
+---
+title: "Development Community"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+HADES is developed and maintained by the HADES Workgroup of the OHDSI community. 
+
+# Meetings
+
+The HADES workgroup has regular meetings. Meetings are open to all, and will be held on the third Thursday of the month. 
+
+```{block2, type='rounded'}
+### Next HADES meeting
+
+Date: **October 15, 2020**
+
+Time (DST where appropriate):
+
+- **6pm Central European time**
+- **5pm UK time**
+- **12pm (noon) Eastern Time** (New York / New Jersey / Pennsylvania)
+- **9am Pacific Time** (Los Angeles / Stanford)
+
+Skype Meeting details:
+
+- To be added.
+```
+
+# Online discussions
+
+Online discussions can take place on the [OHDSI forums](https://forums.ohdsi.org/).

@@ -9,6 +9,12 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Lane JCE, Weaver J, Kostka K, et al. [Risk of hydroxychloroquine alone and in combination with azithromycin in the treatment of rheumatoid arthritis: a multinational, retrospective study.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7442425/) Lancet Rheumatology. 2020 Aug 21.
+
+- Kim Y, Tian Y, Yang J, et al. [Comparative safety and effectiveness of alendronate versus raloxifene in women with osteoporosis.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7338498/) Sci Rep. 2020 Jul 6;10(1):11115. 
+
+- Reps JM, Williams RD, You SC, et al. [Feasibility and evaluation of a large-scale external validation approach for patient-level prediction in an international data network: validation of models predicting stroke in female patients newly diagnosed with atrial fibrillation.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7201646/) BMC Med Res Methodol. 2020 May 6;20(1):102.
+
 - Hripcsak G, Suchard MA, Shea S, et al. [Comparison of Cardiovascular and Safety Outcomes of Chlorthalidone vs Hydrochlorothiazide to Treat Hypertension.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2760777) JAMA Intern Med. 2020 Feb 17.
 
 - Reps JM, Cepeda MS, Ryan PB. [Wisdom of the CROUD:  Development and validation of a patient-level prediction model for opioid use disorder using population-level claims data.](http://dx.plos.org/10.1371/journal.pone.0228632) PLoS One. 2020 Feb 13;15(2):e0228632.
@@ -20,6 +26,8 @@ These papers were written using HADES.
 - You SC, Jung S, Swerdel JN, Ryan PB, et al. [Comparison of First-Line Dual Combination Treatments in Hypertension: Real-World Evidence from Multinational Heterogeneous Cohorts.](https://e-kcj.org/DOIx.php?id=10.4070/kcj.2019.0173) Korean Circ J. 2020 Jan;50(1):52-68.
 
 - Johnston SS, Morton JM, Kalsekar I, et al. [Using Machine Learning Applied to Real-World Healthcare Data for Predictive Analytics: An Applied Example in Bariatric Surgery.](https://www.sciencedirect.com/science/article/pii/S1098301519300737?via%3Dihub) Value Health. 2019 May;22(5):580-586. 
+
+- Weinstein RB, Ryan PB, Berlin JA, et al. [Channeling Bias in the Analysis of Risk of Myocardial Infarction, Stroke, Gastrointestinal Bleeding, and Acute Renal Failure with the Use of Paracetamol Compared with Ibuprofen.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7434801/) Drug Saf. 2020 Sep;43(9):927-942.
 
 - Vashisht R, Jung K, Schuler A, et al. [Association of hemoglobin a1c levels with use of sulfonylureas, dipeptidyl peptidase 4 inhibitors, and thiazolidinediones in patients with type 2 diabetes treated with metformin: Analysis from the observational health data sciences and informatics initiative.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2698083) JAMA Network Open. 2018; 1: e181755.
 
@@ -41,6 +49,8 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Schuemie MJ, Ryan PB, Pratt N, et al. [Large-scale evidence generation and evaluation across a network of databases (LEGEND): assessing validity using hypertension as a case study.](https://academic.oup.com/jamia/article/27/8/1268/5895564) J Am Med Inform Assoc. 2020 Aug 1;27(8):1268-1277.
 
 - Schuemie MJ, Cepeda MS, Suchard MA, et al. [How Confident Are We About Observational Findings in Health Care: A Benchmark Study](https://hdsr.mitpress.mit.edu/pub/fxz7kr65) Harvard Data Science Review, 2(1).
 
