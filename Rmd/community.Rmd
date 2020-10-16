@@ -8,6 +8,10 @@ output:
 
 HADES is developed and maintained by the HADES Workgroup of the OHDSI community. 
 
+# Online discussions
+
+Online discussions can take place on the [OHDSI forums](https://forums.ohdsi.org/).
+
 # Meetings
 
 The HADES workgroup has regular meetings. Meetings are open to all, and will be held on the third Thursday of the month. 
@@ -15,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **October 15, 2020**
+Date: **November 19, 2020**
 
 Time (DST where appropriate):
 
@@ -29,6 +33,9 @@ Teams meeting details:
 URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19%3ac0ff168a04954dc28c18c260133baa3c%40thread.tacv2/1602145307087?context=%7b%22Tid%22%3a%22a30f0094-9120-4aab-ba4c-e5509023b2d5%22%2c%22Oid%22%3a%22dac1472c-1cc6-41dc-9cc7-c4720f7798de%22%7d)
 ```
 
-# Online discussions
+## Prior meetings
 
-Online discussions can take place on the [OHDSI forums](https://forums.ohdsi.org/).
+### 2020
+
+- October 15: *HADES kickoff, versioning and releasing*. [Notes](meetings/Hades15Oct2020.docx"), [slides](meetings/HADESkickoff.pptx), and [recording](https://drive.google.com/file/d/1N9_5GGdX4JNNugJohVZ8h_ZjwO91_GQ9/view?usp=sharing).
+
