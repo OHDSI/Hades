@@ -25,9 +25,20 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -464,7 +475,7 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link indicated in the screenshot below.</p>
-<p><img src="images/downloadR.png" /></p></li>
+<p><img src="images/downloadRWindows.png" /></p></li>
 <li><p>After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below. <img src="images/rDestination.png" /></p>
 <p><img src="images/no32Bits.png" /></p></li>
 </ol>
@@ -482,15 +493,53 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 <div id="installing-rstudio" class="section level2">
 <h2>Installing RStudio</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Windows as highlighted below. <img src="images/downloadRStudio.png" /></p></li>
+<li><p>Go to <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Windows as highlighted below. <img src="images/downloadRStudioWindows.png" /></p></li>
 <li><p>After downloading, start the installer, and use the default options everywhere.</p></li>
 </ol>
 </div>
 <div id="installing-java" class="section level2">
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://java.com/en/download/manual.jsp">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJava.png" /></p></li>
+<li><p>Go to <a href="https://java.com/en/download/manual.jsp">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJavaWindows.png" /></p></li>
 <li><p>After downloading just run the installer.</p></li>
+</ol>
+</div>
+</div>
+<div id="instructions-for-mac-os-x" class="section level1">
+<h1>Instructions for Mac OS X</h1>
+<p>These instructions are also demonstrated in <a href="">this video</a>, showing a step-by-step guide to installing the required software.</p>
+<div id="installing-r-1" class="section level2">
+<h2>Installing R</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for (Mac) OS X’, then ‘base’, then click the Download link indicated in the screenshot below.</p>
+<p><img src="images/downloadRMac.png" /></p></li>
+<li><p>After the download has completed, run the installer and accept all of the default options. You should see a screen indicating that the installation was successful.</p>
+<p><img src="images/installRMacSuccess.png" /></p></li>
+</ol>
+</div>
+<div id="installing-r-build-tools" class="section level2">
+<h2>Installing R build tools</h2>
+<p>We will need to install C and Fortran compilers in order to build R packages from source code. These are included with XCode which can be downloaded from the Mac App store.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing xcode command line tools by following the instructions <a href="https://railsapps.github.io/xcode-command-line-tools.html">here</a>. Verify that the C compiler gcc is installed by opening the terminal and running the command <code>clang</code>. You should see an error that says “no input files”.</p></li>
+<li><p>Download and install the gfortran compiler .dmg from <a href="https://github.com/fxcoudert/gfortran-for-macOS/releases" class="uri">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command <code>gfortran</code>. You should see an error that says “no input files”.</p></li>
+<li><p>Go to <a href="https://www.xquartz.org/">https://www.xquartz.org/</a>, download the .dmg and run the installer.</p></li>
+<li><p>Verify that build tools are installed and available by opening an R console and running</p></li>
+</ol>
+<pre class="r"><code>install.packages(&quot;pkgbuild&quot;)
+pkgbuild::check_build_tools()</code></pre>
+</div>
+<div id="installing-rstudio-1" class="section level2">
+<h2>Installing RStudio</h2>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Mac as highlighted below. <img src="images/downloadRStudioMac.png" /></li>
+</ol>
+</div>
+<div id="installing-java-1" class="section level2">
+<h2>Installing Java</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>, and select the Mac OS installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJavaMac.png" /></p></li>
+<li><p>After downloading just run the installer. Check that java is installed by opening the terminal and running the command <code>java</code>. If you see some helpful output about usage then the installation was successful.</p></li>
 </ol>
 </div>
 </div>
@@ -503,9 +552,8 @@ translate(&quot;SELECT TOP 10 * FROM person;&quot;, &quot;postgresql&quot;)</cod
 <pre><code>## [1] &quot;SELECT  * FROM person LIMIT 10;&quot;</code></pre>
 <p>This function uses Java, so if all goes well we know both R and Java have been installed correctly!</p>
 <p>Another test is to see if source packages can be built. Run the following R code to install the <code>CohortMethod</code> package from the OHDSI GitHub repository:</p>
-<pre class="r"><code>install.packages(&quot;drat&quot;)
-drat::addRepo(&quot;OHDSI&quot;)
-install.packages(&quot;CohortMethod&quot;)</code></pre>
+<pre class="r"><code>install.packages(&quot;remotes&quot;)
+remotes::install_github(&quot;OHDSI/CohortMethod&quot;)</code></pre>
 </div>
 
 
@@ -519,7 +567,7 @@ install.packages(&quot;CohortMethod&quot;)</code></pre>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

@@ -24,7 +24,7 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 
 1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'base', then click the Download link indicated in the screenshot below.
 
-   ![](images/downloadR.png)
+   ![](images/downloadRWindows.png)
 
 2. After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below.
    ![](images/rDestination.png)
@@ -48,16 +48,61 @@ Once completed, you should be able to select R from your Start Menu.
 ## Installing RStudio
 
 1. Go to [https://www.rstudio.com/](https://www.rstudio.com/), select 'Download RStudio' (or the 'Download' button under 'RStudio'), opt for the free version, and download the installer for Windows as highlighted below.
-   ![](images/downloadRStudio.png)
+   ![](images/downloadRStudioWindows.png)
 
 2. After downloading, start the installer, and use the default options everywhere.
 
 ## Installing Java
 
 1. Go to [https://java.com/en/download/manual.jsp](https://java.com/en/download/manual.jsp), and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you *must* also install the other (32-bit) version of Java.
-   ![](images/downloadJava.png) 
+   ![](images/downloadJavaWindows.png) 
 
 2. After downloading just run the installer.
+
+
+# Instructions for Mac OS X
+
+These instructions are also demonstrated in [this video](), showing a step-by-step guide to installing the required software.
+
+## Installing R
+
+1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for (Mac) OS X', then 'base', then click the Download link indicated in the screenshot below.
+
+   ![](images/downloadRMac.png)
+   
+2. After the download has completed, run the installer and accept all of the default options. You should see a screen indicating that the installation was successful.
+
+    ![](images/installRMacSuccess.png)
+
+## Installing R build tools
+
+We will need to install C and Fortran compilers in order to build R packages from source code. These are included with XCode which can be downloaded from the Mac App store. 
+
+1. Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing xcode command line tools by following the instructions [here](https://railsapps.github.io/xcode-command-line-tools.html).  Verify that the C compiler gcc is installed by opening the terminal and running the command `clang`. You should see an error that says "no input files".
+
+2. Download and install the gfortran compiler .dmg from https://github.com/fxcoudert/gfortran-for-macOS/releases. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command `gfortran`. You should see an error that says "no input files".
+
+3. Go to [https://www.xquartz.org/](https://www.xquartz.org/), download the .dmg and run the installer.
+
+4. Verify that build tools are installed and available by opening an R console and running
+
+```{r, eval=FALSE}
+install.packages("pkgbuild")
+pkgbuild::check_build_tools()
+```
+
+
+## Installing RStudio
+
+1. Go to [https://www.rstudio.com/](https://www.rstudio.com/), select 'Download RStudio' (or the 'Download' button under 'RStudio'), opt for the free version, and download the installer for Mac as highlighted below.
+   ![](images/downloadRStudioMac.png)
+   
+## Installing Java
+
+1. Go to [https://www.oracle.com/java/technologies/javase-jdk15-downloads.html](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html), and select the Mac OS installer as highlighted below. If you also installed the 32-bit version of R, you *must* also install the other (32-bit) version of Java.
+   ![](images/downloadJavaMac.png) 
+
+2. After downloading just run the installer. Check that java is installed by opening the terminal and running the command `java`. If you see some helpful output about usage then the installation was successful.
 
 # Verifying the installation
 
@@ -76,9 +121,8 @@ translate("SELECT TOP 10 * FROM person;", "postgresql")
 This function uses Java, so if all goes well we know both R and Java have been installed correctly!
 
 Another test is to see if source packages can be built. Run the following R code to install the `CohortMethod` package from the OHDSI GitHub repository:
-```{r eval=FALSE}
-install.packages("drat")
-drat::addRepo("OHDSI")
-install.packages("CohortMethod")
+```{r eval=FALSE} 
+install.packages("remotes")
+remotes::install_github("OHDSI/CohortMethod")
 ```
 
