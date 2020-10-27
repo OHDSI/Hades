@@ -505,9 +505,8 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 </ol>
 </div>
 </div>
-<div id="instructions-for-mac-os-x" class="section level1">
-<h1>Instructions for Mac OS X</h1>
-<p>These instructions are also demonstrated in <a href="">this video</a>, showing a step-by-step guide to installing the required software.</p>
+<div id="instructions-for-mac" class="section level1">
+<h1>Instructions for Mac</h1>
 <div id="installing-r-1" class="section level2">
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
@@ -519,9 +518,9 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 </div>
 <div id="installing-r-build-tools" class="section level2">
 <h2>Installing R build tools</h2>
-<p>We will need to install C and Fortran compilers in order to build R packages from source code. These are included with XCode which can be downloaded from the Mac App store.</p>
+<p>We will need to install C and Fortran compilers in order to build R packages from source code. These are included with Xcode which can be downloaded from the Mac App store.</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing xcode command line tools by following the instructions <a href="https://railsapps.github.io/xcode-command-line-tools.html">here</a>. Verify that the C compiler gcc is installed by opening the terminal and running the command <code>clang</code>. You should see an error that says “no input files”.</p></li>
+<li><p>Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing Xcode command line tools by following the instructions <a href="https://railsapps.github.io/xcode-command-line-tools.html">here</a>. Verify that the C compiler gcc is installed by opening the terminal and running the command <code>clang</code>. You should see an error that says “no input files”.</p></li>
 <li><p>Download and install the gfortran compiler .dmg from <a href="https://github.com/fxcoudert/gfortran-for-macOS/releases" class="uri">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command <code>gfortran</code>. You should see an error that says “no input files”.</p></li>
 <li><p>Go to <a href="https://www.xquartz.org/">https://www.xquartz.org/</a>, download the .dmg and run the installer.</p></li>
 <li><p>Verify that build tools are installed and available by opening an R console and running</p></li>
@@ -538,7 +537,7 @@ pkgbuild::check_build_tools()</code></pre>
 <div id="installing-java-1" class="section level2">
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>, and select the Mac OS installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJavaMac.png" /></p></li>
+<li><p>Go to <a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>, and select the Mac OS installer for the Oracle JDK as highlighted below. <img src="images/downloadJavaMac.png" /></p></li>
 <li><p>After downloading just run the installer. Check that java is installed by opening the terminal and running the command <code>java</code>. If you see some helpful output about usage then the installation was successful.</p></li>
 </ol>
 </div>

@@ -60,9 +60,7 @@ Once completed, you should be able to select R from your Start Menu.
 2. After downloading just run the installer.
 
 
-# Instructions for Mac OS X
-
-These instructions are also demonstrated in [this video](), showing a step-by-step guide to installing the required software.
+# Instructions for Mac
 
 ## Installing R
 
@@ -76,9 +74,9 @@ These instructions are also demonstrated in [this video](), showing a step-by-st
 
 ## Installing R build tools
 
-We will need to install C and Fortran compilers in order to build R packages from source code. These are included with XCode which can be downloaded from the Mac App store. 
+We will need to install C and Fortran compilers in order to build R packages from source code. These are included with Xcode which can be downloaded from the Mac App store. 
 
-1. Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing xcode command line tools by following the instructions [here](https://railsapps.github.io/xcode-command-line-tools.html).  Verify that the C compiler gcc is installed by opening the terminal and running the command `clang`. You should see an error that says "no input files".
+1. Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing Xcode command line tools by following the instructions [here](https://railsapps.github.io/xcode-command-line-tools.html).  Verify that the C compiler gcc is installed by opening the terminal and running the command `clang`. You should see an error that says "no input files".
 
 2. Download and install the gfortran compiler .dmg from https://github.com/fxcoudert/gfortran-for-macOS/releases. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command `gfortran`. You should see an error that says "no input files".
 
@@ -99,7 +97,7 @@ pkgbuild::check_build_tools()
    
 ## Installing Java
 
-1. Go to [https://www.oracle.com/java/technologies/javase-jdk15-downloads.html](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html), and select the Mac OS installer as highlighted below. If you also installed the 32-bit version of R, you *must* also install the other (32-bit) version of Java.
+1. Go to [https://www.oracle.com/java/technologies/javase-jdk15-downloads.html](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html), and select the Mac OS installer for the Oracle JDK as highlighted below. 
    ![](images/downloadJavaMac.png) 
 
 2. After downloading just run the installer. Check that java is installed by opening the terminal and running the command `java`. If you see some helpful output about usage then the installation was successful.
