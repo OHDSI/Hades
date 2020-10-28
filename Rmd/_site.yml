@@ -28,12 +28,16 @@ navbar:
           href: support.html   
         - text: "R setup"
           href: rSetup.html  
+        - text: "Installing HADES"
+          href: installingHades.html
     - text: "Contribute"
       icon: fa-hand-paper
       href: contribute.html
     - text: "Developers"
       icon: fa-wrench
       menu: 
+        - text: "Developer Community"
+          href: community.html   
         - text: "Developer Guidelines"
           href: developerGuidelines.html   
         - text: "Code Style"

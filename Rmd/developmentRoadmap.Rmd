@@ -10,24 +10,25 @@ Below is a high-level overview of the development roadmap for HADES. Note that e
 
 # Short term
 
-These taska are in progress, and should be finished within the next two months:
+These tasks are in progress, and should be finished within the next two months:
 
-- Update the `SelfControlledCaseSeries` package to the same standards at the `CohortMehod` package. The `createSccsEras` function curently does too many things at once, like impose the naive period, select the outcome, define the eras, etc. We may want  to have a `createStudyPopulation` function like in `CohortMethod` that performs some of these steps while keeping track of how many subjects are lost at each step. This could then also feed into the several diagnostics functions, and allow us to generate a detailed attrition table. We could then add a Shiny app to view the results.
+- Move `Eunomia` to CRAN.
 
 # Medium term
 
 These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:
 
-- Add the `PheValuator` package to HADES. 
 - Add the `DataQualityDashboard` package to HADES.
 - Add the `Achilles` package to HADES.  
 - Add support for CDM version 6 to all packages in HADES.
 - Move `FeatureExtraction` into CRAN.
+- Add support for 64-bit integers throughout HADES, but starting with DatabaseConnector.
 
 # Long term
 
 These rasks are on our radar, but it is unclear when they will be finished.
 
+- Add the `PheValuator` package to HADES. 
 - Refactor signal injection code in `MethodEvaluation`. The code for positive control synthesis is highly complex, and there are some issues when there are many exposures with length 0. The code should be restructured, with testable units.
 - Move all HADES packages to CRAN.
 - Add more unit tests to all packages.

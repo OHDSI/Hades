@@ -29,6 +29,15 @@
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -393,6 +402,9 @@ div.tocify {
     <li>
       <a href="rSetup.html">R setup</a>
     </li>
+    <li>
+      <a href="installingHades.html">Installing HADES</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -411,6 +423,9 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="community.html">Developer Community</a>
+    </li>
     <li>
       <a href="developerGuidelines.html">Developer Guidelines</a>
     </li>
@@ -448,27 +463,28 @@ div.tocify {
 <p>Below is a high-level overview of the development roadmap for HADES. Note that each package maintains a much more detailed list of issues.</p>
 <div id="short-term" class="section level1">
 <h1>Short term</h1>
-<p>These taska are in progress, and should be finished within the next two months:</p>
+<p>These tasks are in progress, and should be finished within the next two months:</p>
 <ul>
-<li>Update the <code>SelfControlledCaseSeries</code> package to the same standards at the <code>CohortMehod</code> package. The <code>createSccsEras</code> function curently does too many things at once, like impose the naive period, select the outcome, define the eras, etc. We may want to have a <code>createStudyPopulation</code> function like in <code>CohortMethod</code> that performs some of these steps while keeping track of how many subjects are lost at each step. This could then also feed into the several diagnostics functions, and allow us to generate a detailed attrition table. We could then add a Shiny app to view the results.</li>
+<li>Move <code>Eunomia</code> to CRAN.</li>
 </ul>
 </div>
 <div id="medium-term" class="section level1">
 <h1>Medium term</h1>
 <p>These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:</p>
 <ul>
-<li>Add the <code>PheValuator</code> package to HADES.</li>
 <li>Add the <code>DataQualityDashboard</code> package to HADES.</li>
 <li>Add the <code>Achilles</code> package to HADES.<br />
 </li>
 <li>Add support for CDM version 6 to all packages in HADES.</li>
 <li>Move <code>FeatureExtraction</code> into CRAN.</li>
+<li>Add support for 64-bit integers throughout HADES, but starting with DatabaseConnector.</li>
 </ul>
 </div>
 <div id="long-term" class="section level1">
 <h1>Long term</h1>
 <p>These rasks are on our radar, but it is unclear when they will be finished.</p>
 <ul>
+<li>Add the <code>PheValuator</code> package to HADES.</li>
 <li>Refactor signal injection code in <code>MethodEvaluation</code>. The code for positive control synthesis is highly complex, and there are some issues when there are many exposures with length 0. The code should be restructured, with testable units.</li>
 <li>Move all HADES packages to CRAN.</li>
 <li>Add more unit tests to all packages.</li>

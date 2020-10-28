@@ -118,7 +118,7 @@ Intead of using `library`, always explicitly reference the packge a function bel
 
 Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.
 
-We have more or less accepted we need to depend on the [`tidyverse`](https://www.tidyverse.org/), so any of those packages are allowed. 
+We have more or less accepted we need to depend on the *core* [`tidyverse`](https://www.tidyverse.org/) packages, so any of those packages are allowed. 
 
 ## Use named arguments
 

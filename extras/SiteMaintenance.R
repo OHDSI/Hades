@@ -1,10 +1,9 @@
 # Generate site from markdown files --------------------------------------
 
+setwd("c:/git/Hades")
+
 # You'll need the icon package:
 devtools::install_github("ropenscilabs/icon")
-
-
-setwd("C:/Git/Hades/Rmd")
 
 # Generate packages markdown file
 source("extras/GeneratePackagesPage.R")
@@ -14,4 +13,4 @@ source("extras/GenerateSupportPage.R")
 
 # Run this in standalone R session. Runs orders of magnitude faster compared 
 # to running in RStudio:
-rmarkdown::render_site()
+rmarkdown::render_site("Rmd")
