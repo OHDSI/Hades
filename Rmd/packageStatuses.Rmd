@@ -24,7 +24,7 @@ output:
 | ROhdsiWebApi                   | Gowtham Rao                 | HADES |
 | OhdsiSharing                   | Martijn Schuemie            | HADES |
 | Hydra                          | Martijn Schuemie            | HADES |
-| Eunomia                        | Martijn Schuemie            | HADES |
+| Eunomia                        | Frank DeFalco               | CRAN  |
 
 # Maintainers
 
