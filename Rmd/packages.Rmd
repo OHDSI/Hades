@@ -14,6 +14,7 @@ Below are the packages included in HADES. For each package a link is provided wi
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/CohortMethod">CohortMethod</a></h4>New-user cohort studies using large-scale regression for propensity and outcome models.</br><a href="https://ohdsi.github.io/CohortMethod">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/SelfControlledCaseSeries">SelfControlledCaseSeries</a></h4>Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.</br><a href="https://ohdsi.github.io/SelfControlledCaseSeries">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/SelfControlledCohort">SelfControlledCohort</a></h4>A self-controlled cohort design, where time preceding exposure is used as control.</br><a href="https://ohdsi.github.io/SelfControlledCohort">Learn more...</a></li>
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/EvidenceSynthesis">EvidenceSynthesis</a></h4>Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.</br><a href="https://ohdsi.github.io/EvidenceSynthesis">Learn more...</a></li>
 </ul>
 <h2 id="pkg_header">Patient-level prediction</h2>
 <ul id="pkg">

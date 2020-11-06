@@ -20,6 +20,7 @@ Imports:
   Cyclops,
   EmpiricalCalibration,
   Eunomia,
+  EvidenceSynthesis
   BigKnn,
   ROhdsiWebApi,
   FeatureExtraction,
@@ -34,6 +35,7 @@ Imports:
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
+  ohdsi/EvidenceSynthesis,
   ohdsi/FeatureExtraction,
   ohdsi/CohortDiagnostics,
   ohdsi/CohortMethod,

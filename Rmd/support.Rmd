@@ -30,6 +30,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [Eunomia issue tracker](https://github.com/OHDSI/Eunomia/issues)
 
+- [EvidenceSynthesis issue tracker](https://github.com/OHDSI/EvidenceSynthesis/issues)
+
 - [FeatureExtraction issue tracker](https://github.com/OHDSI/FeatureExtraction/issues)
 
 - [Hydra issue tracker](https://github.com/OHDSI/Hydra/issues)

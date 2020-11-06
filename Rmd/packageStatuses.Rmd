@@ -7,24 +7,25 @@ output:
 ---
 | Package                        | Maintainer(s)               | Status          |
 | :----------------------------- | :-------------------------- | :-------------: |
-| CohortMethod                   | Martijn Schuemie            | HADES |
-| SelfControlledCaseSeries       | Martijn Schuemie            | HADES |
-| SelfControlledCohort           | Martijn Schuemie            | HADES |
-| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | HADES |
+| CohortMethod                   | Martijn Schuemie            | HADES           |
+| SelfControlledCaseSeries       | Martijn Schuemie            | HADES           |
+| SelfControlledCohort           | Martijn Schuemie            | HADES           |
+| EvidenceSynthesis              | Martijn Schuemie            | HADES           |
+| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | HADES           |
 | EmpiricalCalibration           | Martijn Schuemie            | CRAN            |
-| MethodEvaluation               | Martijn Schuemie            | HADES |
-| CohortDiagnostics              | Gowtham Rao                 | HADES |
+| MethodEvaluation               | Martijn Schuemie            | HADES           |
+| CohortDiagnostics              | Gowtham Rao                 | HADES           |
 | Cyclops                        | Marc Suchard                | CRAN            |
-| DatabaseConnector              | Chris Knoll & Martijn Schuemie | CRAN            |
-| SqlRender                      | Chris Knoll & Martijn Schuemie | CRAN            |
+| DatabaseConnector              | Martijn Schuemie            | CRAN            |
+| SqlRender                      | Martijn Schuemie            | CRAN            |
 | ParallelLogger                 | Martijn Schuemie            | CRAN            |
-| FeatureExtraction              | Martijn Schuemie            | HADES |
-| Andromeda                      | Martijn Schuemie            | CRAN |
-| BigKnn                         | Martijn Schuemie            | HADES |
-| ROhdsiWebApi                   | Gowtham Rao                 | HADES |
-| OhdsiSharing                   | Martijn Schuemie            | HADES |
-| Hydra                          | Martijn Schuemie            | HADES |
-| Eunomia                        | Frank DeFalco               | CRAN  |
+| FeatureExtraction              | Martijn Schuemie            | HADES           |
+| Andromeda                      | Martijn Schuemie            | CRAN            |
+| BigKnn                         | Martijn Schuemie            | HADES           |
+| ROhdsiWebApi                   | Gowtham Rao                 | HADES           |
+| OhdsiSharing                   | Martijn Schuemie            | HADES           |
+| Hydra                          | Martijn Schuemie            | HADES           |
+| Eunomia                        | Frank DeFalco               | CRAN            |
 
 # Maintainers
 
