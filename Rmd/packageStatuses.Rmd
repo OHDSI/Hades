@@ -7,24 +7,24 @@ output:
 ---
 | Package                        | Maintainer(s)               | Status          |
 | :----------------------------- | :-------------------------- | :-------------: |
-| CohortMethod                   | Martijn Schuemie            | HADES           |
-| SelfControlledCaseSeries       | Martijn Schuemie            | HADES           |
-| SelfControlledCohort           | Martijn Schuemie            | HADES           |
-| EvidenceSynthesis              | Martijn Schuemie            | HADES           |
-| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | HADES           |
+| CohortMethod                   | Martijn Schuemie            | GitHub          |
+| SelfControlledCaseSeries       | Martijn Schuemie            | GitHub          |
+| SelfControlledCohort           | Martijn Schuemie            | GitHub          |
+| EvidenceSynthesis              | Martijn Schuemie            | CRAN            |
+| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | GitHub          |
 | EmpiricalCalibration           | Martijn Schuemie            | CRAN            |
-| MethodEvaluation               | Martijn Schuemie            | HADES           |
-| CohortDiagnostics              | Gowtham Rao                 | HADES           |
+| MethodEvaluation               | Martijn Schuemie            | GitHub          |
+| CohortDiagnostics              | Gowtham Rao                 | GitHub          |
 | Cyclops                        | Marc Suchard                | CRAN            |
 | DatabaseConnector              | Martijn Schuemie            | CRAN            |
 | SqlRender                      | Martijn Schuemie            | CRAN            |
 | ParallelLogger                 | Martijn Schuemie            | CRAN            |
-| FeatureExtraction              | Martijn Schuemie            | HADES           |
+| FeatureExtraction              | Martijn Schuemie            | GitHub          |
 | Andromeda                      | Martijn Schuemie            | CRAN            |
-| BigKnn                         | Martijn Schuemie            | HADES           |
-| ROhdsiWebApi                   | Gowtham Rao                 | HADES           |
-| OhdsiSharing                   | Martijn Schuemie            | HADES           |
-| Hydra                          | Martijn Schuemie            | HADES           |
+| BigKnn                         | Martijn Schuemie            | GitHub          |
+| ROhdsiWebApi                   | Gowtham Rao                 | GitHub          |
+| OhdsiSharing                   | Martijn Schuemie            | GitHub          |
+| Hydra                          | Martijn Schuemie            | GitHub          |
 | Eunomia                        | Frank DeFalco               | CRAN            |
 
 # Maintainers
@@ -36,7 +36,7 @@ The package maintainers have final responsibility and authority over their respe
 We currently distinguish the following stages in a package life cycle:
 
 1. **Candidate**: The R package is being considered for inclusion in HADES, but does not yet meet all requirements.
-2. **HADES**: The package meets all requirements for inclusion in HADES, and is recommended for use in OHDSI community studies.
+2. **GitHub**: The package meets all requirements for inclusion in HADES, and is recommended for use in OHDSI community studies. Installation must be done via GitHub.
 3. **CRAN**: The package is available in CRAN.
 
 ## Requirements for packages in HADES

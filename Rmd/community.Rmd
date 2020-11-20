@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **November 19, 2020**
+Date: **December 18, 2020**
 
 Time (DST where appropriate):
 
@@ -36,6 +36,8 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 ## Prior meetings
 
 ### 2020
+
+- November 19: *Study packages & CDM v6*. [Notes](meetings/Hades19Nov2020.docx).
 
 - October 15: *HADES kickoff, versioning and releasing*. [Notes](meetings/Hades15Oct2020.docx), [slides](meetings/HADESkickoff.pptx), and [recording](https://drive.google.com/file/d/1N9_5GGdX4JNNugJohVZ8h_ZjwO91_GQ9/view?usp=sharing).
 

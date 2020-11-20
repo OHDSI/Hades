@@ -2,7 +2,7 @@ order,name,section,description,inCran,pages
 1,CohortMethod,Population-level estimation,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE
 2,SelfControlledCaseSeries,Population-level estimation,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE
 3,SelfControlledCohort,Population-level estimation,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE
-4,EvidenceSynthesis,Population-level estimation,"Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.",FALSE,TRUE
+4,EvidenceSynthesis,Population-level estimation,"Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.",TRUE,TRUE
 6,PatientLevelPrediction,Patient-level prediction,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE
 7,EmpiricalCalibration,Evidence Quality,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE
 8,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE
