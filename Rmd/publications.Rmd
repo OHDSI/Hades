@@ -9,11 +9,15 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Morales DR, Conover MM, You SC, et al. [Renin-angiotensin system blockers and susceptibility to COVID-19: an international, open science, cohort analysis.](https://doi.org/10.1016/S2589-7500(20)30289-2) Lancet Digit Health. 2020 Dec 17:S2589-7500(20)30289-2. doi: 10.1016/S2589-7500(20)30289-2. 
+
+- You SC, Rho Y, Bikdeli B, et al. [Association of Ticagrelor vs Clopidogrel With Net Adverse Clinical Events in Patients With Acute Coronary Syndrome Undergoing Percutaneous Coronary Intervention.](https://doi.org/10.1001/jama.2020.16167) JAMA. 2020 Oct 27;324(16):1640-1650. doi: 10.1001/jama.2020.16167.
+
+- Burn E, You SC, Sena AG, et al. [Deep phenotyping of 34,128 adult patients hospitalised with COVID-19 in an international network study.](https://doi.org/10.1038/s41467-020-18849-z) Nat Commun. 2020 Oct 6;11(1):5009. doi: 10.1038/s41467-020-18849-z.
+
 - Lane JCE, Weaver J, Kostka K, et al. [Risk of hydroxychloroquine alone and in combination with azithromycin in the treatment of rheumatoid arthritis: a multinational, retrospective study.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7442425/) Lancet Rheumatology. 2020 Aug 21.
 
 - Kim Y, Tian Y, Yang J, et al. [Comparative safety and effectiveness of alendronate versus raloxifene in women with osteoporosis.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7338498/) Sci Rep. 2020 Jul 6;10(1):11115. 
-
-- Reps JM, Williams RD, You SC, et al. [Feasibility and evaluation of a large-scale external validation approach for patient-level prediction in an international data network: validation of models predicting stroke in female patients newly diagnosed with atrial fibrillation.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7201646/) BMC Med Res Methodol. 2020 May 6;20(1):102.
 
 - Hripcsak G, Suchard MA, Shea S, et al. [Comparison of Cardiovascular and Safety Outcomes of Chlorthalidone vs Hydrochlorothiazide to Treat Hypertension.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2760777) JAMA Intern Med. 2020 Feb 17.
 
@@ -50,7 +54,13 @@ These papers were written using HADES.
 
 # Methods research
 
+- Thurin NH, Lassalle R, Schuemie M, et al. [Empirical assessment of case-based methods for identification of drugs associated with acute liver injury in the French National Healthcare System database (SNDS).](https://doi.org/10.1002/pds.5161) Pharmacoepidemiol Drug Saf. 2020 Oct 25. doi: 10.1002/pds.5161. 
+
 - Schuemie MJ, Ryan PB, Pratt N, et al. [Large-scale evidence generation and evaluation across a network of databases (LEGEND): assessing validity using hypertension as a case study.](https://academic.oup.com/jamia/article/27/8/1268/5895564) J Am Med Inform Assoc. 2020 Aug 1;27(8):1268-1277.
+
+- Thurin NH, Lassalle R, Schuemie M, et al. [Empirical assessment of case-based methods for identification of drugs associated with upper gastrointestinal bleeding in the French National Healthcare System database (SNDS).](https://doi.org/10.1002/pds.5038) Pharmacoepidemiol Drug Saf. 2020 Aug;29(8):890-903. doi: 10.1002/pds.5038.
+
+- Reps JM, Williams RD, You SC, et al. [Feasibility and evaluation of a large-scale external validation approach for patient-level prediction in an international data network: validation of models predicting stroke in female patients newly diagnosed with atrial fibrillation.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7201646/) BMC Med Res Methodol. 2020 May 6;20(1):102.
 
 - Schuemie MJ, Cepeda MS, Suchard MA, et al. [How Confident Are We About Observational Findings in Health Care: A Benchmark Study](https://hdsr.mitpress.mit.edu/pub/fxz7kr65) Harvard Data Science Review, 2(1).
 

@@ -24,7 +24,7 @@ The easiest way to create a GitHub PAT is by using the [usethis](https://usethis
 ```{r eval=FALSE}
 install.packages("usethis")
 library(usethis)
-browse_github_pat(scopes = c("(no scope)"), description = "R:GITHUB_PAT", host = "https://github.com")
+create_github_token(scopes = c("(no scope)"), description = "R:GITHUB_PAT", host = "https://github.com")
 ```
 
 You may need to log on to GitHub. Note that the PAT does not require any of the permissions listed, so you can leave all checkboxes unchecked. Scroll down and click on 'Generate token' to generate your PAT. Your PAT is a sequence of 40 letters and numbers. Make sure to copy your PAT, because you will not be able to see it again once you close your browser!
