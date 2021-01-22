@@ -7,7 +7,7 @@ output:
 ---
 # The develop branch
 
-All development should be done in the `develop` branch of the package GithHub repository. The aim should be to have a workable version in `develop` branch, so **make sure your package passes R check locally before pushing to the `develop` branch**.
+All development should be done in the `develop` branch of the package GithHub repository. The aim should be to have a workable version in `develop` branch, so **make sure your package passes R CMD check locally before pushing to the `develop` branch**.
 
 # The master branch
 
@@ -15,7 +15,7 @@ The head of the `master` branch should be the latest released version of the pac
 
 # Continuous integration
 
-All branches are monitored by [travis](https://travis-ci.org/github/OHDSI). Travis is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers.
+All branches are monitored by [Github Actions](https://docs.github.com/en/actions/quickstart). Github Actions is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R CMD check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers.
 
 # Version numbering
 
@@ -43,7 +43,7 @@ Only the package maintainer may create a new release. The release should be prep
 	- Regerate the package website using `pkgdown`.
 
 
-3. Make sure the package passes R check, both locally and on travis.
+3. Make sure the package passes R check, both locally and on Github Actions.
 
 For those packages that go into CRAN, the following additional step must be taken:
 

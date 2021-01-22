@@ -81,7 +81,7 @@ Unit tests are triggered when
 
 - You manually perform a check of the R package (see the Build tab in R-Studio)
 
-- When the OHDSI Travis CI Server automatically builds the package after a push to the repository
+- When [Github Actions](https://docs.github.com/en/actions/quickstart) automatically builds the package after a push to the repository
 
 You should only push changes to the GitHub repository if they pass R check locally.
 
@@ -91,7 +91,7 @@ We use `codecov` in combination with the `covr` package to measure which lines o
 
 ### Testing functions requiring database access
 
-On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you'll need to specify several environmental variables. These environmental variables should also be available on the OHDSI Travis CI Server.
+On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you'll need to specify several environmental variables. These environmental variables should also be available when running tests using Github Actions.
 
 Some example code in the DatabaseConnector package can be found [here](https://github.com/OHDSI/DatabaseConnector/blob/master/tests/testthat/test-connection.R).
 
