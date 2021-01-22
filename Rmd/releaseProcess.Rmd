@@ -15,7 +15,13 @@ The head of the `master` branch should be the latest released version of the pac
 
 # Continuous integration
 
-All branches are monitored by [Github Actions](https://docs.github.com/en/actions/quickstart). Github Actions is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R CMD check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers.
+All branches are monitored by [Github Actions](https://docs.github.com/en/actions/quickstart). Github Actions is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R CMD check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers. To implement continuous integration using github actions HADES package maintainers need to 
+
+1. From [`CohortMethod`](https://github.com/OHDSI/CohortMethod/tree/develop) repo, copy `.github/workflows/R_CMD_check_Hades.yaml` and `.github/workflows/nightly_cleanup_Hades.yaml` into the `.github/workflows` subdirectory in the new repository.
+2. Add a build status badge to `README.md`: `[![Build Status](https://github.com/OHDSI/<reponame>/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/<reponame>/actions?query=workflow%3AR-CMD-check)`
+3. `git add`, `git commit`, and `git push` the new files.
+4. Ensure that github Actions are now executing by visiting: https://github.com/OHDSI/<reponame>/actions 
+ 
 
 # Version numbering
 
