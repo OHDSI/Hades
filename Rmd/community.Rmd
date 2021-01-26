@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **January 21, 2021**
+Date: **February 18, 2021**
 
 Time (DST where appropriate):
 
@@ -34,6 +34,11 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 ```
 
 ## Prior meetings
+
+### 2021
+
+- January 21: *Study package guidelines, system requirements, GitHub Actions, Objectives and key results*. [Notes](meetings/Hades21Jan2021.docx).
+
 
 ### 2020
 
