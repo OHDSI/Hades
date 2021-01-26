@@ -25,6 +25,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
@@ -82,7 +84,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -363,34 +364,34 @@ div.tocify {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
   </a>
 </li>
 <li>
   <a href="packages.html">
-    <span class="fas fa-cube"></span>
+    <span class="fa fa-cube"></span>
      
     Packages
   </a>
 </li>
 <li>
   <a href="validation.html">
-    <span class="fas fa-clipboard-check"></span>
+    <span class="fa fa-clipboard-check"></span>
      
     Validation
   </a>
 </li>
 <li>
   <a href="publications.html">
-    <span class="fas fa-pen-alt"></span>
+    <span class="fa fa-pen-alt"></span>
      
     Publications
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-life-ring"></span>
+    <span class="fa fa-life-ring"></span>
      
     Support
      
@@ -410,14 +411,14 @@ div.tocify {
 </li>
 <li>
   <a href="contribute.html">
-    <span class="fas fa-hand-paper"></span>
+    <span class="fa fa-hand-paper"></span>
      
     Contribute
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-wrench"></span>
+    <span class="fa fa-wrench"></span>
      
     Developers
      
@@ -463,7 +464,7 @@ div.tocify {
 
 <div id="the-develop-branch" class="section level1">
 <h1>The develop branch</h1>
-<p>All development should be done in the <code>develop</code> branch of the package GithHub repository. The aim should be to have a workable version in <code>develop</code> branch, so <strong>make sure your package passes R check locally before pushing to the <code>develop</code> branch</strong>.</p>
+<p>All development should be done in the <code>develop</code> branch of the package GithHub repository. The aim should be to have a workable version in <code>develop</code> branch, so <strong>make sure your package passes R CMD check locally before pushing to the <code>develop</code> branch</strong>.</p>
 </div>
 <div id="the-master-branch" class="section level1">
 <h1>The master branch</h1>
@@ -471,7 +472,13 @@ div.tocify {
 </div>
 <div id="continuous-integration" class="section level1">
 <h1>Continuous integration</h1>
-<p>All branches are monitored by <a href="https://travis-ci.org/github/OHDSI">travis</a>. Travis is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers.</p>
+<p>All branches are monitored by <a href="https://docs.github.com/en/actions/quickstart">Github Actions</a>. Github Actions is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R CMD check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers. To implement continuous integration using Github Actions HADES package maintainers need to</p>
+<ol style="list-style-type: decimal">
+<li>From <a href="https://github.com/OHDSI/CohortMethod/tree/develop"><code>CohortMethod</code></a> repo, copy <code>.github/workflows/R_CMD_check_Hades.yaml</code> and <code>.github/workflows/nightly_cleanup_Hades.yaml</code> into the <code>.github/workflows</code> subdirectory in the new repository.</li>
+<li>Add a build status badge to <code>README.md</code>: <code>[![Build Status](https://github.com/OHDSI/&lt;reponame&gt;/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/&lt;reponame&gt;/actions?query=workflow%3AR-CMD-check)</code></li>
+<li><code>git add</code>, <code>git commit</code>, and <code>git push</code> the new files.</li>
+<li>Ensure that Github Actions are executing by visiting: <code>https://github.com/OHDSI/&lt;reponame&gt;/actions</code></li>
+</ol>
 </div>
 <div id="version-numbering" class="section level1">
 <h1>Version numbering</h1>
@@ -496,7 +503,7 @@ div.tocify {
 <li>Regenerate any vignette PDFs.</li>
 <li>Regerate the package website using <code>pkgdown</code>.</li>
 </ul></li>
-<li><p>Make sure the package passes R check, both locally and on travis.</p></li>
+<li><p>Make sure the package passes R check, both locally and on Github Actions.</p></li>
 </ol>
 <p>For those packages that go into CRAN, the following additional step must be taken:</p>
 <ol start="4" style="list-style-type: decimal">
