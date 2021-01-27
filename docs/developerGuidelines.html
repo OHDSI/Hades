@@ -25,6 +25,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
@@ -82,7 +84,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -363,34 +364,34 @@ div.tocify {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
   </a>
 </li>
 <li>
   <a href="packages.html">
-    <span class="fas fa-cube"></span>
+    <span class="fa fa-cube"></span>
      
     Packages
   </a>
 </li>
 <li>
   <a href="validation.html">
-    <span class="fas fa-clipboard-check"></span>
+    <span class="fa fa-clipboard-check"></span>
      
     Validation
   </a>
 </li>
 <li>
   <a href="publications.html">
-    <span class="fas fa-pen-alt"></span>
+    <span class="fa fa-pen-alt"></span>
      
     Publications
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-life-ring"></span>
+    <span class="fa fa-life-ring"></span>
      
     Support
      
@@ -410,14 +411,14 @@ div.tocify {
 </li>
 <li>
   <a href="contribute.html">
-    <span class="fas fa-hand-paper"></span>
+    <span class="fa fa-hand-paper"></span>
      
     Contribute
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-wrench"></span>
+    <span class="fa fa-wrench"></span>
      
     Developers
      
@@ -519,7 +520,7 @@ test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
 <p>Unit tests are triggered when</p>
 <ul>
 <li><p>You manually perform a check of the R package (see the Build tab in R-Studio)</p></li>
-<li><p>When the OHDSI Travis CI Server automatically builds the package after a push to the repository</p></li>
+<li><p>When <a href="https://docs.github.com/en/actions/quickstart">Github Actions</a> automatically builds the package after a push to the repository</p></li>
 </ul>
 <p>You should only push changes to the GitHub repository if they pass R check locally.</p>
 </div>
@@ -529,7 +530,7 @@ test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
 </div>
 <div id="testing-functions-requiring-database-access" class="section level3">
 <h3>Testing functions requiring database access</h3>
-<p>On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you’ll need to specify several environmental variables. These environmental variables should also be available on the OHDSI Travis CI Server.</p>
+<p>On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you’ll need to specify several environmental variables. These environmental variables should also be available when running tests using Github Actions.</p>
 <p>Some example code in the DatabaseConnector package can be found <a href="https://github.com/OHDSI/DatabaseConnector/blob/master/tests/testthat/test-connection.R">here</a>.</p>
 </div>
 </div>

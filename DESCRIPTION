@@ -43,7 +43,8 @@ Remotes:
   ohdsi/PatientLevelPrediction,
   ohdsi/MethodEvaluation,
   ohdsi/OhdsiSharing,
-  ohdsi/Hydra
+  ohdsi/Hydra,
+  ohdsi/EvidenceSynthesis
 LazyData: false
 RoxygenNote: 7.1.1
 Encoding: UTF-8
