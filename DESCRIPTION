@@ -33,18 +33,18 @@ Imports:
   OhdsiSharing,
   Hydra
 Remotes:
-  git://github.com/ohdsi/BigKnn.git,
-  git://github.com/ohdsi/ROhdsiWebApi.git,
-  git://github.com/ohdsi/FeatureExtraction.git,
-  git://github.com/ohdsi/CohortDiagnostics.git,
-  git://github.com/ohdsi/CohortMethod.git,
-  git://github.com/ohdsi/SelfControlledCaseSeries.git,
-  git://github.com/ohdsi/SelfControlledCohort.git,
-  git://github.com/ohdsi/PatientLevelPrediction.git,
-  git://github.com/ohdsi/MethodEvaluation.git,
-  git://github.com/ohdsi/OhdsiSharing.git,
-  git://github.com/ohdsi/Hydra.git,
-  git://github.com/ohdsi/EvidenceSynthesis.git
+  url::https://github.com/OHDSI/BigKnn/archive/master.zip,
+  url::https://github.com/OHDSI/ROhdsiWebApi/archive/master.zip,
+  url::https://github.com/OHDSI/FeatureExtraction/archive/master.zip,
+  url::https://github.com/OHDSI/CohortDiagnostics/archive/master.zip,
+  url::https://github.com/OHDSI/CohortMethod/archive/master.zip,
+  url::https://github.com/OHDSI/SelfControlledCaseSeries/archive/master.zip,
+  url::https://github.com/OHDSI/SelfControlledCohort/archive/master.zip,
+  url::https://github.com/OHDSI/PatientLevelPrediction/archive/master.zip,
+  url::https://github.com/OHDSI/MethodEvaluation/archive/master.zip,
+  url::https://github.com/OHDSI/OhdsiSharing/archive/master.zip,
+  url::https://github.com/OHDSI/Hydra/archive/master.zip,
+  url::https://github.com/OHDSI/EvidenceSynthesis/archive/master.zip
 LazyData: false
 RoxygenNote: 7.1.1
 Encoding: UTF-8
