@@ -88,19 +88,19 @@ jobs:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
 
-      - name: Send email to package maintainer
-        if: runner.os == 'macOS' && always()
-        uses: dawidd6/action-send-mail@v2
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
-          from: Github Actions Status
-          # to: address is the package maintainer
-          to: msuchard@ucla.edu
+#      - name: Send email to package maintainer
+#        if: runner.os == 'macOS' && failure()
+#        uses: dawidd6/action-send-mail@v2
+#        with:
+#          server_address: smtp.gmail.com
+#          server_port: 465
+#          username: ${{ secrets.EMAIL_USERNAME }}
+#          password: ${{ secrets.EMAIL_PASSWORD }}
+#          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+#          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+#          from: Github Actions Status
+#          # to: address is the package maintainer
+#          to: msuchard@ucla.edu
 
   Release:
     needs: R-CMD-Check
