@@ -19,14 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
@@ -84,6 +79,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -266,69 +262,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -336,16 +269,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -364,34 +287,34 @@ div.tocify {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fa fa-home"></span>
+    <span class="fas fa-home"></span>
      
   </a>
 </li>
 <li>
   <a href="packages.html">
-    <span class="fa fa-cube"></span>
+    <span class="fas fa-cube"></span>
      
     Packages
   </a>
 </li>
 <li>
   <a href="validation.html">
-    <span class="fa fa-clipboard-check"></span>
+    <span class="fas fa-clipboard-check"></span>
      
     Validation
   </a>
 </li>
 <li>
   <a href="publications.html">
-    <span class="fa fa-pen-alt"></span>
+    <span class="fas fa-pen-alt"></span>
      
     Publications
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-life-ring"></span>
+    <span class="fas fa-life-ring"></span>
      
     Support
      
@@ -411,14 +334,14 @@ div.tocify {
 </li>
 <li>
   <a href="contribute.html">
-    <span class="fa fa-hand-paper"></span>
+    <span class="fas fa-hand-paper"></span>
      
     Contribute
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-wrench"></span>
+    <span class="fas fa-wrench"></span>
      
     Developers
      
@@ -463,139 +386,161 @@ div.tocify {
 
 
 <table>
+<colgroup>
+<col width="28%" />
+<col width="25%" />
+<col width="11%" />
+<col width="19%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Package</th>
 <th align="left">Maintainer(s)</th>
-<th align="center">Status</th>
+<th align="center">Availability</th>
+<th align="center">Build status</th>
+<th align="center">Coverage</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">CohortMethod</td>
-<td align="left">Martijn Schuemie</td>
-<td align="center">GitHub</td>
-</tr>
-<tr class="even">
-<td align="left">SelfControlledCaseSeries</td>
-<td align="left">Martijn Schuemie</td>
-<td align="center">GitHub</td>
-</tr>
-<tr class="odd">
-<td align="left">SelfControlledCohort</td>
-<td align="left">Martijn Schuemie</td>
-<td align="center">GitHub</td>
-</tr>
-<tr class="even">
-<td align="left">EvidenceSynthesis</td>
+<td align="left">Andromeda</td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
-</tr>
-<tr class="odd">
-<td align="left">PatientLevelPrediction</td>
-<td align="left">Jenna Reps &amp; Peter Rijnbeek</td>
-<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/Andromeda/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Andromeda/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/Andromeda?branch=master"><img src="https://codecov.io/github/OHDSI/Andromeda/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="even">
-<td align="left">EmpiricalCalibration</td>
-<td align="left">Martijn Schuemie</td>
-<td align="center">CRAN</td>
-</tr>
-<tr class="odd">
-<td align="left">MethodEvaluation</td>
+<td align="left">BigKnn</td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/BigKnn/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/BigKnn/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/BigKnn?branch=master"><img src="https://codecov.io/github/OHDSI/BigKnn/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">CohortDiagnostics</td>
 <td align="left">Gowtham Rao</td>
 <td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/CohortDiagnostics/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/CohortDiagnostics/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/CohortDiagnostics?branch=master"><img src="https://codecov.io/github/OHDSI/CohortDiagnostics/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="even">
+<td align="left">CohortMethod</td>
+<td align="left">Martijn Schuemie</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/CohortMethod/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/CohortMethod/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/CohortMethod?branch=master"><img src="https://codecov.io/github/OHDSI/CohortMethod/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
 <td align="left">Cyclops</td>
 <td align="left">Marc Suchard</td>
 <td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/Cyclops/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Cyclops/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/Cyclops?branch=master"><img src="https://codecov.io/github/OHDSI/Cyclops/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="even">
 <td align="left">DatabaseConnector</td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/DatabaseConnector/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/DatabaseConnector/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/DatabaseConnector?branch=master"><img src="https://codecov.io/github/OHDSI/DatabaseConnector/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
-<td align="left">SqlRender</td>
+<td align="left">EmpiricalCalibration</td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/EmpiricalCalibration/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/EmpiricalCalibration/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/EmpiricalCalibration?branch=master"><img src="https://codecov.io/github/OHDSI/EmpiricalCalibration/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="even">
-<td align="left">ParallelLogger</td>
-<td align="left">Martijn Schuemie</td>
+<td align="left">Eunomia</td>
+<td align="left">Frank DeFalco</td>
 <td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/Eunomia/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Eunomia/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/Eunomia?branch=master"><img src="https://codecov.io/github/OHDSI/Eunomia/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
+<td align="left">EvidenceSynthesis</td>
+<td align="left">Martijn Schuemie</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/EvidenceSynthesis/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/EvidenceSynthesis/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/EvidenceSynthesis?branch=master"><img src="https://codecov.io/github/OHDSI/EvidenceSynthesis/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="even">
 <td align="left">FeatureExtraction</td>
-<td align="left">Martijn Schuemie</td>
+<td align="left">Anthony Sena</td>
 <td align="center">GitHub</td>
-</tr>
-<tr class="even">
-<td align="left">Andromeda</td>
-<td align="left">Martijn Schuemie</td>
-<td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/FeatureExtraction/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/FeatureExtraction/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/FeatureExtraction?branch=master"><img src="https://codecov.io/github/OHDSI/FeatureExtraction/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
-<td align="left">BigKnn</td>
+<td align="left">Hydra</td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/Hydra/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Hydra/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/Hydra?branch=master"><img src="https://codecov.io/github/OHDSI/Hydra/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="even">
-<td align="left">ROhdsiWebApi</td>
-<td align="left">Gowtham Rao</td>
+<td align="left">MethodEvaluation</td>
+<td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/MethodEvaluation/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/MethodEvaluation/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/MethodEvaluation?branch=master"><img src="https://codecov.io/github/OHDSI/MethodEvaluation/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
 <td align="left">OhdsiSharing</td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/OhdsiSharing/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/OhdsiSharing/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/OhdsiSharing?branch=master"><img src="https://codecov.io/github/OHDSI/OhdsiSharing/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="even">
-<td align="left">Hydra</td>
+<td align="left">ParallelLogger</td>
 <td align="left">Martijn Schuemie</td>
-<td align="center">GitHub</td>
+<td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/ParallelLogger/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/ParallelLogger/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/ParallelLogger?branch=master"><img src="https://codecov.io/github/OHDSI/ParallelLogger/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
-<td align="left">Eunomia</td>
-<td align="left">Frank DeFalco</td>
+<td align="left">PatientLevelPrediction</td>
+<td align="left">Jenna Reps &amp; Peter Rijnbeek</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/PatientLevelPrediction/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/PatientLevelPrediction/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/PatientLevelPrediction?branch=master"><img src="https://codecov.io/github/OHDSI/PatientLevelPrediction/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="even">
+<td align="left">ROhdsiWebApi</td>
+<td align="left">Gowtham Rao</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/ROhdsiWebApi/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/ROhdsiWebApi/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/ROhdsiWebApi?branch=master"><img src="https://codecov.io/github/OHDSI/ROhdsiWebApi/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="odd">
+<td align="left">SelfControlledCaseSeries</td>
+<td align="left">Martijn Schuemie</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/SelfControlledCaseSeries/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/SelfControlledCaseSeries/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/SelfControlledCaseSeries?branch=master"><img src="https://codecov.io/github/OHDSI/SelfControlledCaseSeries/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="even">
+<td align="left">SelfControlledCohort</td>
+<td align="left">Martijn Schuemie</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/SelfControlledCohort/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/SelfControlledCohort/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/SelfControlledCohort?branch=master"><img src="https://codecov.io/github/OHDSI/SelfControlledCohort/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="odd">
+<td align="left">SqlRender</td>
+<td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
+<td align="center"><a href="https://github.com/OHDSI/SqlRender/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/SqlRender/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/SqlRender?branch=master"><img src="https://codecov.io/github/OHDSI/SqlRender/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 </tbody>
 </table>
-<div id="maintainers" class="section level1">
-<h1>Maintainers</h1>
-<p>The package maintainers have final responsibility and authority over their respective packages. Only a maintainer may create a new release (following the <a href="releaseProcess.html">release process</a>), accept pull requests, and push to the master branch.</p>
-</div>
-<div id="package-life-cycle" class="section level1">
-<h1>Package life cycle</h1>
-<p>We currently distinguish the following stages in a package life cycle:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Candidate</strong>: The R package is being considered for inclusion in HADES, but does not yet meet all requirements.</li>
-<li><strong>GitHub</strong>: The package meets all requirements for inclusion in HADES, and is recommended for use in OHDSI community studies. Installation must be done via GitHub.</li>
-<li><strong>CRAN</strong>: The package is available in CRAN.</li>
-</ol>
-<div id="requirements-for-packages-in-hades" class="section level2">
-<h2>Requirements for packages in HADES</h2>
-<p>For a package to be eligible for admission to HADES, it should meet the following criteria:</p>
-<ol style="list-style-type: decimal">
-<li><p>Adhere to all guidelines documented on this site.</p></li>
-<li><p>For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)</p></li>
-<li><p>For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.</p></li>
-</ol>
-<p>The final decision for including a package in HADES lies with the leaders of the OHDSI <a href="https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:patient-level_prediction">Patient-Level Prediction Workgroup</a> and <a href="https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:est-methods">Population-Level Estimation Workgroup</a>.</p>
-</div>
-</div>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -628,32 +573,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

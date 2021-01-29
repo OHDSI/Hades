@@ -10,9 +10,9 @@ Below is a high-level overview of the development roadmap for HADES. Note that e
 
 # Short term
 
-These tasks are in progress, and should be finished within the next two months:
+These tasks are in progress, and should be finished within the next six months:
 
-- Move `Eunomia` to CRAN.
+- Increase unit test coverage to > 80% for all packages
 
 # Medium term
 
@@ -22,7 +22,8 @@ These task will be taken on after the short term tasks are complete. We expect t
 - Add the `Achilles` package to HADES.  
 - Add support for CDM version 6 to all packages in HADES.
 - Move `FeatureExtraction` into CRAN.
-- Add support for 64-bit integers throughout HADES, but starting with DatabaseConnector.
+- Add support for 64-bit integers throughout HADES.
+- Add study package skeletons for characterization studies.
 
 # Long term
 

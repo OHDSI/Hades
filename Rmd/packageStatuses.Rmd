@@ -2,51 +2,27 @@
 title: "Package statuses"
 output: 
     html_document:
-        toc: TRUE
-        toc_float: TRUE
+        toc: FALSE
 ---
-| Package                        | Maintainer(s)               | Status          |
-| :----------------------------- | :-------------------------- | :-------------: |
-| CohortMethod                   | Martijn Schuemie            | GitHub          |
-| SelfControlledCaseSeries       | Martijn Schuemie            | GitHub          |
-| SelfControlledCohort           | Martijn Schuemie            | GitHub          |
-| EvidenceSynthesis              | Martijn Schuemie            | CRAN            |
-| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | GitHub          |
-| EmpiricalCalibration           | Martijn Schuemie            | CRAN            |
-| MethodEvaluation               | Martijn Schuemie            | GitHub          |
-| CohortDiagnostics              | Gowtham Rao                 | GitHub          |
-| Cyclops                        | Marc Suchard                | CRAN            |
-| DatabaseConnector              | Martijn Schuemie            | CRAN            |
-| SqlRender                      | Martijn Schuemie            | CRAN            |
-| ParallelLogger                 | Martijn Schuemie            | CRAN            |
-| FeatureExtraction              | Martijn Schuemie            | GitHub          |
-| Andromeda                      | Martijn Schuemie            | CRAN            |
-| BigKnn                         | Martijn Schuemie            | GitHub          |
-| ROhdsiWebApi                   | Gowtham Rao                 | GitHub          |
-| OhdsiSharing                   | Martijn Schuemie            | GitHub          |
-| Hydra                          | Martijn Schuemie            | GitHub          |
-| Eunomia                        | Frank DeFalco               | CRAN            |
 
-# Maintainers
-
-The package maintainers have final responsibility and authority over their respective packages. Only a maintainer may create a new release (following the [release process](releaseProcess.html)), accept pull requests, and push to the master branch.
-
-# Package life cycle
-
-We currently distinguish the following stages in a package life cycle:
-
-1. **Candidate**: The R package is being considered for inclusion in HADES, but does not yet meet all requirements.
-2. **GitHub**: The package meets all requirements for inclusion in HADES, and is recommended for use in OHDSI community studies. Installation must be done via GitHub.
-3. **CRAN**: The package is available in CRAN.
-
-## Requirements for packages in HADES
-
-For a package to be eligible for admission to HADES, it should meet the following criteria:
-
-1. Adhere to all guidelines documented on this site.
-
-2. For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)
-
-3. For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.
-
-The final decision for including a package in HADES lies with the leaders of the OHDSI [Patient-Level Prediction Workgroup](https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:patient-level_prediction) and [Population-Level Estimation Workgroup](https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:est-methods).
+| Package             | Maintainer(s)     | Availability | Build status | Coverage   |
+| :------------------ | :---------------- | :------: | :-----------: | :--------: |
+| Andromeda | Martijn Schuemie  | CRAN | [![Build Status](https://github.com/OHDSI/Andromeda/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/Andromeda/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/Andromeda/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/Andromeda?branch=master) |
+| BigKnn | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/BigKnn/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/BigKnn/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/BigKnn/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/BigKnn?branch=master) |
+| CohortDiagnostics | Gowtham Rao | GitHub | [![Build Status](https://github.com/OHDSI/CohortDiagnostics/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/CohortDiagnostics/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/CohortDiagnostics/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/CohortDiagnostics?branch=master) |
+| CohortMethod | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/CohortMethod/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/CohortMethod/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/CohortMethod/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/CohortMethod?branch=master) |
+| Cyclops | Marc Suchard | CRAN | [![Build Status](https://github.com/OHDSI/Cyclops/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/Cyclops/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/Cyclops/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/Cyclops?branch=master) |
+| DatabaseConnector | Martijn Schuemie  | CRAN | [![Build Status](https://github.com/OHDSI/DatabaseConnector/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/DatabaseConnector/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/DatabaseConnector/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/DatabaseConnector?branch=master) |
+| EmpiricalCalibration | Martijn Schuemie  | CRAN | [![Build Status](https://github.com/OHDSI/EmpiricalCalibration/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/EmpiricalCalibration/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/EmpiricalCalibration/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/EmpiricalCalibration?branch=master) |
+| Eunomia | Frank DeFalco | CRAN | [![Build Status](https://github.com/OHDSI/Eunomia/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/Eunomia/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/Eunomia/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/Eunomia?branch=master) |
+| EvidenceSynthesis | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/EvidenceSynthesis/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/EvidenceSynthesis/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/EvidenceSynthesis/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/EvidenceSynthesis?branch=master) |
+| FeatureExtraction | Anthony Sena | GitHub | [![Build Status](https://github.com/OHDSI/FeatureExtraction/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/FeatureExtraction/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/FeatureExtraction/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/FeatureExtraction?branch=master) |
+| Hydra | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/Hydra/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/Hydra/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/Hydra/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/Hydra?branch=master) |
+| MethodEvaluation | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/MethodEvaluation/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/MethodEvaluation/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/MethodEvaluation/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/MethodEvaluation?branch=master) |
+| OhdsiSharing | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/OhdsiSharing/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/OhdsiSharing/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/OhdsiSharing/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/OhdsiSharing?branch=master) |
+| ParallelLogger | Martijn Schuemie  | CRAN | [![Build Status](https://github.com/OHDSI/ParallelLogger/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/ParallelLogger/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/ParallelLogger/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/ParallelLogger?branch=master) |
+| PatientLevelPrediction | Jenna Reps & Peter Rijnbeek | GitHub | [![Build Status](https://github.com/OHDSI/PatientLevelPrediction/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/PatientLevelPrediction/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/PatientLevelPrediction/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/PatientLevelPrediction?branch=master) |
+| ROhdsiWebApi | Gowtham Rao | GitHub | [![Build Status](https://github.com/OHDSI/ROhdsiWebApi/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/ROhdsiWebApi/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/ROhdsiWebApi/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/ROhdsiWebApi?branch=master) |
+| SelfControlledCaseSeries | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/SelfControlledCaseSeries/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/SelfControlledCaseSeries/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/SelfControlledCaseSeries/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/SelfControlledCaseSeries?branch=master) |
+| SelfControlledCohort | Martijn Schuemie  | GitHub | [![Build Status](https://github.com/OHDSI/SelfControlledCohort/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/SelfControlledCohort/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/SelfControlledCohort/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/SelfControlledCohort?branch=master) |
+| SqlRender | Martijn Schuemie  | CRAN | [![Build Status](https://github.com/OHDSI/SqlRender/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/SqlRender/actions?query=workflow%3AR-CMD-check) | [![codecov.io](https://codecov.io/github/OHDSI/SqlRender/coverage.svg?branch=master)](https://codecov.io/github/OHDSI/SqlRender?branch=master) |
