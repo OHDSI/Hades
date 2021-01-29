@@ -89,7 +89,7 @@ jobs:
           path: check
 
       - name: Send email to package maintainer
-        if: always()
+        if: runner.os == 'macOS' && always()
         uses: dawidd6/action-send-mail@v2
         with:
           server_address: smtp.gmail.com
