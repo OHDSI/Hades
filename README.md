@@ -1,8 +1,15 @@
 # Health Analytics Data-to-Evidence Suite (HADES)
 
+[![Build Status](https://github.com/OHDSI/Hades/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/Hades/actions?query=workflow%3AR-CMD-check)
+
 Introduction
 ============
 HADES is a set of open source R packages for large scale analytics, including population characterization, population-level causal effect estimation, and patient-level prediction.
+
+This GitHub repository has two purposes:
+
+1. Provide a single R package that, when you install it, you will automatically install all HADES packages.
+2. Host the main HADES website.
 
 Installation
 ============
