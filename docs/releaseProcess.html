@@ -473,10 +473,20 @@ div.tocify {
 <h1>Continuous integration</h1>
 <p>All branches are monitored by <a href="https://docs.github.com/en/actions/quickstart">Github Actions</a>. Github Actions is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R CMD check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers. To implement continuous integration using Github Actions HADES package maintainers need to</p>
 <ol style="list-style-type: decimal">
-<li>From <a href="https://github.com/OHDSI/CohortMethod/tree/develop"><code>CohortMethod</code></a> repo, copy <code>.github/workflows/R_CMD_check_Hades.yaml</code> and <code>.github/workflows/nightly_cleanup_Hades.yaml</code> into the <code>.github/workflows</code> subdirectory in the new repository.</li>
-<li>Add a build status badge to <code>README.md</code>: <code>[![Build Status](https://github.com/OHDSI/&lt;reponame&gt;/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/&lt;reponame&gt;/actions?query=workflow%3AR-CMD-check)</code></li>
-<li><code>git add</code>, <code>git commit</code>, and <code>git push</code> the new files.</li>
-<li>Ensure that Github Actions are executing by visiting: <code>https://github.com/OHDSI/&lt;reponame&gt;/actions</code></li>
+<li><p>From the <a href="https://github.com/OHDSI/EvidenceSynthesis"><code>EvidenceSynthesis</code></a> repo, copy these files into the new repository in their respective subfolders:</p>
+<ul>
+<li><code>.github/workflows/R_CMD_check_Hades.yaml</code></li>
+<li><code>.github/workflows/nightly_cleanup_Hades.yaml</code></li>
+<li><code>compare_versions</code></li>
+<li><code>deploy.sh</code></li>
+</ul></li>
+<li><p>Add these lines to your <code>.Rbuildignore</code> file if they are not already there:</p>
+<pre><code>.github
+deploy.sh
+compare_versions</code></pre></li>
+<li><p>Add a build status badge to <code>README.md</code>: <code>[![Build Status](https://github.com/OHDSI/&lt;reponame&gt;/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/&lt;reponame&gt;/actions?query=workflow%3AR-CMD-check)</code></p></li>
+<li><p><code>git add</code>, <code>git commit</code>, and <code>git push</code> the new files.</p></li>
+<li><p>Ensure that Github Actions are executing by visiting: <code>https://github.com/OHDSI/&lt;reponame&gt;/actions</code></p></li>
 </ol>
 </div>
 <div id="version-numbering" class="section level1">
@@ -511,7 +521,7 @@ div.tocify {
 <p>Once all these steps are completed and commited to the <code>develop</code> branch, the package can be released by merging <code>develop</code> into <code>master</code>.</p>
 <p>Pushing changes to the <code>master</code> branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:</p>
 <ol style="list-style-type: decimal">
-<li><p>A new tag is created in the GitHub repo with the version number.</p></li>
+<li><p>A new release is created in the GitHub repo with the version number.</p></li>
 <li><p>The package is pushed to the <a href="https://github.com/OHDSI/drat">OHDSI <code>drat</code> repo</a>.</p></li>
 </ol>
 <p>For those packages that go into CRAN, the package can be submitted to CRAN using <code>devtools::release()</code>.</p>
