@@ -19,12 +19,12 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **February 18, 2021**
+Date: **March 18, 2021**
 
 Time (DST where appropriate):
 
-- **6pm Central European time**
-- **5pm UK time**
+- **5pm Central European time**
+- **4pm UK time**
 - **12pm (noon) Eastern Time** (New York / New Jersey / Pennsylvania)
 - **9am Pacific Time** (Los Angeles / Stanford)
 
@@ -37,6 +37,8 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 
 ### 2021
 
+- February 18: *Continuous Integration, OKRs, package maintainer expectations, 64-bit ints*. [Notes](meetings/Hades18Feb2021.docx)
+
 - January 21: *Study package guidelines, system requirements, GitHub Actions, Objectives and key results*. [Notes](meetings/Hades21Jan2021.docx).
 
 
@@ -47,4 +49,16 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 - November 19: *Study packages & CDM v6*. [Notes](meetings/Hades19Nov2020.docx).
 
 - October 15: *HADES kickoff, versioning and releasing*. [Notes](meetings/Hades15Oct2020.docx), [slides](meetings/HADESkickoff.pptx), and [recording](https://drive.google.com/file/d/1N9_5GGdX4JNNugJohVZ8h_ZjwO91_GQ9/view?usp=sharing).
+
+# Package maintainers
+
+Each package in HADES has one or two maintainers. These maintainers have the final responsibility and authority over their package. These are the expectations of package maintainers:
+
+- Represent the package in the HADES group discussions.
+- Ensure that issues are resolved in a timely manner.
+- Review and merge pull requests.
+- Create releases (and communicate upcoming releases to those that need to know).
+- Adapt the package to changes in its dependencies (including R packages, R itself, and the infrastructure).
+- Develop new functionality depending on the needs of the community.
+- Adhere to and enforce the HADES standards, such as the [Developer Guidelines](developerGuidelines.html) and [Code Style Guide](codeStyle.html).
 
