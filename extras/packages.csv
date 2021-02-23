@@ -12,9 +12,9 @@ order,name,section,description,inCran,pages,maintainers
 11,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie 
 12,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
 13,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena
-14,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Martijn Schuemie 
+14,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Adam Black
 14,BigKnn,Supporting packages,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,Martijn Schuemie 
 15,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
-16,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Martijn Schuemie 
+16,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
 17,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Martijn Schuemie 
 18,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,TRUE,TRUE,Frank DeFalco
