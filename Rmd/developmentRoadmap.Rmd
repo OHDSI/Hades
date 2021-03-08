@@ -12,7 +12,10 @@ Below is a high-level overview of the development roadmap for HADES. Note that e
 
 These tasks are in progress, and should be finished within the next six months:
 
-- Increase unit test coverage to > 80% for all packages
+- Increase unit test coverage to > 80% for all packages.
+- Add the `CirceR` package to HADES.  
+- Add meta-analysis to the PLE skeleton in `Hydra`.
+- Add competing risk analyses to `CohortMethod`.
 
 # Medium term
 
@@ -22,8 +25,8 @@ These task will be taken on after the short term tasks are complete. We expect t
 - Add the `Achilles` package to HADES.  
 - Add support for CDM version 6 to all packages in HADES.
 - Move `FeatureExtraction` into CRAN.
-- Add support for 64-bit integers throughout HADES.
-- Add study package skeletons for characterization studies.
+- Add study package skeletons for characterization studies to `Hydra`.
+- Add option to use a database backend for all Shiny apps.
 
 # Long term
 
@@ -32,4 +35,5 @@ These rasks are on our radar, but it is unclear when they will be finished.
 - Add the `PheValuator` package to HADES. 
 - Refactor signal injection code in `MethodEvaluation`. The code for positive control synthesis is highly complex, and there are some issues when there are many exposures with length 0. The code should be restructured, with testable units.
 - Move all HADES packages to CRAN.
-- Add more unit tests to all packages.
+- Make Shiny apps more modular.
+- Create a study skeleton in `Hydra` for the self-controlled case series.
