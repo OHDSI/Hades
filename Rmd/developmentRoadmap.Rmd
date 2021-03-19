@@ -13,6 +13,8 @@ Below is a high-level overview of the development roadmap for HADES. Note that e
 These tasks are in progress, and should be finished within the next six months:
 
 - Increase unit test coverage to > 80% for all packages.
+- Add the `Achilles` package to HADES.  
+- Add the `Capr` package to HADES.  
 - Add the `CirceR` package to HADES.  
 - Add meta-analysis to the PLE skeleton in `Hydra`.
 - Add competing risk analyses to `CohortMethod`.
@@ -22,7 +24,6 @@ These tasks are in progress, and should be finished within the next six months:
 These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:
 
 - Add the `DataQualityDashboard` package to HADES.
-- Add the `Achilles` package to HADES.  
 - Add support for CDM version 6 to all packages in HADES.
 - Move `FeatureExtraction` into CRAN.
 - Add study package skeletons for characterization studies to `Hydra`.

@@ -19,12 +19,12 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **March 18, 2021**
+Date: **April 16, 2021**
 
 Time (DST where appropriate):
 
-- **5pm Central European time**
-- **4pm UK time**
+- **6pm Central European time**
+- **5pm UK time**
 - **12pm (noon) Eastern Time** (New York / New Jersey / Pennsylvania)
 - **9am Pacific Time** (Los Angeles / Stanford)
 
@@ -36,6 +36,8 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 ## Prior meetings
 
 ### 2021
+
+- March 18: *Upcoming HADES packages, unit testing*. [Notes](meetings/Hades18Mar2021.docx)
 
 - February 18: *Continuous Integration, OKRs, package maintainer expectations, 64-bit ints*. [Notes](meetings/Hades18Feb2021.docx)
 
