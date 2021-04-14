@@ -19,6 +19,15 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -36,11 +45,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -53,32 +57,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -90,10 +68,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -110,40 +84,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -171,7 +118,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -183,7 +130,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -194,10 +141,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -209,7 +169,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -376,7 +335,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -435,6 +394,15 @@ $(document).ready(function () {
 <td align="center"><a href="https://codecov.io/github/OHDSI/BigKnn?branch=master"><img src="https://codecov.io/github/OHDSI/BigKnn/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
 <tr class="odd">
+<td align="left"><a href="https://github.com/OHDSI/CirceR">CirceR</a></td>
+<td align="left">Chris Knoll</td>
+<td align="center">GitHub</td>
+<td align="center"><a href="https://github.com/OHDSI/CirceR/issues"><img src="https://img.shields.io/github/issues-raw/OHDSI/CirceR?label=%20" alt="Open issues" /></a></td>
+<td align="center"><a href="https://github.com/OHDSI/CirceR/pulls"><img src="https://img.shields.io/github/issues-pr-raw/OHDSI/CirceR?label=%20" alt="Open pull-requests" /></a></td>
+<td align="center"><a href="https://github.com/OHDSI/CirceR/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/CirceR/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
+<td align="center"><a href="https://codecov.io/github/OHDSI/CirceR?branch=master"><img src="https://codecov.io/github/OHDSI/CirceR/coverage.svg?branch=master" alt="codecov.io" /></a></td>
+</tr>
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/CohortDiagnostics">CohortDiagnostics</a></td>
 <td align="left">Gowtham Rao</td>
 <td align="center">GitHub</td>
@@ -443,7 +411,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/CohortDiagnostics/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/CohortDiagnostics/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/CohortDiagnostics?branch=master"><img src="https://codecov.io/github/OHDSI/CohortDiagnostics/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/CohortMethod">CohortMethod</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
@@ -452,7 +420,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/CohortMethod/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/CohortMethod/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/CohortMethod?branch=master"><img src="https://codecov.io/github/OHDSI/CohortMethod/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/Cyclops">Cyclops</a></td>
 <td align="left">Marc Suchard</td>
 <td align="center">CRAN</td>
@@ -461,7 +429,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/Cyclops/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Cyclops/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/Cyclops?branch=master"><img src="https://codecov.io/github/OHDSI/Cyclops/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/DatabaseConnector">DatabaseConnector</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
@@ -470,7 +438,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/DatabaseConnector/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/DatabaseConnector/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/DatabaseConnector?branch=master"><img src="https://codecov.io/github/OHDSI/DatabaseConnector/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/EmpiricalCalibration">EmpiricalCalibration</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
@@ -479,7 +447,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/EmpiricalCalibration/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/EmpiricalCalibration/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/EmpiricalCalibration?branch=master"><img src="https://codecov.io/github/OHDSI/EmpiricalCalibration/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/Eunomia">Eunomia</a></td>
 <td align="left">Frank DeFalco</td>
 <td align="center">CRAN</td>
@@ -488,7 +456,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/Eunomia/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Eunomia/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/Eunomia?branch=master"><img src="https://codecov.io/github/OHDSI/Eunomia/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/EvidenceSynthesis">EvidenceSynthesis</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
@@ -497,7 +465,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/EvidenceSynthesis/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/EvidenceSynthesis/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/EvidenceSynthesis?branch=master"><img src="https://codecov.io/github/OHDSI/EvidenceSynthesis/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/FeatureExtraction">FeatureExtraction</a></td>
 <td align="left">Anthony Sena</td>
 <td align="center">GitHub</td>
@@ -506,7 +474,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/FeatureExtraction/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/FeatureExtraction/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/FeatureExtraction?branch=master"><img src="https://codecov.io/github/OHDSI/FeatureExtraction/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/Hydra">Hydra</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
@@ -515,7 +483,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/Hydra/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/Hydra/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/Hydra?branch=master"><img src="https://codecov.io/github/OHDSI/Hydra/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/MethodEvaluation">MethodEvaluation</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
@@ -524,7 +492,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/MethodEvaluation/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/MethodEvaluation/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/MethodEvaluation?branch=master"><img src="https://codecov.io/github/OHDSI/MethodEvaluation/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/OhdsiSharing">OhdsiSharing</a></td>
 <td align="left">Lee Evans</td>
 <td align="center">GitHub</td>
@@ -533,7 +501,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/OhdsiSharing/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/OhdsiSharing/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/OhdsiSharing?branch=master"><img src="https://codecov.io/github/OHDSI/OhdsiSharing/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/ParallelLogger">ParallelLogger</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
@@ -542,7 +510,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/ParallelLogger/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/ParallelLogger/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/ParallelLogger?branch=master"><img src="https://codecov.io/github/OHDSI/ParallelLogger/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/PatientLevelPrediction">PatientLevelPrediction</a></td>
 <td align="left">Jenna Reps &amp; Peter Rijnbeek</td>
 <td align="center">GitHub</td>
@@ -551,7 +519,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/PatientLevelPrediction/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/PatientLevelPrediction/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/PatientLevelPrediction?branch=master"><img src="https://codecov.io/github/OHDSI/PatientLevelPrediction/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/ROhdsiWebApi">ROhdsiWebApi</a></td>
 <td align="left">Gowtham Rao</td>
 <td align="center">GitHub</td>
@@ -560,7 +528,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/ROhdsiWebApi/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/ROhdsiWebApi/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/ROhdsiWebApi?branch=master"><img src="https://codecov.io/github/OHDSI/ROhdsiWebApi/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/SelfControlledCaseSeries">SelfControlledCaseSeries</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
@@ -569,7 +537,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/SelfControlledCaseSeries/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/SelfControlledCaseSeries/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/SelfControlledCaseSeries?branch=master"><img src="https://codecov.io/github/OHDSI/SelfControlledCaseSeries/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/SelfControlledCohort">SelfControlledCohort</a></td>
 <td align="left">Jamie Gilbert</td>
 <td align="center">GitHub</td>
@@ -578,7 +546,7 @@ $(document).ready(function () {
 <td align="center"><a href="https://github.com/OHDSI/SelfControlledCohort/actions?query=workflow%3AR-CMD-check"><img src="https://github.com/OHDSI/SelfControlledCohort/workflows/R-CMD-check/badge.svg" alt="Build Status" /></a></td>
 <td align="center"><a href="https://codecov.io/github/OHDSI/SelfControlledCohort?branch=master"><img src="https://codecov.io/github/OHDSI/SelfControlledCohort/coverage.svg?branch=master" alt="codecov.io" /></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/OHDSI/SqlRender">SqlRender</a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
@@ -617,7 +585,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

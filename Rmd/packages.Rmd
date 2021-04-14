@@ -39,4 +39,5 @@ Below are the packages included in HADES. For each package a link is provided wi
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/OhdsiSharing">OhdsiSharing</a></h4>Securely sharing (large) files between OHDSI collaborators.</br><a href="https://ohdsi.github.io/OhdsiSharing">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Hydra">Hydra</a></h4>Hydrating package skeletons into executable R study packages based on specifications in JSON format.</br><a href="https://ohdsi.github.io/Hydra">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Eunomia">Eunomia</a></h4>A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.</br><a href="https://ohdsi.github.io/Eunomia">Learn more...</a></li>
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/CirceR">CirceR</a></h4>An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.</br><a href="https://ohdsi.github.io/CirceR">Learn more...</a></li>
 </ul>

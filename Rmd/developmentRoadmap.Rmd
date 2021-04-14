@@ -15,9 +15,9 @@ These tasks are in progress, and should be finished within the next six months:
 - Increase unit test coverage to > 80% for all packages.
 - Add the `Achilles` package to HADES.  
 - Add the `Capr` package to HADES.  
-- Add the `CirceR` package to HADES.  
 - Add meta-analysis to the PLE skeleton in `Hydra`.
 - Add competing risk analyses to `CohortMethod`.
+- Add a skeleton for cohort diagnostics.
 
 # Medium term
 

@@ -18,3 +18,4 @@ order,name,section,description,inCran,pages,maintainers
 16,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
 17,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Martijn Schuemie 
 18,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,TRUE,TRUE,Frank DeFalco
+19,CirceR,Supporting packages,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",FALSE,TRUE,Chris Knoll

@@ -17,6 +17,7 @@ Imports:
   Andromeda,
   DatabaseConnector,
   ParallelLogger,
+  CirceR,
   Cyclops,
   EmpiricalCalibration,
   Eunomia,
@@ -43,7 +44,8 @@ Remotes:
   ohdsi/PatientLevelPrediction,
   ohdsi/MethodEvaluation,
   ohdsi/OhdsiSharing,
-  ohdsi/Hydra
+  ohdsi/Hydra,
+  ohdsi/CirceR
 LazyData: false
 RoxygenNote: 7.1.1
 Encoding: UTF-8
