@@ -9,6 +9,9 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Chan You S, Krumholz HM, Suchard MA, et al. [Comprehensive Comparative Effectiveness and Safety of First-Line β-Blocker Monotherapy in Hypertensive Patients: A Large-Scale Multicenter Observational Study](https://doi.org/10.1161/hypertensionaha.120.16402) Hypertension
+. 2021 May 5;77(5):1528-1538. doi: 10.1161/HYPERTENSIONAHA.120.16402.
+
 - Morales DR, Conover MM, You SC, et al. [Renin-angiotensin system blockers and susceptibility to COVID-19: an international, open science, cohort analysis.](https://doi.org/10.1016/S2589-7500(20)30289-2) Lancet Digit Health. 2020 Dec 17:S2589-7500(20)30289-2. doi: 10.1016/S2589-7500(20)30289-2. 
 
 - You SC, Rho Y, Bikdeli B, et al. [Association of Ticagrelor vs Clopidogrel With Net Adverse Clinical Events in Patients With Acute Coronary Syndrome Undergoing Percutaneous Coronary Intervention.](https://doi.org/10.1001/jama.2020.16167) JAMA. 2020 Oct 27;324(16):1640-1650. doi: 10.1001/jama.2020.16167.
@@ -53,6 +56,10 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Reps JM, Rijnbeek P, Cuthbert A, et al. [An empirical analysis of dealing with patients who are lost to follow-up when developing prognostic models using a cohort design](https://doi.org/10.1186/s12911-021-01408-x) BMC Med Inform Decis Mak. 2021 Feb 6;21(1):43. doi: 10.1186/s12911-021-01408-x.
+
+- Schuemie MJ, Weinstein R, Ryan PB, et al. [Quantifying bias in epidemiologic studies evaluating the association between acetaminophen use and cancer](https://doi.org/10.1016/j.yrtph.2021.104866) Regul Toxicol Pharmacol. 2021 Mar;120:104866. doi: 10.1016/j.yrtph.2021.104866.
 
 - Thurin NH, Lassalle R, Schuemie M, et al. [Empirical assessment of case-based methods for identification of drugs associated with acute liver injury in the French National Healthcare System database (SNDS).](https://doi.org/10.1002/pds.5161) Pharmacoepidemiol Drug Saf. 2020 Oct 25. doi: 10.1002/pds.5161. 
 

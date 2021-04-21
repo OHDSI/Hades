@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **April 16, 2021**
+Date: **May 20, 2021**
 
 Time (DST where appropriate):
 
@@ -36,6 +36,8 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 ## Prior meetings
 
 ### 2021
+
+- April 15: *Unit testing, CDM 5.4.0, HADES paper*. [Notes](meetings/Hades15Apr2021.docx)
 
 - March 18: *Upcoming HADES packages, unit testing*. [Notes](meetings/Hades18Mar2021.docx)
 
