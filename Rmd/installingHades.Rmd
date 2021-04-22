@@ -6,6 +6,8 @@ output:
         toc_float: TRUE
 ---
 
+These instructions are also demonstrated in [this video](https://youtu.be/ole3IFMLSYA). 
+
 Each HADES package site describes how you can install that individual package (including its dependency). On this page you will learn how you can install all HADES packages in one go, or update any HADES packages you have already installed. But before proceeding, make sure you have R, RTools (for Windows) and Java installed properly, as described [here](rSetup.html).
 
 # GitHub Personal Access Token
