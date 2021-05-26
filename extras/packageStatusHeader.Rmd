@@ -7,6 +7,7 @@ output:
 
 The table below lists, for each of the HADES packages, the following details:
 
+- **Version**: The latest released version.
 - **Maintainer(s)**: The persons responsible for the package. Only maintainers can create releases.
 - **Availability**: whether the package can be installed from CRAN (using `install.packages()`), or needs to be installed from GitHub (using `remotes::install_github()`).
 - **Open issues**: The number of open issues.
