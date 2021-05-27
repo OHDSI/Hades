@@ -88,13 +88,7 @@ jobs:
           remotes::install_deps(dependencies = TRUE, INSTALL_opts=c("--no-multiarch"))
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
-        
-      - name: Install covr
-        if: runner.os == 'macOS'
-        run: |
-          remotes::install_cran("covr")
-        shell: Rscript {0}
-        
+                
       - name: Remove check folder if exists
         if: runner.os == 'macOS'
         run: unlink("check", recursive = TRUE)
@@ -119,12 +113,7 @@ jobs:
         with:
           name: package_tarball
           path: check/*.tar.gz
-      
-      - name: Test coverage
-        if: runner.os == 'macOS'
-        run: covr::codecov()
-        shell: Rscript {0}
-        
+              
   Release:
     needs: R-CMD-Check
   
