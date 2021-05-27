@@ -34,28 +34,12 @@ if ($monotonic != 0) {
 
 if ($monotonic == 0 & $ARGV[0] eq "--tag") {
 
-	open(GIT_TAG, "git tag v$r_major.$r_minor.$r_mod |");
-
-	$fail = 0;
-	while ($line = <GIT_TAG>) {
-		if ($line =~ /fatal/) {
-			$fail = 1;
-		}
-		print "tag: $line";
-	} # TODO Check for errors
-	close(GIT_TAG);
-	print "tag: END\n\n";
-
-	if ($fail eq 1) {
-		exit(-1);
-	}
-
-	$cmd = "git config user.name \"Marc A. Suchard\"; " .
-	       "git config user.email \"msuchard@ucla.edu\"; " .
+	$cmd = "git config user.name \"Martijn Schuemie\"; " .
+	       "git config user.email \"schuemie@ohdsi.org\"; " .
 	       "git tag v$r_major.$r_minor.$r_mod ; " .
-	       "git push -q https://\$GH_TOKEN\@github.com/OHDSI/\$PKG_NAME.git --tags";
+	       "git push -q https://\$GH_TOKEN\@github.com/\$GITHUB_REPOSITORY.git --tags";
 
-	print "cmd: $cmd\n";
+	print "cmd: $cmd\n"; 
 
 	open(GIT_PUSH, "$cmd |");
 	while ($line = <GIT_PUSH>) {
