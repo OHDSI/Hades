@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **June 17, 2021**
+Date: **July  15, 2021**
 
 Time (DST where appropriate):
 
@@ -36,6 +36,8 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 ## Prior meetings
 
 ### 2021
+
+- June 17: *Unit-test-a-thon, integration testing*. [Notes](meetings/Hades17June021.docx)
 
 - May 20: *PLP GUI*. [Notes](meetings/Hades20May2021.docx)
 
