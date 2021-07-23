@@ -68,7 +68,7 @@ Only the package maintainer may create a new release. The release should be prep
 
 3. Make sure the package passes R check *without warnings*, both locally and on Github Actions. Fix as many Notes as possible. 
 
-4. For those packages that go into CRAN: Check the package using `devtools::check_win_devel()` and `devtools::check_rhub()`.
+4. For those packages that go into CRAN: Check the package using `devtools::check_win_devel()` and `devtools::check_rhub()`, and submit to CRAN using `devtools::release()`.
 
 5. Once all these steps are completed and commited to the `develop` branch, the package can be released by merging `develop` into `master`. 
 
@@ -78,4 +78,4 @@ Only the package maintainer may create a new release. The release should be prep
 
 	- The package is pushed to the [OHDSI `drat` repo](https://github.com/OHDSI/drat).
 
-For those packages that go into CRAN, the package can be submitted to CRAN using `devtools::release()`.
+6. Announce the new release on the [OHDSI Forums HADES development announcements thread](https://forums.ohdsi.org/t/hades-development-announcements/12293), providing a short summary of hte most important changes in the new release.

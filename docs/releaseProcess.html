@@ -477,15 +477,15 @@ compare_versions</code></pre></li>
 <li>Regerate the package website using <code>pkgdown</code>, and fix the HADES logo using <code>OhdsiRTools::fixHadesLogo()</code> after running <code>pkgdown</code>.</li>
 </ul></li>
 <li><p>Make sure the package passes R check <em>without warnings</em>, both locally and on Github Actions. Fix as many Notes as possible.</p></li>
-<li><p>For those packages that go into CRAN: Check the package using <code>devtools::check_win_devel()</code> and <code>devtools::check_rhub()</code>.</p></li>
+<li><p>For those packages that go into CRAN: Check the package using <code>devtools::check_win_devel()</code> and <code>devtools::check_rhub()</code>, and submit to CRAN using <code>devtools::release()</code>.</p></li>
 <li><p>Once all these steps are completed and commited to the <code>develop</code> branch, the package can be released by merging <code>develop</code> into <code>master</code>.</p>
 <p>Pushing changes to the <code>master</code> branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:</p>
 <ul>
 <li><p>A new release and tag are created in the GitHub repo with the version number.</p></li>
 <li><p>The package is pushed to the <a href="https://github.com/OHDSI/drat">OHDSI <code>drat</code> repo</a>.</p></li>
 </ul></li>
+<li><p>Announce the new release on the <a href="https://forums.ohdsi.org/t/hades-development-announcements/12293">OHDSI Forums HADES development announcements thread</a>, providing a short summary of hte most important changes in the new release.</p></li>
 </ol>
-<p>For those packages that go into CRAN, the package can be submitted to CRAN using <code>devtools::release()</code>.</p>
 </div>
 
 
