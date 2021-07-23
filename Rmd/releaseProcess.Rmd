@@ -49,31 +49,33 @@ Each package has a three-digit version number.
 
 Only the package maintainer may create a new release. The release should be prepared in the `develop` branch. The following steps are mandatory:
 
-1. Update the package version number in the DESCRIPTION file.
+1. Update the package meta-data
 
-2. Update the documentation. This includes the following steps. Note that the `extras/PackageMaintenance.R` file should contain the code needed to perform most of these steps:
+	- Update the package version number in the DESCRIPTION file.
+	- Update the date in the DESCRIPTION file.
+	- Ensure the Remotes section in the DESCRIPTION file only references the master branch of repos.
+	- Ensure *no* Git tag or GitHub release with the new version number already exist. Delete them if they do.
+
+
+2. Regenerate the documentation. This includes the following steps. Note that the `extras/PackageMaintenance.R` file should contain the code needed to perform most of these steps:
 
 	- Run roxygen to regenerate the manual files.
-	- Updating the `NEWS.md` file to reflect all the changes and bugfixes included in the new version.
 	- Perform a spellcheck using `devtools::spellcheck()`
 	- Regenerate the package manual PDF.
 	- Regenerate any vignette PDFs. 
-	- Regerate the package website using `pkgdown`.
+	- Regerate the package website using `pkgdown`, and fix the HADES logo using `OhdsiRTools::fixHadesLogo()` after running `pkgdown`.
 
 
-3. Make sure the package passes R check, both locally and on Github Actions.
+3. Make sure the package passes R check *without warnings*, both locally and on Github Actions. Fix as many Notes as possible. 
 
-For those packages that go into CRAN, the following additional step must be taken:
+4. For those packages that go into CRAN: Check the package using `devtools::check_win_devel()` and `devtools::check_rhub()`.
 
-4. Check the package using `devtools::check_win_devel()` and `devtools::check_rhub()`.
+5. Once all these steps are completed and commited to the `develop` branch, the package can be released by merging `develop` into `master`. 
 
+	Pushing changes to the `master` branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:
 
-Once all these steps are completed and commited to the `develop` branch, the package can be released by merging `develop` into `master`. 
+	- A new release and tag are created in the GitHub repo with the version number.
 
-Pushing changes to the `master` branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:
-
-1. A new release is created in the GitHub repo with the version number.
-
-2. The package is pushed to the [OHDSI `drat` repo](https://github.com/OHDSI/drat).
+	- The package is pushed to the [OHDSI `drat` repo](https://github.com/OHDSI/drat).
 
 For those packages that go into CRAN, the package can be submitted to CRAN using `devtools::release()`.
