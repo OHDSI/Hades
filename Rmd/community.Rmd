@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **September  16, 2021**
+Date: **October 21, 2021**
 
 Time (DST where appropriate):
 
@@ -37,7 +37,9 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 
 ### 2021
 
-- June 17: *Unit-test-a-thon, integration testing*. [Notes](meetings/Hades17June021.docx)
+- September 16: *CDM 5.4.0, interfaces with ATLAS and ARACHNE*. [Notes](meetings/Hades16Sep2021.docx)
+
+- June 17: *Unit-test-a-thon, integration testing*. [Notes](meetings/Hades17June2021.docx)
 
 - May 20: *PLP GUI*. [Notes](meetings/Hades20May2021.docx)
 
