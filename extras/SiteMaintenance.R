@@ -1,9 +1,14 @@
 # Generate site from markdown files --------------------------------------
 
-setwd("c:/git/Hades")
+setwd("c:/temp/git/Hades")
 
 # You'll need the icon package:
 devtools::install_github("ropenscilabs/icon")
+
+# May need to install pandoc:
+install.packages("installr")
+installr::install.pandoc()
+rmarkdown::find_pandoc(dir = "C:/Users/mschuemi/AppData/Local/Pandoc")
 
 # Generate packages markdown file
 source("extras/GeneratePackagesPage.R")

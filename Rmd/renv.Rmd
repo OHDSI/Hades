@@ -1,0 +1,196 @@
+---
+title: "Using renv for dependencies"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# What is renv?
+
+The [`renv` package](https://rstudio.github.io/renv/) offers two main benefits:
+
+1. **Specifying the exact package versions that must be loaded** for executing a specific study. It offers functions for recording the versions of packages that are currently used, and for restoring a library of packages on the same computer (in the future) or other computers, thus greatly improving reproducibility.
+
+2. **Isolating the package library to a (RStudio) project**. This means that different projects (e.g. different studies) can use very different package versions on the same computer without conflicting. When switching from one project to another, R will switch to the appropriate library.
+
+## The renv lock file
+
+At the core of `renv` is the 'renv.lock' file that specifies all required packages. This file should be in the root folder of the project. The structure of the lock file is not very complicated, and it can easily be edited by hand if need be. An example of a full lock file can be found [here](https://github.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/blob/reproducibility/renv.lock). Here's an example partial lock file, with just 3 entries:
+
+```
+{
+	"R" : {
+		"Version" : "4.0.3",
+		"Repositories" : [
+			{
+				"Name" : "CRAN",
+				"URL" : "https://cloud.r-project.org"
+			}
+		]
+	},
+  "Packages" : {
+    "rlang" : {
+			"Package" : "rlang",
+			"Version" : "0.4.11",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+    "FeatureExtraction" : {
+			"Package" : "FeatureExtraction",
+			"Version" : "3.1.1",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "FeatureExtraction",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v3.1.1"
+		},
+    "Covid19EstimationHydroxychloroquine" : {
+			"Package" : "Covid19EstimationHydroxychloroquine",
+			"Version" : "0.0.1",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "Covid19EstimationHydroxychloroquine",
+			"RemoteUsername" : "ohdsi-studies",
+			"RemoteRef" : "master"
+		}
+  }
+}
+```
+
+We can see different types of entries in a lock file. All types have a name of the entry, and the following fields:
+
+- **Package**: The name of the package. This should match the name of the entry.
+- **Version**: The package version that needs to be installed.
+- **Source**: The source where the package can be obtained. 
+
+In an OHDSI lock file, the following types can be encountered:
+
+### CRAN packages
+
+```
+   "rlang" : {
+			"Package" : "rlang",
+			"Version" : "0.4.11",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+```
+
+Most packages, like `rlang`, but also several HADES packages like `DatabaseConnector`,  will be available from CRAN, and will therefore have `Source` equal to "Repository", and one additional field:
+
+- **Repository**: The name of the repository. This is always "CRAN".
+
+### HADES GitHub packages
+
+```
+    "FeatureExtraction" : {
+			"Package" : "FeatureExtraction",
+			"Version" : "3.1.1",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "FeatureExtraction",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v3.1.1"
+		},
+```
+
+Many HADES packages need to be installed from GitHub rather than CRAN. See the 'Availability' column on the [Package statuses page](packageStatuses.html) to learn which packages are not in CRAN. For these packages, `Source` is equal to "GitHub". Other required fields are:
+
+- **RemoteType**: Should always be "github".
+- **RemoteHost**: Should always be "api.github.com".
+- **RemoteRepo**: The name of the HADES package repo, for example "FeatureExtraction".
+- **RemoteUsername**: This should always be "ohdsi" for HADES packages.
+- **RemoteRef**: The GitHub reference. For HADES packages it is recommended to use the git tag of the version, for example "v3.1.1" for version 3.1.1. (In HADES, all package releases are automatically tagged with a "v" prefix and then the version number). This could also be set to the name of a branch (e.g. "master"), but the contents of a branch tend to change over time, so this will break reproducibility. 
+
+### OHDSI Study packages
+
+```
+    "Covid19EstimationHydroxychloroquine" : {
+			"Package" : "Covid19EstimationHydroxychloroquine",
+			"Version" : "0.0.1",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "Covid19EstimationHydroxychloroquine",
+			"RemoteUsername" : "ohdsi-studies",
+			"RemoteRef" : "master"
+		}
+```
+
+As discussed later in this document, sometimes we would like to include an OHDSI study package in the lock file as well. These entries are identical in terms of `Source`, `RemoteType`, and `RemoteHost` to those for HADES GitHub packages, but differ in these fields:
+
+- **RemoteRepo**: The name of the OHDSI study package repo, for example "Covid19EstimationHydroxychloroquine".
+- **RemoteUsername**: This should always be "ohdsi-studies" for OHDSI study packages.
+- **RemoteRef**: The GitHub reference. This is often "master", for the master branch, but can also refer to the name of a git tag, or the hash of a specific git commit.
+
+
+# Creating a renv lock file
+
+One could construct a lock file by hand, but this would take a lot of work. The `renv` package itself provides the `snapshot()` function for automatically constructing lock files, but this function only really works well for dependencies from CRAN. For OHDSI studies it is therefore recommended to use the [`createRenvLockFile()`](http://ohdsi.github.io/OhdsiRTools/reference/createRenvLockFile.html) function in the `OhdsiRTools` package. You can install `OhdsiRTools` using `remotes`:
+
+```r
+remotes::install_github("ohdsi/OhdsiRTools")
+```
+
+Three arguments of `createRenvLockFile()` are:
+
+- **rootPackage**: The name of the study package for which we would like to capture all dependencies in the lock file. 
+- **additionalRequiredPackages**: We may want to have other packages available as well, for example `keyring`. We can specify those here.
+- **includeRootPackage**: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.
+
+**Important**: The `createRenvLockFile()` uses the information in the 'DESCRIPTION' file of your study package, so make sure this contains all dependencies. A good way to verify if all required packages are in the DESCRIPTION is by running R check on your study package. The function also assumes you have the right package versions installed, so make sure your study package runs before calling `createRenvLockFile()`.
+
+For example, we could create a lock file for the `Covid19EstimationHydroxychloroquine` study package using this command:
+
+```r
+OhdsiRtools::createRenvLockFile(rootPackage = "Covid19EstimationHydroxychloroquine",
+                                additionalRequiredPackages  = "keyring",
+                                includeRootPackage  = TRUE)
+```
+
+## Including the study (root) package
+
+The root package is your study package. If your study package is in the ohdsi-studies GitHub, it is recommended to include it in the lock file. That way, we can use `renv` to automatically install that package as well. Otherwise, people will have to clone your study package repo, run `renv:restore()`, and then build the study package itself.
+
+# Using a lock file to restore an environment
+
+There are two ways to use the lock file, depending on whether the root package is included in the lock file.
+
+## When the study package is included
+
+When the study package is included in the lock file, as described above, one can follow these steps to install the package and all its dependencies:
+
+1. Make sure R, RTools, Java, and RStudio are properly configured as described [here](rSetup.html).
+
+2. Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:
+
+    ```r
+    install.packages("renv")
+    download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/reproducibility/renv.lock", "renv.lock")
+    renv::init()
+    ```
+    
+Where the URL used in `download.file()` points to the lock file in the ohdsi-studies repo. Important: this should point to the raw lock file contents, not the GitHub page with additional information on the file.
+
+## When the study package is not included
+
+When the study package itself is not included, follow these steps:
+
+1. Make sure R, RTools, Java, and RStudio are properly configured as described [here](rSetup.html).
+
+2. Make sure [`git`](https://git-scm.com/) is installed.
+
+3. Clone the study package repo.
+
+4. Open the study package project in RStudio, and type `renv::restore()`.
+
+5. Build the study package.
+
+
+
+
+

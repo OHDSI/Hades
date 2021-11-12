@@ -13,7 +13,8 @@
 
 <title>Development Community</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -367,12 +368,19 @@ div.tocify {
     </li>
   </ul>
 </li>
-<li>
-  <a href="contribute.html">
-    <span class="fa fa-hand-paper"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-flask"></span>
      
-    Contribute
+    Study packages
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="renv.html">Using renv for dependencies</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -383,6 +391,9 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="contribute.html">How to contribute</a>
+    </li>
     <li>
       <a href="community.html">Developer Community</a>
     </li>
@@ -429,8 +440,8 @@ div.tocify {
 <h1>Meetings</h1>
 <p>The HADES workgroup has regular meetings. Meetings are open to all, and will be held on the third Thursday of the month.</p>
 
-<div class="rounded">
-<h3 id="next-hades-meeting">Next HADES meeting</h3>
+<div id="next-hades-meeting" class="section level3 rounded">
+<h3>Next HADES meeting</h3>
 <p>Date: <strong>October 21, 2021</strong></p>
 <p>Time (DST where appropriate):</p>
 <ul>
@@ -442,7 +453,6 @@ div.tocify {
 <p>Teams meeting details:</p>
 URL: <a href="https://teams.microsoft.com/l/meetup-join/19%3ac0ff168a04954dc28c18c260133baa3c%40thread.tacv2/1602145307087?context=%7b%22Tid%22%3a%22a30f0094-9120-4aab-ba4c-e5509023b2d5%22%2c%22Oid%22%3a%22dac1472c-1cc6-41dc-9cc7-c4720f7798de%22%7d">Join Microsoft Teams Meeting</a>
 </div>
-
 <div id="prior-meetings" class="section level2">
 <h2>Prior meetings</h2>
 <div id="section" class="section level3">

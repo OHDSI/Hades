@@ -30,12 +30,16 @@ navbar:
           href: rSetup.html  
         - text: "Installing HADES"
           href: installingHades.html
-    - text: "Contribute"
-      icon: fa-hand-paper
-      href: contribute.html
+    - text: "Study packages"
+      icon: fa-flask
+      menu:
+        - text: "Using renv for dependencies"
+          href: renv.html
     - text: "Developers"
       icon: fa-wrench
       menu: 
+        - text: "How to contribute"
+          href: contribute.html
         - text: "Developer Community"
           href: community.html   
         - text: "Developer Guidelines"
