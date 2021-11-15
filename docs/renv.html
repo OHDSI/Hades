@@ -546,17 +546,35 @@ div.tocify {
 <h1>Creating a renv lock file</h1>
 <p>One could construct a lock file by hand, but this would take a lot of work. The <code>renv</code> package itself provides the <code>snapshot()</code> function for automatically constructing lock files, but this function only really works well for dependencies from CRAN. For OHDSI studies it is therefore recommended to use the <a href="http://ohdsi.github.io/OhdsiRTools/reference/createRenvLockFile.html"><code>createRenvLockFile()</code></a> function in the <code>OhdsiRTools</code> package. You can install <code>OhdsiRTools</code> using <code>remotes</code>:</p>
 <pre class="r"><code>remotes::install_github(&quot;ohdsi/OhdsiRTools&quot;)</code></pre>
-<p>Three arguments of <code>createRenvLockFile()</code> are:</p>
+<p>The <code>createRenvLockFile()</code> function has two modes: “auto”, and “decription”. The description mode is for more advanced users.</p>
+<div id="auto-mode" class="section level2">
+<h2>Auto mode</h2>
+<p>In auto mode, the <code>createRenvLockFile()</code> function will leverage <code>renv::init()</code> to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that is automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites.</p>
+<p>The auto mode is the default, and comes with two potentially important arguments:</p>
 <ul>
-<li><strong>rootPackage</strong>: The name of the study package for which we would like to capture all dependencies in the lock file.</li>
+<li><strong>rootPackage</strong>: The name of the study package. Only required if <code>includeRootPackage = TRUE</code>.</li>
+<li><strong>includeRootPackage</strong>: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.</li>
+</ul>
+<p>For example, we could create a lock file for the <code>Covid19EstimationHydroxychloroquine</code> study package using this command:</p>
+<pre class="r"><code>OhdsiRTools::createRenvLockFile(rootPackage = &quot;Covid19EstimationHydroxychloroquine&quot;,
+                                includeRootPackage = TRUE)</code></pre>
+</div>
+<div id="description-mode-advanced" class="section level2">
+<h2>Description mode (Advanced)</h2>
+<p>In description mode, the <code>createRenvLockFile()</code> function will only include the dependencies of the study package as documented in the package’s DECRIPTION file. The advantage of this mode is that it can lead to substantially smaller lock files. The disadvantage is that it requires the user to accurately document all dependencies in the DESCRIPTION file.</p>
+<p>In description mode, these arguments of <code>createRenvLockFile()</code> are of particular importance:</p>
+<ul>
+<li><strong>rootPackage</strong>: The name of the study package for which we would like to capture all dependencies in the lock file. This package’s dependencies as documented in its DESCRIPTION will be included.</li>
 <li><strong>additionalRequiredPackages</strong>: We may want to have other packages available as well, for example <code>keyring</code>. We can specify those here.</li>
 <li><strong>includeRootPackage</strong>: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.</li>
 </ul>
 <p><strong>Important</strong>: The <code>createRenvLockFile()</code> uses the information in the ‘DESCRIPTION’ file of your study package, so make sure this contains all dependencies. A good way to verify if all required packages are in the DESCRIPTION is by running R check on your study package. The function also assumes you have the right package versions installed, so make sure your study package runs before calling <code>createRenvLockFile()</code>.</p>
 <p>For example, we could create a lock file for the <code>Covid19EstimationHydroxychloroquine</code> study package using this command:</p>
-<pre class="r"><code>OhdsiRtools::createRenvLockFile(rootPackage = &quot;Covid19EstimationHydroxychloroquine&quot;,
+<pre class="r"><code>OhdsiRTools::createRenvLockFile(mode = &quot;description&quot;,
+                                rootPackage = &quot;Covid19EstimationHydroxychloroquine&quot;,
                                 additionalRequiredPackages  = &quot;keyring&quot;,
                                 includeRootPackage  = TRUE)</code></pre>
+</div>
 <div id="including-the-study-root-package" class="section level2">
 <h2>Including the study (root) package</h2>
 <p>The root package is your study package. If your study package is in the ohdsi-studies GitHub, it is recommended to include it in the lock file. That way, we can use <code>renv</code> to automatically install that package as well. Otherwise, people will have to clone your study package repo, run <code>renv:restore()</code>, and then build the study package itself.</p>
@@ -588,6 +606,30 @@ renv::init()</code></pre></li>
 <li><p>Build the study package.</p></li>
 </ol>
 </div>
+</div>
+<div id="adding-a-function-for-checking-dependencies-at-runtime" class="section level1">
+<h1>Adding a function for checking dependencies at runtime</h1>
+<p>Even though <code>renv</code> tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at the runtime. One scenario where this has happened is when the user forgets to run <code>renv</code> before running the study package. To make absolutely sure the right versions are executed, it is recommended to <strong>add a function to the study package that checks all dependency versions, and execute that function as a first step in the study’s main function</strong>. Below is an example function. Note that this function depends on <code>RJSONIO</code> and <code>dplyr</code>, so make sure these are in your lock file as well.</p>
+<pre class="r"><code>verifyDependencies &lt;- function() {
+  expected &lt;- RJSONIO::fromJSON(&quot;renv.lock&quot;)
+  expected &lt;- dplyr::bind_rows(expected[[2]])
+  basePackages &lt;- rownames(installed.packages(priority = &quot;base&quot;))
+  expected &lt;- expected[!expected$Package %in% basePackages, ]
+  observedVersions &lt;- sapply(sapply(expected$Package, packageVersion), paste, collapse = &quot;.&quot;)
+  expectedVersions &lt;- sapply(sapply(expected$Version, numeric_version), paste, collapse = &quot;.&quot;)
+  mismatchIdx &lt;- which(observedVersions != expectedVersions)
+  if (length(mismatchIdx) &gt; 0) {
+
+    lines &lt;- sapply(mismatchIdx, function(idx) sprintf(&quot;- Package %s version %s should be %s&quot;,
+                                                       expected$Package[idx],
+                                                       observedVersions[idx],
+                                                       expectedVersions[idx]))
+    message &lt;- paste(c(&quot;Mismatch between required and installed package versions. Did you forget to run renv::restore()?&quot;,
+                       lines),
+                     collapse = &quot;\n&quot;)
+    stop(message)
+  }
+}</code></pre>
 </div>
 
 

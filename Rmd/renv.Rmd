@@ -136,9 +136,31 @@ One could construct a lock file by hand, but this would take a lot of work. The 
 remotes::install_github("ohdsi/OhdsiRTools")
 ```
 
-Three arguments of `createRenvLockFile()` are:
+The `createRenvLockFile()` function has two modes: "auto", and "decription". The description mode is for more advanced users.
 
-- **rootPackage**: The name of the study package for which we would like to capture all dependencies in the lock file. 
+## Auto mode
+
+In auto mode, the `createRenvLockFile()` function will leverage `renv::init()` to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that is automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites. 
+
+The auto mode is the default, and comes with two potentially important arguments:
+
+- **rootPackage**: The name of the study package. Only required if `includeRootPackage = TRUE`.
+- **includeRootPackage**: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.
+
+For example, we could create a lock file for the `Covid19EstimationHydroxychloroquine` study package using this command:
+
+```r
+OhdsiRTools::createRenvLockFile(rootPackage = "Covid19EstimationHydroxychloroquine",
+                                includeRootPackage = TRUE)
+```
+
+## Description mode (Advanced)
+
+In description mode, the `createRenvLockFile()` function will only include the dependencies of the study package as documented in the package's DECRIPTION file. The advantage of this mode is that it can lead to substantially smaller lock files. The disadvantage is that it requires the user to accurately document all dependencies in the DESCRIPTION file.
+
+In description mode, these arguments of `createRenvLockFile()` are of particular importance:
+
+- **rootPackage**: The name of the study package for which we would like to capture all dependencies in the lock file. This package's dependencies as documented in its DESCRIPTION will be included.
 - **additionalRequiredPackages**: We may want to have other packages available as well, for example `keyring`. We can specify those here.
 - **includeRootPackage**: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.
 
@@ -147,7 +169,8 @@ Three arguments of `createRenvLockFile()` are:
 For example, we could create a lock file for the `Covid19EstimationHydroxychloroquine` study package using this command:
 
 ```r
-OhdsiRtools::createRenvLockFile(rootPackage = "Covid19EstimationHydroxychloroquine",
+OhdsiRTools::createRenvLockFile(mode = "description",
+                                rootPackage = "Covid19EstimationHydroxychloroquine",
                                 additionalRequiredPackages  = "keyring",
                                 includeRootPackage  = TRUE)
 ```
@@ -191,6 +214,32 @@ When the study package itself is not included, follow these steps:
 5. Build the study package.
 
 
+# Adding a function for checking dependencies at runtime
+
+Even though `renv` tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at the runtime. One scenario where this has happened is when the user forgets to run `renv` before running the study package. To make absolutely sure the right versions are executed, it is recommended to **add a function to the study package that checks all dependency versions, and execute that function as a first step in the study's main function**. Below is an example function. Note that this function depends on `RJSONIO` and `dplyr`, so make sure these are in your lock file as well.
+
+```r
+verifyDependencies <- function() {
+  expected <- RJSONIO::fromJSON("renv.lock")
+  expected <- dplyr::bind_rows(expected[[2]])
+  basePackages <- rownames(installed.packages(priority = "base"))
+  expected <- expected[!expected$Package %in% basePackages, ]
+  observedVersions <- sapply(sapply(expected$Package, packageVersion), paste, collapse = ".")
+  expectedVersions <- sapply(sapply(expected$Version, numeric_version), paste, collapse = ".")
+  mismatchIdx <- which(observedVersions != expectedVersions)
+  if (length(mismatchIdx) > 0) {
+
+    lines <- sapply(mismatchIdx, function(idx) sprintf("- Package %s version %s should be %s",
+                                                       expected$Package[idx],
+                                                       observedVersions[idx],
+                                                       expectedVersions[idx]))
+    message <- paste(c("Mismatch between required and installed package versions. Did you forget to run renv::restore()?",
+                       lines),
+                     collapse = "\n")
+    stop(message)
+  }
+}
+```
 
 
 
