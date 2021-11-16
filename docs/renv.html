@@ -431,6 +431,7 @@ div.tocify {
 </div>
 
 
+<p>This page describes how you can use <code>renv</code> to make sure the right dependencies are installed when people run your study package. Please read the entire page, even when you’re familiar with <code>renv</code>.</p>
 <div id="what-is-renv" class="section level1">
 <h1>What is renv?</h1>
 <p>The <a href="https://rstudio.github.io/renv/"><code>renv</code> package</a> offers two main benefits:</p>
@@ -580,12 +581,13 @@ div.tocify {
 <p>The root package is your study package. If your study package is in the ohdsi-studies GitHub, it is recommended to include it in the lock file. That way, we can use <code>renv</code> to automatically install that package as well. Otherwise, people will have to clone your study package repo, run <code>renv:restore()</code>, and then build the study package itself.</p>
 </div>
 </div>
-<div id="using-a-lock-file-to-restore-an-environment" class="section level1">
-<h1>Using a lock file to restore an environment</h1>
+<div id="how-to-use-a-lock-file-to-restore-an-environment" class="section level1">
+<h1>How to use a lock file to restore an environment</h1>
 <p>There are two ways to use the lock file, depending on whether the root package is included in the lock file.</p>
-<div id="when-the-study-package-is-included" class="section level2">
-<h2>When the study package is included</h2>
-<p>When the study package is included in the lock file, as described above, one can follow these steps to install the package and all its dependencies:</p>
+<div id="when-the-study-root-package-is-included" class="section level2">
+<h2>When the study (root) package is included</h2>
+<p>When the study package is included in the lock file, as described above, we can use <code>renv</code> to install not only the dependencies, but the study package itself as well. This means the user will not need to clone the study package repo, and does not have to build the study package separately.</p>
+<p>Follow these steps to install the study package and all its dependencies:</p>
 <ol style="list-style-type: decimal">
 <li><p>Make sure R, RTools, Java, and RStudio are properly configured as described <a href="rSetup.html">here</a>.</p></li>
 <li><p>Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:</p>
@@ -593,11 +595,12 @@ div.tocify {
 download.file(&quot;https://raw.githubusercontent.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/reproducibility/renv.lock&quot;, &quot;renv.lock&quot;)
 renv::init()</code></pre></li>
 </ol>
-<p>Where the URL used in <code>download.file()</code> points to the lock file in the ohdsi-studies repo. Important: this should point to the raw lock file contents, not the GitHub page with additional information on the file.</p>
+<p>Where the URL used in <code>download.file()</code> points to the lock file in the ohdsi-studies repo. <em>Important</em>: this should point to the raw lock file contents, not the GitHub page with additional information on the file.</p>
 </div>
-<div id="when-the-study-package-is-not-included" class="section level2">
-<h2>When the study package is not included</h2>
-<p>When the study package itself is not included, follow these steps:</p>
+<div id="when-the-study-root-package-is-not-included" class="section level2">
+<h2>When the study (root) package is not included</h2>
+<p>When the study package itself is not included in the lock file, the user will need to clone the project (which requires git to be installed), and build the study package after all dependencies have been loaded.</p>
+<p>Follow these steps to install the study package and all its dependencies:</p>
 <ol style="list-style-type: decimal">
 <li><p>Make sure R, RTools, Java, and RStudio are properly configured as described <a href="rSetup.html">here</a>.</p></li>
 <li><p>Make sure <a href="https://git-scm.com/"><code>git</code></a> is installed.</p></li>
@@ -630,6 +633,10 @@ renv::init()</code></pre></li>
     stop(message)
   }
 }</code></pre>
+</div>
+<div id="testing" class="section level1">
+<h1>Testing</h1>
+<p>Once you’re done creating a lock file, and writing the instructions for how people can install your study package including its dependencies, make sure to test the instructions. Since <code>renv</code> isolates the study project, you can even do this using the same machine used to create the package and lock file (just in a different folder).</p>
 </div>
 
 

@@ -6,6 +6,8 @@ output:
         toc_float: TRUE
 ---
 
+This page describes how you can use `renv` to make sure the right dependencies are installed when people run your study package. Please read the entire page, even when you're familiar with `renv`.
+
 # What is renv?
 
 The [`renv` package](https://rstudio.github.io/renv/) offers two main benefits:
@@ -179,13 +181,15 @@ OhdsiRTools::createRenvLockFile(mode = "description",
 
 The root package is your study package. If your study package is in the ohdsi-studies GitHub, it is recommended to include it in the lock file. That way, we can use `renv` to automatically install that package as well. Otherwise, people will have to clone your study package repo, run `renv:restore()`, and then build the study package itself.
 
-# Using a lock file to restore an environment
+# How to use a lock file to restore an environment
 
 There are two ways to use the lock file, depending on whether the root package is included in the lock file.
 
-## When the study package is included
+## When the study (root) package is included
 
-When the study package is included in the lock file, as described above, one can follow these steps to install the package and all its dependencies:
+When the study package is included in the lock file, as described above, we can use `renv` to install not only the dependencies, but the study package itself as well. This means the user will not need to clone the study package repo, and does not have to build the study package separately. 
+
+Follow these steps to install the study package and all its dependencies:
 
 1. Make sure R, RTools, Java, and RStudio are properly configured as described [here](rSetup.html).
 
@@ -197,11 +201,13 @@ When the study package is included in the lock file, as described above, one can
     renv::init()
     ```
     
-Where the URL used in `download.file()` points to the lock file in the ohdsi-studies repo. Important: this should point to the raw lock file contents, not the GitHub page with additional information on the file.
+Where the URL used in `download.file()` points to the lock file in the ohdsi-studies repo. *Important*: this should point to the raw lock file contents, not the GitHub page with additional information on the file.
 
-## When the study package is not included
+## When the study (root) package is not included
 
-When the study package itself is not included, follow these steps:
+When the study package itself is not included in the lock file, the user will need to clone the project (which requires git to be installed), and build the study package after all dependencies have been loaded.
+
+Follow these steps to install the study package and all its dependencies:
 
 1. Make sure R, RTools, Java, and RStudio are properly configured as described [here](rSetup.html).
 
@@ -241,5 +247,7 @@ verifyDependencies <- function() {
 }
 ```
 
+# Testing
 
+Once you're done creating a lock file, and writing the instructions for how people can install your study package including its dependencies, make sure to test the instructions. Since `renv` isolates the study project, you can even do this using the same machine used to create the package and lock file (just in a different folder). 
 
