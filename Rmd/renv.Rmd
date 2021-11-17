@@ -142,7 +142,7 @@ The `createRenvLockFile()` function has two modes: "auto", and "decription". The
 
 ## Auto mode
 
-In auto mode, the `createRenvLockFile()` function will leverage `renv::init()` to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that is automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites. 
+In auto mode, the `createRenvLockFile()` function will leverage `renv::init()` to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that it automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites. 
 
 The auto mode is the default, and comes with two potentially important arguments:
 
@@ -197,11 +197,14 @@ Follow these steps to install the study package and all its dependencies:
 
     ```r
     install.packages("renv")
-    download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/reproducibility/renv.lock", "renv.lock")
+    download.file("https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock", "renv.lock")
     renv::init()
+	# When asked, choose to "Restore the project from the lockfile".
     ```
     
-Where the URL used in `download.file()` points to the lock file in the ohdsi-studies repo. *Important*: this should point to the raw lock file contents, not the GitHub page with additional information on the file.
+Where the URL used in `download.file()` points to the lock file in the ohdsi-studies repo. 
+
+**Important**: the URL should point to the raw lock file contents, not the GitHub page with additional information about the file. So "[https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock](https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock)", not "[https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock](https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock)".
 
 ## When the study (root) package is not included
 
@@ -222,7 +225,7 @@ Follow these steps to install the study package and all its dependencies:
 
 # Adding a function for checking dependencies at runtime
 
-Even though `renv` tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at the runtime. One scenario where this has happened is when the user forgets to run `renv` before running the study package. To make absolutely sure the right versions are executed, it is recommended to **add a function to the study package that checks all dependency versions, and execute that function as a first step in the study's main function**. Below is an example function. Note that this function depends on `RJSONIO` and `dplyr`, so make sure these are in your lock file as well.
+Even though `renv` tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at runtime. One scenario where this has happened is when the user forgets to run `renv` before running the study package. To make absolutely sure the right versions are executed, it is recommended to **add a function to the study package that checks all dependency versions, and execute that function as a first step in the study's main function**. Below is an example function. Note that this function depends on `RJSONIO` and `dplyr`, so make sure these are in your lock file as well.
 
 ```r
 verifyDependencies <- function() {
@@ -246,6 +249,8 @@ verifyDependencies <- function() {
   }
 }
 ```
+
+Once this function has been added to the study package it is recommended to add a call to this function to your study's main function like [this](https://github.com/ohdsi-studies/ScyllaEstimation/blob/master/R/Main.R#L105).
 
 # Testing
 

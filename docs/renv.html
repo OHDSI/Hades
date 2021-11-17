@@ -550,7 +550,7 @@ div.tocify {
 <p>The <code>createRenvLockFile()</code> function has two modes: “auto”, and “decription”. The description mode is for more advanced users.</p>
 <div id="auto-mode" class="section level2">
 <h2>Auto mode</h2>
-<p>In auto mode, the <code>createRenvLockFile()</code> function will leverage <code>renv::init()</code> to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that is automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites.</p>
+<p>In auto mode, the <code>createRenvLockFile()</code> function will leverage <code>renv::init()</code> to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that it automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites.</p>
 <p>The auto mode is the default, and comes with two potentially important arguments:</p>
 <ul>
 <li><strong>rootPackage</strong>: The name of the study package. Only required if <code>includeRootPackage = TRUE</code>.</li>
@@ -592,10 +592,12 @@ div.tocify {
 <li><p>Make sure R, RTools, Java, and RStudio are properly configured as described <a href="rSetup.html">here</a>.</p></li>
 <li><p>Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:</p>
 <pre class="r"><code>install.packages(&quot;renv&quot;)
-download.file(&quot;https://raw.githubusercontent.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/reproducibility/renv.lock&quot;, &quot;renv.lock&quot;)
-renv::init()</code></pre></li>
+download.file(&quot;https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock&quot;, &quot;renv.lock&quot;)
+renv::init()
+# When asked, choose to &quot;Restore the project from the lockfile&quot;.</code></pre></li>
 </ol>
-<p>Where the URL used in <code>download.file()</code> points to the lock file in the ohdsi-studies repo. <em>Important</em>: this should point to the raw lock file contents, not the GitHub page with additional information on the file.</p>
+<p>Where the URL used in <code>download.file()</code> points to the lock file in the ohdsi-studies repo.</p>
+<p><strong>Important</strong>: the URL should point to the raw lock file contents, not the GitHub page with additional information about the file. So “<a href="https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock">https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock</a>”, not “<a href="https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock">https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock</a>”.</p>
 </div>
 <div id="when-the-study-root-package-is-not-included" class="section level2">
 <h2>When the study (root) package is not included</h2>
@@ -612,7 +614,7 @@ renv::init()</code></pre></li>
 </div>
 <div id="adding-a-function-for-checking-dependencies-at-runtime" class="section level1">
 <h1>Adding a function for checking dependencies at runtime</h1>
-<p>Even though <code>renv</code> tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at the runtime. One scenario where this has happened is when the user forgets to run <code>renv</code> before running the study package. To make absolutely sure the right versions are executed, it is recommended to <strong>add a function to the study package that checks all dependency versions, and execute that function as a first step in the study’s main function</strong>. Below is an example function. Note that this function depends on <code>RJSONIO</code> and <code>dplyr</code>, so make sure these are in your lock file as well.</p>
+<p>Even though <code>renv</code> tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at runtime. One scenario where this has happened is when the user forgets to run <code>renv</code> before running the study package. To make absolutely sure the right versions are executed, it is recommended to <strong>add a function to the study package that checks all dependency versions, and execute that function as a first step in the study’s main function</strong>. Below is an example function. Note that this function depends on <code>RJSONIO</code> and <code>dplyr</code>, so make sure these are in your lock file as well.</p>
 <pre class="r"><code>verifyDependencies &lt;- function() {
   expected &lt;- RJSONIO::fromJSON(&quot;renv.lock&quot;)
   expected &lt;- dplyr::bind_rows(expected[[2]])
@@ -633,6 +635,7 @@ renv::init()</code></pre></li>
     stop(message)
   }
 }</code></pre>
+<p>Once this function has been added to the study package it is recommended to add a call to this function to your study’s main function like <a href="https://github.com/ohdsi-studies/ScyllaEstimation/blob/master/R/Main.R#L105">this</a>.</p>
 </div>
 <div id="testing" class="section level1">
 <h1>Testing</h1>
