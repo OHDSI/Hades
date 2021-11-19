@@ -9,6 +9,8 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Chen R, Suchard MA, Krumholz HM, et al. [Comparative First-Line Effectiveness and Safety of ACE (Angiotensin-Converting Enzyme) Inhibitors and Angiotensin Receptor Blockers: A Multinational Cohort Study](https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.120.16667?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed) Hypertension. 2021 Sep;78(3):591-603. doi: 10.1161/HYPERTENSIONAHA.120.16667.
+
 - Chan You S, Krumholz HM, Suchard MA, et al. [Comprehensive Comparative Effectiveness and Safety of First-Line β-Blocker Monotherapy in Hypertensive Patients: A Large-Scale Multicenter Observational Study](https://doi.org/10.1161/hypertensionaha.120.16402) Hypertension
 . 2021 May 5;77(5):1528-1538. doi: 10.1161/HYPERTENSIONAHA.120.16402.
 
@@ -56,6 +58,8 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Khalid S, Yang C, Blacketer C, et al. [A standardized analytics pipeline for reliable and rapid development and validation of prediction models using observational health data](https://linkinghub.elsevier.com/retrieve/pii/S0169-2607(21)00468-5) Comput Methods Programs Biomed. 2021 Nov;211:106394. doi: 10.1016/j.cmpb.2021.106394.
 
 - Reps JM, Kim C, Williams RD, et al. [Implementation of the COVID-19 Vulnerability Index Across an International Network of Health Care Data Sets: Collaborative External Validation Study.](https://medinform.jmir.org/2021/4/e21547/) JMIR Med Inform. 2021 Apr 5;9(4):e21547. doi: 10.2196/21547.
 
