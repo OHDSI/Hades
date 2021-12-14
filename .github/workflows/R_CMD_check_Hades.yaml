@@ -118,11 +118,6 @@ jobs:
         with:
           name: package_tarball
           path: check/*.tar.gz
-
-      - name: Test coverage
-        if: runner.os == 'macOS'
-        run: covr::codecov()
-        shell: Rscript {0}
               
   Release:
     needs: R-CMD-Check
