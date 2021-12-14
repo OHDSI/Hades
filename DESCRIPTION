@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.0.0
-Date: 2021-05-27
+Version: 1.0.1
+Date: 2021-12-14
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -45,7 +45,8 @@ Remotes:
   ohdsi/MethodEvaluation,
   ohdsi/OhdsiSharing,
   ohdsi/Hydra,
-  ohdsi/CirceR
+  ohdsi/CirceR,
+  ohdsi/Eunomia
 LazyData: false
 RoxygenNote: 7.1.1
 Encoding: UTF-8
