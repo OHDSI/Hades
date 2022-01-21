@@ -435,9 +435,9 @@ div.tocify {
 <h1>The develop branch</h1>
 <p>All development should be done in the <code>develop</code> branch of the package GithHub repository. The aim should be to have a workable version in <code>develop</code> branch, so <strong>make sure your package passes R CMD check locally before pushing to the <code>develop</code> branch</strong>.</p>
 </div>
-<div id="the-master-branch" class="section level1">
-<h1>The master branch</h1>
-<p>The head of the <code>master</code> branch should be the latest released version of the package. No changes should be directly pushed to the <code>master</code> branch.</p>
+<div id="the-main-branch" class="section level1">
+<h1>The main branch</h1>
+<p>The head of the <code>main</code> branch should be the latest released version of the package. No changes should be directly pushed to the <code>main</code> branch.</p>
 </div>
 <div id="continuous-integration" class="section level1">
 <h1>Continuous integration</h1>
@@ -476,7 +476,7 @@ compare_versions</code></pre></li>
 <ul>
 <li>Update the package version number in the DESCRIPTION file.</li>
 <li>Update the date in the DESCRIPTION file.</li>
-<li>Ensure the Remotes section in the DESCRIPTION file only references the master branch of repos.</li>
+<li>Ensure the Remotes section in the DESCRIPTION file only references the main branch of repos.</li>
 <li>Ensure <em>no</em> Git tag or GitHub release with the new version number already exist. Delete them if they do.</li>
 </ul></li>
 <li><p>Regenerate the documentation. This includes the following steps. Note that the <code>extras/PackageMaintenance.R</code> file should contain the code needed to perform most of these steps:</p>
@@ -489,8 +489,8 @@ compare_versions</code></pre></li>
 </ul></li>
 <li><p>Make sure the package passes R check <em>without warnings</em>, both locally and on Github Actions. Fix as many Notes as possible.</p></li>
 <li><p>For those packages that go into CRAN: Check the package using <code>devtools::check_win_devel()</code> and <code>devtools::check_rhub()</code>, and submit to CRAN using <code>devtools::release()</code>.</p></li>
-<li><p>Once all these steps are completed and commited to the <code>develop</code> branch, the package can be released by merging <code>develop</code> into <code>master</code>.</p>
-<p>Pushing changes to the <code>master</code> branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:</p>
+<li><p>Once all these steps are completed and commited to the <code>develop</code> branch, the package can be released by merging <code>develop</code> into <code>main</code>.</p>
+<p>Pushing changes to the <code>main</code> branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:</p>
 <ul>
 <li><p>A new release and tag are created in the GitHub repo with the version number.</p></li>
 <li><p>The package is pushed to the <a href="https://github.com/OHDSI/drat">OHDSI <code>drat</code> repo</a>.</p></li>

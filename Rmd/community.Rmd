@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **December 16, 2021**
+Date: **February 18, 2022**
 
 Time (DST where appropriate):
 
@@ -34,6 +34,10 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 ```
 
 ## Prior meetings
+
+### 2022
+
+- January 20: *2022 objectives and key results*. See recordings in Teams
 
 ### 2021
 

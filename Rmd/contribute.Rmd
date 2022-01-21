@@ -18,5 +18,5 @@ If you're a bit more experienced with HADES and are looking to improve your open
 
 # Write unit tests
 
-An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are [several unit tests](https://github.com/OHDSI/CohortMethod/blob/master/tests/testthat/test-psFunctions.R#L5) that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how HADES packages work under the hood. Make sure you read through the Develops section first!
+An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are [several unit tests](https://github.com/OHDSI/CohortMethod/blob/main/tests/testthat/test-psFunctions.R#L5) that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how HADES packages work under the hood. Make sure you read through the Develops section first!
 

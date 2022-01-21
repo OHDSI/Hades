@@ -12,6 +12,6 @@ The table below lists, for each of the HADES packages, the following details:
 - **Availability**: whether the package can be installed from CRAN (using `install.packages()`), or needs to be installed from GitHub (using `remotes::install_github()`).
 - **Open issues**: The number of open issues.
 - **Open pull-requests**: The number of open pull-requests.
-- **Build status**: Whether the package passes R Check (including unit tests) on several different operating systems, and using various database platforms. The status shown is of the  the latest push, including those to develop branches. Released packages (in the master branch) by definition have successful builds, and are not shown here.
-- **Coverage**: The percentage of lines of code that is covered by the unit tests in the master branch (i.e. in the latest released version).
+- **Build status**: Whether the package passes R Check (including unit tests) on several different operating systems, and using various database platforms. The status shown is of the  the latest push, including those to develop branches. Released packages (in the `main` branch) by definition have successful builds, and are not shown here.
+- **Coverage**: The percentage of lines of code that is covered by the unit tests in the `main` branch (i.e. in the latest released version).
 

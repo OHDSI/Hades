@@ -9,9 +9,9 @@ output:
 
 All development should be done in the `develop` branch of the package GithHub repository. The aim should be to have a workable version in `develop` branch, so **make sure your package passes R CMD check locally before pushing to the `develop` branch**.
 
-# The master branch
+# The main branch
 
-The head of the `master` branch should be the latest released version of the package. No changes should be directly pushed to the `master` branch.
+The head of the `main` branch should be the latest released version of the package. No changes should be directly pushed to the `main` branch.
 
 # Continuous integration
 
@@ -53,7 +53,7 @@ Only the package maintainer may create a new release. The release should be prep
 
 	- Update the package version number in the DESCRIPTION file.
 	- Update the date in the DESCRIPTION file.
-	- Ensure the Remotes section in the DESCRIPTION file only references the master branch of repos.
+	- Ensure the Remotes section in the DESCRIPTION file only references the main branch of repos.
 	- Ensure *no* Git tag or GitHub release with the new version number already exist. Delete them if they do.
 
 
@@ -70,9 +70,9 @@ Only the package maintainer may create a new release. The release should be prep
 
 4. For those packages that go into CRAN: Check the package using `devtools::check_win_devel()` and `devtools::check_rhub()`, and submit to CRAN using `devtools::release()`.
 
-5. Once all these steps are completed and commited to the `develop` branch, the package can be released by merging `develop` into `master`. 
+5. Once all these steps are completed and commited to the `develop` branch, the package can be released by merging `develop` into `main`. 
 
-	Pushing changes to the `master` branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:
+	Pushing changes to the `main` branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:
 
 	- A new release and tag are created in the GitHub repo with the version number.
 

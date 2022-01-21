@@ -47,7 +47,7 @@ All of these should be generated when releasing a new version, as discussed in t
 
 ### README.md
 
-In addition, the README.md file forms the main page of the package repo. This page has a standard structure, as for example can be seen [here](https://github.com/OHDSI/FeatureExtraction/blob/master/README.md).
+In addition, the README.md file forms the main page of the package repo. This page has a standard structure, as for example can be seen [here](https://github.com/OHDSI/FeatureExtraction/blob/main/README.md).
 
 ## extras folder
 
@@ -93,7 +93,7 @@ We use `codecov` in combination with the `covr` package to measure which lines o
 
 On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you'll need to specify several environmental variables. These environmental variables should also be available when running tests using Github Actions.
 
-Some example code in the DatabaseConnector package can be found [here](https://github.com/OHDSI/DatabaseConnector/blob/master/tests/testthat/test-connection.R).
+Some example code in the DatabaseConnector package can be found [here](https://github.com/OHDSI/DatabaseConnector/blob/main/tests/testthat/test-connection.R).
 
 
 # Coding guidelines

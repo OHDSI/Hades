@@ -477,7 +477,7 @@ div.tocify {
             &quot;RemoteHost&quot; : &quot;api.github.com&quot;,
             &quot;RemoteRepo&quot; : &quot;Covid19EstimationHydroxychloroquine&quot;,
             &quot;RemoteUsername&quot; : &quot;ohdsi-studies&quot;,
-            &quot;RemoteRef&quot; : &quot;master&quot;
+            &quot;RemoteRef&quot; : &quot;main&quot;
         }
   }
 }</code></pre>
@@ -519,7 +519,7 @@ div.tocify {
 <li><strong>RemoteHost</strong>: Should always be “api.github.com”.</li>
 <li><strong>RemoteRepo</strong>: The name of the HADES package repo, for example “FeatureExtraction”.</li>
 <li><strong>RemoteUsername</strong>: This should always be “ohdsi” for HADES packages.</li>
-<li><strong>RemoteRef</strong>: The GitHub reference. For HADES packages it is recommended to use the git tag of the version, for example “v3.1.1” for version 3.1.1. (In HADES, all package releases are automatically tagged with a “v” prefix and then the version number). This could also be set to the name of a branch (e.g. “master”), but the contents of a branch tend to change over time, so this will break reproducibility.</li>
+<li><strong>RemoteRef</strong>: The GitHub reference. For HADES packages it is recommended to use the git tag of the version, for example “v3.1.1” for version 3.1.1. (In HADES, all package releases are automatically tagged with a “v” prefix and then the version number). This could also be set to the name of a branch (e.g. “main”), but the contents of a branch tend to change over time, so this will break reproducibility.</li>
 </ul>
 </div>
 <div id="ohdsi-study-packages" class="section level3">
@@ -532,13 +532,13 @@ div.tocify {
             &quot;RemoteHost&quot; : &quot;api.github.com&quot;,
             &quot;RemoteRepo&quot; : &quot;Covid19EstimationHydroxychloroquine&quot;,
             &quot;RemoteUsername&quot; : &quot;ohdsi-studies&quot;,
-            &quot;RemoteRef&quot; : &quot;master&quot;
+            &quot;RemoteRef&quot; : &quot;main&quot;
         }</code></pre>
 <p>As discussed later in this document, sometimes we would like to include an OHDSI study package in the lock file as well. These entries are identical in terms of <code>Source</code>, <code>RemoteType</code>, and <code>RemoteHost</code> to those for HADES GitHub packages, but differ in these fields:</p>
 <ul>
 <li><strong>RemoteRepo</strong>: The name of the OHDSI study package repo, for example “Covid19EstimationHydroxychloroquine”.</li>
 <li><strong>RemoteUsername</strong>: This should always be “ohdsi-studies” for OHDSI study packages.</li>
-<li><strong>RemoteRef</strong>: The GitHub reference. This is often “master”, for the master branch, but can also refer to the name of a git tag, or the hash of a specific git commit.</li>
+<li><strong>RemoteRef</strong>: The GitHub reference. This is often “main”, for the main branch, but can also refer to the name of a git tag, or the hash of a specific git commit.</li>
 </ul>
 </div>
 </div>

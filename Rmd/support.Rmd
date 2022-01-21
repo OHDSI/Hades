@@ -18,6 +18,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [BigKnn issue tracker](https://github.com/OHDSI/BigKnn/issues)
 
+- [Capr issue tracker](https://github.com/OHDSI/Capr/issues)
+
 - [CirceR issue tracker](https://github.com/OHDSI/CirceR/issues)
 
 - [CohortDiagnostics issue tracker](https://github.com/OHDSI/CohortDiagnostics/issues)

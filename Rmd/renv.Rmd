@@ -56,7 +56,7 @@ At the core of `renv` is the 'renv.lock' file that specifies all required packag
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Covid19EstimationHydroxychloroquine",
 			"RemoteUsername" : "ohdsi-studies",
-			"RemoteRef" : "master"
+			"RemoteRef" : "main"
 		}
   }
 }
@@ -106,7 +106,7 @@ Many HADES packages need to be installed from GitHub rather than CRAN. See the '
 - **RemoteHost**: Should always be "api.github.com".
 - **RemoteRepo**: The name of the HADES package repo, for example "FeatureExtraction".
 - **RemoteUsername**: This should always be "ohdsi" for HADES packages.
-- **RemoteRef**: The GitHub reference. For HADES packages it is recommended to use the git tag of the version, for example "v3.1.1" for version 3.1.1. (In HADES, all package releases are automatically tagged with a "v" prefix and then the version number). This could also be set to the name of a branch (e.g. "master"), but the contents of a branch tend to change over time, so this will break reproducibility. 
+- **RemoteRef**: The GitHub reference. For HADES packages it is recommended to use the git tag of the version, for example "v3.1.1" for version 3.1.1. (In HADES, all package releases are automatically tagged with a "v" prefix and then the version number). This could also be set to the name of a branch (e.g. "main"), but the contents of a branch tend to change over time, so this will break reproducibility. 
 
 ### OHDSI Study packages
 
@@ -119,7 +119,7 @@ Many HADES packages need to be installed from GitHub rather than CRAN. See the '
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Covid19EstimationHydroxychloroquine",
 			"RemoteUsername" : "ohdsi-studies",
-			"RemoteRef" : "master"
+			"RemoteRef" : "main"
 		}
 ```
 
@@ -127,7 +127,7 @@ As discussed later in this document, sometimes we would like to include an OHDSI
 
 - **RemoteRepo**: The name of the OHDSI study package repo, for example "Covid19EstimationHydroxychloroquine".
 - **RemoteUsername**: This should always be "ohdsi-studies" for OHDSI study packages.
-- **RemoteRef**: The GitHub reference. This is often "master", for the master branch, but can also refer to the name of a git tag, or the hash of a specific git commit.
+- **RemoteRef**: The GitHub reference. This is often "main", for the main branch, but can also refer to the name of a git tag, or the hash of a specific git commit.
 
 
 # Creating a renv lock file
