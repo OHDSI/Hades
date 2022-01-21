@@ -181,6 +181,7 @@ jobs:
         if: ${{ env.new_version != '' }}
         run: |
           bash deploy.sh
+
       - name: Push to BroadSea
         if: ${{ env.new_version != '' }}
         run: |
