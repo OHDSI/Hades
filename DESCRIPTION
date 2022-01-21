@@ -17,6 +17,7 @@ Imports:
   Andromeda,
   DatabaseConnector,
   ParallelLogger,
+  Capr,
   CirceR,
   Cyclops,
   EmpiricalCalibration,
@@ -47,6 +48,7 @@ Remotes:
   ohdsi/OhdsiSharing,
   ohdsi/Hydra,
   ohdsi/CirceR,
+  ohdsi/Capr,
   ohdsi/Eunomia,
   ohdsi/CohortGenerator
 LazyData: false
