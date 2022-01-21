@@ -38,5 +38,5 @@ HADES is being developed in R Studio.
 
 ### Development status
 
-Beta. Use at your own risk.
+Beta. Use at your own risk. 
 
