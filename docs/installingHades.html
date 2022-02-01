@@ -463,6 +463,7 @@ create_github_token(scopes = c(&quot;(no scope)&quot;), description = &quot;R:GI
 library(remotes)
 install_github(&quot;ohdsi/Hades&quot;, upgrade = &quot;always&quot;)</code></pre>
 <p>Note that we use <code>upgrade = "always"</code> to avoid having to answer any questions about whether we want to upgrade any packages. HADES is designed to work with the latest released versions of all its dependencies, so we should always upgrade these (unless we’re running an older study package, which is an entirely different story).</p>
+<p>When asked “<em>Do you want to install from source the packages which needs compilation</em>”, I recommend you choose “<em>No</em>”. Compiling these packages may take a very long time, and it is unlikely they contain functionality needed to run HADES (since HADES was likely developed with the previous version).</p>
 </div>
 <div id="updating-hades" class="section level1">
 <h1>Updating HADES</h1>

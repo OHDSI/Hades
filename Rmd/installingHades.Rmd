@@ -61,6 +61,8 @@ install_github("ohdsi/Hades", upgrade = "always")
 
 Note that we use `upgrade = "always"` to avoid having to answer any questions about whether we want to upgrade any packages. HADES is designed to work with the latest released versions of all its dependencies, so we should always upgrade these (unless we're running an older study package, which is an entirely different story).
 
+When asked "*Do you want to install from source the packages which needs compilation*", I recommend you choose "*No*". Compiling these packages may take a very long time, and it is unlikely they contain functionality needed to run HADES (since HADES was likely developed with the previous version).
+
 # Updating HADES
 
 If we already have the HADES packages installed, and wish to upgrade to the latest versions, we can also use the `remotes` package:
