@@ -9,6 +9,12 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Williams RD, Markus AF, Yang C, et al. [Seek COVER: using a disease proxy to rapidly develop and validate a personalized risk calculator for COVID-19 outcomes in an international network](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-022-01505-z) BMC Med Res Methodol. 2022 Jan 30;22(1):35. doi: 10.1186/s12874-022-01505-z.
+
+- Nestsiarovich A, Reps JM, Matheny ME, et al. [Predictors of diagnostic transition from major depressive disorder to bipolar disorder: a retrospective observational network study](https://doi.org/10.1038/s41398-021-01760-6) Transl Psychiatry. 2021 Dec 20;11(1):642.
+
+- Williams RD, Reps JM; OHDSI/EHDEN Knee Arthroplasty Group, et al. [90-Day all-cause mortality can be predicted following a total knee replacement: an international, network study to develop and validate a prediction model](https://dx.doi.org/10.1007/s00167-021-06799-y) Knee Surg Sports Traumatol Arthrosc. 2021 Dec 6. doi: 10.1007/s00167-021-06799-y.
+
 - Chen R, Suchard MA, Krumholz HM, et al. [Comparative First-Line Effectiveness and Safety of ACE (Angiotensin-Converting Enzyme) Inhibitors and Angiotensin Receptor Blockers: A Multinational Cohort Study](https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.120.16667?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed) Hypertension. 2021 Sep;78(3):591-603. doi: 10.1161/HYPERTENSIONAHA.120.16667.
 
 - Chan You S, Krumholz HM, Suchard MA, et al. [Comprehensive Comparative Effectiveness and Safety of First-Line β-Blocker Monotherapy in Hypertensive Patients: A Large-Scale Multicenter Observational Study](https://doi.org/10.1161/hypertensionaha.120.16402) Hypertension
@@ -58,6 +64,12 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Li X, Lai LY, Ostropolets A, et al. [Bias, Precision and Timeliness of Historical (Background) Rate Comparison Methods for Vaccine Safety Monitoring: An Empirical Multi-Database Analysis](https://doi.org/10.3389/fphar.2021.773875) Front Pharmacol. 2021 Nov 24;12:773875. doi: 10.3389/fphar.2021.773875.
+
+- Schuemie MJ, Chen Y, Madigan D, et al. [Combining cox regressions across a heterogeneous distributed research network facing small and zero counts](https://journals.sagepub.com/doi/10.1177/09622802211060518) Stat Methods Med Res. 2021 Nov 29. doi: 10.1177/09622802211060518.
+
+- Reps JM, Ryan P, Rijnbeek PR. [Investigating the impact of development and internal validation design when training prognostic models using a retrospective cohort in big US observational healthcare data](https://bmjopen.bmj.com/lookup/pmidlookup?view=long&pmid=34952871) BMJ Open. 2021 Dec 24;11(12):e050146. doi: 10.1136/bmjopen-2021-050146.
 
 - Khalid S, Yang C, Blacketer C, et al. [A standardized analytics pipeline for reliable and rapid development and validation of prediction models using observational health data](https://linkinghub.elsevier.com/retrieve/pii/S0169-2607(21)00468-5) Comput Methods Programs Biomed. 2021 Nov;211:106394. doi: 10.1016/j.cmpb.2021.106394.
 
