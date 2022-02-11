@@ -11,7 +11,7 @@
 
 
 
-<title>Development Community</title>
+<title>Connecting to a Database</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -429,77 +429,20 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Development Community</h1>
+<h1 class="title toc-ignore">Connecting to a Database</h1>
 
 </div>
 
 
-<p>HADES is developed and maintained by the HADES Workgroup of the OHDSI community.</p>
-<div id="online-discussions" class="section level1">
-<h1>Online discussions</h1>
-<p>Online discussions can take place in the <a href="https://teams.microsoft.com/l/team/19%3ac0ff168a04954dc28c18c260133baa3c%40thread.tacv2/conversations?groupId=e6ddb436-9789-468e-820e-defbb0f1a11b&amp;tenantId=a30f0094-9120-4aab-ba4c-e5509023b2d5">HADES Teams</a> or on the <a href="https://forums.ohdsi.org/">OHDSI forums</a>.</p>
+<p>Most HADES packages will need to interact with a database, for example a database containing healthcare data in the <a href="https://ohdsi.github.io/CommonDataModel/">Common Data Model</a>. HADES provides the <code>DatabaseConnector</code> package to make these connections.</p>
+<div id="installing-databaseconnector" class="section level2">
+<h2>Installing DatabaseConnector</h2>
+<p>To connect to a database, you must first make sure the <code>DatabaseConnector</code> is installed. If you have <a href="installingHades.html">installed all of HADES</a> you will already have installed <code>DatabaseConnector</code>. Otherwise, you can install <code>DatabaseConnector</code> from CRAN using:</p>
+<pre class="r"><code>install.package(&quot;DatabaseConnector&quot;)</code></pre>
 </div>
-<div id="meetings" class="section level1">
-<h1>Meetings</h1>
-<p>The HADES workgroup has regular meetings. Meetings are open to all, and will be held on the third Thursday of the month.</p>
-
-<div id="next-hades-meeting" class="section level3 rounded">
-<h3>Next HADES meeting</h3>
-<p>Date: <strong>February 18, 2022</strong></p>
-<p>Time (DST where appropriate):</p>
-<ul>
-<li><strong>6pm Central European time</strong></li>
-<li><strong>5pm UK time</strong></li>
-<li><strong>12pm (noon) Eastern Time</strong> (New York / New Jersey / Pennsylvania)</li>
-<li><strong>9am Pacific Time</strong> (Los Angeles / Stanford)</li>
-</ul>
-<p>Teams meeting details:</p>
-URL: <a href="https://teams.microsoft.com/l/meetup-join/19%3ac0ff168a04954dc28c18c260133baa3c%40thread.tacv2/1602145307087?context=%7b%22Tid%22%3a%22a30f0094-9120-4aab-ba4c-e5509023b2d5%22%2c%22Oid%22%3a%22dac1472c-1cc6-41dc-9cc7-c4720f7798de%22%7d">Join Microsoft Teams Meeting</a>
-</div>
-<div id="prior-meetings" class="section level2">
-<h2>Prior meetings</h2>
-<div id="section" class="section level3">
-<h3>2022</h3>
-<ul>
-<li>January 20: <em>2022 objectives and key results</em>. See recordings in Teams</li>
-</ul>
-</div>
-<div id="section-1" class="section level3">
-<h3>2021</h3>
-<ul>
-<li><p>November 18: <em>Study packages, Hydra, renv, and Docker</em>. <a href="meetings/Hades18Nov2021.docx">Notes</a> and <a href="meetings/HadesNovember2021.pptx">slides</a></p></li>
-<li><p>October 22; <em>Study packages</em>.</p></li>
-<li><p>September 16: <em>CDM 5.4.0, interfaces with ATLAS and ARACHNE</em>. <a href="meetings/Hades16Sep2021.docx">Notes</a></p></li>
-<li><p>June 17: <em>Unit-test-a-thon, integration testing</em>. <a href="meetings/Hades17June2021.docx">Notes</a></p></li>
-<li><p>May 20: <em>PLP GUI</em>. <a href="meetings/Hades20May2021.docx">Notes</a></p></li>
-<li><p>April 15: <em>Unit testing, CDM 5.4.0, HADES paper</em>. <a href="meetings/Hades15Apr2021.docx">Notes</a></p></li>
-<li><p>March 18: <em>Upcoming HADES packages, unit testing</em>. <a href="meetings/Hades18Mar2021.docx">Notes</a></p></li>
-<li><p>February 18: <em>Continuous Integration, OKRs, package maintainer expectations, 64-bit ints</em>. <a href="meetings/Hades18Feb2021.docx">Notes</a></p></li>
-<li><p>January 21: <em>Study package guidelines, system requirements, GitHub Actions, Objectives and key results</em>. <a href="meetings/Hades21Jan2021.docx">Notes</a>.</p></li>
-</ul>
-</div>
-<div id="section-2" class="section level3">
-<h3>2020</h3>
-<ul>
-<li><p>December 17: <em>GitHub Actions, System Requirements, CDMv6, Communication</em>. <a href="meetings/Hades17Dec2020.docx">Notes</a>.</p></li>
-<li><p>November 19: <em>Study packages &amp; CDM v6</em>. <a href="meetings/Hades19Nov2020.docx">Notes</a>.</p></li>
-<li><p>October 15: <em>HADES kickoff, versioning and releasing</em>. <a href="meetings/Hades15Oct2020.docx">Notes</a>, <a href="meetings/HADESkickoff.pptx">slides</a>, and <a href="https://drive.google.com/file/d/1N9_5GGdX4JNNugJohVZ8h_ZjwO91_GQ9/view?usp=sharing">recording</a>.</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="package-maintainers" class="section level1">
-<h1>Package maintainers</h1>
-<p>Each package in HADES has one or two maintainers. These maintainers have the final responsibility and authority over their package. These are the expectations of package maintainers:</p>
-<ul>
-<li>Represent the package in the HADES group discussions.</li>
-<li>Ensure that issues are resolved in a timely manner.</li>
-<li>Review and merge pull requests.</li>
-<li>Create releases (and communicate upcoming releases to those that need to know).</li>
-<li>Adapt the package to changes in its dependencies (including R packages, R itself, and the infrastructure).</li>
-<li>Develop new functionality depending on the needs of the community.</li>
-<li>Adhere to and enforce the HADES standards, such as the <a href="developerGuidelines.html">Developer Guidelines</a> and <a href="codeStyle.html">Code Style Guide</a>.</li>
-</ul>
+<div id="configuring-your-connection" class="section level2">
+<h2>Configuring your connection</h2>
+<p>After <code>DatabaseConnector</code> is installed, several steps will need to be taken to configure the connection to your database. See <a href="http://ohdsi.github.io/DatabaseConnector/articles/Connecting.html">this vignette</a> for instructions.</p>
 </div>
 
 

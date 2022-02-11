@@ -14,6 +14,7 @@ These tasks are in progress, and should be finished within the next six months:
 
 - Add competing risk analyses to `CohortMethod`.
 - Certify support for CDM version 5.4 for all packages in HADES.
+- Quarterly releases of Hydra, providing the latest and greated of HADES.
 
 
 # Medium term

@@ -30,10 +30,12 @@ navbar:
           href: rSetup.html  
         - text: "Installing HADES"
           href: installingHades.html
+        - text: "Connecting to a Database"
+          href: connecting.html
     - text: "Study packages"
       icon: fa-flask
       menu:
-        - text: "Using renv for dependencies"
+        - text: "Using Renv for Dependencies"
           href: renv.html
     - text: "Developers"
       icon: fa-wrench

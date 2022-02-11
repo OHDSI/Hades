@@ -1,0 +1,22 @@
+---
+title: "Connecting to a Database"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+Most HADES packages will need to interact with a database, for example a database containing healthcare data in the [Common Data Model](https://ohdsi.github.io/CommonDataModel/). HADES provides the `DatabaseConnector` package to make these connections. 
+
+## Installing DatabaseConnector
+
+To connect to a database, you must first make sure the `DatabaseConnector` is installed. If you have [installed all of HADES](installingHades.html) you will already have installed `DatabaseConnector`. Otherwise, you can install `DatabaseConnector` from CRAN using:
+
+```r
+install.package("DatabaseConnector")
+```
+
+
+## Configuring your connection
+
+After `DatabaseConnector` is installed, several steps will need to be taken to configure the connection to your database. See [this vignette](http://ohdsi.github.io/DatabaseConnector/articles/Connecting.html) for instructions.
