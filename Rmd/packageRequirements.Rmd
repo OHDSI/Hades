@@ -34,6 +34,11 @@ A HADES package should run without problems on Microsoft Windows, MacOS, and Lin
 
 All HADES R package follow the basic structure of R packages. See [R packages](http://r-pkgs.had.co.nz/) for a thorough discussion on R packages.
 
+## Extras folder
+
+The `extras` folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is `PackageMaintenance.R`, which contains the code executed when releasing a package.
+
+
 ## Versioning
 
 Each package has a three-digit version number.
@@ -50,7 +55,7 @@ The 'main' branch at all times should contain the latest released version. Each 
 
 It is highly recommended to keep the latest develop version in a branch called 'develop'.
 
-## HADES code style guide
+## Code style
 
 A HADES package should adhere to the [HADES codes style guide](codeStyle.html).
 
@@ -89,7 +94,6 @@ When a user calls a function, the effect of that call should be aparent to the u
 - Do not use global variables.
 
 Intead of using `library`, always explicitly reference the packge a function belongs to, for example `SqlRender::translate()`.
-
 
 # License
 

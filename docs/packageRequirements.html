@@ -463,6 +463,10 @@ div.tocify {
 <div id="code-style-and-organization" class="section level1">
 <h1>Code style and organization</h1>
 <p>All HADES R package follow the basic structure of R packages. See <a href="http://r-pkgs.had.co.nz/">R packages</a> for a thorough discussion on R packages.</p>
+<div id="extras-folder" class="section level2">
+<h2>Extras folder</h2>
+<p>The <code>extras</code> folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is <code>PackageMaintenance.R</code>, which contains the code executed when releasing a package.</p>
+</div>
 <div id="versioning" class="section level2">
 <h2>Versioning</h2>
 <p>Each package has a three-digit version number.</p>
@@ -477,8 +481,8 @@ div.tocify {
 <p>The ‘main’ branch at all times should contain the latest released version. Each version, including the latest release, should be tagged as ‘vx.x.x’, for example ‘v1.0.0’.</p>
 <p>It is highly recommended to keep the latest develop version in a branch called ‘develop’.</p>
 </div>
-<div id="hades-code-style-guide" class="section level2">
-<h2>HADES code style guide</h2>
+<div id="code-style" class="section level2">
+<h2>Code style</h2>
 <p>A HADES package should adhere to the <a href="codeStyle.html">HADES codes style guide</a>.</p>
 </div>
 <div id="copyright-header" class="section level2">
