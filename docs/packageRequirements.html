@@ -11,7 +11,7 @@
 
 
 
-<title>Connecting to a Database</title>
+<title>HADES Package Requirements</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -432,20 +432,148 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Connecting to a Database</h1>
+<h1 class="title toc-ignore">HADES Package Requirements</h1>
 
 </div>
 
 
-<p>Most HADES packages will need to interact with a database, for example a database containing healthcare data in the <a href="https://ohdsi.github.io/CommonDataModel/">Common Data Model</a>. HADES provides the <code>DatabaseConnector</code> package to make these connections.</p>
-<div id="installing-databaseconnector" class="section level2">
-<h2>Installing DatabaseConnector</h2>
-<p>To connect to a database, you must first make sure the <code>DatabaseConnector</code> is installed. If you have <a href="installingHades.html">installed all of HADES</a> you will already have installed <code>DatabaseConnector</code>. Otherwise, you can install <code>DatabaseConnector</code> from CRAN using:</p>
-<pre class="r"><code>install.package(&quot;DatabaseConnector&quot;)</code></pre>
+<p>This page describes the minimal requirements a package must meet to be considered for inclusion in HADES.</p>
+<div id="functionality" class="section level1">
+<h1>Functionality</h1>
+<div id="implement-ohdsi-best-practices" class="section level2">
+<h2>Implement OHDSI best practices</h2>
+<p>A HADES package should implement OHDSI best practices, ideally as established through systematic emprical evaluation. Best practices include the ability to apply methods at large scale (e.g. across many exposures and outcomes). Methods should provide diagnostics, allowing the user to verify wether the results are accurate. (E.g. computing the standardized difference of the mean after propensity score matching).</p>
 </div>
-<div id="configuring-your-connection" class="section level2">
-<h2>Configuring your connection</h2>
-<p>After <code>DatabaseConnector</code> is installed, several steps will need to be taken to configure the connection to your database. See <a href="http://ohdsi.github.io/DatabaseConnector/articles/Connecting.html">this vignette</a> for instructions.</p>
+<div id="minimize-duplication-of-functionality" class="section level2">
+<h2>Minimize duplication of functionality</h2>
+<p>There should be no two HADES packages that provide the same functionality. For example, all communication with <code>WebAPI</code> should go through <code>ROhdsiWebApi</code>, all comparative cohort analytics should go in the <code>CohortMethod</code> package, etc.</p>
+</div>
+</div>
+<div id="cross-platform-support" class="section level1">
+<h1>Cross-platform support</h1>
+<div id="cross-database-platform-support" class="section level2">
+<h2>Cross-database-platform support</h2>
+<p>When a package needs to communicate with a user’s database server, the package must support a wide variety of database platforms. The main mechanisms for this in HADES are the <code>DatabaseConnector</code> and <code>SqlRender</code> packages.</p>
+</div>
+<div id="cross-operating-system" class="section level2">
+<h2>Cross-operating system</h2>
+<p>A HADES package should run without problems on Microsoft Windows, MacOS, and Linux.</p>
+</div>
+</div>
+<div id="code-style-and-organization" class="section level1">
+<h1>Code style and organization</h1>
+<p>All HADES R package follow the basic structure of R packages. See <a href="http://r-pkgs.had.co.nz/">R packages</a> for a thorough discussion on R packages.</p>
+<div id="versioning" class="section level2">
+<h2>Versioning</h2>
+<p>Each package has a three-digit version number.</p>
+<ul>
+<li><p>New micro versions (e.g. from 4.3.2 to 4.3.3) indicate bug fixes only. No new functionality, and forward and backward compatibility are guaranteed</p></li>
+<li><p>New minor versions (e.g. from 4.3.3 to 4.4.0) indicate added functionality. Only backward compatibility is guaranteed</p></li>
+<li><p>New major versions (e.g. from 4.4.0 to 5.0.0) indicate major revisions. All bets are off in terms of compatibility</p></li>
+</ul>
+</div>
+<div id="branches-and-tags" class="section level2">
+<h2>Branches and tags</h2>
+<p>The ‘main’ branch at all times should contain the latest released version. Each version, including the latest release, should be tagged as ‘vx.x.x’, for example ‘v1.0.0’.</p>
+<p>It is highly recommended to keep the latest develop version in a branch called ‘develop’.</p>
+</div>
+<div id="hades-code-style-guide" class="section level2">
+<h2>HADES code style guide</h2>
+<p>A HADES package should adhere to the <a href="codeStyle.html">HADES codes style guide</a>.</p>
+</div>
+<div id="copyright-header" class="section level2">
+<h2>Copyright header</h2>
+<p>In each source file should start with a copyright header like this:</p>
+<pre><code># Copyright 2022 Observational Health Data Sciences and Informatics
+#
+# This file is part of CohortMethod
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.</code></pre>
+</div>
+<div id="packages-must-not-have-invisible-side-effects" class="section level2">
+<h2>Packages must not have invisible side effects</h2>
+<p>When a user calls a function, the effect of that call should be aparent to the user. This means:</p>
+<ul>
+<li><p>Do not call <code>library</code> or <code>require</code> in a function, as this changes the user’s search path.</p></li>
+<li><p>Do not set options.</p></li>
+<li><p>Do not write to files other than those specified by the user in the function call.</p></li>
+<li><p>Do not use global variables.</p></li>
+</ul>
+<p>Intead of using <code>library</code>, always explicitly reference the packge a function belongs to, for example <code>SqlRender::translate()</code>.</p>
+</div>
+</div>
+<div id="license" class="section level1">
+<h1>License</h1>
+<p>All HADES packages should licensed as Apache 2.0.</p>
+</div>
+<div id="documentation" class="section level1">
+<h1>Documentation</h1>
+<div id="function-documentation" class="section level2">
+<h2>Function documentation</h2>
+<p>The <code>roxygen2</code> package should be used for function documentation. Each function and function argument must be documented.</p>
+</div>
+<div id="vignettes" class="section level2">
+<h2>Vignettes</h2>
+<p>Vignettes are highly recommended as a way to explain how the package can be used for one or more typical use cases.</p>
+</div>
+<div id="readme.md-and-website" class="section level2">
+<h2>README.md and website</h2>
+<p>The README.md and package website should follow HADES style and organization. The package website should be generated using the <code>pkgdown</code> package. See any HADES package for examples.</p>
+</div>
+<div id="news.md" class="section level2">
+<h2>NEWS.md</h2>
+<p>Changes should be maintained in NEWS.md. This should be aimed at the user, to explain what has changed from the user’s perspective. Avoid referencing GitHub issues, which are aimed at developers.</p>
+</div>
+<div id="announce-new-releases-on-the-ohdsi-forums" class="section level2">
+<h2>Announce new releases on the OHDSI forums</h2>
+<p>Each release should be announced in the OHDSI Forums, in <a href="https://forums.ohdsi.org/t/hades-development-announcements/12293">this thread</a>. Provide a link to the change log, and briefly described the most important changes.</p>
+</div>
+</div>
+<div id="continuous-integration-and-unit-test" class="section level1">
+<h1>Continuous integration and unit test</h1>
+<p>Use the OHDSI GitHub Actions for continuous integration, so R check is performed at every push to the repo. Released packages must pass R without warnings on Windows, MacOS, and Linux. Tagging the released version should be done automatically, as described in the <a href="releaseProcess.html">release process</a>.</p>
+<div id="unit-tests" class="section level2">
+<h2>Unit tests</h2>
+<p>OHDSI unit testing for R follows the standard R practice using <code>test_that</code>: A folder named ‘tests’ is created in the root of the package, and this folder contains</p>
+<ul>
+<li>A sub-folder called ’testthat`</li>
+<li>A file called ‘testthat.R’</li>
+<li>The file ‘testthat.R’ should have the following content:</li>
+</ul>
+<pre class="r"><code>library(testthat)
+library(&lt;package name&gt;)
+test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
+<p>The sub-folder ‘testthat’ should contain one or more R scripts whose file name starts with ‘test-’ (e.g. ‘test-connection.R’. Each file should contain one or more <code>test_that</code> blocks, for example</p>
+<pre class="r"><code>test_that(&quot;Function x returns 2&quot;, {
+  expect_equal(x(), 2)
+})</code></pre>
+<p>Each package should have unit tests. Unit test coverage must be around 80%.</p>
+</div>
+</div>
+<div id="dependencies" class="section level1">
+<h1>Dependencies</h1>
+<div id="hades-or-cran" class="section level2">
+<h2>HADES or CRAN</h2>
+<p>A HADES package may only depend on other HADES packages or packages in CRAN. HADES dependencies not in CRAN should be in <code>Remotes</code> section of the DESCRIPTION file.</p>
+</div>
+<div id="minimize-overall-dependencies" class="section level2">
+<h2>Minimize overall dependencies</h2>
+<p>Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable. We have more or less accepted we need to depend on the <em>core</em> <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> packages, so any of those packages are allowed.</p>
+</div>
+<div id="minimize-added-dependencies" class="section level2">
+<h2>Minimize added dependencies</h2>
+<p>Where possible, only use packages that are already used by other HADES packages. For example, when storing objects too large to fit in memory, use <code>Andromeda</code>, not <code>ff</code>. Similarly, avoid adding a new technology; HADES packages primarily use R, C++ (embedded in R packages), Java (through rJava), and some Python (through <code>reticulate</code>). Avoid requiring for example Julia or .Net.</p>
+</div>
 </div>
 
 

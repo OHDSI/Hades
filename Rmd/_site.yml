@@ -54,3 +54,5 @@ navbar:
           href: packageStatuses.html 
         - text: "Development Roadmap"
           href: "developmentRoadmap.html"
+        - text: "HADES Package Requirements"
+          href: "packageRequirements.html"
