@@ -1,3 +1,10 @@
+HADES 1.3.0
+===========
+
+Changes
+
+- Adding EnsemblePatientLevelPrediction to HADES
+
 HADES 1.2.0
 ===========
 

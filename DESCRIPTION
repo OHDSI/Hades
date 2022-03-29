@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.2.0
-Date: 2022-01-21
+Version: 1.3.0
+Date: 2022-03-29
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -21,6 +21,7 @@ Imports:
   CirceR,
   Cyclops,
   EmpiricalCalibration,
+  EnsemblePatientLevelPrediction,
   Eunomia,
   EvidenceSynthesis,
   BigKnn,
@@ -38,6 +39,7 @@ Imports:
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
+  ohdsi/EnsemblePatientLevelPrediction,
   ohdsi/FeatureExtraction,
   ohdsi/CohortDiagnostics,
   ohdsi/CohortMethod,
