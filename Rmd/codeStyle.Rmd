@@ -225,6 +225,25 @@ else
 }
 ```
 
+## Tidyverse pipes
+
+Pipes should always be at the end of the line.
+
+**Good**
+
+```r
+foo %>%
+	filter(x > 0) %>%
+	group_by(y) %>%
+	summarize(total = sum(x))
+```
+
+**Bad**
+
+```r
+foo %>% filter(x > 0) %>% group_by(y) %>% summarize(total = sum(x))
+```
+
 ## Dplyr joins and merges
 
 Dplyr joins and merge statements should always have a 'by' argument.
