@@ -24,7 +24,7 @@ See the Support section for instructions on [setting up the R environment](rSetu
 
 ## Technology
 
-HADES is a set of R packages that execute against data in a database server. HADES supports traditional database systems (PostgreSQL, Microsoft SQL Server, and Oracle), parallel data warehouses (Microsoft APS, IBM Netezza, and Amazon RedShift), as well as 'Big Data' platforms (Hadoop through Impala, SPARK, and Google BigQuery). HADES does *not* support MySQL. 
+HADES is a set of R packages that execute against data in a database server. HADES supports traditional database systems (PostgreSQL, Microsoft SQL Server, and Oracle), parallel data warehouses (Microsoft APS, IBM Netezza, and Amazon RedShift), as well as 'Big Data' platforms (Hadoop through Apache Impala, Apache Spark, and Google BigQuery). HADES does *not* support MySQL. 
 
 ## License
 
