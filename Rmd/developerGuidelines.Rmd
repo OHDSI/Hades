@@ -6,6 +6,32 @@ output:
         toc_float: TRUE
 ---
 
+# Issues
+
+Issues will be collected using GitHub's issue trackers, one for each HADES repo. Anyone can file an issue. 
+
+Assign an issue to a collaborator to indicate that person is working on it, or will be working on it shortly. 
+
+Issues can be labelled with the following labels (See also [here](https://github.com/OHDSI/CohortMethod/issues/labels)):
+
+## Type of issue
+
+- <span style="border-radius: 25px; color:#ffffff; background: #fc2929; padding: 0px 8px 0px 8px;">bug</span> Erroneous behavior that needs to be fixed. <span style="color:#aaaaaa;">(Color #fc2929)</span>
+- <span style="border-radius: 25px; background: #84b6eb; padding: 0px 8px 0px 8px;">enhancement</span> New functionality that could be added. <span style="color:#aaaaaa;">(Color #84b6eb)</span>
+- <span style="border-radius: 25px; background: #fbca04; padding: 0px 8px 0px 8px;">exploratory</span> Changes that require some research first. (<span style="color:#aaaaaa;">Color #fbca04)</span>
+- <span style="border-radius: 25px; color:#ffffff; background: #cc317c; padding: 0px 8px 0px 8px;">question</span> A questions that just needs an answer, not a change in code. <span style="color:#aaaaaa;">(Color #cc317c)</span>
+- <span style="border-radius: 25px; background: #cccccc; padding: 0px 8px 0px 8px;">duplicate</span> Duplication of an existing issue. <span style="color:#aaaaaa;">(Color #cccccc)</span>
+
+## Issue collaboration
+
+- <span style="border-radius: 25px; color:#ffffff; background: #0052cc; padding: 0px 8px 0px 8px;">good first issue</span> An issue that could be solved by someone new to the package. <span style="color:#aaaaaa;">(Color #0052cc)
+- <span style="border-radius: 25px; color:#ffffff; background: #B7042F; padding: 0px 8px 0px 8px;">documentation</span> Requires (re) writing of documentation, no coding. <span style="color:#aaaaaa;">(Color #B7042F)</span>
+- <span style="border-radius: 25px; color:#ffffff; background: #159818; padding: 0px 8px 0px 8px;">help wanted</span> Will probably not be addressed by the package maintainer, but could be addressed by someone else. <span style="color:#aaaaaa;">(Color #159818)</span>
+
+# Milestones
+
+GitHub milestones should be used to indicate future versions, and link issues to specific versions. It is recommended to have (concurrent) miltestones for next major and next minor release.
+
 # Pull requests
 
 Before you do a pull request, you should always **file an issue** and make sure the package maintainer agrees that it’s a problem, and is happy with your basic proposal for fixing it. We don’t want you to spend a bunch of time on something that we don’t think is a good idea.
@@ -22,10 +48,9 @@ Additional requirements for pull requests:
 
 - Always target the `develop` branch, and make sure you are up-to-date with the develop branch.
 
+# Repo organization
 
-# Package organization
-
-All HADES R package follow the basic structure of R packages. See [R packages](http://r-pkgs.had.co.nz/) for a thorough discussion on R packages.
+All HADES repos follow the basic structure of R packages. See [R packages](http://r-pkgs.had.co.nz/) for a thorough discussion on R packages.
 
 ## Documentation
 

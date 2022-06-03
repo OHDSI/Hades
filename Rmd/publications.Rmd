@@ -9,6 +9,8 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Reps JM, Wilcox M, McGee BA, et al. [Development of multivariable models to predict perinatal depression before and after delivery using patient reported survey responses at weeks 4-10 of pregnancy](https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-022-04741-9) BMC Pregnancy Childbirth. 2022 May 26;22(1):442. doi: 10.1186/s12884-022-04741-9.
+
 - Williams RD, Markus AF, Yang C, et al. [Seek COVER: using a disease proxy to rapidly develop and validate a personalized risk calculator for COVID-19 outcomes in an international network](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-022-01505-z) BMC Med Res Methodol. 2022 Jan 30;22(1):35. doi: 10.1186/s12874-022-01505-z.
 
 - Nestsiarovich A, Reps JM, Matheny ME, et al. [Predictors of diagnostic transition from major depressive disorder to bipolar disorder: a retrospective observational network study](https://doi.org/10.1038/s41398-021-01760-6) Transl Psychiatry. 2021 Dec 20;11(1):642.
@@ -64,6 +66,10 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Reps JM, Williams RD, Schuemie MJ, et al. [Learning patient-level prediction models across multiple healthcare databases: evaluation of ensembles for increasing model transportability](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-022-01879-6) BMC Med Inform Decis Mak. 2022 May 25;22(1):142. doi: 10.1186/s12911-022-01879-6.
+
+- Ostropolets A, Ryan P, Schuemie M, et al. [Differential anchoring effects of vaccination comparator selection: characterizing a potential bias due to healthcare utilization in COVID-19 versus influenza](https://doi.org/10.2196/33099) JMIR Public Health Surveill. 2022 Apr 26. doi: 10.2196/33099
 
 - Li X, Lai LY, Ostropolets A, et al. [Bias, Precision and Timeliness of Historical (Background) Rate Comparison Methods for Vaccine Safety Monitoring: An Empirical Multi-Database Analysis](https://doi.org/10.3389/fphar.2021.773875) Front Pharmacol. 2021 Nov 24;12:773875. doi: 10.3389/fphar.2021.773875.
 

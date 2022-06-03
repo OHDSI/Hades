@@ -441,31 +441,7 @@ div.tocify {
 </div>
 
 
-<p>These instructions are also demonstrated in <a href="https://youtu.be/ole3IFMLSYA">this video</a>.</p>
-<p>Each HADES package site describes how you can install that individual package (including its dependency). On this page you will learn how you can install all HADES packages in one go, or update any HADES packages you have already installed. But before proceeding, make sure you have R, RTools (for Windows) and Java installed properly, as described <a href="rSetup.html">here</a>.</p>
-<div id="github-personal-access-token" class="section level1">
-<h1>GitHub Personal Access Token</h1>
-<p>Installing all HADES packages requires a lot of downloads from GitHub. Unfortunately, GitHub has a cap on how many downloads an anonymous user can make in a short amount of time, and this cap is reached when trying to download all HADES packages. To avoid this cap, we need to authenticate ourselves using our GitHub account. A known GitHub user has a much higher download cap, and can install HADES without issues. We can authenticate ourselves by first creating a <strong>Personal Access Token</strong> (PAT), and then providing this to R.</p>
-<p>Fortunately, you will need to do this only once. After you’ve set your PAT in R, you can rely on it to be there in all your future R sessions.</p>
-<div id="creating-a-personal-access-token" class="section level2">
-<h2>Creating a Personal Access Token</h2>
-<p>Before we can create a PAT, you must make sure that you have a valid GitHub account. You can create one for free at <a href="https://github.com/">GitHub.com</a>.</p>
-<p>The easiest way to create a GitHub PAT is by using the <a href="https://usethis.r-lib.org/">usethis</a> package. Running this code will open a browser that allows you to generate a PAT:</p>
-<pre class="r"><code>install.packages(&quot;usethis&quot;)
-library(usethis)
-create_github_token(scopes = c(&quot;(no scope)&quot;), description = &quot;R:GITHUB_PAT&quot;, host = &quot;https://github.com&quot;)</code></pre>
-<p>You may need to log on to GitHub. Note that the PAT does not require any of the permissions listed, so you can leave all checkboxes unchecked. Scroll down and click on ‘Generate token’ to generate your PAT. Your PAT is a sequence of 40 letters and numbers. Make sure to copy your PAT, because you will not be able to see it again once you close your browser!</p>
-</div>
-<div id="adding-your-personal-access-token-to-r" class="section level2">
-<h2>Adding your Personal Access Token to R</h2>
-<p>Next, we need to make the PAT available to R. For this we need to add a line to the <code>.Renviron</code> file that looks like this:</p>
-<pre><code>GITHUB_PAT = &#39;a1b2c3d4e5f6g7h8g9h0ijklmnopqrstuvwxyz&#39;</code></pre>
-<p>where ‘a1b2c3d4e5f6g7h8g9h0ijklmnopqrstuvwxyz’ is your PAT.</p>
-<p>The easiest way to edit your <code>.Renviron</code> file is by using the <code>usethis</code> package again:</p>
-<pre class="r"><code>edit_r_environ()</code></pre>
-<p>This will open <code>.Renviron</code> in a text editor. Add the line with your PAT, save the file, and restart R. The PAT will now be available to the various R functions.</p>
-</div>
-</div>
+<p>Each HADES package site describes how you can install that individual package (including its dependency). On this page you will learn how you can install all HADES packages in one go, or update any HADES packages you have already installed. But before proceeding, make sure you have R, RTools (for Windows) and Java installed properly, as described <a href="rSetup.html">here</a>. Please don’t forget to ensure you have set a GitHub Personal Access Token (PAT) as described <a href="rSetup.html#GitHub_Personal_Access_Token">here</a>. Else we will hit our GitHub download limit, and the installation will fail.</p>
 <div id="installing-all-hades-packages" class="section level1">
 <h1>Installing all HADES packages</h1>
 <p>We install the HADES packages from GitHub using the <a href="https://remotes.r-lib.org/">remotes</a> package:</p>
