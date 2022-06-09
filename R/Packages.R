@@ -14,8 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' @keywords internal
-"_PACKAGE"
-
-#' @importFrom utils read.table
-NULL
+#' List all packages currently in HADES
+#'
+#' @return
+#' A data frame with one row per HADES package.
+#'
+#' @examples
+#' listHadesPackages()
+#' 
+#' @export
+listHadesPackages <- function() {
+  packageListUrl <- "https://raw.githubusercontent.com/OHDSI/Hades/main/extras/packages.csv"
+  hadesPackageList <- read.table(packageListUrl, sep = ",", header = TRUE)
+  return(hadesPackageList)
+}
