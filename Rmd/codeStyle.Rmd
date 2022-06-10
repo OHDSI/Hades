@@ -1,5 +1,5 @@
 ---
-title: "Developer Guidelines"
+title: "Code Style"
 output: 
     html_document:
         toc: TRUE
