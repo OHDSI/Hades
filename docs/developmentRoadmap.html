@@ -441,38 +441,87 @@ div.tocify {
 </div>
 
 
-<p>Below is a high-level overview of the development roadmap for HADES. Note that each package maintains a much more detailed list of issues.</p>
-<div id="short-term" class="section level1">
-<h1>Short term</h1>
+<div id="package-milestones" class="section level1">
+<h1>Package milestones</h1>
+<p>For each of the HADES packages we try to define milestones corresponding to future releases. Here’s an overview of these milestones:</p>
+<script src="milestones.js"></script>
+<p id='Andromeda'/>
+<script>addMileStones('Andromeda')</script>
+<p id='BigKnn'/>
+<script>addMileStones('BigKnn')</script>
+<p id='Capr'/>
+<script>addMileStones('Capr')</script>
+<p id='CirceR'/>
+<script>addMileStones('CirceR')</script>
+<p id='CohortDiagnostics'/>
+<script>addMileStones('CohortDiagnostics')</script>
+<p id='CohortGenerator'/>
+<script>addMileStones('CohortGenerator')</script>
+<p id='CohortMethod'/>
+<script>addMileStones('CohortMethod')</script>
+<p id='Cyclops'/>
+<script>addMileStones('Cyclops')</script>
+<p id='DatabaseConnector'/>
+<script>addMileStones('DatabaseConnector')</script>
+<p id='EmpiricalCalibration'/>
+<script>addMileStones('EmpiricalCalibration')</script>
+<p id='EnsemblePatientLevelPrediction'/>
+<script>addMileStones('EnsemblePatientLevelPrediction')</script>
+<p id='Eunomia'/>
+<script>addMileStones('Eunomia')</script>
+<p id='EvidenceSynthesis'/>
+<script>addMileStones('EvidenceSynthesis')</script>
+<p id='FeatureExtraction'/>
+<script>addMileStones('FeatureExtraction')</script>
+<p id='Hydra'/>
+<script>addMileStones('Hydra')</script>
+<p id='MethodEvaluation'/>
+<script>addMileStones('MethodEvaluation')</script>
+<p id='OhdsiSharing'/>
+<script>addMileStones('OhdsiSharing')</script>
+<p id='ParallelLogger'/>
+<script>addMileStones('ParallelLogger')</script>
+<p id='PatientLevelPrediction'/>
+<script>addMileStones('PatientLevelPrediction')</script>
+<p id='ROhdsiWebApi'/>
+<script>addMileStones('ROhdsiWebApi')</script>
+<p id='SelfControlledCaseSeries'/>
+<script>addMileStones('SelfControlledCaseSeries')</script>
+<p id='SelfControlledCohort'/>
+<script>addMileStones('SelfControlledCohort')</script>
+<p id='SqlRender'/>
+<script>addMileStones('SqlRender')</script>
+</div>
+<div id="overall-roadmap" class="section level1">
+<h1>Overall roadmap</h1>
+<p>Below is a high-level overview of the overall development roadmap for HADES.</p>
+<div id="short-term" class="section level2">
+<h2>Short term</h2>
 <p>These tasks are in progress, and should be finished within the next six months:</p>
 <ul>
 <li>Add competing risk analyses to <code>CohortMethod</code>.</li>
 <li>Certify support for CDM version 5.4 for all packages in HADES.</li>
-<li>Quarterly releases of Hydra, providing the latest and greated of HADES.</li>
+<li>Develop a modular approach to studies. A study will be defined as a JSON object, executed through a new package called <code>Strategus</code>, and will produce CSV output that can be shared between sites and can be viewed using a modular Shiny app.</li>
+<li>Develop a characterization package that will allow computing incidence rates, prevalence, and cohort characteristics (using FeatureExtraction).</li>
 </ul>
 </div>
-<div id="medium-term" class="section level1">
-<h1>Medium term</h1>
+<div id="medium-term" class="section level2">
+<h2>Medium term</h2>
 <p>These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:</p>
 <ul>
 <li>Add the <code>DataQualityDashboard</code> package to HADES.</li>
-<li>Move <code>FeatureExtraction</code> into CRAN.</li>
-<li>Add study package skeletons for characterization studies to <code>Hydra</code>.</li>
 <li>Add option to use a database backend for all Shiny apps.</li>
-<li>Create a study skeleton in <code>Hydra</code> for the self-controlled case series.</li>
 </ul>
 </div>
-<div id="long-term" class="section level1">
-<h1>Long term</h1>
+<div id="long-term" class="section level2">
+<h2>Long term</h2>
 <p>These rasks are on our radar, but it is unclear when they will be finished.</p>
 <ul>
 <li>Add the <code>Achilles</code> package to HADES.<br />
 </li>
 <li>Add the <code>PheValuator</code> package to HADES.</li>
-<li>Refactor signal injection code in <code>MethodEvaluation</code>. The code for positive control synthesis is highly complex, and there are some issues when there are many exposures with length 0. The code should be restructured, with testable units.</li>
-<li>Move all HADES packages to CRAN.</li>
-<li>Make Shiny apps more modular.</li>
 </ul>
+</div>
 </div>
 
 

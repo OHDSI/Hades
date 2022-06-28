@@ -6,34 +6,45 @@ output:
         toc_float: TRUE
 ---
 
-Below is a high-level overview of the development roadmap for HADES. Note that each package maintains a much more detailed list of issues.
+# Package milestones
 
-# Short term
+For each of the HADES packages we try to define milestones corresponding to future releases. Here's an overview of these milestones:
+
+<script src="milestones.js"></script>
+
+```{r echo=FALSE, results="asis", warning=FALSE}
+packages <- read.csv("../extras/packages.csv", stringsAsFactors = FALSE)
+packages <- packages[order(packages$name), ]
+for (i in seq_len(nrow(packages))) {
+  writeLines(sprintf("<p id='%s'/><script>addMileStones('%s')</script>", packages$name[i], packages$name[i]))
+}
+
+```
+
+# Overall roadmap
+
+
+Below is a high-level overview of the overall development roadmap for HADES. 
+
+## Short term
 
 These tasks are in progress, and should be finished within the next six months:
 
 - Add competing risk analyses to `CohortMethod`.
 - Certify support for CDM version 5.4 for all packages in HADES.
-- Quarterly releases of Hydra, providing the latest and greated of HADES.
+- Develop a modular approach to studies. A study will be defined as a JSON object, executed through a new package called `Strategus`, and will produce CSV output that can be shared between sites and can be viewed using a modular Shiny app.
+- Develop a characterization package that will allow computing incidence rates, prevalence, and cohort characteristics (using FeatureExtraction).
 
-
-# Medium term
+## Medium term
 
 These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:
 
 - Add the `DataQualityDashboard` package to HADES.
-- Move `FeatureExtraction` into CRAN.
-- Add study package skeletons for characterization studies to `Hydra`.
 - Add option to use a database backend for all Shiny apps.
-- Create a study skeleton in `Hydra` for the self-controlled case series.
 
-
-# Long term
+## Long term
 
 These rasks are on our radar, but it is unclear when they will be finished.
 
 - Add the `Achilles` package to HADES.  
 - Add the `PheValuator` package to HADES. 
-- Refactor signal injection code in `MethodEvaluation`. The code for positive control synthesis is highly complex, and there are some issues when there are many exposures with length 0. The code should be restructured, with testable units.
-- Move all HADES packages to CRAN.
-- Make Shiny apps more modular.
