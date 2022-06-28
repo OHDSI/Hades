@@ -30,7 +30,15 @@ Issues can be labelled with the following labels (See also [here](https://github
 
 # Milestones
 
-GitHub milestones should be used to indicate future versions, and link issues to specific versions. It is recommended to have (concurrent) miltestones for next major and next minor release.
+GitHub milestones should be used to indicate future versions, and link issues to those versions. Note that these milestones will also be reported in our [roadmap dashboard](developmentRoadmap.html), so they are a good way to keep HADES users informed on what will happen to their favorite package moving forward.
+
+Some recommendations for milestones:
+
+- Use the name of the version as the milestone name (e.g. 'v5.0.0' for a next major release).
+- Provide a short description of the most important changes a user can expect in the release.
+- You can have (concurrent) miltestones for the next major and next minor release.
+- Collect all issues that will be addressed in the release under the milestone.
+- Ensure that issue titles are self-explanatory.
 
 # Pull requests
 

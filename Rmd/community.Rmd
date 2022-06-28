@@ -19,7 +19,7 @@ The HADES workgroup has regular meetings. Meetings are open to all, and will be 
 ```{block2, type='rounded'}
 ### Next HADES meeting
 
-Date: **May 19, 2022**
+Date: **July 21, 2022**
 
 Time (DST where appropriate):
 
@@ -37,6 +37,8 @@ URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19
 
 ### 2022
 
+- June 16: *Strategus update, OHDSI targets*
+- May 19: *Khieron, organizing issues, Strategus update*
 - April 21: *Upcoming hack-a-thon, Q2 key results*. See recordings in Teams
 - March 17: *Key results. Modularization*. See recordings in Teams
 - February 17: *2022 objectives and key results*. See recordings in Teams
