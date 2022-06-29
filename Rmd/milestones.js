@@ -11,10 +11,10 @@ function apiCallback(results) {
     var resultDataList = results.data;
 	if (resultDataList.length == 0)
 		return;
-	var repo = resultDataList[1].repository_url.replace(/^.*\//, "");
+	var repo = resultDataList[0].repository_url.replace(/^.*\//, "");
 	var content = document.getElementById(repo);
 	var repoTitle = document.createElement("h3");
-	repoTitle.href = resultDataList[1].repository_url;
+	repoTitle.href = resultDataList[0].repository_url;
 	repoTitle.textContent = repo;
 	repoTitle.setAttribute("target", "_blank");
 	
