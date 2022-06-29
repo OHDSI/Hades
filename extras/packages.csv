@@ -17,7 +17,7 @@ order,name,section,description,inCran,pages,maintainers
 15,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie 
 16,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,FALSE,TRUE,Frank DeFalco
 17,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena
-18,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Martijn Schuemie 
+18,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena 
 19,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
 20,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
 21,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
