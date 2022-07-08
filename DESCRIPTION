@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.3.0
-Date: 2022-03-29
+Version: 1.4.0
+Date: 2022-07-08
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -33,6 +33,7 @@ Imports:
   SelfControlledCaseSeries,
   SelfControlledCohort,
   PatientLevelPrediction,
+  PhenotypeLibrary,
   MethodEvaluation,
   OhdsiSharing,
   Hydra
@@ -48,6 +49,7 @@ Remotes:
   ohdsi/PatientLevelPrediction,
   ohdsi/MethodEvaluation,
   ohdsi/OhdsiSharing,
+  ohdsi/PhenotypeLibrary,
   ohdsi/Hydra,
   ohdsi/CirceR,
   ohdsi/Capr,

@@ -52,6 +52,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [PatientLevelPrediction issue tracker](https://github.com/OHDSI/PatientLevelPrediction/issues)
 
+- [PhenotypeLibrary issue tracker](https://github.com/OHDSI/PhenotypeLibrary/issues)
+
 - [ROhdsiWebApi issue tracker](https://github.com/OHDSI/ROhdsiWebApi/issues)
 
 - [SelfControlledCaseSeries issue tracker](https://github.com/OHDSI/SelfControlledCaseSeries/issues)

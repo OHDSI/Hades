@@ -1,3 +1,10 @@
+HADES 1.4.0
+===========
+
+Changes
+
+- Adding PhenotypeLibrary to HADES
+
 HADES 1.3.0
 ===========
 

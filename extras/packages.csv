@@ -4,21 +4,22 @@ order,name,section,description,inCran,pages,maintainers
 3,SelfControlledCohort,Population-level estimation,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE,Jamie Gilbert
 4,EvidenceSynthesis,Population-level estimation,Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.,TRUE,TRUE,Martijn Schuemie 
 5,PatientLevelPrediction,Patient-level prediction,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE,Jenna Reps & Peter Rijnbeek
-6,EnsemblePatientLevelPrediction,Patient-level prediction,"Building and validating ensemble patient-level predictive models.",FALSE,TRUE,Jenna Reps
-7,EmpiricalCalibration,Evidence Quality,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,Martijn Schuemie 
-8,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie 
-9,CohortDiagnostics,Evidence Quality,Generate a wide set of diagnostics to evaluate cohort definitions against databases in the CDM.,FALSE,TRUE,Gowtham Rao
-9,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Adam Black
-10,BigKnn,Supporting packages,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,Martijn Schuemie 
-11,Capr,Supporting packages,"Develop and manipulate complex cohort definitions in R",FALSE,TRUE,Martin Lavallee
-12,CirceR,Supporting packages,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",FALSE,TRUE,Chris Knoll
-13,CohortGenerator,Supporting packages,Instantiating cohorts in a database based on a set of cohort definitions.,FALSE,TRUE,Anthony Sena
-14,Cyclops,Supporting packages,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,Marc Suchard
-15,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie 
-16,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,FALSE,TRUE,Frank DeFalco
-17,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena
-18,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena 
-19,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
-20,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
-21,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
-22,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie 
+6,EnsemblePatientLevelPrediction,Patient-level prediction,Building and validating ensemble patient-level predictive models.,FALSE,TRUE,Jenna Reps
+7,Capr,Cohort construction,Develop and manipulate complex cohort definitions in R,FALSE,TRUE,Martin Lavallee
+8,CirceR,Cohort construction,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",FALSE,TRUE,Chris Knoll
+9,CohortGenerator,Cohort construction,Instantiating cohorts in a database based on a set of cohort definitions.,FALSE,TRUE,Anthony Sena
+10,PhenotypeLibrary,Cohort construction,The OHDSI Phenotype Library: a collection of community-maintained pre-definined cohorts.,FALSE,TRUE,Gowtham Rao
+11,EmpiricalCalibration,Evidence Quality,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,Martijn Schuemie 
+12,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie 
+13,CohortDiagnostics,Evidence Quality,Generate a wide set of diagnostics to evaluate cohort definitions against databases in the CDM.,FALSE,TRUE,Gowtham Rao
+14,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Adam Black
+15,BigKnn,Supporting packages,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,Martijn Schuemie 
+16,Cyclops,Supporting packages,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,Marc Suchard
+17,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie 
+18,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,FALSE,TRUE,Frank DeFalco
+19,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena
+20,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena 
+21,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
+22,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
+23,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
+24,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie 

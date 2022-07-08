@@ -21,6 +21,13 @@ Below are the packages included in HADES. For each package a link is provided wi
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/PatientLevelPrediction">PatientLevelPrediction</a></h4>Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.</br><a href="https://ohdsi.github.io/PatientLevelPrediction">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/EnsemblePatientLevelPrediction">EnsemblePatientLevelPrediction</a></h4>Building and validating ensemble patient-level predictive models.</br><a href="https://ohdsi.github.io/EnsemblePatientLevelPrediction">Learn more...</a></li>
 </ul>
+<h2 id="pkg_header">Cohort construction</h2>
+<ul id="pkg">
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Capr">Capr</a></h4>Develop and manipulate complex cohort definitions in R</br><a href="https://ohdsi.github.io/Capr">Learn more...</a></li>
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/CirceR">CirceR</a></h4>An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.</br><a href="https://ohdsi.github.io/CirceR">Learn more...</a></li>
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/CohortGenerator">CohortGenerator</a></h4>Instantiating cohorts in a database based on a set of cohort definitions.</br><a href="https://ohdsi.github.io/CohortGenerator">Learn more...</a></li>
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/PhenotypeLibrary">PhenotypeLibrary</a></h4>The OHDSI Phenotype Library: a collection of community-maintained pre-definined cohorts.</br><a href="https://ohdsi.github.io/PhenotypeLibrary">Learn more...</a></li>
+</ul>
 <h2 id="pkg_header">Evidence Quality</h2>
 <ul id="pkg">
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/EmpiricalCalibration">EmpiricalCalibration</a></h4>Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.</br><a href="https://ohdsi.github.io/EmpiricalCalibration">Learn more...</a></li>
@@ -31,9 +38,6 @@ Below are the packages included in HADES. For each package a link is provided wi
 <ul id="pkg">
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Andromeda">Andromeda</a></h4>Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.</br><a href="https://ohdsi.github.io/Andromeda">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/BigKnn">BigKnn</a></h4>A large scale k-nearest neighbor classifier using the Lucene search engine.</br><a href="https://ohdsi.github.io/BigKnn">Learn more...</a></li>
-<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Capr">Capr</a></h4>Develop and manipulate complex cohort definitions in R</br><a href="https://ohdsi.github.io/Capr">Learn more...</a></li>
-<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/CirceR">CirceR</a></h4>An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.</br><a href="https://ohdsi.github.io/CirceR">Learn more...</a></li>
-<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/CohortGenerator">CohortGenerator</a></h4>Instantiating cohorts in a database based on a set of cohort definitions.</br><a href="https://ohdsi.github.io/CohortGenerator">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Cyclops">Cyclops</a></h4>Highly efficient implementation of regularized logistic, Poisson and Cox regression.</br><a href="https://ohdsi.github.io/Cyclops">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/DatabaseConnector">DatabaseConnector</a></h4>Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.</br><a href="https://ohdsi.github.io/DatabaseConnector">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Eunomia">Eunomia</a></h4>A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.</br><a href="https://ohdsi.github.io/Eunomia">Learn more...</a></li>
