@@ -1,5 +1,5 @@
 # Returns the list of HADES packages, and installs all dependencies of those packages
-prepareForRcheck <- function(pkgdir = ".") {
+prepareForRcheck <- function() {
   packageListUrl <- "https://raw.githubusercontent.com/OHDSI/Hades/main/extras/packages.csv"
   gitHubOrganization <- "ohdsi"
   hadesPackageList <- read.table(packageListUrl, sep = ",", header = TRUE) 
@@ -11,12 +11,11 @@ prepareForRcheck <- function(pkgdir = ".") {
   packagesToInstall <- c(packagesToInstall, "formatR") # Required for some vignettes
   # Don't install packages that are already installed:
   packagesToInstall <- packagesToInstall[!packagesToInstall %in% rownames(installed.packages())]
-  
+  packagesToInstallFromGitHub <- packagesToInstall[packagesToInstall %in% hadesPackageList$name[!hadesPackageList$inCran]]
   packagesToInstallFromCran <- packagesToInstall[!packagesToInstall %in% packagesToInstallFromGitHub]
   if (length(packagesToInstallFromCran) > 0) {
     remotes::install_cran(packagesToInstallFromCran)
   }
-  packagesToInstallFromGitHub <- packagesToInstall[packagesToInstall %in% hadesPackageList$name[!hadesPackageList$inCran]]
   for (package in packagesToInstallFromGitHub) {
     remotes::install_github(sprintf("%s/%s", gitHubOrganization, package), upgrade = FALSE)
   }
