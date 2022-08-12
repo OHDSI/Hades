@@ -1,6 +1,6 @@
 on: workflow_dispatch
 
-name: Reverse-deps-check
+name: R-check-all-of-HADES
 
 jobs:
   R-check-all-of-HADES:
