@@ -44,6 +44,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [Hydra issue tracker](https://github.com/OHDSI/Hydra/issues)
 
+- [IterativeHardThresholding issue tracker](https://github.com/OHDSI/IterativeHardThresholding/issues)
+
 - [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
 
 - [OhdsiSharing issue tracker](https://github.com/OHDSI/OhdsiSharing/issues)

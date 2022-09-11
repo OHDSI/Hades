@@ -532,7 +532,6 @@ pkgbuild::check_build_tools()</code></pre>
 <pre class="r"><code>install.packages(&quot;SqlRender&quot;)
 library(SqlRender)
 translate(&quot;SELECT TOP 10 * FROM person;&quot;, &quot;postgresql&quot;)</code></pre>
-<pre><code>## Warning: package &#39;SqlRender&#39; was built under R version 4.1.3</code></pre>
 <pre><code>## [1] &quot;SELECT  * FROM person LIMIT 10;&quot;</code></pre>
 <p>This function uses Java, so if all goes well we know both R and Java have been installed correctly!</p>
 <p>Another test is to see if source packages can be built. Run the following R code to install the <code>CohortMethod</code> package from the OHDSI GitHub repository:</p>

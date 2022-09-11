@@ -9,6 +9,12 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Voss EA, Ali SR, Singh A, et al. [Hip Fracture Risk After Treatment with Tramadol or Codeine: An Observational Study](https://doi.org/10.1007/s40264-022-01198-9) Drug Saf. 2022 Jul;45(7):791-807.
+
+- Li X, Ostropolets A, Makadia R, Shoaibi A, et al. [Characterising the background incidence rates of adverse events of special interest for covid-19 vaccines in eight countries: multinational network cohort study](https://doi.org/10.1136/bmj.n1435) BMJ. 2021 Jun 14;373:n1435.
+
+- Shoaibi A, Rao GA, Voss EA,  et al. [Phenotype Algorithms for the Identification and Characterization of Vaccine-Induced Thrombotic Thrombocytopenia in Real World Data: A Multinational Network Cohort Study](https://doi.org/10.1007/s40264-022-01187-y) Drug Saf. 2022 Jun;45(6):685-698.
+
 - Reps JM, Wilcox M, McGee BA, et al. [Development of multivariable models to predict perinatal depression before and after delivery using patient reported survey responses at weeks 4-10 of pregnancy](https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-022-04741-9) BMC Pregnancy Childbirth. 2022 May 26;22(1):442. doi: 10.1186/s12884-022-04741-9.
 
 - Williams RD, Markus AF, Yang C, et al. [Seek COVER: using a disease proxy to rapidly develop and validate a personalized risk calculator for COVID-19 outcomes in an international network](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-022-01505-z) BMC Med Res Methodol. 2022 Jan 30;22(1):35. doi: 10.1186/s12874-022-01505-z.
@@ -67,9 +73,20 @@ These papers were written using HADES.
 
 # Methods research
 
+- Swerdel JN, Schuemie M, Murray G, et al. [PheValuator 2.0: Methodological improvements for the PheValuator approach to semi-automated phenotype algorithm evaluation](https://doi.org/10.1016/j.jbi.2022.104177) J Biomed Inform. 2022 Aug 19;104177.
+
+- Schuemie MJ, Arshad F, Pratt N, et al. [Vaccine Safety Surveillance Using Routinely Collected Healthcare Data-An Empirical Evaluation of Epidemiological Designs](https://doi.org/10.3389/fphar.2022.893484) Front Pharmacol. 2022 Jul 6;13:893484.
+
+- Ostropolets A, Ryan PB, Schuemie MJ, et al. [Characterizing Anchoring Bias in Vaccine Comparator Selection Due to Health Care Utilization With COVID-19 and Influenza: Observational Cohort Study](https://doi.org/10.2196/33099) JMIR Public Health Surveill
+. 2022 Jun 17;8(6):e33099.
+
 - Reps JM, Williams RD, Schuemie MJ, et al. [Learning patient-level prediction models across multiple healthcare databases: evaluation of ensembles for increasing model transportability](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-022-01879-6) BMC Med Inform Decis Mak. 2022 May 25;22(1):142. doi: 10.1186/s12911-022-01879-6.
 
+- Williams RD, Reps JM, Kors JA, et al. [Using Iterative Pairwise External Validation to Contextualize Prediction Model Performance: A Use Case Predicting 1-Year Heart Failure Risk in Patients with Diabetes Across Five Data Sources](https://doi.org/10.1007/s40264-022-01161-8) Drug Saf. 2022 May;45(5):563-570.
+
 - Ostropolets A, Ryan P, Schuemie M, et al. [Differential anchoring effects of vaccination comparator selection: characterizing a potential bias due to healthcare utilization in COVID-19 versus influenza](https://doi.org/10.2196/33099) JMIR Public Health Surveill. 2022 Apr 26. doi: 10.2196/33099
+
+- Ostropolets A, Li X, Makadia R, et al., [Factors Influencing Background Incidence Rate Calculation: Systematic Empirical Evaluation Across an International Network of Observational Databases](https://doi.org/10.3389/fphar.2022.814198) Front Pharmacol. 2022 Apr 26;13:814198.
 
 - Li X, Lai LY, Ostropolets A, et al. [Bias, Precision and Timeliness of Historical (Background) Rate Comparison Methods for Vaccine Safety Monitoring: An Empirical Multi-Database Analysis](https://doi.org/10.3389/fphar.2021.773875) Front Pharmacol. 2021 Nov 24;12:773875. doi: 10.3389/fphar.2021.773875.
 

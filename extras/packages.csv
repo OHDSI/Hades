@@ -19,7 +19,8 @@ order,name,section,description,inCran,pages,maintainers
 18,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,FALSE,TRUE,Frank DeFalco
 19,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena
 20,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena 
-21,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
-22,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
-23,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
-24,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie 
+21,IterativeHardThresholding,Supporting packages,"Performing L0-based regressions using Cyclops",TRUE,TRUE,Marc Suchard
+22,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
+23,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
+24,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
+25,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie 

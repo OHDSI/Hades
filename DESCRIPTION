@@ -36,7 +36,8 @@ Imports:
   PhenotypeLibrary,
   MethodEvaluation,
   OhdsiSharing,
-  Hydra
+  Hydra,
+  IterativeHardThresholding
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
