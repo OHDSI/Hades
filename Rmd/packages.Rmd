@@ -19,6 +19,7 @@ Below are the packages included in HADES. For each package a link is provided wi
 <h2 id="pkg_header">Patient-level prediction</h2>
 <ul id="pkg">
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/PatientLevelPrediction">PatientLevelPrediction</a></h4>Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.</br><a href="https://ohdsi.github.io/PatientLevelPrediction">Learn more...</a></li>
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/DeepPatientLevelPrediction">DeepPatientLevelPrediction</a></h4>Performing patient level prediction using deep learning</br><a href="https://ohdsi.github.io/DeepPatientLevelPrediction">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/EnsemblePatientLevelPrediction">EnsemblePatientLevelPrediction</a></h4>Building and validating ensemble patient-level predictive models.</br><a href="https://ohdsi.github.io/EnsemblePatientLevelPrediction">Learn more...</a></li>
 </ul>
 <h2 id="pkg_header">Cohort construction</h2>

@@ -20,6 +20,7 @@ Imports:
   Capr,
   CirceR,
   Cyclops,
+  DeepPatientLevelPrediction,
   EmpiricalCalibration,
   EnsemblePatientLevelPrediction,
   Eunomia,
@@ -55,7 +56,8 @@ Remotes:
   ohdsi/CirceR,
   ohdsi/Capr,
   ohdsi/Eunomia,
-  ohdsi/CohortGenerator
+  ohdsi/CohortGenerator,
+  ohdsi/DeepPatientLevelPrediction
 LazyData: false
 RoxygenNote: 7.2.0
 Encoding: UTF-8
