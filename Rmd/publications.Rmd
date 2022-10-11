@@ -9,6 +9,8 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Londhe AA, Holy CE, Weaver J, et al. [Risk of retinal detachment and exposure to fluoroquinolones, common antibiotics, and febrile illness using a self-controlled case series study design: Retrospective analyses of three large healthcare databases in the US](https://doi.org/10.1371/journal.pone.0275796) PLoS One. 2022 Oct 6;17(10):e0275796. 
+
 - Voss EA, Ali SR, Singh A, et al. [Hip Fracture Risk After Treatment with Tramadol or Codeine: An Observational Study](https://doi.org/10.1007/s40264-022-01198-9) Drug Saf. 2022 Jul;45(7):791-807.
 
 - Li X, Ostropolets A, Makadia R, Shoaibi A, et al. [Characterising the background incidence rates of adverse events of special interest for covid-19 vaccines in eight countries: multinational network cohort study](https://doi.org/10.1136/bmj.n1435) BMJ. 2021 Jun 14;373:n1435.
