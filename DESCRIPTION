@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.4.0
-Date: 2022-07-08
+Version: 1.5.0
+Date: 2022-11-18
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -31,6 +31,7 @@ Imports:
   CohortDiagnostics,
   CohortMethod,
   CohortGenerator,
+  CohortExplorer,
   SelfControlledCaseSeries,
   SelfControlledCohort,
   PatientLevelPrediction,
@@ -57,7 +58,8 @@ Remotes:
   ohdsi/Capr,
   ohdsi/Eunomia,
   ohdsi/CohortGenerator,
-  ohdsi/DeepPatientLevelPrediction
+  ohdsi/DeepPatientLevelPrediction,
+  ohdsi/CohortExplorer
 LazyData: false
 RoxygenNote: 7.2.0
 Encoding: UTF-8

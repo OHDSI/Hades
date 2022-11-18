@@ -9,15 +9,27 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Li X, Burn E, Duarte-Salles T, Yin C, et al. [Comparative risk of thrombosis with thrombocytopenia syndrome or thromboembolic events associated with different covid-19 vaccines: international network cohort study from five European countries and the US](https://doi.org/10.1136/bmj-2022-071594)  BMJ. 2022 Oct 26;379:e071594.
+
+- Yang C, Williams RD, Swerdel JN, et al. [Development and external validation of prediction models for adverse health outcomes in rheumatoid arthritis: A multinational real-world cohort analysis](https://doi.org/10.1016/j.semarthrit.2022.152050) Semin Arthritis Rheum. 2022 Oct;56:152050. 
+
+- Nishimura A, Xie J, Kostka K, Duarte-Salles T, et al. [International cohort study indicates no association between alpha-1 blockers and susceptibility to COVID-19 in benign prostatic hyperplasia patients](https://doi.org/10.3389/fphar.2022.945592) Front Pharmacol. 2022 Sep 14;13:945592. 
+
 - Londhe AA, Holy CE, Weaver J, et al. [Risk of retinal detachment and exposure to fluoroquinolones, common antibiotics, and febrile illness using a self-controlled case series study design: Retrospective analyses of three large healthcare databases in the US](https://doi.org/10.1371/journal.pone.0275796) PLoS One. 2022 Oct 6;17(10):e0275796. 
 
 - Voss EA, Ali SR, Singh A, et al. [Hip Fracture Risk After Treatment with Tramadol or Codeine: An Observational Study](https://doi.org/10.1007/s40264-022-01198-9) Drug Saf. 2022 Jul;45(7):791-807.
+
+- Recalde M, Roel E, Pistillo A, et al. [Characteristics and outcomes of 627 044 COVID-19 patients living with and without obesity in the United States, Spain, and the United Kingdom](https://doi.org/10.1038/s41366-021-00893-4) nt J Obes (Lond). 2021 Nov;45(11):2347-2357.  
 
 - Li X, Ostropolets A, Makadia R, Shoaibi A, et al. [Characterising the background incidence rates of adverse events of special interest for covid-19 vaccines in eight countries: multinational network cohort study](https://doi.org/10.1136/bmj.n1435) BMJ. 2021 Jun 14;373:n1435.
 
 - Shoaibi A, Rao GA, Voss EA,  et al. [Phenotype Algorithms for the Identification and Characterization of Vaccine-Induced Thrombotic Thrombocytopenia in Real World Data: A Multinational Network Cohort Study](https://doi.org/10.1007/s40264-022-01187-y) Drug Saf. 2022 Jun;45(6):685-698.
 
 - Reps JM, Wilcox M, McGee BA, et al. [Development of multivariable models to predict perinatal depression before and after delivery using patient reported survey responses at weeks 4-10 of pregnancy](https://bmcpregnancychildbirth.biomedcentral.com/articles/10.1186/s12884-022-04741-9) BMC Pregnancy Childbirth. 2022 May 26;22(1):442. doi: 10.1186/s12884-022-04741-9.
+
+- Prats-Uribe A, Sena AG, Lai LYH, et al. [Use of repurposed and adjuvant drugs in hospital patients with covid-19: multinational network cohort study](https://doi.org/10.1136/bmj.n1038) BMJ. 2021 May 11;373:n1038.
+
+- Kostka K, Duarte-Salles T, Prats-Uribe A, et al. [Unraveling COVID-19: A Large-Scale Characterization of 4.5 Million COVID-19 Cases Using CHARYBDIS](https://doi.org/10.2147/clep.s323292) Clin Epidemiol. 2022 Mar 22;14:369-384. 
 
 - Williams RD, Markus AF, Yang C, et al. [Seek COVER: using a disease proxy to rapidly develop and validate a personalized risk calculator for COVID-19 outcomes in an international network](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-022-01505-z) BMC Med Res Methodol. 2022 Jan 30;22(1):35. doi: 10.1186/s12874-022-01505-z.
 
@@ -27,8 +39,9 @@ These papers were written using HADES.
 
 - Chen R, Suchard MA, Krumholz HM, et al. [Comparative First-Line Effectiveness and Safety of ACE (Angiotensin-Converting Enzyme) Inhibitors and Angiotensin Receptor Blockers: A Multinational Cohort Study](https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.120.16667?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed) Hypertension. 2021 Sep;78(3):591-603. doi: 10.1161/HYPERTENSIONAHA.120.16667.
 
-- Chan You S, Krumholz HM, Suchard MA, et al. [Comprehensive Comparative Effectiveness and Safety of First-Line β-Blocker Monotherapy in Hypertensive Patients: A Large-Scale Multicenter Observational Study](https://doi.org/10.1161/hypertensionaha.120.16402) Hypertension
-. 2021 May 5;77(5):1528-1538. doi: 10.1161/HYPERTENSIONAHA.120.16402.
+- Duarte-Salles T, Vizcaya D, Pistillo A, Casajust P, et al. [Thirty-Day Outcomes of Children and Adolescents With COVID-19: An International Experience](https://doi.org/10.1542/peds.2020-042929) Pediatrics. 2021 Sep;148(3):e2020042929. 
+
+- Chan You S, Krumholz HM, Suchard MA, et al. [Comprehensive Comparative Effectiveness and Safety of First-Line β-Blocker Monotherapy in Hypertensive Patients: A Large-Scale Multicenter Observational Study](https://doi.org/10.1161/hypertensionaha.120.16402) Hypertension. 2021 May 5;77(5):1528-1538. doi: 10.1161/HYPERTENSIONAHA.120.16402.
 
 - Morales DR, Conover MM, You SC, et al. [Renin-angiotensin system blockers and susceptibility to COVID-19: an international, open science, cohort analysis.](https://doi.org/10.1016/S2589-7500(20)30289-2) Lancet Digit Health. 2020 Dec 17:S2589-7500(20)30289-2. doi: 10.1016/S2589-7500(20)30289-2. 
 
@@ -75,12 +88,13 @@ These papers were written using HADES.
 
 # Methods research
 
+- Zhang L, Wang Y, Schuemie MJ, et al. [Adjusting for indirectly measured confounding using large-scale propensity score](https://doi.org/10.1016/j.jbi.2022.104204) J Biomed Inform. 2022 Oct;134:104204. 
+
 - Swerdel JN, Schuemie M, Murray G, et al. [PheValuator 2.0: Methodological improvements for the PheValuator approach to semi-automated phenotype algorithm evaluation](https://doi.org/10.1016/j.jbi.2022.104177) J Biomed Inform. 2022 Aug 19;104177.
 
 - Schuemie MJ, Arshad F, Pratt N, et al. [Vaccine Safety Surveillance Using Routinely Collected Healthcare Data-An Empirical Evaluation of Epidemiological Designs](https://doi.org/10.3389/fphar.2022.893484) Front Pharmacol. 2022 Jul 6;13:893484.
 
-- Ostropolets A, Ryan PB, Schuemie MJ, et al. [Characterizing Anchoring Bias in Vaccine Comparator Selection Due to Health Care Utilization With COVID-19 and Influenza: Observational Cohort Study](https://doi.org/10.2196/33099) JMIR Public Health Surveill
-. 2022 Jun 17;8(6):e33099.
+- Ostropolets A, Ryan PB, Schuemie MJ, et al. [Characterizing Anchoring Bias in Vaccine Comparator Selection Due to Health Care Utilization With COVID-19 and Influenza: Observational Cohort Study](https://doi.org/10.2196/33099) JMIR Public Health Surveill. 2022 Jun 17;8(6):e33099.
 
 - Reps JM, Williams RD, Schuemie MJ, et al. [Learning patient-level prediction models across multiple healthcare databases: evaluation of ensembles for increasing model transportability](https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-022-01879-6) BMC Med Inform Decis Mak. 2022 May 25;22(1):142. doi: 10.1186/s12911-022-01879-6.
 

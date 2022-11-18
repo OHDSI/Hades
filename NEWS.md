@@ -1,3 +1,10 @@
+HADES 1.5.0
+===========
+
+Changes
+
+- Adding CohortExplorer to HADES
+
 HADES 1.4.0
 ===========
 
