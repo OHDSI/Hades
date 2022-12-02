@@ -7,7 +7,7 @@
 # - DOCKER_HUB_ACCESS_TOKEN
 # - GITHUBPAT - The github account to use for downloading CRAN dependencies.
 #                      Needed to avoid "API rate limit exceeded" from github.
-name: Release
+name: Release Docker
 
 on:
   release:
