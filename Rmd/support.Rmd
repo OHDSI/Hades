@@ -60,6 +60,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [PhenotypeLibrary issue tracker](https://github.com/OHDSI/PhenotypeLibrary/issues)
 
+- [PheValuator issue tracker](https://github.com/OHDSI/PheValuator/issues)
+
 - [ROhdsiWebApi issue tracker](https://github.com/OHDSI/ROhdsiWebApi/issues)
 
 - [SelfControlledCaseSeries issue tracker](https://github.com/OHDSI/SelfControlledCaseSeries/issues)

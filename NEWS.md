@@ -1,3 +1,10 @@
+HADES 1.6.0
+===========
+
+Changes
+
+- Adding PheValuator to HADES
+
 HADES 1.5.0
 ===========
 

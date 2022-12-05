@@ -11,6 +11,7 @@ order,name,section,description,inCran,pages,maintainers
 10,CohortGenerator,Cohort construction and evaluation,Instantiating cohorts in a database based on a set of cohort definitions.,FALSE,TRUE,Anthony Sena
 11,PhenotypeLibrary,Cohort construction and evaluation,The OHDSI Phenotype Library: a collection of community-maintained pre-definined cohorts.,FALSE,TRUE,Gowtham Rao
 12,CohortDiagnostics,Cohort construction and evaluation,Generate a wide set of diagnostics to evaluate cohort definitions against databases in the CDM.,FALSE,TRUE,Jamie Gilbert
+13,PheValuator,Cohort construction and evaluation,"Semi-automated evaluation of cohorts, producing metrics suchs as sensitivity, specificity, and positive and negative preditive value.",FALSE,TRUE,Joel Swerdel
 13,CohortExplorer,Cohort construction and evaluation,Visually explore all individual-level data of patients in a cohort,FALSE,TRUE,Gowtham Rao
 14,EmpiricalCalibration,Evidence Quality,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,Martijn Schuemie 
 15,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie 
