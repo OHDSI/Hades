@@ -24,6 +24,7 @@ order,name,section,description,inCran,pages,maintainers
 22,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena 
 23,IterativeHardThresholding,Supporting packages,Performing L0-based regressions using Cyclops,TRUE,TRUE,Marc Suchard
 24,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans
+25,OhdsiShinyModules,Supporting packages,Contains shiny modules that can be used within shiny result interfaces,FALSE,TRUE,Jenna Reps
 25,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie 
 26,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao
 27,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie 

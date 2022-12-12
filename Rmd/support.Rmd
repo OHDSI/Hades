@@ -54,6 +54,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [OhdsiSharing issue tracker](https://github.com/OHDSI/OhdsiSharing/issues)
 
+- [OhdsiShinyModules issue tracker](https://github.com/OHDSI/OhdsiShinyModules/issues)
+
 - [ParallelLogger issue tracker](https://github.com/OHDSI/ParallelLogger/issues)
 
 - [PatientLevelPrediction issue tracker](https://github.com/OHDSI/PatientLevelPrediction/issues)

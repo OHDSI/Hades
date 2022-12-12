@@ -1,3 +1,10 @@
+HADES 1.7.0
+===========
+
+Changes
+
+- Adding OhdsiShinyModules to HADES
+
 HADES 1.6.0
 ===========
 
