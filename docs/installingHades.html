@@ -445,7 +445,10 @@ div.tocify {
 <div id="installing-all-hades-packages" class="section level1">
 <h1>Installing all HADES packages</h1>
 <p>We install the HADES packages from GitHub using the <a href="https://remotes.r-lib.org/">remotes</a> package:</p>
-<pre class="r"><code>install.packages(&quot;remotes&quot;)
+<pre class="r"><code># This line prevents the annoying &quot;Do you want to install from source&quot; dialogs:
+options(install.packages.compile.from.source = &quot;never&quot;)
+
+install.packages(&quot;remotes&quot;)
 library(remotes)
 install_github(&quot;ohdsi/Hades&quot;, upgrade = &quot;always&quot;)</code></pre>
 <p>Note that we use <code>upgrade = "always"</code> to avoid having to answer any questions about whether we want to upgrade any packages. HADES is designed to work with the latest released versions of all its dependencies, so we should always upgrade these (unless we’re running an older study package, which is an entirely different story).</p>
@@ -454,7 +457,10 @@ install_github(&quot;ohdsi/Hades&quot;, upgrade = &quot;always&quot;)</code></pr
 <div id="updating-hades" class="section level1">
 <h1>Updating HADES</h1>
 <p>If we already have the HADES packages installed, and wish to upgrade to the latest versions, we can also use the <code>remotes</code> package:</p>
-<pre class="r"><code>library(remotes)
+<pre class="r"><code># This line prevents the annoying &quot;Do you want to install from source&quot; dialogs:
+options(install.packages.compile.from.source = &quot;never&quot;)
+
+library(remotes)
 update_packages()</code></pre>
 </div>
 

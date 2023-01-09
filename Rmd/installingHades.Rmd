@@ -13,6 +13,9 @@ Each HADES package site describes how you can install that individual package (i
 We install the HADES packages from GitHub using the [remotes](https://remotes.r-lib.org/) package:
 
 ```{r eval=FALSE}
+# This line prevents the annoying "Do you want to install from source" dialogs:
+options(install.packages.compile.from.source = "never")
+
 install.packages("remotes")
 library(remotes)
 install_github("ohdsi/Hades", upgrade = "always")
@@ -27,6 +30,9 @@ When asked "*Do you want to install from source the packages which needs compila
 If we already have the HADES packages installed, and wish to upgrade to the latest versions, we can also use the `remotes` package:
 
 ```{r eval=FALSE}
+# This line prevents the annoying "Do you want to install from source" dialogs:
+options(install.packages.compile.from.source = "never")
+
 library(remotes)
 update_packages()
 ```
