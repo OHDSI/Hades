@@ -1,3 +1,10 @@
+HADES 1.8.0
+===========
+
+Changes
+
+- Adding ResultModelManager to HADES
+
 HADES 1.7.0
 ===========
 

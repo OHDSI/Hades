@@ -26,5 +26,6 @@ order,name,section,description,inCran,pages,maintainers,CRON
 24,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans,0 8 * * 0
 25,OhdsiShinyModules,Supporting packages,Contains shiny modules that can be used within shiny result interfaces,FALSE,TRUE,Jenna Reps,0 9 * * 0
 25,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie ,0 10 * * 0
-26,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
-27,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0
+26,ResultModelManager,Supporting packages,"A lightweight utility for data migrations allowing old results to work with new shiny apps and data visualisations.",FALSE,TRUE,Jamie Gilbert,0 13 * * 0
+27,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
+28,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0

@@ -64,6 +64,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [PheValuator issue tracker](https://github.com/OHDSI/PheValuator/issues)
 
+- [ResultModelManager issue tracker](https://github.com/OHDSI/ResultModelManager/issues)
+
 - [ROhdsiWebApi issue tracker](https://github.com/OHDSI/ROhdsiWebApi/issues)
 
 - [SelfControlledCaseSeries issue tracker](https://github.com/OHDSI/SelfControlledCaseSeries/issues)
