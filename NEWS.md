@@ -1,3 +1,10 @@
+HADES 1.9.0
+===========
+
+Changes
+
+- Adding Characterization to HADES
+
 HADES 1.8.0
 ===========
 

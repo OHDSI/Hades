@@ -1,7 +1,7 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.8.0
+Version: 1.9.0
 Date: 2023-01-11
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
@@ -42,7 +42,8 @@ Imports:
   Hydra,
   IterativeHardThresholding,
   OhdsiShinyModules,
-  ResultModelManager
+  ResultModelManager,
+  Characterization
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
@@ -65,7 +66,8 @@ Remotes:
   ohdsi/DeepPatientLevelPrediction,
   ohdsi/CohortExplorer,
   ohdsi/OhdsiShinyModules,
-  ohdsi/ResultModelManager
+  ohdsi/ResultModelManager,
+  ohdsi/Characterization
 LazyData: false
 RoxygenNote: 7.2.0
 Encoding: UTF-8

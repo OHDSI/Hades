@@ -20,6 +20,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [Capr issue tracker](https://github.com/OHDSI/Capr/issues)
 
+- [Characterization issue tracker](https://github.com/OHDSI/Characterization/issues)
+
 - [CirceR issue tracker](https://github.com/OHDSI/CirceR/issues)
 
 - [CohortDiagnostics issue tracker](https://github.com/OHDSI/CohortDiagnostics/issues)
