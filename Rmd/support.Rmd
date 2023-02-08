@@ -74,5 +74,7 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [SelfControlledCohort issue tracker](https://github.com/OHDSI/SelfControlledCohort/issues)
 
+- [ShinyAppBuilder issue tracker](https://github.com/OHDSI/ShinyAppBuilder/issues)
+
 - [SqlRender issue tracker](https://github.com/OHDSI/SqlRender/issues)
 

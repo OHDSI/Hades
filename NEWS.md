@@ -1,3 +1,10 @@
+HADES 1.10.0
+============
+
+Changes
+
+- Adding ShinyAppBuilder to HADES
+
 HADES 1.9.0
 ===========
 

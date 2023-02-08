@@ -29,4 +29,5 @@ order,name,section,description,inCran,pages,maintainers,CRON
 28,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie ,0 10 * * 0
 29,ResultModelManager,Supporting packages,A lightweight utility for data migrations allowing old results to work with new shiny apps and data visualisations.,FALSE,TRUE,Jamie Gilbert,0 13 * * 0
 30,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
-31,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0
+31,ShinyAppBuilder,Supporting packages,Interactively view analysis results across different types of analyses.,FALSE,TRUE,Jenna Reps,0 15 * * 0
+32,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0
