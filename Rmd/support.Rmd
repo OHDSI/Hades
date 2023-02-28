@@ -36,6 +36,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [DatabaseConnector issue tracker](https://github.com/OHDSI/DatabaseConnector/issues)
 
+- [DataQualityDashboard issue tracker](https://github.com/OHDSI/DataQualityDashboard/issues)
+
 - [DeepPatientLevelPrediction issue tracker](https://github.com/OHDSI/DeepPatientLevelPrediction/issues)
 
 - [EmpiricalCalibration issue tracker](https://github.com/OHDSI/EmpiricalCalibration/issues)

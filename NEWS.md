@@ -1,3 +1,10 @@
+HADES 1.11.0
+============
+
+Changes
+
+- Adding DataQualityDashboard to HADES
+
 HADES 1.10.0
 ============
 
