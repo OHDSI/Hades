@@ -18,7 +18,9 @@ envs <- reticulate::conda_list()
 envs <- envs[envs$name == 'r-reticulate', ]
 message(sprintf("Good r-reticulate: %s", envs$python[1]))
 message(sprintf("Evil r-reticulate: %s", envs$python[2]))
+# TODO: this somehow creates a r-reticulate folder in the r-reticulate folder. Need to fix
 unlink(dirname(envs$python[2]), recursive = TRUE)
+dir.create(dirname(envs$python[2]))
 file.copy(
   from = dirname(envs$python[1]),
   to = dirname(envs$python[2]),
