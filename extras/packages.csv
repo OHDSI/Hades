@@ -1,6 +1,6 @@
 order,name,section,description,inCran,pages,maintainers,CRON
-1,CohortMethod,Population-level estimation,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE,Martijn Schuemie ,0 8 * * 6
-2,SelfControlledCaseSeries,Population-level estimation,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE,Martijn Schuemie ,0 9 * * 6
+1,CohortMethod,Population-level estimation,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE,Martijn Schuemie,0 8 * * 6
+2,SelfControlledCaseSeries,Population-level estimation,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE,Martijn Schuemie,0 9 * * 6
 3,SelfControlledCohort,Population-level estimation,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE,Jamie Gilbert,0 10 * * 6
 4,EvidenceSynthesis,Population-level estimation,Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.,TRUE,TRUE,Martijn Schuemie ,0 11 * * 6
 5,PatientLevelPrediction,Patient-level prediction,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE,Jenna Reps & Peter Rijnbeek,0 12 * * 6
@@ -19,16 +19,17 @@ order,name,section,description,inCran,pages,maintainers,CRON
 18,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie ,0 23 * * 6
 19,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Adam Black,0 0 * * 0
 20,BigKnn,Supporting packages,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,Martijn Schuemie ,0 1 * * 0
-21,Cyclops,Supporting packages,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,Marc Suchard,0 2 * * 0
-22,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie ,0 3 * * 0
-23,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,FALSE,TRUE,Frank DeFalco,0 4 * * 0
-24,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena,0 5 * * 0
-25,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena ,0 6 * * 0
-26,IterativeHardThresholding,Supporting packages,Performing L0-based regressions using Cyclops,TRUE,TRUE,Marc Suchard,0 7 * * 0
-27,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans,0 8 * * 0
-28,OhdsiShinyModules,Supporting packages,Contains shiny modules that can be used within shiny result interfaces,FALSE,TRUE,Jenna Reps,0 9 * * 0
-29,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie ,0 10 * * 0
-30,ResultModelManager,Supporting packages,A lightweight utility for data migrations allowing old results to work with new shiny apps and data visualisations.,FALSE,TRUE,Jamie Gilbert,0 13 * * 0
-31,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
-32,ShinyAppBuilder,Supporting packages,Interactively view analysis results across different types of analyses.,FALSE,TRUE,Jenna Reps,0 15 * * 0
-33,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0
+21,BrokenAdaptiveRidge,Supporting packages,Broken Adaptive Ridge Regression with Cyclops.,TRUE,TRUE,Marc Suchard,0 18 * * 0
+22,Cyclops,Supporting packages,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,Marc Suchard,0 2 * * 0
+23,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie ,0 3 * * 0
+24,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,FALSE,TRUE,Frank DeFalco,0 4 * * 0
+25,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,FALSE,TRUE,Anthony Sena,0 5 * * 0
+26,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena ,0 6 * * 0
+27,IterativeHardThresholding,Supporting packages,Performing L0-based regressions using Cyclops,TRUE,TRUE,Marc Suchard,0 7 * * 0
+28,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans,0 8 * * 0
+29,OhdsiShinyModules,Supporting packages,Contains shiny modules that can be used within shiny result interfaces,FALSE,TRUE,Jenna Reps,0 9 * * 0
+30,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie ,0 10 * * 0
+31,ResultModelManager,Supporting packages,A lightweight utility for data migrations allowing old results to work with new shiny apps and data visualisations.,FALSE,TRUE,Jamie Gilbert,0 13 * * 0
+32,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
+33,ShinyAppBuilder,Supporting packages,Interactively view analysis results across different types of analyses.,FALSE,TRUE,Jenna Reps,0 15 * * 0
+34,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0

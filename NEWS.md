@@ -1,3 +1,8 @@
+HADES 1.12.0
+============
+
+- Adding BrokenAdaptiveRidge to HADES
+
 HADES 1.11.0
 ============
 
