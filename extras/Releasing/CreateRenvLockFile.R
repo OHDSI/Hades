@@ -16,13 +16,14 @@ remotes::install_github("ohdsi/OhdsiRTools")
 
 packagesUtils <- c("keyring")
 packagesForPlp <- c("lightgbm", "survminer", "parallel")
+packagesForBulkImport <- c("aws.s3", "R.utils")
 install.packages(c(packagesForPlp, packagesUtils))
 
 OhdsiRTools::createRenvLockFile(
   rootPackage = "Hades",
   mode = "description",
   includeRootPackage = TRUE,
-  additionalRequiredPackages = c(packagesForPlp, packagesUtils)
+  additionalRequiredPackages = c(packagesForPlp, packagesUtils, packagesForBulkImport)
 )
 # Manually fix remoteRef and remoteUserName  of HADES entry
 
