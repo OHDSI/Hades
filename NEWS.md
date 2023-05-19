@@ -1,3 +1,8 @@
+HADES 1.13.0
+============
+
+- Adding Achilles to HADES
+
 HADES 1.12.0
 ============
 

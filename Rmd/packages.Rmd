@@ -38,6 +38,7 @@ Below are the packages included in HADES. For each package a link is provided wi
 </ul>
 <h2 id="pkg_header">Evidence Quality</h2>
 <ul id="pkg">
+<li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/Achilles">Achilles</a></h4>Generate descriptive statistics on an entire OMOP CDM database</br><a href="https://ohdsi.github.io/Achilles">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/DataQualityDashboard">DataQualityDashboard</a></h4>Expose and evaluate observational data quality.</br><a href="https://ohdsi.github.io/DataQualityDashboard">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/EmpiricalCalibration">EmpiricalCalibration</a></h4>Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.</br><a href="https://ohdsi.github.io/EmpiricalCalibration">Learn more...</a></li>
 <li><h4><i class="fas  fa-cube "></i> <a href="https://ohdsi.github.io/MethodEvaluation">MethodEvaluation</a></h4>Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.</br><a href="https://ohdsi.github.io/MethodEvaluation">Learn more...</a></li>

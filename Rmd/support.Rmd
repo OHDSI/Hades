@@ -14,6 +14,8 @@ Questions about HADES can be asked on the [OHDSI Forums](http://forums.ohdsi.org
 
 Bug reports should be files using the issue tracker of the misbehaving package:
 
+- [Achilles issue tracker](https://github.com/OHDSI/Achilles/issues)
+
 - [Andromeda issue tracker](https://github.com/OHDSI/Andromeda/issues)
 
 - [BigKnn issue tracker](https://github.com/OHDSI/BigKnn/issues)
