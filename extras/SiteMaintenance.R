@@ -3,7 +3,7 @@
 setwd("c:/temp/git/Hades")
 
 # You'll need the icon package:
-devtools::install_github("ropenscilabs/icon")
+remotes::install_github("ropenscilabs/icon")
 
 # May need to install pandoc:
 install.packages("installr")

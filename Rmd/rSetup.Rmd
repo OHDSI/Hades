@@ -5,28 +5,39 @@ output:
         toc: TRUE
         toc_float: TRUE
 ---
+```{r echo=FALSE,message=FALSE}
+if (file.exists("../extras/rVersion.csv")) {
+  rVersion <- read.csv("../extras/rVersion.csv")
+} else {
+  rVersion <- read.csv("extras/rVersion.csv")
+}
+```
+
 Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed: 
 
-1. **R** is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.
+1. **R** is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface. For stability, we've picked one R version that we aim to support for a while moving forward. Since `r rVersion$fromDate` our target is **R `r rVersion$rVersion`**. We highly recommend installing R `r rVersion$rVersion` for maximum compatibility.
 2. **RTools** is a set of programs that is required on Windows to build R packages from source.
 3. **RStudio** is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.
 4. **Java** is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.
+
+In order to install HADES, you must also set a GitHub Personal Access Token as described [in this section](#github-personal-access-token)
+
 
 # Instructions for Windows
 
 These instructions are also demonstrated in [this video](https://youtu.be/DjVgbBGK4jM), showing a step-by-step guide to installing the required software.
 
 ```{block2, type='rmdimportant'}
-In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you **must** also install Java in both architectures. It is recommended to only install the 64-bit version of R.
+In Windows, older R versions (< 4.2.0) come with both R a 32-bit and a 64-bits architecture. If you install R in both architectures, you **must** also install both 32-bit and 64- bits Java versions. It is recommended to only install the 64-bit version of R.
 ```
 
 ## Installing R
 
-1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'base', then click the Download link indicated in the screenshot below.
+1. Go to [https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/](https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/), click on 'R-`r rVersion$rVersion`-win.exe' to download.
 
-   ![](images/downloadRWindows.png)
 
-2. After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below.
+2. After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, if you're installing an older R version (< 4.2.0), disable the 32-bit architecture as also shown below.
+
    ![](images/rDestination.png)
    
    ![](images/no32Bits.png)
@@ -35,20 +46,19 @@ Once completed, you should be able to select R from your Start Menu.
 
 ## Installing RTools
 
-1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'Rtools', and select the very latest version of RTools to download.
+```{r echo=FALSE}
+rToolsVersion <- gsub("\\.", "", gsub("\\.[0-9]+$", "", rVersion$rVersion))
+rToolsUrl <- sprintf("https://cran.r-project.org/bin/windows/Rtools/rtools%s/rtools.html", rToolsVersion)
+```
+
+1. Go to [`r rToolsUrl`](`r rToolsUrl`), and download the RTools installer.
 
 2. After downloading has completed run the installer. Select the default options everywhere.
 
-3. Since R v4.0.0 you also need to add the following line to your .Renviron file, as described on the RTools page:
-
-    ```
-    PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
-    ```
 	
 ## Installing RStudio
 
-1. Go to [https://www.rstudio.com/](https://www.rstudio.com/), select 'Download RStudio' (or the 'Download' button under 'RStudio'), opt for the free version, and download the installer for Windows as highlighted below.
-   ![](images/downloadRStudioWindows.png)
+1. Go to [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/), select 'Download RStudio Desktop For Windows'.
 
 2. After downloading, start the installer, and use the default options everywhere.
 
@@ -64,10 +74,8 @@ Once completed, you should be able to select R from your Start Menu.
 
 ## Installing R
 
-1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for (Mac) OS X', then 'base', then click the Download link indicated in the screenshot below.
+1. Go to [https://cran.r-project.org/bin/macosx/base/](https://cran.r-project.org/bin/macosx/base/), click on 'R-`r rVersion$rVersion`.pkg' to download.
 
-   ![](images/downloadRMac.png)
-   
 2. After the download has completed, run the installer and accept all of the default options. You should see a screen indicating that the installation was successful.
 
     ![](images/installRMacSuccess.png)
@@ -92,8 +100,7 @@ pkgbuild::check_build_tools()
 
 ## Installing RStudio
 
-1. Go to [https://www.rstudio.com/](https://www.rstudio.com/), select 'Download RStudio' (or the 'Download' button under 'RStudio'), opt for the free version, and download the installer for Mac as highlighted below.
-   ![](images/downloadRStudioMac.png)
+1. Go to [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/), select 'Download RStudio Desktop For Mac'.
    
 ## Installing Java
 
