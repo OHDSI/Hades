@@ -1,0 +1,33 @@
+---
+title: 'Supported Database Platforms'
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+Below are the database platforms currently supported by HADES, with the following details:
+
+- **Platform**: The name of the platform.
+- **Abbreviation**: the abbreviation used throughout HADES.
+- **Status**: The status of HADES support. 'Deprecated' means code for that platform exists, but the OHDSI community no longer supports it, so no guarantees are given. 
+- **Testing**: Whether the platform is tested in HADES' continuous integration. 
+
+
+
+| Platform           | Abbreviation | Status       | Testing |
+| :----------------- | :----------- | :----------- |:------- |
+| Amazon RedShift | redshift | Supported | Yes |
+| Apache Hive | hive | Deprecated |  |
+| Apache Impala | impala | Deprecated |  |
+| Apache Spark | spark | Supported |  |
+| Azure Synapse Analytics Dedicated | synapse | Supported |  |
+| DuckDB | duckdb | Supported | Yes |
+| Google BigQuery | bigquery | Supported |  |
+| IBM Netezza | netezza | Deprecated |  |
+| Microsoft Parallel Data Warehouse | pdw | Deprecated |  |
+| Microsoft SQL Server | sql server | Supported | Yes |
+| Oracle | oracle | Supported | Yes |
+| PostgreSQL | postgresql | Supported | Yes |
+| Snowflake | snowflake | Supported |  |
+| SQLite | sqlite | Supported | Yes |

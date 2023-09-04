@@ -14,14 +14,7 @@ Online discussions can take place in the [HADES Teams](https://teams.microsoft.c
 
 # Meetings
 
-The HADES workgroup has regular meetings. Meetings are open to all, and will be held on the third Thursday of the month. 
-
-```{block2, type='rounded'}
-### Next HADES meeting
-
-Date: **July 21, 2022**
-
-Time (DST where appropriate):
+The HADES workgroup has regular meetings. Meetings are open to all, and will be held on the third Thursday of the month. Time (DST where appropriate):
 
 - **6pm Central European time**
 - **5pm UK time**
@@ -31,47 +24,6 @@ Time (DST where appropriate):
 Teams meeting details:
 
 URL: [Join Microsoft Teams Meeting](https://teams.microsoft.com/l/meetup-join/19%3ac0ff168a04954dc28c18c260133baa3c%40thread.tacv2/1602145307087?context=%7b%22Tid%22%3a%22a30f0094-9120-4aab-ba4c-e5509023b2d5%22%2c%22Oid%22%3a%22dac1472c-1cc6-41dc-9cc7-c4720f7798de%22%7d)
-```
-
-## Prior meetings
-
-### 2022
-
-- June 16: *Strategus update, OHDSI targets*
-- May 19: *Khieron, organizing issues, Strategus update*
-- April 21: *Upcoming hack-a-thon, Q2 key results*. See recordings in Teams
-- March 17: *Key results. Modularization*. See recordings in Teams
-- February 17: *2022 objectives and key results*. See recordings in Teams
-- January 20: *2022 objectives and key results*. See recordings in Teams
-
-### 2021
-
-- November 18: *Study packages, Hydra, renv, and Docker*. [Notes](meetings/Hades18Nov2021.docx) and [slides](meetings/HadesNovember2021.pptx)
-
-- October 22; *Study packages*.
-
-- September 16: *CDM 5.4.0, interfaces with ATLAS and ARACHNE*. [Notes](meetings/Hades16Sep2021.docx)
-
-- June 17: *Unit-test-a-thon, integration testing*. [Notes](meetings/Hades17June2021.docx)
-
-- May 20: *PLP GUI*. [Notes](meetings/Hades20May2021.docx)
-
-- April 15: *Unit testing, CDM 5.4.0, HADES paper*. [Notes](meetings/Hades15Apr2021.docx)
-
-- March 18: *Upcoming HADES packages, unit testing*. [Notes](meetings/Hades18Mar2021.docx)
-
-- February 18: *Continuous Integration, OKRs, package maintainer expectations, 64-bit ints*. [Notes](meetings/Hades18Feb2021.docx)
-
-- January 21: *Study package guidelines, system requirements, GitHub Actions, Objectives and key results*. [Notes](meetings/Hades21Jan2021.docx).
-
-
-### 2020
-
-- December 17: *GitHub Actions, System Requirements, CDMv6, Communication*. [Notes](meetings/Hades17Dec2020.docx).
-
-- November 19: *Study packages & CDM v6*. [Notes](meetings/Hades19Nov2020.docx).
-
-- October 15: *HADES kickoff, versioning and releasing*. [Notes](meetings/Hades15Oct2020.docx), [slides](meetings/HADESkickoff.pptx), and [recording](https://drive.google.com/file/d/1N9_5GGdX4JNNugJohVZ8h_ZjwO91_GQ9/view?usp=sharing).
 
 # Package maintainers
 

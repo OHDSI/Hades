@@ -20,31 +20,3 @@ for (i in seq_len(nrow(packages))) {
 }
 
 ```
-
-# Overall roadmap
-
-
-Below is a high-level overview of the overall development roadmap for HADES. 
-
-## Short term
-
-These tasks are in progress, and should be finished within the next six months:
-
-- Add competing risk analyses to `CohortMethod`.
-- Certify support for CDM version 5.4 for all packages in HADES.
-- Develop a modular approach to studies. A study will be defined as a JSON object, executed through a new package called `Strategus`, and will produce CSV output that can be shared between sites and can be viewed using a modular Shiny app.
-- Develop a characterization package that will allow computing incidence rates, prevalence, and cohort characteristics (using FeatureExtraction).
-
-## Medium term
-
-These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:
-
-- Add the `DataQualityDashboard` package to HADES.
-- Add option to use a database backend for all Shiny apps.
-
-## Long term
-
-These rasks are on our radar, but it is unclear when they will be finished.
-
-- Add the `Achilles` package to HADES.  
-- Add the `PheValuator` package to HADES. 

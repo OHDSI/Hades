@@ -13,7 +13,7 @@
 
 <title>Development Roadmap</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
@@ -370,6 +370,9 @@ div.tocify {
     <li>
       <a href="connecting.html">Connecting to a Database</a>
     </li>
+    <li>
+      <a href="supportedPlatforms.html">Supported Database Platforms</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -514,46 +517,6 @@ milestones:</p>
 <script>addMileStones('ShinyAppBuilder')</script>
 <p id='SqlRender'/>
 <script>addMileStones('SqlRender')</script>
-</div>
-<div id="overall-roadmap" class="section level1">
-<h1>Overall roadmap</h1>
-<p>Below is a high-level overview of the overall development roadmap for
-HADES.</p>
-<div id="short-term" class="section level2">
-<h2>Short term</h2>
-<p>These tasks are in progress, and should be finished within the next
-six months:</p>
-<ul>
-<li>Add competing risk analyses to <code>CohortMethod</code>.</li>
-<li>Certify support for CDM version 5.4 for all packages in HADES.</li>
-<li>Develop a modular approach to studies. A study will be defined as a
-JSON object, executed through a new package called
-<code>Strategus</code>, and will produce CSV output that can be shared
-between sites and can be viewed using a modular Shiny app.</li>
-<li>Develop a characterization package that will allow computing
-incidence rates, prevalence, and cohort characteristics (using
-FeatureExtraction).</li>
-</ul>
-</div>
-<div id="medium-term" class="section level2">
-<h2>Medium term</h2>
-<p>These task will be taken on after the short term tasks are complete.
-We expect to finish them within the next year:</p>
-<ul>
-<li>Add the <code>DataQualityDashboard</code> package to HADES.</li>
-<li>Add option to use a database backend for all Shiny apps.</li>
-</ul>
-</div>
-<div id="long-term" class="section level2">
-<h2>Long term</h2>
-<p>These rasks are on our radar, but it is unclear when they will be
-finished.</p>
-<ul>
-<li>Add the <code>Achilles</code> package to HADES.<br />
-</li>
-<li>Add the <code>PheValuator</code> package to HADES.</li>
-</ul>
-</div>
 </div>
 
 

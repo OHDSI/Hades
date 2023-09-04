@@ -9,6 +9,16 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Voss EA, Shoaibi A, Yin Hui Lai L, et al. [Contextualising adverse events of special interest to characterise the baseline incidence rates in 24 million patients with COVID-19 across 26 databases: a multinational retrospective cohort study](https://doi.org/10.1016/j.eclinm.2023.101932) EClinicalMedicine. 2023 Apr;58:101932. 
+
+
+
+- Chandran U, Reps J, Yang R, et al. [Machine Learning and Real-World Data to Predict Lung Cancer Risk in Routine Care](https://doi.org/10.1158/1055-9965.epi-22-0873) Cancer Epidemiol Biomarkers Prev. 2023 Mar 6;32(3):337-343. 
+
+- John LH, Kors JA, Fridgeirsson EA, et al. [External validation of existing dementia prediction models on observational health data](https://doi.org/10.1186/s12874-022-01793-5) BMC Med Res Methodol. 2022 Dec 5;22(1):311. 
+
+- Reps JM, Wilcox M, McGee BA, et al. [Development of multivariable models to predict perinatal depression before and after delivery using patient reported survey responses at weeks 4-10 of pregnancy](https://doi.org/10.1186/s12884-022-04741-9) BMC Pregnancy Childbirth. 2022 May 26;22(1):442. 
+
 - Li X, Burn E, Duarte-Salles T, Yin C, et al. [Comparative risk of thrombosis with thrombocytopenia syndrome or thromboembolic events associated with different covid-19 vaccines: international network cohort study from five European countries and the US](https://doi.org/10.1136/bmj-2022-071594)  BMJ. 2022 Oct 26;379:e071594.
 
 - Yang C, Williams RD, Swerdel JN, et al. [Development and external validation of prediction models for adverse health outcomes in rheumatoid arthritis: A multinational real-world cohort analysis](https://doi.org/10.1016/j.semarthrit.2022.152050) Semin Arthritis Rheum. 2022 Oct;56:152050. 
@@ -87,6 +97,18 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Wu Q, Schuemie MJ, Suchard MA, et al. [Pade approximant meets federated learning: A nearly lossless, one-shot algorithm for evidence synthesis in distributed research networks with rare outcomes](https://doi.org/10.1016/j.jbi.2023.104476) J Biomed Inform. 2023 Aug 18:104476. 
+
+- Arshad F, Schuemie MJ, Bu F, et al. [Serially Combining Epidemiological Designs Does Not Improve Overall Signal Detection in Vaccine Safety Surveillance](https://doi.org/10.1007/s40264-023-01324-1) Drug Saf. 2023 Aug;46(8):797-807. 
+
+- Lee DY, Choi B, Kim C, et al. [Privacy-Preserving Federated Model Predicting Bipolar Transition in Patients With Depression: Prediction Model Development Study](https://www.jmir.org/2023/1/e46165) J Med Internet Res. 2023 Jul 20;25:e46165.
+
+- Williams RD, den Otter S, Reps JM, et al. [The DELPHI Library: Improving Model Validation, Transparency and Dissemination Through a Centralised Library of Prediction Models](https://doi.org/10.3233/shti230085) Stud Health Technol Inform. 2023 May 18;302:139-140.
+
+- Yang C, Fridgeirsson EA, Kors JA, et al. [Does Using a Stacking Ensemble Method to Combine Multiple Base Learners Within a Database Improve Model Transportability?](https://doi.org/10.3233/shti230080) Stud Health Technol Inform. 2023 May 18;302:129-130. 
+
+- Schuemie MJ, Bu F, Nishimura A, et al. [Adjusting for both sequential testing and systematic error in safety surveillance using observational data: Empirical calibration and MaxSPRT](https://doi.org/10.1002/sim.9631) Stat Med. 2023 Feb 28;42(5):619-631. 
 
 - Zhang L, Wang Y, Schuemie MJ, et al. [Adjusting for indirectly measured confounding using large-scale propensity score](https://doi.org/10.1016/j.jbi.2022.104204) J Biomed Inform. 2022 Oct;134:104204. 
 

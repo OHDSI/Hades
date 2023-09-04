@@ -1,6 +1,7 @@
 # Generate site from markdown files --------------------------------------
 
 setwd("c:/temp/git/Hades")
+setwd("C:/Users/admin_mschuemi/Documents/git/Hades")
 
 # You'll need the icon package:
 remotes::install_github("ropenscilabs/icon")
@@ -18,6 +19,9 @@ source("extras/GenerateSupportPage.R")
 
 # Generate package status markdown file
 source("extras/GeneratePackageStatusPage.R")
+
+# Generate supported platforms markdown file
+source("extras/GenerateSupportedPlatformsPage.R")
 
 
 # Run this in standalone R session. Runs orders of magnitude faster compared 

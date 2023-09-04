@@ -11,7 +11,7 @@
 
 
 
-<title>Contribute</title>
+<title>Supported Database Platforms</title>
 
 <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -436,42 +436,119 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Contribute</h1>
+<h1 class="title toc-ignore">Supported Database Platforms</h1>
 
 </div>
 
 
-<p>HADES is built by the community for the community. No matter what you
-skill level, there is always a way for you to contribute:</p>
-<div id="file-bug-reports" class="section level1">
-<h1>File bug reports</h1>
-<p>If you’ve found a bug you can help out by filing a bug report. Each
-package has an issue tracker where you can create a new issue. Try and
-be as specific as possible. What error message occurs? Can you provide a
-simple example to reproduce the problem? What versions of the various
-packages are you running?</p>
-</div>
-<div id="write-help-files" class="section level1">
-<h1>Write help files</h1>
-<p>If you’re a bit more experienced with HADES and are looking to
-improve your open source development skills, the next step up is to
-contribute a pull request to a HADES package. The most important thing
-to know is that HADES packages use <a
-href="https://github.com/klutometis/roxygen">roxygen2</a>: this means
-that documentation is found in the R code close to the source of each
-function.</p>
-</div>
-<div id="write-unit-tests" class="section level1">
-<h1>Write unit tests</h1>
-<p>An important part of validating the methods in the library is unit
-testing. A unit test is a small program that tests a specific function
-in the library. For example, there are <a
-href="https://github.com/OHDSI/CohortMethod/blob/main/tests/testthat/test-psFunctions.R#L5">several
-unit tests</a> that make sure the propensity score matching works
-correctly. We can never have enough unit tests, and writing unit tests
-is an excellent way to learn how HADES packages work under the hood.
-Make sure you read through the Develops section first!</p>
-</div>
+<p>Below are the database platforms currently supported by HADES, with
+the following details:</p>
+<ul>
+<li><strong>Platform</strong>: The name of the platform.</li>
+<li><strong>Abbreviation</strong>: the abbreviation used throughout
+HADES.</li>
+<li><strong>Status</strong>: The status of HADES support. ‘Deprecated’
+means code for that platform exists, but the OHDSI community no longer
+supports it, so no guarantees are given.</li>
+<li><strong>Testing</strong>: Whether the platform is tested in HADES’
+continuous integration.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Platform</th>
+<th align="left">Abbreviation</th>
+<th align="left">Status</th>
+<th align="left">Testing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Amazon RedShift</td>
+<td align="left">redshift</td>
+<td align="left">Supported</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Apache Hive</td>
+<td align="left">hive</td>
+<td align="left">Deprecated</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Apache Impala</td>
+<td align="left">impala</td>
+<td align="left">Deprecated</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Apache Spark</td>
+<td align="left">spark</td>
+<td align="left">Supported</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Azure Synapse Analytics Dedicated</td>
+<td align="left">synapse</td>
+<td align="left">Supported</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DuckDB</td>
+<td align="left">duckdb</td>
+<td align="left">Supported</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Google BigQuery</td>
+<td align="left">bigquery</td>
+<td align="left">Supported</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">IBM Netezza</td>
+<td align="left">netezza</td>
+<td align="left">Deprecated</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Microsoft Parallel Data Warehouse</td>
+<td align="left">pdw</td>
+<td align="left">Deprecated</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Microsoft SQL Server</td>
+<td align="left">sql server</td>
+<td align="left">Supported</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Oracle</td>
+<td align="left">oracle</td>
+<td align="left">Supported</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">PostgreSQL</td>
+<td align="left">postgresql</td>
+<td align="left">Supported</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Snowflake</td>
+<td align="left">snowflake</td>
+<td align="left">Supported</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">SQLite</td>
+<td align="left">sqlite</td>
+<td align="left">Supported</td>
+<td align="left">Yes</td>
+</tr>
+</tbody>
+</table>
 
 
 
