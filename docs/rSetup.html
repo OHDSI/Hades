@@ -13,7 +13,7 @@
 
 <title>Setting up the R environment</title>
 
-<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -441,88 +441,49 @@ div.tocify {
 </div>
 
 
-<p>Here are the steps for installing the required environment to run the
-OHDSI R packages. Four things needs to be installed:</p>
+<p>Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed:</p>
 <ol style="list-style-type: decimal">
-<li><strong>R</strong> is a statistical computing environment. It comes
-with a basic user interface that is primarily a command-line interface.
-For stability, we’ve picked one R version that we aim to support for a
-while moving forward. Since 2023-04-01 our target is <strong>R
-4.2.3</strong>. We highly recommend installing R 4.2.3 for maximum
-compatibility.</li>
-<li><strong>RTools</strong> is a set of programs that is required on
-Windows to build R packages from source.</li>
-<li><strong>RStudio</strong> is an IDE (Integrated Development
-Environment) that makes R easier to use. It includes a code editor,
-debugging and visualization tools. Please use it to obtain a nice R
-experience.</li>
-<li><strong>Java</strong> is a computing environment that is needed to
-run some of the components in the OHDSI R packages, for example those
-needed to connect to a database.</li>
+<li><strong>R</strong> is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface. For stability, we’ve picked one R version that we aim to support for a while moving forward. Since 2023-04-01 our target is <strong>R 4.2.3</strong>. We highly recommend installing R 4.2.3 for maximum compatibility.</li>
+<li><strong>RTools</strong> is a set of programs that is required on Windows to build R packages from source.</li>
+<li><strong>RStudio</strong> is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.</li>
+<li><strong>Java</strong> is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.</li>
 </ol>
-<p>In order to install HADES, you must also set a GitHub Personal Access
-Token as described <a href="#github-personal-access-token">in this
-section</a></p>
+<p>In order to install HADES, you must also set a GitHub Personal Access Token as described <a href="#github-personal-access-token">in this section</a></p>
 <div id="instructions-for-windows" class="section level1">
 <h1>Instructions for Windows</h1>
-<p>These instructions are also demonstrated in <a
-href="https://youtu.be/DjVgbBGK4jM">this video</a>, showing a
-step-by-step guide to installing the required software.</p>
+<p>These instructions are also demonstrated in <a href="https://youtu.be/DjVgbBGK4jM">this video</a>, showing a step-by-step guide to installing the required software.</p>
 
 <div class="rmdimportant">
-In Windows, older R versions (&lt; 4.2.0) come with both R a 32-bit and
-a 64-bits architecture. If you install R in both architectures, you
-<strong>must</strong> also install both 32-bit and 64- bits Java
-versions. It is recommended to only install the 64-bit version of R.
+In Windows, older R versions (&lt; 4.2.0) come with both R a 32-bit and a 64-bits architecture. If you install R in both architectures, you <strong>must</strong> also install both 32-bit and 64- bits Java versions. It is recommended to only install the 64-bit version of R.
 </div>
 <div id="installing-r" class="section level2">
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://cran.r-project.org/bin/windows/base/old/4.2.3/">https://cran.r-project.org/bin/windows/base/old/4.2.3/</a>,
-click on ‘R-4.2.3-win.exe’ to download.</p></li>
-<li><p>After the download has completed, run the installer. Use the
-default options everywhere, with two exceptions: First, it is better not
-to install into program files. Instead, just make R a subfolder of your
-C drive as shown below. Second, to avoid problems due to differing
-architectures between R and Java, if you’re installing an older R
-version (&lt; 4.2.0), disable the 32-bit architecture as also shown
-below.</p>
+<li><p>Go to <a href="https://cran.r-project.org/bin/windows/base/old/4.2.3/">https://cran.r-project.org/bin/windows/base/old/4.2.3/</a>, click on ‘R-4.2.3-win.exe’ to download.</p></li>
+<li><p>After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, if you’re installing an older R version (&lt; 4.2.0), disable the 32-bit architecture as also shown below.</p>
 <p><img src="images/rDestination.png" /></p>
 <p><img src="images/no32Bits.png" /></p></li>
 </ol>
-<p>Once completed, you should be able to select R from your Start
-Menu.</p>
+<p>Once completed, you should be able to select R from your Start Menu.</p>
 </div>
 <div id="installing-rtools" class="section level2">
 <h2>Installing RTools</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a>,
-and download the RTools installer.</p></li>
-<li><p>After downloading has completed run the installer. Select the
-default options everywhere.</p></li>
+<li><p>Go to <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a>, and download the RTools installer.</p></li>
+<li><p>After downloading has completed run the installer. Select the default options everywhere.</p></li>
 </ol>
 </div>
 <div id="installing-rstudio" class="section level2">
 <h2>Installing RStudio</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>,
-select ‘Download RStudio Desktop For Windows’.</p></li>
-<li><p>After downloading, start the installer, and use the default
-options everywhere.</p></li>
+<li><p>Go to <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>, select ‘Download RStudio Desktop For Windows’.</p></li>
+<li><p>After downloading, start the installer, and use the default options everywhere.</p></li>
 </ol>
 </div>
 <div id="installing-java" class="section level2">
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://java.com/en/download/manual.jsp">https://java.com/en/download/manual.jsp</a>,
-and select the Windows 64-bit installer as highlighted below. If you
-also installed the 32-bit version of R, you <em>must</em> also install
-the other (32-bit) version of Java. <img
-src="images/downloadJavaWindows.png" /></p></li>
+<li><p>Go to <a href="https://java.com/en/download/manual.jsp">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJavaWindows.png" /></p></li>
 <li><p>After downloading just run the installer.</p></li>
 </ol>
 </div>
@@ -532,40 +493,19 @@ src="images/downloadJavaWindows.png" /></p></li>
 <div id="installing-r-1" class="section level2">
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://cran.r-project.org/bin/macosx/base/">https://cran.r-project.org/bin/macosx/base/</a>,
-click on ‘R-4.2.3.pkg’ to download.</p></li>
-<li><p>After the download has completed, run the installer and accept
-all of the default options. You should see a screen indicating that the
-installation was successful.</p>
+<li><p>Go to <a href="https://cran.r-project.org/bin/macosx/base/">https://cran.r-project.org/bin/macosx/base/</a>, click on ‘R-4.2.3.pkg’ to download.</p></li>
+<li><p>After the download has completed, run the installer and accept all of the default options. You should see a screen indicating that the installation was successful.</p>
 <p><img src="images/installRMacSuccess.png" /></p></li>
 </ol>
 </div>
 <div id="installing-r-build-tools" class="section level2">
 <h2>Installing R build tools</h2>
-<p>We will need to install C and Fortran compilers in order to build R
-packages from source code. These are included with Xcode which can be
-downloaded from the Mac App store.</p>
+<p>We will need to install C and Fortran compilers in order to build R packages from source code. These are included with Xcode which can be downloaded from the Mac App store.</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the App Store in Mac OS and install Xcode. Xcode is a large
-program. If disk space is scarce you could also try only installing
-Xcode command line tools by following the instructions <a
-href="https://railsapps.github.io/xcode-command-line-tools.html">here</a>.
-Verify that the C compiler gcc is installed by opening the terminal and
-running the command <code>clang</code>. You should see an error that
-says “no input files”.</p></li>
-<li><p>Download and install the gfortran compiler .dmg from <a
-href="https://github.com/fxcoudert/gfortran-for-macOS/releases"
-class="uri">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>.
-Choose the latest version that is compatible with your operating system.
-Verify the installation by opening the terminal and running the command
-<code>gfortran</code>. You should see an error that says “no input
-files”.</p></li>
-<li><p>Go to <a
-href="https://www.xquartz.org/">https://www.xquartz.org/</a>, download
-the .dmg and run the installer.</p></li>
-<li><p>Verify that build tools are installed and available by opening an
-R console and running</p></li>
+<li><p>Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing Xcode command line tools by following the instructions <a href="https://railsapps.github.io/xcode-command-line-tools.html">here</a>. Verify that the C compiler gcc is installed by opening the terminal and running the command <code>clang</code>. You should see an error that says “no input files”.</p></li>
+<li><p>Download and install the gfortran compiler .dmg from <a href="https://github.com/fxcoudert/gfortran-for-macOS/releases" class="uri">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command <code>gfortran</code>. You should see an error that says “no input files”.</p></li>
+<li><p>Go to <a href="https://www.xquartz.org/">https://www.xquartz.org/</a>, download the .dmg and run the installer.</p></li>
+<li><p>Verify that build tools are installed and available by opening an R console and running</p></li>
 </ol>
 <pre class="r"><code>install.packages(&quot;pkgbuild&quot;)
 pkgbuild::check_build_tools()</code></pre>
@@ -573,86 +513,52 @@ pkgbuild::check_build_tools()</code></pre>
 <div id="installing-rstudio-1" class="section level2">
 <h2>Installing RStudio</h2>
 <ol style="list-style-type: decimal">
-<li>Go to <a
-href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>,
-select ‘Download RStudio Desktop For Mac’.</li>
+<li>Go to <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>, select ‘Download RStudio Desktop For Mac’.</li>
 </ol>
 </div>
 <div id="installing-java-1" class="section level2">
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>,
-and select the Mac OS installer for the Oracle JDK as highlighted below.
-<img src="images/downloadJavaMac.png" /></p></li>
-<li><p>After downloading just run the installer. Check that java is
-installed by opening the terminal and running the command
-<code>java</code>. If you see some helpful output about usage then the
-installation was successful.</p></li>
+<li><p>Go to <a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>, and select the Mac OS installer for the Oracle JDK as highlighted below. <img src="images/downloadJavaMac.png" /></p></li>
+<li><p>After downloading just run the installer. Check that java is installed by opening the terminal and running the command <code>java</code>. If you see some helpful output about usage then the installation was successful.</p></li>
 </ol>
 </div>
 </div>
 <div id="verifying-the-installation" class="section level1">
 <h1>Verifying the installation</h1>
-<p>You should now be ready to go, but we should make sure. Start
-R-studio, and type</p>
+<p>You should now be ready to go, but we should make sure. Start R-studio, and type</p>
 <pre class="r"><code>install.packages(&quot;SqlRender&quot;)
 library(SqlRender)
 translate(&quot;SELECT TOP 10 * FROM person;&quot;, &quot;postgresql&quot;)</code></pre>
 <pre><code>## [1] &quot;SELECT  * FROM person LIMIT 10;&quot;
 ## attr(,&quot;sqlDialect&quot;)
 ## [1] &quot;postgresql&quot;</code></pre>
-<p>This function uses Java, so if all goes well we know both R and Java
-have been installed correctly!</p>
-<p>Another test is to see if source packages can be built. Run the
-following R code to install the <code>CohortMethod</code> package from
-the OHDSI GitHub repository:</p>
+<p>This function uses Java, so if all goes well we know both R and Java have been installed correctly!</p>
+<p>Another test is to see if source packages can be built. Run the following R code to install the <code>CohortMethod</code> package from the OHDSI GitHub repository:</p>
 <pre class="r"><code>install.packages(&quot;remotes&quot;)
 remotes::install_github(&quot;OHDSI/CohortMethod&quot;)</code></pre>
 </div>
 <div id="github-personal-access-token" class="section level1">
 <h1>GitHub Personal Access Token</h1>
-<p>Installing HADES packages requires downloads from GitHub.
-Unfortunately, GitHub has a cap on how many downloads an anonymous user
-can make in a short amount of time, and this cap is reached when trying
-to download all HADES packages. To avoid this cap, we need to
-authenticate ourselves using our GitHub account. A known GitHub user has
-a much higher download cap, and can install HADES without issues. We can
-authenticate ourselves by first creating a <strong>Personal Access
-Token</strong> (PAT), and then providing this to R.</p>
-<p>Fortunately, you will need to do this only once. After you’ve set
-your PAT in R, you can rely on it to be there in all your future R
-sessions.</p>
+<p>Installing HADES packages requires downloads from GitHub. Unfortunately, GitHub has a cap on how many downloads an anonymous user can make in a short amount of time, and this cap is reached when trying to download all HADES packages. To avoid this cap, we need to authenticate ourselves using our GitHub account. A known GitHub user has a much higher download cap, and can install HADES without issues. We can authenticate ourselves by first creating a <strong>Personal Access Token</strong> (PAT), and then providing this to R.</p>
+<p>Fortunately, you will need to do this only once. After you’ve set your PAT in R, you can rely on it to be there in all your future R sessions.</p>
 <div id="creating-a-personal-access-token" class="section level2">
 <h2>Creating a Personal Access Token</h2>
-<p>Before we can create a PAT, you must make sure that you have a valid
-GitHub account. You can create one for free at <a
-href="https://github.com/">GitHub.com</a>.</p>
-<p>The easiest way to create a GitHub PAT is by using the <a
-href="https://usethis.r-lib.org/">usethis</a> package. Running this code
-will open a browser that allows you to generate a PAT:</p>
+<p>Before we can create a PAT, you must make sure that you have a valid GitHub account. You can create one for free at <a href="https://github.com/">GitHub.com</a>.</p>
+<p>The easiest way to create a GitHub PAT is by using the <a href="https://usethis.r-lib.org/">usethis</a> package. Running this code will open a browser that allows you to generate a PAT:</p>
 <pre class="r"><code>install.packages(&quot;usethis&quot;)
 library(usethis)
 create_github_token(scopes = c(&quot;(no scope)&quot;), description = &quot;R:GITHUB_PAT&quot;, host = &quot;https://github.com&quot;)</code></pre>
-<p>You may need to log on to GitHub. Note that the PAT does not require
-any of the permissions listed, so you can leave all checkboxes
-unchecked. Scroll down and click on ‘Generate token’ to generate your
-PAT. Your PAT is a sequence of 40 letters and numbers. Make sure to copy
-your PAT, because you will not be able to see it again once you close
-your browser!</p>
+<p>You may need to log on to GitHub. Note that the PAT does not require any of the permissions listed, so you can leave all checkboxes unchecked. Scroll down and click on ‘Generate token’ to generate your PAT. Your PAT is a sequence of 40 letters and numbers. Make sure to copy your PAT, because you will not be able to see it again once you close your browser!</p>
 </div>
 <div id="adding-your-personal-access-token-to-r" class="section level2">
 <h2>Adding your Personal Access Token to R</h2>
-<p>Next, we need to make the PAT available to R. For this we need to add
-a line to the <code>.Renviron</code> file that looks like this:</p>
+<p>Next, we need to make the PAT available to R. For this we need to add a line to the <code>.Renviron</code> file that looks like this:</p>
 <pre><code>GITHUB_PAT = &#39;a1b2c3d4e5f6g7h8g9h0ijklmnopqrstuvwxyz&#39;</code></pre>
 <p>where ‘a1b2c3d4e5f6g7h8g9h0ijklmnopqrstuvwxyz’ is your PAT.</p>
-<p>The easiest way to edit your <code>.Renviron</code> file is by using
-the <code>usethis</code> package again:</p>
+<p>The easiest way to edit your <code>.Renviron</code> file is by using the <code>usethis</code> package again:</p>
 <pre class="r"><code>edit_r_environ()</code></pre>
-<p>This will open <code>.Renviron</code> in a text editor. Add the line
-with your PAT, save the file, and restart R. The PAT will now be
-available to the various R functions.</p>
+<p>This will open <code>.Renviron</code> in a text editor. Add the line with your PAT, save the file, and restart R. The PAT will now be available to the various R functions.</p>
 </div>
 </div>
 
