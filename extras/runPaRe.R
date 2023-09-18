@@ -17,6 +17,7 @@ pareHades <- function(
     packagesPath = "extras/packages.csv",
     logPath = "./",
     nCores = 10) {
+  start <- Sys.time()
   pkgs <- read.csv(packagesPath)
   pkgNames <- pkgs$name
   
@@ -35,6 +36,7 @@ pareHades <- function(
   
   parallel::parLapply(cl = cl, X = pkgNames, fun = function(pkg) {
     tryCatch({
+      start <- Sys.time()
       repoDir <- file.path(tempdir(), pkg)
       
       git2r::clone(
@@ -48,9 +50,9 @@ pareHades <- function(
         repo = repo,
         outputFile = file.path("docs/pare_reports/", sprintf("%s.html", pkg))
       )
-      
+      timeDiff <- round(Sys.time() - start, 2)
       write(
-        x = sprintf("[*] Generated PaRe report for %s\n\n", pkg),
+        x = sprintf("[*] Generated PaRe report for %s [%s %s]", pkg, as.numeric(timeDiff), units(timeDiff)),
         file = logFile,
         append = TRUE
       )
@@ -66,7 +68,9 @@ pareHades <- function(
       )
     })
   })
-  message(sprintf("Worte reports to\n\t%s", "docs/pare_reports/"))
+  timeDiff <- round(Sys.time() - start, 2)
+  message(sprintf("Worte reports to: %s", "docs/pare_reports/"))
+  message(sprintf("Time: %s %s", as.numeric(timeDiff), units(timeDiff)))
   return(NULL)
 }
 

@@ -1,0 +1,58 @@
+[*] Generated PaRe report for BrokenAdaptiveRidge [53.08 secs]
+[*] Generated PaRe report for CohortExplorer [55.26 secs]
+[*] Generated PaRe report for Eunomia [1 mins]
+[*] Generated PaRe report for OhdsiSharing [1.04 mins]
+[*] Generated PaRe report for Characterization [1.09 mins]
+[*] Generated PaRe report for ResultModelManager [1.14 mins]
+[*] Generated PaRe report for MethodEvaluation [1.17 mins]
+[*] Generated PaRe report for Andromeda [33.57 secs]
+[*] Generated PaRe report for BigKnn [26.67 secs]
+[*] Generated PaRe report for Capr [1.09 mins]
+[*] Generated PaRe report for FeatureExtraction [1.34 mins]
+[*] Generated PaRe report for ROhdsiWebApi [1.47 mins]
+[*] Generated PaRe report for CirceR [30.25 secs]
+[*] Generated PaRe report for Hydra [36.18 secs]
+[*] Generated PaRe report for CohortMethod [2.97 mins]
+[*] Generated PaRe report for ShinyAppBuilder [32.39 secs]
+[*] Generated PaRe report for PhenotypeLibrary [3.29 mins]
+[*] Generated PaRe report for IterativeHardThresholding [23.39 secs]
+[*] Generated PaRe report for Achilles [2.44 mins]
+[*] Generated PaRe report for Cyclops [2.52 mins]
+[*] Generated PaRe report for CohortGenerator [58.45 secs]
+[*] Generated PaRe report for SqlRender [37.9 secs]
+[*] Generated PaRe report for DataQualityDashboard [41.97 secs]
+[*] Generated PaRe report for SelfControlledCaseSeries [1.47 mins]
+[*] Generated PaRe report for PatientLevelPrediction [4.48 mins]
+[*] Generated PaRe report for CohortDiagnostics [1.24 mins]
+[*] Generated PaRe report for OhdsiShinyModules [3.68 mins]
+[*] Generated PaRe report for DatabaseConnector [1.5 mins]
+[*] Generated PaRe report for SelfControlledCohort [29.46 secs]
+[!] Generating PaRe report for DeepPatientLevelPrediction failed
+! error in pak subprocess
+Caused by error: 
+! Could not solve package dependencies:
+* dplyr: dependency conflict
+* ParallelLogger: dependency conflict
+* rlang: dependency conflict
+* withr: dependency conflict
+* reticulate: dependency conflict
+* ohdsi/PatientLevelPrediction: Can't install dependency ohdsi/ParallelLogger (>= 2.0.0)
+* ohdsi/ParallelLogger: Conflicts with ParallelLogger
+
+
+[*] Generated PaRe report for EmpiricalCalibration [1.01 mins]
+[*] Generated PaRe report for PheValuator [39.94 secs]
+[*] Generated PaRe report for ParallelLogger [35.9 secs]
+[*] Generated PaRe report for EvidenceSynthesis [56.65 secs]
+[!] Generating PaRe report for EnsemblePatientLevelPrediction failed
+! error in pak subprocess
+Caused by error: 
+! Could not solve package dependencies:
+* dplyr: dependency conflict
+* ParallelLogger: dependency conflict
+* rlang: dependency conflict
+* tidyr: dependency conflict
+* ohdsi/PatientLevelPrediction: Can't install dependency ohdsi/ParallelLogger (>= 2.0.0)
+* ohdsi/ParallelLogger: Conflicts with ParallelLogger
+
+
