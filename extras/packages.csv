@@ -13,8 +13,8 @@ order,name,section,description,inCran,pages,maintainers,CRON
 12,PhenotypeLibrary,Cohort construction and evaluation,The OHDSI Phenotype Library: a collection of community-maintained pre-definined cohorts.,FALSE,TRUE,Gowtham Rao,0 18 * * 6
 13,CohortDiagnostics,Cohort construction and evaluation,Generate a wide set of diagnostics to evaluate cohort definitions against databases in the CDM.,FALSE,TRUE,Jamie Gilbert,0 19 * * 6
 14,PheValuator,Cohort construction and evaluation,"Semi-automated evaluation of cohorts, producing metrics suchs as sensitivity, specificity, and positive and negative preditive value.",FALSE,TRUE,Joel Swerdel,0 20 * * 6
-15,CohortExplorer,Cohort construction and evaluation,Visually explore all individual-level data of patients in a cohort,FALSE,TRUE,Gowtham Rao,0 21 * * 6
-16,Achilles,Evidence Quality,Generate descriptive statistics on an entire OMOP CDM database,FALSE,TRUE,Frank DeFalco,0 19 * * 0
+15,CohortExplorer,Cohort construction and evaluation,Visually explore all individual-level data of patients in a cohort,TRUE,TRUE,Gowtham Rao,0 21 * * 6
+16,Achilles,Evidence Quality,Generate descriptive statistics on an entire OMOP CDM database,TRUE,TRUE,Frank DeFalco,0 19 * * 0
 17,DataQualityDashboard,Evidence Quality,Expose and evaluate observational data quality.,FALSE,TRUE,Katy Sadowksi,0 17 * * 0
 18,EmpiricalCalibration,Evidence Quality,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,Martijn Schuemie,0 22 * * 6
 19,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie ,0 23 * * 6
