@@ -13,7 +13,7 @@
 
 <title>Using Renv for Dependencies</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -441,17 +441,35 @@ div.tocify {
 </div>
 
 
-<p>This page describes how you can use <code>renv</code> to make sure the right dependencies are installed when people run your study package. Please read the entire page, even when you’re familiar with <code>renv</code>.</p>
+<p>This page describes how you can use <code>renv</code> to make sure
+the right dependencies are installed when people run your study package.
+Please read the entire page, even when you’re familiar with
+<code>renv</code>.</p>
 <div id="what-is-renv" class="section level1">
 <h1>What is renv?</h1>
-<p>The <a href="https://rstudio.github.io/renv/"><code>renv</code> package</a> offers two main benefits:</p>
+<p>The <a href="https://rstudio.github.io/renv/"><code>renv</code>
+package</a> offers two main benefits:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Specifying the exact package versions that must be loaded</strong> for executing a specific study. It offers functions for recording the versions of packages that are currently used, and for restoring a library of packages on the same computer (in the future) or other computers, thus greatly improving reproducibility.</p></li>
-<li><p><strong>Isolating the package library to a (RStudio) project</strong>. This means that different projects (e.g. different studies) can use very different package versions on the same computer without conflicting. When switching from one project to another, R will switch to the appropriate library.</p></li>
+<li><p><strong>Specifying the exact package versions that must be
+loaded</strong> for executing a specific study. It offers functions for
+recording the versions of packages that are currently used, and for
+restoring a library of packages on the same computer (in the future) or
+other computers, thus greatly improving reproducibility.</p></li>
+<li><p><strong>Isolating the package library to a (RStudio)
+project</strong>. This means that different projects (e.g. different
+studies) can use very different package versions on the same computer
+without conflicting. When switching from one project to another, R will
+switch to the appropriate library.</p></li>
 </ol>
 <div id="the-renv-lock-file" class="section level2">
 <h2>The renv lock file</h2>
-<p>At the core of <code>renv</code> is the ‘renv.lock’ file that specifies all required packages. This file should be in the root folder of the project. The structure of the lock file is not very complicated, and it can easily be edited by hand if need be. An example of a full lock file can be found <a href="https://github.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/blob/reproducibility/renv.lock">here</a>. Here’s an example partial lock file, with just 3 entries:</p>
+<p>At the core of <code>renv</code> is the ‘renv.lock’ file that
+specifies all required packages. This file should be in the root folder
+of the project. The structure of the lock file is not very complicated,
+and it can easily be edited by hand if need be. An example of a full
+lock file can be found <a
+href="https://github.com/ohdsi-studies/Covid19EstimationHydroxychloroquine/blob/reproducibility/renv.lock">here</a>.
+Here’s an example partial lock file, with just 3 entries:</p>
 <pre><code>{
     &quot;R&quot; : {
         &quot;Version&quot; : &quot;4.0.3&quot;,
@@ -491,11 +509,15 @@ div.tocify {
         }
   }
 }</code></pre>
-<p>We can see different types of entries in a lock file. All types have a name of the entry, and the following fields:</p>
+<p>We can see different types of entries in a lock file. All types have
+a name of the entry, and the following fields:</p>
 <ul>
-<li><strong>Package</strong>: The name of the package. This should match the name of the entry.</li>
-<li><strong>Version</strong>: The package version that needs to be installed.</li>
-<li><strong>Source</strong>: The source where the package can be obtained.</li>
+<li><strong>Package</strong>: The name of the package. This should match
+the name of the entry.</li>
+<li><strong>Version</strong>: The package version that needs to be
+installed.</li>
+<li><strong>Source</strong>: The source where the package can be
+obtained.</li>
 </ul>
 <p>In an OHDSI lock file, the following types can be encountered:</p>
 <div id="cran-packages" class="section level3">
@@ -506,9 +528,13 @@ div.tocify {
             &quot;Source&quot; : &quot;Repository&quot;,
             &quot;Repository&quot; : &quot;CRAN&quot;
         },</code></pre>
-<p>Most packages, like <code>rlang</code>, but also several HADES packages like <code>DatabaseConnector</code>, will be available from CRAN, and will therefore have <code>Source</code> equal to “Repository”, and one additional field:</p>
+<p>Most packages, like <code>rlang</code>, but also several HADES
+packages like <code>DatabaseConnector</code>, will be available from
+CRAN, and will therefore have <code>Source</code> equal to “Repository”,
+and one additional field:</p>
 <ul>
-<li><strong>Repository</strong>: The name of the repository. This is always “CRAN”.</li>
+<li><strong>Repository</strong>: The name of the repository. This is
+always “CRAN”.</li>
 </ul>
 </div>
 <div id="hades-github-packages" class="section level3">
@@ -523,13 +549,25 @@ div.tocify {
             &quot;RemoteUsername&quot; : &quot;ohdsi&quot;,
             &quot;RemoteRef&quot; : &quot;v3.1.1&quot;
         },</code></pre>
-<p>Many HADES packages need to be installed from GitHub rather than CRAN. See the ‘Availability’ column on the <a href="packageStatuses.html">Package statuses page</a> to learn which packages are not in CRAN. For these packages, <code>Source</code> is equal to “GitHub”. Other required fields are:</p>
+<p>Many HADES packages need to be installed from GitHub rather than
+CRAN. See the ‘Availability’ column on the <a
+href="packageStatuses.html">Package statuses page</a> to learn which
+packages are not in CRAN. For these packages, <code>Source</code> is
+equal to “GitHub”. Other required fields are:</p>
 <ul>
 <li><strong>RemoteType</strong>: Should always be “github”.</li>
 <li><strong>RemoteHost</strong>: Should always be “api.github.com”.</li>
-<li><strong>RemoteRepo</strong>: The name of the HADES package repo, for example “FeatureExtraction”.</li>
-<li><strong>RemoteUsername</strong>: This should always be “ohdsi” for HADES packages.</li>
-<li><strong>RemoteRef</strong>: The GitHub reference. For HADES packages it is recommended to use the git tag of the version, for example “v3.1.1” for version 3.1.1. (In HADES, all package releases are automatically tagged with a “v” prefix and then the version number). This could also be set to the name of a branch (e.g. “main”), but the contents of a branch tend to change over time, so this will break reproducibility.</li>
+<li><strong>RemoteRepo</strong>: The name of the HADES package repo, for
+example “FeatureExtraction”.</li>
+<li><strong>RemoteUsername</strong>: This should always be “ohdsi” for
+HADES packages.</li>
+<li><strong>RemoteRef</strong>: The GitHub reference. For HADES packages
+it is recommended to use the git tag of the version, for example
+“v3.1.1” for version 3.1.1. (In HADES, all package releases are
+automatically tagged with a “v” prefix and then the version number).
+This could also be set to the name of a branch (e.g. “main”), but the
+contents of a branch tend to change over time, so this will break
+reproducibility.</li>
 </ul>
 </div>
 <div id="ohdsi-study-packages" class="section level3">
@@ -544,43 +582,92 @@ div.tocify {
             &quot;RemoteUsername&quot; : &quot;ohdsi-studies&quot;,
             &quot;RemoteRef&quot; : &quot;main&quot;
         }</code></pre>
-<p>As discussed later in this document, sometimes we would like to include an OHDSI study package in the lock file as well. These entries are identical in terms of <code>Source</code>, <code>RemoteType</code>, and <code>RemoteHost</code> to those for HADES GitHub packages, but differ in these fields:</p>
+<p>As discussed later in this document, sometimes we would like to
+include an OHDSI study package in the lock file as well. These entries
+are identical in terms of <code>Source</code>, <code>RemoteType</code>,
+and <code>RemoteHost</code> to those for HADES GitHub packages, but
+differ in these fields:</p>
 <ul>
-<li><strong>RemoteRepo</strong>: The name of the OHDSI study package repo, for example “Covid19EstimationHydroxychloroquine”.</li>
-<li><strong>RemoteUsername</strong>: This should always be “ohdsi-studies” for OHDSI study packages.</li>
-<li><strong>RemoteRef</strong>: The GitHub reference. This is often “main”, for the main branch, but can also refer to the name of a git tag, or the hash of a specific git commit.</li>
+<li><strong>RemoteRepo</strong>: The name of the OHDSI study package
+repo, for example “Covid19EstimationHydroxychloroquine”.</li>
+<li><strong>RemoteUsername</strong>: This should always be
+“ohdsi-studies” for OHDSI study packages.</li>
+<li><strong>RemoteRef</strong>: The GitHub reference. This is often
+“main”, for the main branch, but can also refer to the name of a git
+tag, or the hash of a specific git commit.</li>
 </ul>
 </div>
 </div>
 </div>
 <div id="creating-a-renv-lock-file" class="section level1">
 <h1>Creating a renv lock file</h1>
-<p>One could construct a lock file by hand, but this would take a lot of work. The <code>renv</code> package itself provides the <code>snapshot()</code> function for automatically constructing lock files, but this function only really works well for dependencies from CRAN. For OHDSI studies it is therefore recommended to use the <a href="http://ohdsi.github.io/OhdsiRTools/reference/createRenvLockFile.html"><code>createRenvLockFile()</code></a> function in the <code>OhdsiRTools</code> package. You can install <code>OhdsiRTools</code> using <code>remotes</code>:</p>
+<p>One could construct a lock file by hand, but this would take a lot of
+work. The <code>renv</code> package itself provides the
+<code>snapshot()</code> function for automatically constructing lock
+files, but this function only really works well for dependencies from
+CRAN. For OHDSI studies it is therefore recommended to use the <a
+href="http://ohdsi.github.io/OhdsiRTools/reference/createRenvLockFile.html"><code>createRenvLockFile()</code></a>
+function in the <code>OhdsiRTools</code> package. You can install
+<code>OhdsiRTools</code> using <code>remotes</code>:</p>
 <pre class="r"><code>remotes::install_github(&quot;ohdsi/OhdsiRTools&quot;)</code></pre>
-<p>The <code>createRenvLockFile()</code> function has two modes: “auto”, and “description”. The description mode is for more advanced users.</p>
+<p>The <code>createRenvLockFile()</code> function has two modes: “auto”,
+and “description”. The description mode is for more advanced users.</p>
 <div id="auto-mode" class="section level2">
 <h2>Auto mode</h2>
-<p>In auto mode, the <code>createRenvLockFile()</code> function will leverage <code>renv::init()</code> to scan all R scripts in the project folder and subfolders for references to packages, and will include those (and their dependencies). The advantage of this mode is that it automatically captures all dependencies. The disadvantage is that this may pull in too many dependencies, making for large lock files, and challenges at partner sites.</p>
-<p>The auto mode is the default, and comes with two potentially important arguments:</p>
+<p>In auto mode, the <code>createRenvLockFile()</code> function will
+leverage <code>renv::init()</code> to scan all R scripts in the project
+folder and subfolders for references to packages, and will include those
+(and their dependencies). The advantage of this mode is that it
+automatically captures all dependencies. The disadvantage is that this
+may pull in too many dependencies, making for large lock files, and
+challenges at partner sites.</p>
+<p>The auto mode is the default, and comes with two potentially
+important arguments:</p>
 <ul>
-<li><strong>rootPackage</strong>: The name of the study package. Only required if <code>includeRootPackage = TRUE</code>.</li>
-<li><strong>includeRootPackage</strong>: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.</li>
+<li><strong>rootPackage</strong>: The name of the study package. Only
+required if <code>includeRootPackage = TRUE</code>.</li>
+<li><strong>includeRootPackage</strong>: Should the root package
+(i.e. the study package) be included in the lock file. This will be
+discussed later.</li>
 </ul>
-<p>For example, we could create a lock file for the <code>Covid19EstimationHydroxychloroquine</code> study package using this command:</p>
+<p>For example, we could create a lock file for the
+<code>Covid19EstimationHydroxychloroquine</code> study package using
+this command:</p>
 <pre class="r"><code>OhdsiRTools::createRenvLockFile(rootPackage = &quot;Covid19EstimationHydroxychloroquine&quot;,
                                 includeRootPackage = TRUE)</code></pre>
 </div>
 <div id="description-mode-advanced" class="section level2">
 <h2>Description mode (Advanced)</h2>
-<p>In description mode, the <code>createRenvLockFile()</code> function will only include the dependencies of the study package as documented in the package’s DESCRIPTION file. The advantage of this mode is that it can lead to substantially smaller lock files. The disadvantage is that it requires the user to accurately document all dependencies in the DESCRIPTION file.</p>
-<p>In description mode, these arguments of <code>createRenvLockFile()</code> are of particular importance:</p>
+<p>In description mode, the <code>createRenvLockFile()</code> function
+will only include the dependencies of the study package as documented in
+the package’s DESCRIPTION file. The advantage of this mode is that it
+can lead to substantially smaller lock files. The disadvantage is that
+it requires the user to accurately document all dependencies in the
+DESCRIPTION file.</p>
+<p>In description mode, these arguments of
+<code>createRenvLockFile()</code> are of particular importance:</p>
 <ul>
-<li><strong>rootPackage</strong>: The name of the study package for which we would like to capture all dependencies in the lock file. This package’s dependencies as documented in its DESCRIPTION will be included.</li>
-<li><strong>additionalRequiredPackages</strong>: We may want to have other packages available as well, for example <code>keyring</code>. We can specify those here.</li>
-<li><strong>includeRootPackage</strong>: Should the root package (i.e. the study package) be included in the lock file. This will be discussed later.</li>
+<li><strong>rootPackage</strong>: The name of the study package for
+which we would like to capture all dependencies in the lock file. This
+package’s dependencies as documented in its DESCRIPTION will be
+included.</li>
+<li><strong>additionalRequiredPackages</strong>: We may want to have
+other packages available as well, for example <code>keyring</code>. We
+can specify those here.</li>
+<li><strong>includeRootPackage</strong>: Should the root package
+(i.e. the study package) be included in the lock file. This will be
+discussed later.</li>
 </ul>
-<p><strong>Important</strong>: The <code>createRenvLockFile()</code> uses the information in the ‘DESCRIPTION’ file of your study package, so make sure this contains all dependencies. A good way to verify if all required packages are in the DESCRIPTION is by running R check on your study package. The function also assumes you have the right package versions installed, so make sure your study package runs before calling <code>createRenvLockFile()</code>.</p>
-<p>For example, we could create a lock file for the <code>Covid19EstimationHydroxychloroquine</code> study package using this command:</p>
+<p><strong>Important</strong>: The <code>createRenvLockFile()</code>
+uses the information in the ‘DESCRIPTION’ file of your study package, so
+make sure this contains all dependencies. A good way to verify if all
+required packages are in the DESCRIPTION is by running R check on your
+study package. The function also assumes you have the right package
+versions installed, so make sure your study package runs before calling
+<code>createRenvLockFile()</code>.</p>
+<p>For example, we could create a lock file for the
+<code>Covid19EstimationHydroxychloroquine</code> study package using
+this command:</p>
 <pre class="r"><code>OhdsiRTools::createRenvLockFile(mode = &quot;description&quot;,
                                 rootPackage = &quot;Covid19EstimationHydroxychloroquine&quot;,
                                 additionalRequiredPackages  = &quot;keyring&quot;,
@@ -588,43 +675,83 @@ div.tocify {
 </div>
 <div id="including-the-study-root-package" class="section level2">
 <h2>Including the study (root) package</h2>
-<p>The root package is your study package. If your study package is in the ohdsi-studies GitHub, it is recommended to include it in the lock file. That way, we can use <code>renv</code> to automatically install that package as well. Otherwise, people will have to clone your study package repo, run <code>renv:restore()</code>, and then build the study package itself.</p>
+<p>The root package is your study package. If your study package is in
+the ohdsi-studies GitHub, it is recommended to include it in the lock
+file. That way, we can use <code>renv</code> to automatically install
+that package as well. Otherwise, people will have to clone your study
+package repo, run <code>renv:restore()</code>, and then build the study
+package itself.</p>
 </div>
 </div>
-<div id="how-to-use-a-lock-file-to-restore-an-environment" class="section level1">
+<div id="how-to-use-a-lock-file-to-restore-an-environment"
+class="section level1">
 <h1>How to use a lock file to restore an environment</h1>
-<p>There are two ways to use the lock file, depending on whether the root package is included in the lock file.</p>
-<div id="when-the-study-root-package-is-included" class="section level2">
+<p>There are two ways to use the lock file, depending on whether the
+root package is included in the lock file.</p>
+<div id="when-the-study-root-package-is-included"
+class="section level2">
 <h2>When the study (root) package is included</h2>
-<p>When the study package is included in the lock file, as described above, we can use <code>renv</code> to install not only the dependencies, but the study package itself as well. This means the user will not need to clone the study package repo, and does not have to build the study package separately.</p>
-<p>Follow these steps to install the study package and all its dependencies:</p>
+<p>When the study package is included in the lock file, as described
+above, we can use <code>renv</code> to install not only the
+dependencies, but the study package itself as well. This means the user
+will not need to clone the study package repo, and does not have to
+build the study package separately.</p>
+<p>Follow these steps to install the study package and all its
+dependencies:</p>
 <ol style="list-style-type: decimal">
-<li><p>Make sure R, RTools, Java, and RStudio are properly configured as described <a href="rSetup.html">here</a>.</p></li>
-<li><p>Create an empty folder or new RStudio project, and in R, use the following code to install the study package and its dependencies:</p>
+<li><p>Make sure R, RTools, Java, and RStudio are properly configured as
+described <a href="rSetup.html">here</a>.</p></li>
+<li><p>Create an empty folder or new RStudio project, and in R, use the
+following code to install the study package and its dependencies:</p>
 <pre class="r"><code>install.packages(&quot;renv&quot;)
 download.file(&quot;https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock&quot;, &quot;renv.lock&quot;)
 renv::init()
 # When asked, choose to &quot;Restore the project from the lockfile&quot;.</code></pre></li>
 </ol>
-<p>Where the URL used in <code>download.file()</code> points to the lock file in the ohdsi-studies repo.</p>
-<p><strong>Important</strong>: the URL should point to the raw lock file contents, not the GitHub page with additional information about the file. So “<a href="https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock">https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock</a>”, not “<a href="https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock">https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock</a>”.</p>
+<p>Where the URL used in <code>download.file()</code> points to the lock
+file in the ohdsi-studies repo.</p>
+<p><strong>Important</strong>: the URL should point to the raw lock file
+contents, not the GitHub page with additional information about the
+file. So “<a
+href="https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock">https://raw.githubusercontent.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/master/renv.lock</a>”,
+not “<a
+href="https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock">https://github.com/ohdsi-studies/Covid19SubjectsAesiIncidenceRate/blob/master/renv.lock</a>”.</p>
 </div>
-<div id="when-the-study-root-package-is-not-included" class="section level2">
+<div id="when-the-study-root-package-is-not-included"
+class="section level2">
 <h2>When the study (root) package is not included</h2>
-<p>When the study package itself is not included in the lock file, the user will need to clone the project (which requires git to be installed), and build the study package after all dependencies have been loaded.</p>
-<p>Follow these steps to install the study package and all its dependencies:</p>
+<p>When the study package itself is not included in the lock file, the
+user will need to clone the project (which requires git to be
+installed), and build the study package after all dependencies have been
+loaded.</p>
+<p>Follow these steps to install the study package and all its
+dependencies:</p>
 <ol style="list-style-type: decimal">
-<li><p>Make sure R, RTools, Java, and RStudio are properly configured as described <a href="rSetup.html">here</a>.</p></li>
-<li><p>Make sure <a href="https://git-scm.com/"><code>git</code></a> is installed.</p></li>
+<li><p>Make sure R, RTools, Java, and RStudio are properly configured as
+described <a href="rSetup.html">here</a>.</p></li>
+<li><p>Make sure <a href="https://git-scm.com/"><code>git</code></a> is
+installed.</p></li>
 <li><p>Clone the study package repo.</p></li>
-<li><p>Open the study package project in RStudio, and type <code>renv::restore()</code>.</p></li>
+<li><p>Open the study package project in RStudio, and type
+<code>renv::restore()</code>.</p></li>
 <li><p>Build the study package.</p></li>
 </ol>
 </div>
 </div>
-<div id="adding-a-function-for-checking-dependencies-at-runtime" class="section level1">
+<div id="adding-a-function-for-checking-dependencies-at-runtime"
+class="section level1">
 <h1>Adding a function for checking dependencies at runtime</h1>
-<p>Even though <code>renv</code> tries to make sure all the versions specified in the lock file are loaded in the library, for many reasons it may be that the wrong versions are loaded at runtime. One scenario where this has happened is when the user forgets to run <code>renv</code> before running the study package. To make absolutely sure the right versions are executed, it is recommended to <strong>add a function to the study package that checks all dependency versions, and execute that function as a first step in the study’s main function</strong>. Below is an example function. Note that this function depends on <code>RJSONIO</code> and <code>dplyr</code>, so make sure these are in your lock file as well.</p>
+<p>Even though <code>renv</code> tries to make sure all the versions
+specified in the lock file are loaded in the library, for many reasons
+it may be that the wrong versions are loaded at runtime. One scenario
+where this has happened is when the user forgets to run
+<code>renv</code> before running the study package. To make absolutely
+sure the right versions are executed, it is recommended to <strong>add a
+function to the study package that checks all dependency versions, and
+execute that function as a first step in the study’s main
+function</strong>. Below is an example function. Note that this function
+depends on <code>RJSONIO</code> and <code>dplyr</code>, so make sure
+these are in your lock file as well.</p>
 <pre class="r"><code>verifyDependencies &lt;- function() {
   expected &lt;- RJSONIO::fromJSON(&quot;renv.lock&quot;)
   expected &lt;- dplyr::bind_rows(expected[[2]])
@@ -645,25 +772,48 @@ renv::init()
     stop(message)
   }
 }</code></pre>
-<p>Once this function has been added to the study package it is recommended to add a call to this function to your study’s main function like <a href="https://github.com/ohdsi-studies/ScyllaEstimation/blob/master/R/Main.R#L105">this</a>.</p>
+<p>Once this function has been added to the study package it is
+recommended to add a call to this function to your study’s main function
+like <a
+href="https://github.com/ohdsi-studies/ScyllaEstimation/blob/master/R/Main.R#L105">this</a>.</p>
 </div>
 <div id="testing" class="section level1">
 <h1>Testing</h1>
-<p>Once you’re done creating a lock file, and writing the instructions for how people can install your study package including its dependencies, make sure to test the instructions. Since <code>renv</code> isolates the study project, you can even do this using the same machine used to create the package and lock file (just in a different folder).</p>
+<p>Once you’re done creating a lock file, and writing the instructions
+for how people can install your study package including its
+dependencies, make sure to test the instructions. Since
+<code>renv</code> isolates the study project, you can even do this using
+the same machine used to create the package and lock file (just in a
+different folder).</p>
 </div>
 <div id="updating-a-package-in-the-lock-file" class="section level1">
 <h1>Updating a package in the lock file</h1>
-<p>If you wish to update a dependency in the lock file (like your study package), there are two options, depending on whether the version number of the package has increased:</p>
-<div id="if-the-version-of-the-package-has-increased" class="section level2">
+<p>If you wish to update a dependency in the lock file (like your study
+package), there are two options, depending on whether the version number
+of the package has increased:</p>
+<div id="if-the-version-of-the-package-has-increased"
+class="section level2">
 <h2>If the version of the package has increased</h2>
-<p>If the version number has increased (for example the version number of your study package increased because you changed it in the DESCRIPTION file), you can simply update the version number in the lock file. See details on the lock file earlier in the document. Then, to update the package library in your R project, you can call</p>
+<p>If the version number has increased (for example the version number
+of your study package increased because you changed it in the
+DESCRIPTION file), you can simply update the version number in the lock
+file. See details on the lock file earlier in the document. Then, to
+update the package library in your R project, you can call</p>
 <pre class="r"><code>renv::restore(packages = c(&quot;myPackage&quot;))</code></pre>
 <p>Where ‘myPackage’ is the package you’re updating.</p>
 </div>
-<div id="if-the-version-of-the-package-is-the-same" class="section level2">
+<div id="if-the-version-of-the-package-is-the-same"
+class="section level2">
 <h2>If the version of the package is the same</h2>
-<p>If the package has changed, but the version number hasn’t (for example because you just made a minor change to your study package) you should be aware that <code>renv</code> maintains a package cache. That means that, even if you were to delete the entire project library, <code>renv</code> would still install the old version of the package from the cache, rather than installing it from its source.</p>
-<p>To completely purge a package from the <code>renv</code> cache, and install it again, make sure to restart R (so the package isn’t locked), and use:</p>
+<p>If the package has changed, but the version number hasn’t (for
+example because you just made a minor change to your study package) you
+should be aware that <code>renv</code> maintains a package cache. That
+means that, even if you were to delete the entire project library,
+<code>renv</code> would still install the old version of the package
+from the cache, rather than installing it from its source.</p>
+<p>To completely purge a package from the <code>renv</code> cache, and
+install it again, make sure to restart R (so the package isn’t locked),
+and use:</p>
 <pre class="r"><code># Remove the package from the library:
 remove.packages(&quot;myPackage&quot;)
 

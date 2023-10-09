@@ -1,5 +1,5 @@
 
-outputFolder <- "d:/HadesCheck"
+outputFolder <- "e:/HadesCheck"
 options(install.packages.check.source = "no")
 
 

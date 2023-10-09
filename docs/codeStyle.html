@@ -13,7 +13,7 @@
 
 <title>Code Style</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -443,11 +443,18 @@ div.tocify {
 
 <div id="ohdsi-code-style-for-r" class="section level1">
 <h1>OHDSI code style for R</h1>
-<p>(Adapted from <a href="https://style.tidyverse.org/" class="uri">https://style.tidyverse.org/</a>)</p>
-<p>The <a href="https://www.tidyverse.org/blog/2017/12/styler-1.0.0/"><code>styler</code></a> package is highly recommended for automatically applying some (but not all) of the style recommendations here. <code>styler</code> is available as a stand-alone R package, but also comes with a handy RStudio add-in.</p>
+<p>(Adapted from <a href="https://style.tidyverse.org/"
+class="uri">https://style.tidyverse.org/</a>)</p>
+<p>The <a
+href="https://www.tidyverse.org/blog/2017/12/styler-1.0.0/"><code>styler</code></a>
+package is highly recommended for automatically applying some (but not
+all) of the style recommendations here. <code>styler</code> is available
+as a stand-alone R package, but also comes with a handy RStudio
+add-in.</p>
 <div id="case" class="section level2">
 <h2>Case</h2>
-<p>We use camelCase in R. Function and variable names all start with lowercase. Package names start with uppercase.</p>
+<p>We use camelCase in R. Function and variable names all start with
+lowercase. Package names start with uppercase.</p>
 <p>Examples:</p>
 <ul>
 <li><code>cohortData &lt;- loadCohortData("myFolder")</code></li>
@@ -456,7 +463,9 @@ div.tocify {
 </div>
 <div id="naming-conventions" class="section level2">
 <h2>Naming conventions</h2>
-<p>Function names typically start with a verb. Variable names are typically nouns. Do not encode the data type in the variable names. Also, everything is data, so no need to say that unless unavoidable.</p>
+<p>Function names typically start with a verb. Variable names are
+typically nouns. Do not encode the data type in the variable names.
+Also, everything is data, so no need to say that unless unavoidable.</p>
 <p><strong>Good</strong></p>
 <ul>
 <li>The <code>fitOutcomeModel</code> function.</li>
@@ -466,18 +475,23 @@ div.tocify {
 <p><strong>Bad</strong></p>
 <ul>
 <li><code>sampling</code> as variable name (not a noun)</li>
-<li><code>namesVector</code>, <code>covariatesDf</code> (encodes the data type)</li>
+<li><code>namesVector</code>, <code>covariatesDf</code> (encodes the
+data type)</li>
 <li><code>getResultData</code> (everything is data)</li>
 </ul>
 </div>
 <div id="spacing" class="section level2">
 <h2>Spacing</h2>
-<p>Place spaces around all infix operators (<code>=</code>, <code>+</code>, <code>-</code>, <code>&lt;-</code>, etc.). The same rule applies when using <code>=</code> in function calls. Always put a space after a comma, and never before (just like in regular English).</p>
+<p>Place spaces around all infix operators (<code>=</code>,
+<code>+</code>, <code>-</code>, <code>&lt;-</code>, etc.). The same rule
+applies when using <code>=</code> in function calls. Always put a space
+after a comma, and never before (just like in regular English).</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>average &lt;- mean(feet / 12 + inches, na.rm = TRUE)</code></pre>
 <p><strong>Bad</strong></p>
 <pre class="r"><code>average&lt;-mean(feet/12+inches,na.rm=TRUE)</code></pre>
-<p>There’s a small exception to this rule: <code>:</code>, <code>::</code> and <code>:::</code> don’t need spaces around them.</p>
+<p>There’s a small exception to this rule: <code>:</code>,
+<code>::</code> and <code>:::</code> don’t need spaces around them.</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>x &lt;- 1:10</code></pre>
 <pre class="r"><code>base::get</code></pre>
@@ -497,8 +511,11 @@ plot(x, y)</code></pre>
 }
 
 plot (x, y)</code></pre>
-<p>Extra spacing (i.e., more than one space in a row) is ok if it improves alignment of equal signs or assignments (<code>&lt;-</code>).</p>
-<p>Do not place spaces around code in parentheses or square brackets (unless there’s a comma, in which case see above).</p>
+<p>Extra spacing (i.e., more than one space in a row) is ok if it
+improves alignment of equal signs or assignments
+(<code>&lt;-</code>).</p>
+<p>Do not place spaces around code in parentheses or square brackets
+(unless there’s a comma, in which case see above).</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>if (debug) {
   do(x)
@@ -512,17 +529,25 @@ diamonds[5, ]</code></pre>
 
 x[1,]   # Needs a space after the comma
 x[1 ,]  # Space goes after comma not beforeCurly braces</code></pre>
-<p>An opening curly brace should never go on its own line and should always be followed by a new line. A closing curly brace should always go on its own line, unless it’s followed by else.</p>
+<p>An opening curly brace should never go on its own line and should
+always be followed by a new line. A closing curly brace should always go
+on its own line, unless it’s followed by else.</p>
 </div>
 <div id="indentation" class="section level2">
 <h2>Indentation</h2>
-<p>Always indent the code inside curly braces. It’s ok to leave very short statements on the same line:</p>
+<p>Always indent the code inside curly braces. It’s ok to leave very
+short statements on the same line:</p>
 <pre class="r"><code>if (y &lt; 0 &amp;&amp; debug) {
   message(&quot;Y is negative&quot;)
 }</code></pre>
-<p>Strive to limit your code to 100 characters per line. This fits comfortably on a printed page with a reasonably sized font. If you find yourself running out of room, this is a good indication that you should encapsulate some of the work in a separate function.</p>
-<p>When indenting your code, use tabs. Never use spaces or mix tabs and spaces.</p>
-<p>Hint: In RStudio you can use ctrl-i to automatically indent the code for you.</p>
+<p>Strive to limit your code to 100 characters per line. This fits
+comfortably on a printed page with a reasonably sized font. If you find
+yourself running out of room, this is a good indication that you should
+encapsulate some of the work in a separate function.</p>
+<p>When indenting your code, use tabs. Never use spaces or mix tabs and
+spaces.</p>
+<p>Hint: In RStudio you can use ctrl-i to automatically indent the code
+for you.</p>
 </div>
 <div id="assignment" class="section level2">
 <h2>Assignment</h2>
@@ -534,7 +559,8 @@ x[1 ,]  # Space goes after comma not beforeCurly braces</code></pre>
 </div>
 <div id="if-then-else" class="section level2">
 <h2>If-then-else</h2>
-<p>If-then-else clauses should always use curly brackets, even if there’s only one clause and it’s one statement.</p>
+<p>If-then-else clauses should always use curly brackets, even if
+there’s only one clause and it’s one statement.</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>if (a == b) {
   doSomething()
@@ -544,7 +570,9 @@ x[1 ,]  # Space goes after comma not beforeCurly braces</code></pre>
 </div>
 <div id="use-named-arguments" class="section level2">
 <h2>Use named arguments</h2>
-<p>When calling a function that has more than one argument, make sure to refer to each argument by name instead of relying on the order of arguments.</p>
+<p>When calling a function that has more than one argument, make sure to
+refer to each argument by name instead of relying on the order of
+arguments.</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>translateSql(sql = &quot;COMMIT&quot;, targetDialect = &quot;PDW&quot;)</code></pre>
 <p><strong>Bad</strong></p>
@@ -552,8 +580,12 @@ x[1 ,]  # Space goes after comma not beforeCurly braces</code></pre>
 </div>
 <div id="commenting-guidelines" class="section level2">
 <h2>Commenting guidelines</h2>
-<p>Comment your code only where the intent is not immediately obvious. Each line of a comment should begin with the comment symbol and a single space: <code>#</code>. Comments should explain the why, not the what.</p>
-<p>Use commented lines of <code>-</code> to break up your file into easily readable chunks, for example:</p>
+<p>Comment your code only where the intent is not immediately obvious.
+Each line of a comment should begin with the comment symbol and a single
+space: <code>#</code>. Comments should explain the why, not the
+what.</p>
+<p>Use commented lines of <code>-</code> to break up your file into
+easily readable chunks, for example:</p>
 <pre class="r"><code>## Load data ---------------------------
 x &lt;- readRDS(&quot;data.rds&quot;)
 
@@ -562,7 +594,9 @@ plot(x)</code></pre>
 </div>
 <div id="curly-brackets-and-new-line" class="section level2">
 <h2>Curly brackets and new line</h2>
-<p>Opening curly brackets should precede a new line. A closing curly bracket should be followed by a new line except when it is followed by <code>else</code> or a closing parenthesis.</p>
+<p>Opening curly brackets should precede a new line. A closing curly
+bracket should be followed by a new line except when it is followed by
+<code>else</code> or a closing parenthesis.</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>if (a == b) {
   doSomething()
@@ -592,7 +626,8 @@ else
 </div>
 <div id="dplyr-joins-and-merges" class="section level2">
 <h2>Dplyr joins and merges</h2>
-<p>Dplyr joins and merge statements should always have a ‘by’ argument.</p>
+<p>Dplyr joins and merge statements should always have a ‘by’
+argument.</p>
 <p><strong>Good</strong></p>
 <pre class="r"><code>foo %&gt;% 
   inner_join(bar, by = &quot;covariateId&quot;)</code></pre>
@@ -603,10 +638,20 @@ else
 </div>
 <div id="ohdsi-code-style-for-sql" class="section level1">
 <h1>OHDSI code style for SQL</h1>
-<p>The OHDSI code style for SQL is heavily inspired by the <a href="http://architectshack.com/PoorMansTSqlFormatter.ashx">Poor Man’s T-SQL Formatter</a>, which is available as a <a href="https://notepad-plus-plus.org/">NotePad++</a> plugin. The only difference with the default settings is that in OHDSI, commas are trailing. You can automatically format your SQL correctly by using the <a href="http://poorsql.com/">Poor Man’s T-SQL Formatter Online Tool</a> (but don’t forget to set Trailing Commas).</p>
+<p>The OHDSI code style for SQL is heavily inspired by the <a
+href="http://architectshack.com/PoorMansTSqlFormatter.ashx">Poor Man’s
+T-SQL Formatter</a>, which is available as a <a
+href="https://notepad-plus-plus.org/">NotePad++</a> plugin. The only
+difference with the default settings is that in OHDSI, commas are
+trailing. You can automatically format your SQL correctly by using the
+<a href="http://poorsql.com/">Poor Man’s T-SQL Formatter Online Tool</a>
+(but don’t forget to set Trailing Commas).</p>
 <div id="case-1" class="section level2">
 <h2>Case</h2>
-<p>Because several database platforms are case-insensitive and tend to convert table and field names to either uppercase (e.g. Oracle) or lowercase (e.g. PostgreSQL), we use snake_case. All names should be in lowercase. Reserved words should be in upper case.</p>
+<p>Because several database platforms are case-insensitive and tend to
+convert table and field names to either uppercase (e.g. Oracle) or
+lowercase (e.g. PostgreSQL), we use snake_case. All names should be in
+lowercase. Reserved words should be in upper case.</p>
 <p><strong>Good</strong></p>
 <pre class="sql"><code>SELECT COUNT(*) AS person_count FROM person</code></pre>
 <p><strong>Bad</strong></p>
@@ -638,7 +683,8 @@ GROUP BY condition_concept_id
 </div>
 <div id="indentation-and-new-lines" class="section level2">
 <h2>Indentation and new lines</h2>
-<p>Indentation is done using tabs. Field definitions are followed by a new line.</p>
+<p>Indentation is done using tabs. Field definitions are followed by a
+new line.</p>
 <p><strong>Good</strong></p>
 <pre class="sql"><code>SELECT COUNT(*) AS person_count,
   condition_type_concept_id
@@ -656,8 +702,16 @@ GROUP BY condition_type_concept_id;</code></pre>
 </div>
 <div id="interfacing-between-r-and-sql" class="section level1">
 <h1>Interfacing between R and SQL</h1>
-<p>In R we use camel case, and in SQL we use snake case. Therefore, on the interface between the two languages we must convert from one convention to the other. To facilitate this, the OHDSI <a href="https://ohdsi.github.io/SqlRender/"><code>SqlRender</code></a> and <a href="https://ohdsi.github.io/DatabaseConnector/"><code>DatabaseConnector</code></a> packages provide various features.</p>
-<p>In general, in R we can convert from one case to another using the <code>camelCaseToSnakeCase</code> and <code>snakeCaseToCamelcase</code> functions in the <code>SqlRender</code> package:</p>
+<p>In R we use camel case, and in SQL we use snake case. Therefore, on
+the interface between the two languages we must convert from one
+convention to the other. To facilitate this, the OHDSI <a
+href="https://ohdsi.github.io/SqlRender/"><code>SqlRender</code></a> and
+<a
+href="https://ohdsi.github.io/DatabaseConnector/"><code>DatabaseConnector</code></a>
+packages provide various features.</p>
+<p>In general, in R we can convert from one case to another using the
+<code>camelCaseToSnakeCase</code> and <code>snakeCaseToCamelcase</code>
+functions in the <code>SqlRender</code> package:</p>
 <pre class="r"><code>data &lt;- data.frame(cohortId = 1,
                    cohortName = &quot;test&quot;)
                    
@@ -668,18 +722,25 @@ colnames(data)
 colnames(data) &lt;- snakeCaseToCamelcase(colnames(data))
 colnames(data)
 # [1] &quot;cohortId&quot; &quot;cohortName&quot;</code></pre>
-<div id="when-downloading-data-from-the-database" class="section level2">
+<div id="when-downloading-data-from-the-database"
+class="section level2">
 <h2>When downloading data from the database</h2>
-<p>When downloading data, a shortcut is to use the <code>snakeCaseToCamelcase</code> argument of the <code>querySql</code> function in the <code>DatabaseConnector</code> package:</p>
+<p>When downloading data, a shortcut is to use the
+<code>snakeCaseToCamelcase</code> argument of the <code>querySql</code>
+function in the <code>DatabaseConnector</code> package:</p>
 <pre class="r"><code>sql &lt;- &quot;SELECT cohort_definition_id, subject_id  FROM cdm.cohort;&quot;
 cohort &lt;- querySql(connection = connection,
                    sql = sql,
                    snakeCaseToCamelcase = TRUE)</code></pre>
-<p>Where <code>cohort</code> will be a data frame with columns <code>cohortDefinitionId</code> and <code>subjectId</code>.</p>
+<p>Where <code>cohort</code> will be a data frame with columns
+<code>cohortDefinitionId</code> and <code>subjectId</code>.</p>
 </div>
 <div id="when-inserting-data-in-the-database" class="section level2">
 <h2>When inserting data in the database</h2>
-<p>When uploading data, a shortcut is to use the <code>camelCaseToSnakeCase</code> argument of the <code>insertTable</code> in the <code>DatabaseConnector</code> package:</p>
+<p>When uploading data, a shortcut is to use the
+<code>camelCaseToSnakeCase</code> argument of the
+<code>insertTable</code> in the <code>DatabaseConnector</code>
+package:</p>
 <pre class="r"><code>dataToInsert &lt;- data.frame(cohortId = 1,
                            cohortName = &quot;test&quot;)
 
@@ -687,7 +748,8 @@ insertTable(connection = connection,
             tableName = &quot;my_table&quot;,
             data = dataToInsert,
             camelCaseToSnakeCase = TRUE)</code></pre>
-<p>Where the table called <code>my_table</code> will have columns named <code>cohort_id</code> and <code>cohort_name</code>.</p>
+<p>Where the table called <code>my_table</code> will have columns named
+<code>cohort_id</code> and <code>cohort_name</code>.</p>
 </div>
 </div>
 

@@ -13,7 +13,7 @@
 
 <title>Release Process</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -443,69 +443,117 @@ div.tocify {
 
 <div id="the-develop-branch" class="section level1">
 <h1>The develop branch</h1>
-<p>All development should be done in the <code>develop</code> branch of the package GithHub repository. The aim should be to have a workable version in <code>develop</code> branch, so <strong>make sure your package passes R CMD check locally before pushing to the <code>develop</code> branch</strong>.</p>
+<p>All development should be done in the <code>develop</code> branch of
+the package GithHub repository. The aim should be to have a workable
+version in <code>develop</code> branch, so <strong>make sure your
+package passes R CMD check locally before pushing to the
+<code>develop</code> branch</strong>.</p>
 </div>
 <div id="the-main-branch" class="section level1">
 <h1>The main branch</h1>
-<p>The head of the <code>main</code> branch should be the latest released version of the package. No changes should be directly pushed to the <code>main</code> branch.</p>
+<p>The head of the <code>main</code> branch should be the latest
+released version of the package. No changes should be directly pushed to
+the <code>main</code> branch.</p>
 </div>
 <div id="continuous-integration" class="section level1">
 <h1>Continuous integration</h1>
-<p>All branches are monitored by <a href="https://docs.github.com/en/actions/quickstart">Github Actions</a>. Github Actions is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R CMD check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers. To implement continuous integration using Github Actions HADES package maintainers need to</p>
+<p>All branches are monitored by <a
+href="https://docs.github.com/en/actions/quickstart">Github Actions</a>.
+Github Actions is a continuous integration system, meaning that any
+change pushed to one of the branches triggers the package to be built,
+and R CMD check to be performed. Any warnings or errors that occur
+during this process will cause an e-mail to be sent to the package
+maintainers. To implement continuous integration using Github Actions
+HADES package maintainers need to</p>
 <ol style="list-style-type: decimal">
-<li><p>From the <a href="https://github.com/OHDSI/EvidenceSynthesis"><code>EvidenceSynthesis</code></a> repo, copy these files into the new repository in their respective subfolders:</p>
+<li><p>From the <a
+href="https://github.com/OHDSI/EvidenceSynthesis"><code>EvidenceSynthesis</code></a>
+repo, copy these files into the new repository in their respective
+subfolders:</p>
 <ul>
 <li><code>.github/workflows/R_CMD_check_Hades.yaml</code></li>
 <li><code>.github/workflows/nightly_cleanup_Hades.yaml</code></li>
 <li><code>compare_versions</code></li>
 <li><code>deploy.sh</code></li>
 </ul></li>
-<li><p>Add these lines to your <code>.Rbuildignore</code> file if they are not already there:</p>
+<li><p>Add these lines to your <code>.Rbuildignore</code> file if they
+are not already there:</p>
 <pre><code>.github
 deploy.sh
 compare_versions</code></pre></li>
-<li><p>Add a build status badge to <code>README.md</code>: <code>[![Build Status](https://github.com/OHDSI/&lt;reponame&gt;/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/&lt;reponame&gt;/actions?query=workflow%3AR-CMD-check)</code></p></li>
-<li><p><code>git add</code>, <code>git commit</code>, and <code>git push</code> the new files.</p></li>
-<li><p>Ensure that Github Actions are executing by visiting: <code>https://github.com/OHDSI/&lt;reponame&gt;/actions</code></p></li>
+<li><p>Add a build status badge to <code>README.md</code>:
+<code>[![Build Status](https://github.com/OHDSI/&lt;reponame&gt;/workflows/R-CMD-check/badge.svg)](https://github.com/OHDSI/&lt;reponame&gt;/actions?query=workflow%3AR-CMD-check)</code></p></li>
+<li><p><code>git add</code>, <code>git commit</code>, and
+<code>git push</code> the new files.</p></li>
+<li><p>Ensure that Github Actions are executing by visiting:
+<code>https://github.com/OHDSI/&lt;reponame&gt;/actions</code></p></li>
 </ol>
 </div>
 <div id="version-numbering" class="section level1">
 <h1>Version numbering</h1>
 <p>Each package has a three-digit version number.</p>
 <ul>
-<li><p>New micro versions (e.g. from 4.3.2 to 4.3.3) indicate bug fixes only. No new functionality, and forward and backward compatibility are guaranteed</p></li>
-<li><p>New minor versions (e.g. from 4.3.3 to 4.4.0) indicate added functionality. Only backward compatibility is guaranteed</p></li>
-<li><p>New major versions (e.g. from 4.4.0 to 5.0.0) indicate major revisions. All bets are off in terms of compatibility</p></li>
+<li><p>New micro versions (e.g. from 4.3.2 to 4.3.3) indicate bug fixes
+only. No new functionality, and forward and backward compatibility are
+guaranteed</p></li>
+<li><p>New minor versions (e.g. from 4.3.3 to 4.4.0) indicate added
+functionality. Only backward compatibility is guaranteed</p></li>
+<li><p>New major versions (e.g. from 4.4.0 to 5.0.0) indicate major
+revisions. All bets are off in terms of compatibility</p></li>
 </ul>
 </div>
 <div id="creating-a-release" class="section level1">
 <h1>Creating a release</h1>
-<p>Only the package maintainer may create a new release. The release should be prepared in the <code>develop</code> branch. The following steps are mandatory:</p>
+<p>Only the package maintainer may create a new release. The release
+should be prepared in the <code>develop</code> branch. The following
+steps are mandatory:</p>
 <ol style="list-style-type: decimal">
 <li><p>Update the package meta-data</p>
 <ul>
 <li>Update the package version number in the DESCRIPTION file.</li>
 <li>Update the date in the DESCRIPTION file.</li>
-<li>Ensure the Remotes section in the DESCRIPTION file only references the main branch of repos.</li>
-<li>Ensure <em>no</em> Git tag or GitHub release with the new version number already exist. Delete them if they do.</li>
+<li>Ensure the Remotes section in the DESCRIPTION file only references
+the main branch of repos.</li>
+<li>Ensure <em>no</em> Git tag or GitHub release with the new version
+number already exist. Delete them if they do.</li>
 </ul></li>
-<li><p>Regenerate the documentation. This includes the following steps. Note that the <code>extras/PackageMaintenance.R</code> file should contain the code needed to perform most of these steps:</p>
+<li><p>Regenerate the documentation. This includes the following steps.
+Note that the <code>extras/PackageMaintenance.R</code> file should
+contain the code needed to perform most of these steps:</p>
 <ul>
 <li>Run roxygen to regenerate the manual files.</li>
 <li>Perform a spellcheck using <code>devtools::spellcheck()</code></li>
 <li>Regenerate the package manual PDF.</li>
 <li>Regenerate any vignette PDFs.</li>
-<li>Regerate the package website using <code>pkgdown</code>, and fix the HADES logo using <code>OhdsiRTools::fixHadesLogo()</code> after running <code>pkgdown</code>.</li>
+<li>Regerate the package website using <code>pkgdown</code>, and fix the
+HADES logo using <code>OhdsiRTools::fixHadesLogo()</code> after running
+<code>pkgdown</code>.</li>
 </ul></li>
-<li><p>Make sure the package passes R check <em>without warnings</em>, both locally and on Github Actions. Fix as many Notes as possible.</p></li>
-<li><p>For those packages that go into CRAN: Check the package using <code>devtools::check_win_devel()</code> and <code>devtools::check_rhub()</code>, and submit to CRAN using <code>devtools::release()</code>.</p></li>
-<li><p>Once all these steps are completed and commited to the <code>develop</code> branch, the package can be released by merging <code>develop</code> into <code>main</code>.</p>
-<p>Pushing changes to the <code>main</code> branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:</p>
+<li><p>Make sure the package passes R check <em>without warnings</em>,
+both locally and on Github Actions. Fix as many Notes as
+possible.</p></li>
+<li><p>For those packages that go into CRAN: Check the package using
+<code>devtools::check_win_devel()</code> and
+<code>devtools::check_rhub()</code>, and submit to CRAN using
+<code>devtools::release()</code>.</p></li>
+<li><p>Once all these steps are completed and commited to the
+<code>develop</code> branch, the package can be released by merging
+<code>develop</code> into <code>main</code>.</p>
+<p>Pushing changes to the <code>main</code> branch where the version
+number in the DESCRIPTION file is higher than the current one will
+trigger the automated release process. If the package passes R check,
+the following steps are automatically performed:</p>
 <ul>
-<li><p>A new release and tag are created in the GitHub repo with the version number.</p></li>
-<li><p>The package is pushed to the <a href="https://github.com/OHDSI/drat">OHDSI <code>drat</code> repo</a>.</p></li>
+<li><p>A new release and tag are created in the GitHub repo with the
+version number.</p></li>
+<li><p>The package is pushed to the <a
+href="https://github.com/OHDSI/drat">OHDSI <code>drat</code>
+repo</a>.</p></li>
 </ul></li>
-<li><p>Announce the new release on the <a href="https://forums.ohdsi.org/t/hades-development-announcements/12293">OHDSI Forums HADES development announcements thread</a>, providing a short summary of hte most important changes in the new release.</p></li>
+<li><p>Announce the new release on the <a
+href="https://forums.ohdsi.org/t/hades-development-announcements/12293">OHDSI
+Forums HADES development announcements thread</a>, providing a short
+summary of hte most important changes in the new release.</p></li>
 </ol>
 </div>
 
