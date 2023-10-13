@@ -9,9 +9,6 @@ reticulate::use_virtualenv("r-reticulate")
 reticulate::py_install(c("polars", "tqdm", "connectorx", "scikit-learn", "pyarrow"))
 reticulate::py_install("torch")
 # Test: torch <- reticulate::import('torch')
-pyarrow <- reticulate::import('pyarrow')
+# Error in py_module_import(module, convert = convert) : 
+#   TypeError: the first argument must be callable
 
-# reticulate::virtualenv_remove("r-reticulate")
-
-reticulate::virtualenv_list()
-reticulate::virtualenv_root()
