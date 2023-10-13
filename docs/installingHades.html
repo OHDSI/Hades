@@ -482,6 +482,31 @@ options(install.packages.compile.from.source = &quot;never&quot;)
 library(remotes)
 update_packages()</code></pre>
 </div>
+<div id="hades-wide-releases" class="section level1">
+<h1>HADES-wide releases</h1>
+<p>At the end of quarter 1 and 3 of each year a HADES-wide release is
+created. This is a snapshot of all HADES packages and their dependencies
+at one point in time. Additional checks are executed to ensure all
+packages and their dependencies work together. As such, these HADES-wide
+releases form a stable foundation for studies that may not require the
+absolute cutting-edge in HADES functionality.</p>
+<p>These releases are currently captured as <a
+href="https://rstudio.github.io/renv/articles/renv.html">renv</a> lock
+files. The following releases are available:</p>
+<ul>
+<li>2023Q1: <a
+href="https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q1/renv.lock">renv
+lock file</a></li>
+<li>2023Q3: <a
+href="https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q3/renv.lock">renv
+lock file</a></li>
+</ul>
+<p>To build the R library corresponding to the latest release in your
+current RStudio project, you can use:</p>
+<pre class="r"><code>download.file(&quot;https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q3/renv.lock&quot;, &quot;renv.lock&quot;)
+install.packages(&quot;renv&quot;)
+renv::restore()</code></pre>
+</div>
 
 
 
