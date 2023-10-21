@@ -48,7 +48,7 @@ pareHades <- function(
       
       PaRe::makeReport(
         repo = repo,
-        outputFile = file.path("docs/pare_reports/", sprintf("%s.html", pkg))
+        outputFile = file.path("extras/pare_reports/", sprintf("%s.html", pkg))
       )
       timeDiff <- round(Sys.time() - start, 2)
       write(
@@ -58,8 +58,8 @@ pareHades <- function(
       )
       unlink(repoDir, recursive = TRUE)
     }, error = function(e) {
-      unlink(file.path(sprintf("docs/pare_reports/%s_files", pkg)), recursive = TRUE)
-      unlink(file.path(sprintf("docs/pare_reports/%s.html", pkg)))
+      unlink(file.path(sprintf("extras/pare_reports/%s_files", pkg)), recursive = TRUE)
+      unlink(file.path(sprintf("extras/pare_reports/%s.html", pkg)))
       unlink(repoDir, recursive = TRUE)
       write(
         x = sprintf("[!] Generating PaRe report for %s failed\n%s\n\n", pkg, e$message),
@@ -69,7 +69,7 @@ pareHades <- function(
     })
   })
   timeDiff <- round(Sys.time() - start, 2)
-  message(sprintf("Worte reports to: %s", "docs/pare_reports/"))
+  message(sprintf("Wrote reports to: %s", "docs/pare_reports/"))
   message(sprintf("Time: %s %s", as.numeric(timeDiff), units(timeDiff)))
   return(NULL)
 }
