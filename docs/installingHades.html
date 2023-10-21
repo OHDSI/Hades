@@ -13,7 +13,7 @@
 
 <title>Installing HADES</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -441,27 +441,71 @@ div.tocify {
 </div>
 
 
-<p>Each HADES package site describes how you can install that individual package (including its dependency). On this page you will learn how you can install all HADES packages in one go, or update any HADES packages you have already installed. But before proceeding, make sure you have R, RTools (for Windows) and Java installed properly, as described <a href="rSetup.html">here</a>. Please don’t forget to ensure you have set a GitHub Personal Access Token (PAT) as described <a href="rSetup.html#GitHub_Personal_Access_Token">here</a>. Else we will hit our GitHub download limit, and the installation will fail.</p>
+<p>Each HADES package site describes how you can install that individual
+package (including its dependency). On this page you will learn how you
+can install all HADES packages in one go, or update any HADES packages
+you have already installed. But before proceeding, make sure you have R,
+RTools (for Windows) and Java installed properly, as described <a
+href="rSetup.html">here</a>. Please don’t forget to ensure you have set
+a GitHub Personal Access Token (PAT) as described <a
+href="rSetup.html#GitHub_Personal_Access_Token">here</a>. Else we will
+hit our GitHub download limit, and the installation will fail.</p>
 <div id="installing-all-hades-packages" class="section level1">
 <h1>Installing all HADES packages</h1>
-<p>We install the HADES packages from GitHub using the <a href="https://remotes.r-lib.org/">remotes</a> package:</p>
+<p>We install the HADES packages from GitHub using the <a
+href="https://remotes.r-lib.org/">remotes</a> package:</p>
 <pre class="r"><code># This line prevents the annoying &quot;Do you want to install from source&quot; dialogs:
 options(install.packages.compile.from.source = &quot;never&quot;)
 
 install.packages(&quot;remotes&quot;)
 library(remotes)
 install_github(&quot;ohdsi/Hades&quot;, upgrade = &quot;always&quot;)</code></pre>
-<p>Note that we use <code>upgrade = "always"</code> to avoid having to answer any questions about whether we want to upgrade any packages. HADES is designed to work with the latest released versions of all its dependencies, so we should always upgrade these (unless we’re running an older study package, which is an entirely different story).</p>
-<p>When asked “<em>Do you want to install from source the packages which needs compilation</em>”, I recommend you choose “<em>No</em>”. Compiling these packages may take a very long time, and it is unlikely they contain functionality needed to run HADES (since HADES was likely developed with the previous version).</p>
+<p>Note that we use <code>upgrade = "always"</code> to avoid having to
+answer any questions about whether we want to upgrade any packages.
+HADES is designed to work with the latest released versions of all its
+dependencies, so we should always upgrade these (unless we’re running an
+older study package, which is an entirely different story).</p>
+<p>When asked “<em>Do you want to install from source the packages which
+needs compilation</em>”, I recommend you choose “<em>No</em>”. Compiling
+these packages may take a very long time, and it is unlikely they
+contain functionality needed to run HADES (since HADES was likely
+developed with the previous version).</p>
 </div>
 <div id="updating-hades" class="section level1">
 <h1>Updating HADES</h1>
-<p>If we already have the HADES packages installed, and wish to upgrade to the latest versions, we can also use the <code>remotes</code> package:</p>
+<p>If we already have the HADES packages installed, and wish to upgrade
+to the latest versions, we can also use the <code>remotes</code>
+package:</p>
 <pre class="r"><code># This line prevents the annoying &quot;Do you want to install from source&quot; dialogs:
 options(install.packages.compile.from.source = &quot;never&quot;)
 
 library(remotes)
 update_packages()</code></pre>
+</div>
+<div id="hades-wide-releases" class="section level1">
+<h1>HADES-wide releases</h1>
+<p>At the end of quarter 1 and 3 of each year a HADES-wide release is
+created. This is a snapshot of all HADES packages and their dependencies
+at one point in time. Additional checks are executed to ensure all
+packages and their dependencies work together. As such, these HADES-wide
+releases form a stable foundation for studies that may not require the
+absolute cutting-edge in HADES functionality.</p>
+<p>These releases are currently captured as <a
+href="https://rstudio.github.io/renv/articles/renv.html">renv</a> lock
+files. The following releases are available:</p>
+<ul>
+<li>2023Q1: <a
+href="https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q1/renv.lock">renv
+lock file</a></li>
+<li>2023Q3: <a
+href="https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q3/renv.lock">renv
+lock file</a></li>
+</ul>
+<p>To build the R library corresponding to the latest release in your
+current RStudio project, you can use:</p>
+<pre class="r"><code>download.file(&quot;https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q3/renv.lock&quot;, &quot;renv.lock&quot;)
+install.packages(&quot;renv&quot;)
+renv::restore()</code></pre>
 </div>
 
 

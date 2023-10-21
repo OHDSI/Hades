@@ -13,7 +13,7 @@
 
 <title>Package statuses</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -50,542 +50,7 @@
 if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-
-
-
-<link rel="stylesheet" href="style.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="images/hadesMini.png" width = 80 height = 17/></a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="packages.html">
-    <span class="fa fa-cube"></span>
-     
-    Packages
-  </a>
-</li>
-<li>
-  <a href="validation.html">
-    <span class="fa fa-clipboard-check"></span>
-     
-    Validation
-  </a>
-</li>
-<li>
-  <a href="publications.html">
-    <span class="fa fa-pen-alt"></span>
-     
-    Publications
-  </a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="fa fa-life-ring"></span>
-     
-    Support
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="support.html">Questions and Bug reports</a>
-    </li>
-    <li>
-      <a href="rSetup.html">R setup</a>
-    </li>
-    <li>
-      <a href="installingHades.html">Installing HADES</a>
-    </li>
-    <li>
-      <a href="connecting.html">Connecting to a Database</a>
-    </li>
-    <li>
-      <a href="supportedPlatforms.html">Supported Database Platforms</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="fa fa-flask"></span>
-     
-    Study packages
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="renv.html">Using Renv for Dependencies</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="fa fa-wrench"></span>
-     
-    Developers
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="contribute.html">How to contribute</a>
-    </li>
-    <li>
-      <a href="community.html">Developer Community</a>
-    </li>
-    <li>
-      <a href="developerGuidelines.html">Developer Guidelines</a>
-    </li>
-    <li>
-      <a href="codeStyle.html">Code Style</a>
-    </li>
-    <li>
-      <a href="releaseProcess.html">Release Process</a>
-    </li>
-    <li>
-      <a href="packageStatuses.html">Package Statuses</a>
-    </li>
-    <li>
-      <a href="developmentRoadmap.html">Development Roadmap</a>
-    </li>
-    <li>
-      <a href="packageRequirements.html">HADES Package Requirements</a>
-    </li>
-  </ul>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Package statuses</h1>
-
-</div>
-
-
-<p>The table below lists, for each of the HADES packages, the following details:</p>
-<ul>
-<li><strong>Version</strong>: The latest released version.</li>
-<li><strong>Maintainer(s)</strong>: The persons responsible for the package. Only maintainers can create releases.</li>
-<li><strong>Availability</strong>: whether the package can be installed from CRAN (using <code>install.packages()</code>), or needs to be installed from GitHub (using <code>remotes::install_github()</code>).</li>
-<li><strong>Open issues</strong>: The number of open issues.</li>
-<li><strong>Open pull-requests</strong>: The number of open pull-requests.</li>
-<li><strong>Build status</strong>: Whether the lastest released version (head of <code>main</code>) passes R Check (including unit tests). The check is performed every weekend.</li>
-<li><strong>Coverage</strong>: The percentage of lines of code that is covered by the unit tests in the <code>main</code> branch (i.e. in the latest released version).</li>
-</ul>
-<table>
-<colgroup>
-<col width="18%" />
-<col width="6%" />
-<col width="16%" />
-<col width="8%" />
-<col width="8%" />
-<col width="8%" />
-<col width="14%" />
-<col width="12%" />
-<col width="6%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Package</th>
-<th align="center">Version</th>
-<th align="left">Maintainer(s)</th>
-<th align="center">Availability</th>
-<th align="center">Open issues</th>
-<th align="center">Open pull-requests</th>
-<th align="center">Build status</th>
-<th align="center">Coverage</th>
-<th align="center">PaRe</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/Achilles">Achilles</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Achilles/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Achilles?label=%20" alt="Version" /></a></td>
-<td align="left">Frank DeFalco</td>
-<td align="center">GitHub</td>
-<td align="center"><a
-href="https://github.com/OHDSI/Achilles/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/Achilles?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Achilles/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/Achilles?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Achilles/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/Achilles/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/Achilles?branch=main"><img
-src="https://codecov.io/github/OHDSI/Achilles/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a href="pare_reports/Achilles.html">Report</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/Andromeda">Andromeda</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Andromeda/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Andromeda?label=%20" alt="Version" /></a></td>
-<td align="left">Adam Black</td>
-<td align="center">CRAN</td>
-<td align="center"><a
-href="https://github.com/OHDSI/Andromeda/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/Andromeda?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Andromeda/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/Andromeda?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Andromeda/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/Andromeda/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/Andromeda?branch=main"><img
-src="https://codecov.io/github/OHDSI/Andromeda/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a href="pare_reports/Andromeda.html">Report</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/BigKnn">BigKnn</a></td>
-<td align="center"><a href="https://ohdsi.github.io/BigKnn/"><img src="https://img.shields.io/github/r-package/v/ohdsi/BigKnn?label=%20" alt="Version" /></a></td>
-<td align="left">Martijn Schuemie</td>
-<td align="center">GitHub</td>
-<td align="center"><a href="https://github.com/OHDSI/BigKnn/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/BigKnn?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a href="https://github.com/OHDSI/BigKnn/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/BigKnn?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/BigKnn/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/BigKnn/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/BigKnn?branch=main"><img
-src="https://codecov.io/github/OHDSI/BigKnn/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a href="pare_reports/BigKnn.html">Report</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/BrokenAdaptiveRidge">BrokenAdaptiveRidge</a></td>
-<td align="center"><a href="https://ohdsi.github.io/BrokenAdaptiveRidge/"><img src="https://img.shields.io/github/r-package/v/ohdsi/BrokenAdaptiveRidge?label=%20" alt="Version" /></a></td>
-<td align="left">Marc Suchard</td>
-<td align="center">CRAN</td>
-<td align="center"><a
-href="https://github.com/OHDSI/BrokenAdaptiveRidge/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/BrokenAdaptiveRidge?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/BrokenAdaptiveRidge/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/BrokenAdaptiveRidge?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/BrokenAdaptiveRidge/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/BrokenAdaptiveRidge/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/BrokenAdaptiveRidge?branch=main"><img
-src="https://codecov.io/github/OHDSI/BrokenAdaptiveRidge/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a
-href="pare_reports/BrokenAdaptiveRidge.html">Report</a></td>
-<tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/Capr">Capr</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Capr/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Capr?label=%20" alt="Version" /></a></td>
-<td align="left">Martin Lavallee</td>
-<td align="center">GitHub</td>
-<td align="center"><a href="https://github.com/OHDSI/Capr/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/Capr?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a href="https://github.com/OHDSI/Capr/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/Capr?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Capr/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/Capr/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/Capr?branch=main"><img
-src="https://codecov.io/github/OHDSI/Capr/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a href="pare_reports/Capr.html">Report</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/Characterization">Characterization</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Characterization/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Characterization?label=%20" alt="Version" /></a></td>
-<td align="left">Jenna Reps</td>
-<td align="center">GitHub</td>
-<td align="center"><a
-href="https://github.com/OHDSI/Characterization/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/Characterization?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Characterization/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/Characterization?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/Characterization/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/Characterization/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/Characterization?branch=main"><img
-src="https://codecov.io/github/OHDSI/Characterization/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a
-href="pare_reports/Characterization.html">Report</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/CirceR">CirceR</a></td>
-<td align="center"><a href="https://ohdsi.github.io/CirceR/"><img src="https://img.shields.io/github/r-package/v/ohdsi/CirceR?label=%20" alt="Version" /></a></td>
-<td align="left">Chris Knoll</td>
-<td align="center">GitHub</td>
-<td align="center"><a href="https://github.com/OHDSI/CirceR/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/CirceR?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a href="https://github.com/OHDSI/CirceR/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/CirceR?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/CirceR/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/CirceR/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/CirceR?branch=main"><img
-src="https://codecov.io/github/OHDSI/CirceR/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a href="pare_reports/CirceR.html">Report</a></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/CohortDiagnostics">CohortDiagnostics</a></td>
-<td align="center"><a href="https://ohdsi.github.io/CohortDiagnostics/"><img src="https://img.shields.io/github/r-package/v/ohdsi/CohortDiagnostics?label=%20" alt="Version" /></a></td>
-<td align="left">Jamie Gilbert</td>
-<td align="center">GitHub</td>
-<td align="center"><a
-href="https://github.com/OHDSI/CohortDiagnostics/issues"><img
-src="https://img.shields.io/github/issues-raw/OHDSI/CohortDiagnostics?label=%20"
-alt="Open issues" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/CohortDiagnostics/pulls"><img
-src="https://img.shields.io/github/issues-pr-raw/OHDSI/CohortDiagnostics?label=%20"
-alt="Open pull-requests" /></a></td>
-<td align="center"><a
-href="https://github.com/OHDSI/CohortDiagnostics/actions/workflows/R_CMD_check_main_weekly.yml"><img
-src="https://github.com/OHDSI/CohortDiagnostics/workflows/R%20check/badge.svg"
-alt="Build Status" /></a></td>
-<td align="center"><a
-href="https://codecov.io/github/OHDSI/CohortDiagnostics?branch=main"><img
-src="https://codecov.io/github/OHDSI/CohortDiagnostics/coverage.svg?branch=main"
-alt="codecov.io" /></a></td>
-<td align="center"><a
-href="pare_reports/CohortDiagnostics.html">Report</a></td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/CohortExplorer">CohortExplorer</a></td>
-<td align="center"><a href="https://ohdsi.github.io/CohortExplorer/"><img src="https://img.shields.io/github/r-package/v/ohdsi/CohortExplorer?label=%20" alt="Version" /></a></td>
-<td align="left">Gowtham Rao</td>
-<td align="center">GitHub</td>
+  if (document.readyState && document.readyState 
 <td align="center"><a
 href="https://github.com/OHDSI/CohortExplorer/issues"><img
 src="https://img.shields.io/github/issues-raw/OHDSI/CohortExplorer?label=%20"
@@ -595,19 +60,27 @@ href="https://github.com/OHDSI/CohortExplorer/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/CohortExplorer?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/CohortExplorer/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/CohortExplorer/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/CohortExplorer?branch=main"><img
 src="https://codecov.io/github/OHDSI/CohortExplorer/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/CohortExplorer.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/CohortGenerator">CohortGenerator</a></td>
-<td align="center"><a href="https://ohdsi.github.io/CohortGenerator/"><img src="https://img.shields.io/github/r-package/v/ohdsi/CohortGenerator?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/CohortGenerator">CohortGenerator</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/CohortGenerator/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/CohortGenerator?label=%20"
+alt="Version" /></a></td>
 <td align="left">Anthony Sena</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -619,19 +92,26 @@ href="https://github.com/OHDSI/CohortGenerator/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/CohortGenerator?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/CohortGenerator/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/CohortGenerator/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/CohortGenerator?branch=main"><img
 src="https://codecov.io/github/OHDSI/CohortGenerator/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/CohortGenerator.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/CohortMethod">CohortMethod</a></td>
-<td align="center"><a href="https://ohdsi.github.io/CohortMethod/"><img src="https://img.shields.io/github/r-package/v/ohdsi/CohortMethod?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/CohortMethod">CohortMethod</a></td>
+<td align="center"><a href="https://ohdsi.github.io/CohortMethod/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/CohortMethod?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -643,19 +123,26 @@ href="https://github.com/OHDSI/CohortMethod/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/CohortMethod?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/CohortMethod/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/CohortMethod/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/CohortMethod?branch=main"><img
 src="https://codecov.io/github/OHDSI/CohortMethod/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/CohortMethod.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/Cyclops">Cyclops</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Cyclops/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Cyclops?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/Cyclops">Cyclops</a></td>
+<td align="center"><a href="https://ohdsi.github.io/Cyclops/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/Cyclops?label=%20"
+alt="Version" /></a></td>
 <td align="left">Marc Suchard</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -666,18 +153,26 @@ alt="Open issues" /></a></td>
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/Cyclops?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/Cyclops/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/Cyclops/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/Cyclops?branch=main"><img
 src="https://codecov.io/github/OHDSI/Cyclops/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a href="pare_reports/Cyclops.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/DatabaseConnector">DatabaseConnector</a></td>
-<td align="center"><a href="https://ohdsi.github.io/DatabaseConnector/"><img src="https://img.shields.io/github/r-package/v/ohdsi/DatabaseConnector?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/DatabaseConnector">DatabaseConnector</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/DatabaseConnector/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/DatabaseConnector?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -689,19 +184,27 @@ href="https://github.com/OHDSI/DatabaseConnector/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/DatabaseConnector?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/DatabaseConnector/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/DatabaseConnector/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/DatabaseConnector?branch=main"><img
 src="https://codecov.io/github/OHDSI/DatabaseConnector/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/DatabaseConnector.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/DataQualityDashboard">DataQualityDashboard</a></td>
-<td align="center"><a href="https://ohdsi.github.io/DataQualityDashboard/"><img src="https://img.shields.io/github/r-package/v/ohdsi/DataQualityDashboard?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/DataQualityDashboard">DataQualityDashboard</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/DataQualityDashboard/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/DataQualityDashboard?label=%20"
+alt="Version" /></a></td>
 <td align="left">Katy Sadowksi</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -713,19 +216,27 @@ href="https://github.com/OHDSI/DataQualityDashboard/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/DataQualityDashboard?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/DataQualityDashboard/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/DataQualityDashboard/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/DataQualityDashboard?branch=main"><img
 src="https://codecov.io/github/OHDSI/DataQualityDashboard/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/DataQualityDashboard.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/DeepPatientLevelPrediction">DeepPatientLevelPrediction</a></td>
-<td align="center"><a href="https://ohdsi.github.io/DeepPatientLevelPrediction/"><img src="https://img.shields.io/github/r-package/v/ohdsi/DeepPatientLevelPrediction?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/DeepPatientLevelPrediction">DeepPatientLevelPrediction</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/DeepPatientLevelPrediction/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/DeepPatientLevelPrediction?label=%20"
+alt="Version" /></a></td>
 <td align="left">Egill Fridgeirsson</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -737,18 +248,26 @@ href="https://github.com/OHDSI/DeepPatientLevelPrediction/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/DeepPatientLevelPrediction?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/DeepPatientLevelPrediction/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/DeepPatientLevelPrediction/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/DeepPatientLevelPrediction?branch=main"><img
 src="https://codecov.io/github/OHDSI/DeepPatientLevelPrediction/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/EmpiricalCalibration">EmpiricalCalibration</a></td>
-<td align="center"><a href="https://ohdsi.github.io/EmpiricalCalibration/"><img src="https://img.shields.io/github/r-package/v/ohdsi/EmpiricalCalibration?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/EmpiricalCalibration">EmpiricalCalibration</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/EmpiricalCalibration/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/EmpiricalCalibration?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -760,19 +279,27 @@ href="https://github.com/OHDSI/EmpiricalCalibration/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/EmpiricalCalibration?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/EmpiricalCalibration/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/EmpiricalCalibration/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/EmpiricalCalibration?branch=main"><img
 src="https://codecov.io/github/OHDSI/EmpiricalCalibration/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/EmpiricalCalibration.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/EnsemblePatientLevelPrediction">EnsemblePatientLevelPrediction</a></td>
-<td align="center"><a href="https://ohdsi.github.io/EnsemblePatientLevelPrediction/"><img src="https://img.shields.io/github/r-package/v/ohdsi/EnsemblePatientLevelPrediction?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/EnsemblePatientLevelPrediction">EnsemblePatientLevelPrediction</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/EnsemblePatientLevelPrediction/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/EnsemblePatientLevelPrediction?label=%20"
+alt="Version" /></a></td>
 <td align="left">Jenna Reps</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -784,18 +311,25 @@ href="https://github.com/OHDSI/EnsemblePatientLevelPrediction/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/EnsemblePatientLevelPrediction?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/EnsemblePatientLevelPrediction/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/EnsemblePatientLevelPrediction/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/EnsemblePatientLevelPrediction?branch=main"><img
 src="https://codecov.io/github/OHDSI/EnsemblePatientLevelPrediction/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/Eunomia">Eunomia</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Eunomia/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Eunomia?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/Eunomia">Eunomia</a></td>
+<td align="center"><a href="https://ohdsi.github.io/Eunomia/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/Eunomia?label=%20"
+alt="Version" /></a></td>
 <td align="left">Frank DeFalco</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -806,18 +340,26 @@ alt="Open issues" /></a></td>
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/Eunomia?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/Eunomia/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/Eunomia/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/Eunomia?branch=main"><img
 src="https://codecov.io/github/OHDSI/Eunomia/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a href="pare_reports/Eunomia.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/EvidenceSynthesis">EvidenceSynthesis</a></td>
-<td align="center"><a href="https://ohdsi.github.io/EvidenceSynthesis/"><img src="https://img.shields.io/github/r-package/v/ohdsi/EvidenceSynthesis?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/EvidenceSynthesis">EvidenceSynthesis</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/EvidenceSynthesis/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/EvidenceSynthesis?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -829,19 +371,27 @@ href="https://github.com/OHDSI/EvidenceSynthesis/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/EvidenceSynthesis?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/EvidenceSynthesis/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/EvidenceSynthesis/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/EvidenceSynthesis?branch=main"><img
 src="https://codecov.io/github/OHDSI/EvidenceSynthesis/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/EvidenceSynthesis.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/FeatureExtraction">FeatureExtraction</a></td>
-<td align="center"><a href="https://ohdsi.github.io/FeatureExtraction/"><img src="https://img.shields.io/github/r-package/v/ohdsi/FeatureExtraction?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/FeatureExtraction">FeatureExtraction</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/FeatureExtraction/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/FeatureExtraction?label=%20"
+alt="Version" /></a></td>
 <td align="left">Anthony Sena</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -853,19 +403,25 @@ href="https://github.com/OHDSI/FeatureExtraction/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/FeatureExtraction?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/FeatureExtraction/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/FeatureExtraction/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/FeatureExtraction?branch=main"><img
 src="https://codecov.io/github/OHDSI/FeatureExtraction/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/FeatureExtraction.html">Report</a></td>
+
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/OHDSI/Hydra">Hydra</a></td>
-<td align="center"><a href="https://ohdsi.github.io/Hydra/"><img src="https://img.shields.io/github/r-package/v/ohdsi/Hydra?label=%20" alt="Version" /></a></td>
+<td align="center"><a href="https://ohdsi.github.io/Hydra/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/Hydra?label=%20"
+alt="Version" /></a></td>
 <td align="left">Anthony Sena</td>
 <td align="center">GitHub</td>
 <td align="center"><a href="https://github.com/OHDSI/Hydra/issues"><img
@@ -875,18 +431,26 @@ alt="Open issues" /></a></td>
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/Hydra?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/Hydra/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/Hydra/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/Hydra?branch=main"><img
 src="https://codecov.io/github/OHDSI/Hydra/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a href="pare_reports/Hydra.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/IterativeHardThresholding">IterativeHardThresholding</a></td>
-<td align="center"><a href="https://ohdsi.github.io/IterativeHardThresholding/"><img src="https://img.shields.io/github/r-package/v/ohdsi/IterativeHardThresholding?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/IterativeHardThresholding">IterativeHardThresholding</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/IterativeHardThresholding/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/IterativeHardThresholding?label=%20"
+alt="Version" /></a></td>
 <td align="left">Marc Suchard</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -898,19 +462,27 @@ href="https://github.com/OHDSI/IterativeHardThresholding/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/IterativeHardThresholding?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/IterativeHardThresholding/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/IterativeHardThresholding/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/IterativeHardThresholding?branch=main"><img
 src="https://codecov.io/github/OHDSI/IterativeHardThresholding/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/IterativeHardThresholding.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/MethodEvaluation">MethodEvaluation</a></td>
-<td align="center"><a href="https://ohdsi.github.io/MethodEvaluation/"><img src="https://img.shields.io/github/r-package/v/ohdsi/MethodEvaluation?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/MethodEvaluation">MethodEvaluation</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/MethodEvaluation/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/MethodEvaluation?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -922,19 +494,26 @@ href="https://github.com/OHDSI/MethodEvaluation/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/MethodEvaluation?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/MethodEvaluation/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/MethodEvaluation/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/MethodEvaluation?branch=main"><img
 src="https://codecov.io/github/OHDSI/MethodEvaluation/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/MethodEvaluation.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/OhdsiSharing">OhdsiSharing</a></td>
-<td align="center"><a href="https://ohdsi.github.io/OhdsiSharing/"><img src="https://img.shields.io/github/r-package/v/ohdsi/OhdsiSharing?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/OhdsiSharing">OhdsiSharing</a></td>
+<td align="center"><a href="https://ohdsi.github.io/OhdsiSharing/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/OhdsiSharing?label=%20"
+alt="Version" /></a></td>
 <td align="left">Lee Evans</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -946,19 +525,27 @@ href="https://github.com/OHDSI/OhdsiSharing/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/OhdsiSharing?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/OhdsiSharing/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/OhdsiSharing/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/OhdsiSharing?branch=main"><img
 src="https://codecov.io/github/OHDSI/OhdsiSharing/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/OhdsiSharing.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/OhdsiShinyModules">OhdsiShinyModules</a></td>
-<td align="center"><a href="https://ohdsi.github.io/OhdsiShinyModules/"><img src="https://img.shields.io/github/r-package/v/ohdsi/OhdsiShinyModules?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/OhdsiShinyModules">OhdsiShinyModules</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/OhdsiShinyModules/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/OhdsiShinyModules?label=%20"
+alt="Version" /></a></td>
 <td align="left">Jenna Reps</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -970,19 +557,27 @@ href="https://github.com/OHDSI/OhdsiShinyModules/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/OhdsiShinyModules?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/OhdsiShinyModules/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/OhdsiShinyModules/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/OhdsiShinyModules?branch=main"><img
 src="https://codecov.io/github/OHDSI/OhdsiShinyModules/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/OhdsiShinyModules.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/ParallelLogger">ParallelLogger</a></td>
-<td align="center"><a href="https://ohdsi.github.io/ParallelLogger/"><img src="https://img.shields.io/github/r-package/v/ohdsi/ParallelLogger?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/ParallelLogger">ParallelLogger</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/ParallelLogger/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/ParallelLogger?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -994,19 +589,27 @@ href="https://github.com/OHDSI/ParallelLogger/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/ParallelLogger?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/ParallelLogger/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/ParallelLogger/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/ParallelLogger?branch=main"><img
 src="https://codecov.io/github/OHDSI/ParallelLogger/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/ParallelLogger.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/PatientLevelPrediction">PatientLevelPrediction</a></td>
-<td align="center"><a href="https://ohdsi.github.io/PatientLevelPrediction/"><img src="https://img.shields.io/github/r-package/v/ohdsi/PatientLevelPrediction?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/PatientLevelPrediction">PatientLevelPrediction</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/PatientLevelPrediction/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/PatientLevelPrediction?label=%20"
+alt="Version" /></a></td>
 <td align="left">Jenna Reps &amp; Peter Rijnbeek</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1018,19 +621,27 @@ href="https://github.com/OHDSI/PatientLevelPrediction/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/PatientLevelPrediction?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/PatientLevelPrediction/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/PatientLevelPrediction/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/PatientLevelPrediction?branch=main"><img
 src="https://codecov.io/github/OHDSI/PatientLevelPrediction/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/PatientLevelPrediction.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/PhenotypeLibrary">PhenotypeLibrary</a></td>
-<td align="center"><a href="https://ohdsi.github.io/PhenotypeLibrary/"><img src="https://img.shields.io/github/r-package/v/ohdsi/PhenotypeLibrary?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/PhenotypeLibrary">PhenotypeLibrary</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/PhenotypeLibrary/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/PhenotypeLibrary?label=%20"
+alt="Version" /></a></td>
 <td align="left">Gowtham Rao</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1042,19 +653,26 @@ href="https://github.com/OHDSI/PhenotypeLibrary/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/PhenotypeLibrary?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/PhenotypeLibrary/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/PhenotypeLibrary/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/PhenotypeLibrary?branch=main"><img
 src="https://codecov.io/github/OHDSI/PhenotypeLibrary/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/PhenotypeLibrary.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/PheValuator">PheValuator</a></td>
-<td align="center"><a href="https://ohdsi.github.io/PheValuator/"><img src="https://img.shields.io/github/r-package/v/ohdsi/PheValuator?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/PheValuator">PheValuator</a></td>
+<td align="center"><a href="https://ohdsi.github.io/PheValuator/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/PheValuator?label=%20"
+alt="Version" /></a></td>
 <td align="left">Joel Swerdel</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1066,19 +684,27 @@ href="https://github.com/OHDSI/PheValuator/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/PheValuator?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/PheValuator/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/PheValuator/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/PheValuator?branch=main"><img
 src="https://codecov.io/github/OHDSI/PheValuator/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/PheValuator.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/ResultModelManager">ResultModelManager</a></td>
-<td align="center"><a href="https://ohdsi.github.io/ResultModelManager/"><img src="https://img.shields.io/github/r-package/v/ohdsi/ResultModelManager?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/ResultModelManager">ResultModelManager</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/ResultModelManager/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/ResultModelManager?label=%20"
+alt="Version" /></a></td>
 <td align="left">Jamie Gilbert</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1090,19 +716,26 @@ href="https://github.com/OHDSI/ResultModelManager/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/ResultModelManager?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/ResultModelManager/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/ResultModelManager/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/ResultModelManager?branch=main"><img
 src="https://codecov.io/github/OHDSI/ResultModelManager/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/ResultModelManager.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/ROhdsiWebApi">ROhdsiWebApi</a></td>
-<td align="center"><a href="https://ohdsi.github.io/ROhdsiWebApi/"><img src="https://img.shields.io/github/r-package/v/ohdsi/ROhdsiWebApi?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/ROhdsiWebApi">ROhdsiWebApi</a></td>
+<td align="center"><a href="https://ohdsi.github.io/ROhdsiWebApi/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/ROhdsiWebApi?label=%20"
+alt="Version" /></a></td>
 <td align="left">Gowtham Rao</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1114,19 +747,27 @@ href="https://github.com/OHDSI/ROhdsiWebApi/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/ROhdsiWebApi?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/ROhdsiWebApi/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/ROhdsiWebApi/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/ROhdsiWebApi?branch=main"><img
 src="https://codecov.io/github/OHDSI/ROhdsiWebApi/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/ROhdsiWebApi.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/SelfControlledCaseSeries">SelfControlledCaseSeries</a></td>
-<td align="center"><a href="https://ohdsi.github.io/SelfControlledCaseSeries/"><img src="https://img.shields.io/github/r-package/v/ohdsi/SelfControlledCaseSeries?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/SelfControlledCaseSeries">SelfControlledCaseSeries</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/SelfControlledCaseSeries/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/SelfControlledCaseSeries?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1138,19 +779,27 @@ href="https://github.com/OHDSI/SelfControlledCaseSeries/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/SelfControlledCaseSeries?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/SelfControlledCaseSeries/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/SelfControlledCaseSeries/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/SelfControlledCaseSeries?branch=main"><img
 src="https://codecov.io/github/OHDSI/SelfControlledCaseSeries/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/SelfControlledCaseSeries.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/SelfControlledCohort">SelfControlledCohort</a></td>
-<td align="center"><a href="https://ohdsi.github.io/SelfControlledCohort/"><img src="https://img.shields.io/github/r-package/v/ohdsi/SelfControlledCohort?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/SelfControlledCohort">SelfControlledCohort</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/SelfControlledCohort/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/SelfControlledCohort?label=%20"
+alt="Version" /></a></td>
 <td align="left">Jamie Gilbert</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1162,19 +811,27 @@ href="https://github.com/OHDSI/SelfControlledCohort/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/SelfControlledCohort?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/SelfControlledCohort/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/SelfControlledCohort/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/SelfControlledCohort?branch=main"><img
 src="https://codecov.io/github/OHDSI/SelfControlledCohort/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/SelfControlledCohort.html">Report</a></td>
+
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/OHDSI/ShinyAppBuilder">ShinyAppBuilder</a></td>
-<td align="center"><a href="https://ohdsi.github.io/ShinyAppBuilder/"><img src="https://img.shields.io/github/r-package/v/ohdsi/ShinyAppBuilder?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/ShinyAppBuilder">ShinyAppBuilder</a></td>
+<td align="center"><a
+href="https://ohdsi.github.io/ShinyAppBuilder/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/ShinyAppBuilder?label=%20"
+alt="Version" /></a></td>
 <td align="left">Jenna Reps</td>
 <td align="center">GitHub</td>
 <td align="center"><a
@@ -1186,19 +843,26 @@ href="https://github.com/OHDSI/ShinyAppBuilder/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/ShinyAppBuilder?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/ShinyAppBuilder/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/ShinyAppBuilder/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/ShinyAppBuilder?branch=main"><img
 src="https://codecov.io/github/OHDSI/ShinyAppBuilder/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a
 href="pare_reports/ShinyAppBuilder.html">Report</a></td>
+
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/OHDSI/SqlRender">SqlRender</a></td>
-<td align="center"><a href="https://ohdsi.github.io/SqlRender/"><img src="https://img.shields.io/github/r-package/v/ohdsi/SqlRender?label=%20" alt="Version" /></a></td>
+<td align="left"><a
+href="https://github.com/OHDSI/SqlRender">SqlRender</a></td>
+<td align="center"><a href="https://ohdsi.github.io/SqlRender/"><img
+src="https://img.shields.io/github/r-package/v/ohdsi/SqlRender?label=%20"
+alt="Version" /></a></td>
 <td align="left">Martijn Schuemie</td>
 <td align="center">CRAN</td>
 <td align="center"><a
@@ -1210,14 +874,18 @@ href="https://github.com/OHDSI/SqlRender/pulls"><img
 src="https://img.shields.io/github/issues-pr-raw/OHDSI/SqlRender?label=%20"
 alt="Open pull-requests" /></a></td>
 <td align="center"><a
+
 href="https://github.com/OHDSI/SqlRender/actions/workflows/R_CMD_check_main_weekly.yml"><img
 src="https://github.com/OHDSI/SqlRender/workflows/R%20check/badge.svg"
+
 alt="Build Status" /></a></td>
 <td align="center"><a
 href="https://codecov.io/github/OHDSI/SqlRender?branch=main"><img
 src="https://codecov.io/github/OHDSI/SqlRender/coverage.svg?branch=main"
 alt="codecov.io" /></a></td>
+
 <td align="center"><a href="pare_reports/SqlRender.html">Report</a></td>
+
 </tr>
 </tbody>
 </table>

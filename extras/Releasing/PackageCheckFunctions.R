@@ -39,7 +39,8 @@ checkPackage <- function(package, inCran) {
     sourcePackage <- remotes::download_version(package, type = "source")
     on.exit(unlink(sourcePackage))
   } else {
-    sourcePackage <- remotes::remote_download(remotes::github_remote(sprintf("%s/%s", gitHubOrganization, package)))
+    ref <- sprintf("v%s", packageVersion(package))
+    sourcePackage <- remotes::remote_download(remotes::github_remote(repo = sprintf("%s/%s", gitHubOrganization, package), ref = ref))
     on.exit(unlink(sourcePackage))
   } 
   sourceFolder <- tempfile(pattern = package)
@@ -51,6 +52,7 @@ checkPackage <- function(package, inCran) {
   if (dir.exists(docDir)) {
     unlink(docDir, recursive = TRUE)
   }
+  # devtools::check_built(path = sourcePath)
   rcmdcheck::rcmdcheck(path = sourcePath, args = c("--no-manual", "--no-multiarch"), error_on = "warning")
 }
 

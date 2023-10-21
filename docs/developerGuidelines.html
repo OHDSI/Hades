@@ -13,7 +13,7 @@
 
 <title>Developer Guidelines</title>
 
-<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -35,8 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">
@@ -443,61 +443,114 @@ div.tocify {
 
 <div id="issues" class="section level1">
 <h1>Issues</h1>
-<p>Issues will be collected using GitHub’s issue trackers, one for each HADES repo. Anyone can file an issue.</p>
-<p>Assign an issue to a collaborator to indicate that person is working on it, or will be working on it shortly.</p>
-<p>Issues can be labelled with the following labels (See also <a href="https://github.com/OHDSI/CohortMethod/issues/labels">here</a>):</p>
+<p>Issues will be collected using GitHub’s issue trackers, one for each
+HADES repo. Anyone can file an issue.</p>
+<p>Assign an issue to a collaborator to indicate that person is working
+on it, or will be working on it shortly.</p>
+<p>Issues can be labelled with the following labels (See also <a
+href="https://github.com/OHDSI/CohortMethod/issues/labels">here</a>):</p>
 <div id="type-of-issue" class="section level2">
 <h2>Type of issue</h2>
 <ul>
-<li><span style="border-radius: 25px; color:#ffffff; background: #fc2929; padding: 0px 8px 0px 8px;">bug</span> Erroneous behavior that needs to be fixed. <span style="color:#aaaaaa;">(Color #fc2929)</span></li>
-<li><span style="border-radius: 25px; background: #84b6eb; padding: 0px 8px 0px 8px;">enhancement</span> New functionality that could be added. <span style="color:#aaaaaa;">(Color #84b6eb)</span></li>
-<li><span style="border-radius: 25px; background: #fbca04; padding: 0px 8px 0px 8px;">exploratory</span> Changes that require some research first. (<span style="color:#aaaaaa;">Color #fbca04)</span></li>
-<li><span style="border-radius: 25px; color:#ffffff; background: #cc317c; padding: 0px 8px 0px 8px;">question</span> A questions that just needs an answer, not a change in code. <span style="color:#aaaaaa;">(Color #cc317c)</span></li>
-<li><span style="border-radius: 25px; background: #cccccc; padding: 0px 8px 0px 8px;">duplicate</span> Duplication of an existing issue. <span style="color:#aaaaaa;">(Color #cccccc)</span></li>
+<li><span
+style="border-radius: 25px; color:#ffffff; background: #fc2929; padding: 0px 8px 0px 8px;">bug</span>
+Erroneous behavior that needs to be fixed. <span
+style="color:#aaaaaa;">(Color #fc2929)</span></li>
+<li><span
+style="border-radius: 25px; background: #84b6eb; padding: 0px 8px 0px 8px;">enhancement</span>
+New functionality that could be added. <span
+style="color:#aaaaaa;">(Color #84b6eb)</span></li>
+<li><span
+style="border-radius: 25px; background: #fbca04; padding: 0px 8px 0px 8px;">exploratory</span>
+Changes that require some research first. (<span
+style="color:#aaaaaa;">Color #fbca04)</span></li>
+<li><span
+style="border-radius: 25px; color:#ffffff; background: #cc317c; padding: 0px 8px 0px 8px;">question</span>
+A questions that just needs an answer, not a change in code. <span
+style="color:#aaaaaa;">(Color #cc317c)</span></li>
+<li><span
+style="border-radius: 25px; background: #cccccc; padding: 0px 8px 0px 8px;">duplicate</span>
+Duplication of an existing issue. <span style="color:#aaaaaa;">(Color
+#cccccc)</span></li>
 </ul>
 </div>
 <div id="issue-collaboration" class="section level2">
 <h2>Issue collaboration</h2>
 <ul>
-<li><span style="border-radius: 25px; color:#ffffff; background: #0052cc; padding: 0px 8px 0px 8px;">good first issue</span> An issue that could be solved by someone new to the package. <span style="color:#aaaaaa;">(Color #0052cc)</li>
-<li><span style="border-radius: 25px; color:#ffffff; background: #B7042F; padding: 0px 8px 0px 8px;">documentation</span> Requires (re) writing of documentation, no coding. <span style="color:#aaaaaa;">(Color #B7042F)</span></li>
-<li><span style="border-radius: 25px; color:#ffffff; background: #159818; padding: 0px 8px 0px 8px;">help wanted</span> Will probably not be addressed by the package maintainer, but could be addressed by someone else. <span style="color:#aaaaaa;">(Color #159818)</span></li>
+<li><span
+style="border-radius: 25px; color:#ffffff; background: #0052cc; padding: 0px 8px 0px 8px;">good
+first issue</span> An issue that could be solved by someone new to the
+package. <span style="color:#aaaaaa;">(Color #0052cc)</li>
+<li><span
+style="border-radius: 25px; color:#ffffff; background: #B7042F; padding: 0px 8px 0px 8px;">documentation</span>
+Requires (re) writing of documentation, no coding. <span
+style="color:#aaaaaa;">(Color #B7042F)</span></li>
+<li><span
+style="border-radius: 25px; color:#ffffff; background: #159818; padding: 0px 8px 0px 8px;">help
+wanted</span> Will probably not be addressed by the package maintainer,
+but could be addressed by someone else. <span
+style="color:#aaaaaa;">(Color #159818)</span></li>
 </ul>
 </div>
 </div>
 <div id="milestones" class="section level1">
 <h1>Milestones</h1>
-<p>GitHub milestones should be used to indicate future versions, and link issues to those versions. Note that these milestones will also be reported in our <a href="developmentRoadmap.html">roadmap dashboard</a>, so they are a good way to keep HADES users informed on what will happen to their favorite package moving forward.</p>
+<p>GitHub milestones should be used to indicate future versions, and
+link issues to those versions. Note that these milestones will also be
+reported in our <a href="developmentRoadmap.html">roadmap dashboard</a>,
+so they are a good way to keep HADES users informed on what will happen
+to their favorite package moving forward.</p>
 <p>Some recommendations for milestones:</p>
 <ul>
-<li>Use the name of the version as the milestone name (e.g. ‘v5.0.0’ for a next major release).</li>
-<li>Provide a short description of the most important changes a user can expect in the release.</li>
-<li>You can have (concurrent) miltestones for the next major and next minor release.</li>
-<li>Collect all issues that will be addressed in the release under the milestone.</li>
+<li>Use the name of the version as the milestone name (e.g. ‘v5.0.0’ for
+a next major release).</li>
+<li>Provide a short description of the most important changes a user can
+expect in the release.</li>
+<li>You can have (concurrent) miltestones for the next major and next
+minor release.</li>
+<li>Collect all issues that will be addressed in the release under the
+milestone.</li>
 <li>Ensure that issue titles are self-explanatory.</li>
 </ul>
 </div>
 <div id="pull-requests" class="section level1">
 <h1>Pull requests</h1>
-<p>Before you do a pull request, you should always <strong>file an issue</strong> and make sure the package maintainer agrees that it’s a problem, and is happy with your basic proposal for fixing it. We don’t want you to spend a bunch of time on something that we don’t think is a good idea.</p>
+<p>Before you do a pull request, you should always <strong>file an
+issue</strong> and make sure the package maintainer agrees that it’s a
+problem, and is happy with your basic proposal for fixing it. We don’t
+want you to spend a bunch of time on something that we don’t think is a
+good idea.</p>
 <p>Additional requirements for pull requests:</p>
 <ul>
-<li><p>Adhere to the Developer Guidelines posted here, as well as the <a href="codeStyle.html">OHDSI Code Style</a>.</p></li>
-<li><p>If possible, add unit tests for new functionality you add.</p></li>
-<li><p>Restrict your pull request to solving the issue at hand. Do not try to ‘improve’ parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.</p></li>
-<li><p>Make sure you pass R check without errors and warnings before submitting.</p></li>
-<li><p>Always target the <code>develop</code> branch, and make sure you are up-to-date with the develop branch.</p></li>
+<li><p>Adhere to the Developer Guidelines posted here, as well as the <a
+href="codeStyle.html">OHDSI Code Style</a>.</p></li>
+<li><p>If possible, add unit tests for new functionality you
+add.</p></li>
+<li><p>Restrict your pull request to solving the issue at hand. Do not
+try to ‘improve’ parts of the code that are not related to the issue. If
+you feel other parts of the code need better organization, create a
+separate issue for that.</p></li>
+<li><p>Make sure you pass R check without errors and warnings before
+submitting.</p></li>
+<li><p>Always target the <code>develop</code> branch, and make sure you
+are up-to-date with the develop branch.</p></li>
 </ul>
 </div>
 <div id="repo-organization" class="section level1">
 <h1>Repo organization</h1>
-<p>All HADES repos follow the basic structure of R packages. See <a href="http://r-pkgs.had.co.nz/">R packages</a> for a thorough discussion on R packages.</p>
+<p>All HADES repos follow the basic structure of R packages. See <a
+href="http://r-pkgs.had.co.nz/">R packages</a> for a thorough discussion
+on R packages.</p>
 <div id="documentation" class="section level2">
 <h2>Documentation</h2>
 <p>We use R’s default package documentation features:</p>
 <ul>
-<li><p>Functions and data are documented in a package manual. We use <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html"><code>roxygen2</code></a> to document each function / data where they are defined in the code.</p></li>
-<li><p>Detailed explanations of how to use a package are provides in vignettes.</p></li>
+<li><p>Functions and data are documented in a package manual. We use <a
+href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html"><code>roxygen2</code></a>
+to document each function / data where they are defined in the
+code.</p></li>
+<li><p>Detailed explanations of how to use a package are provides in
+vignettes.</p></li>
 </ul>
 <p>The package manual and vignettes are available</p>
 <ul>
@@ -505,19 +558,28 @@ div.tocify {
 <li><p>As PDFs on the repo GitHub site.</p></li>
 <li><p>In the package documentation website.</p></li>
 </ul>
-<p>All of these should be generated when releasing a new version, as discussed in the <a href="releaseProcess.html">Release Process</a> section.</p>
+<p>All of these should be generated when releasing a new version, as
+discussed in the <a href="releaseProcess.html">Release Process</a>
+section.</p>
 <div id="readme.md" class="section level3">
 <h3>README.md</h3>
-<p>In addition, the README.md file forms the main page of the package repo. This page has a standard structure, as for example can be seen <a href="https://github.com/OHDSI/FeatureExtraction/blob/main/README.md">here</a>.</p>
+<p>In addition, the README.md file forms the main page of the package
+repo. This page has a standard structure, as for example can be seen <a
+href="https://github.com/OHDSI/FeatureExtraction/blob/main/README.md">here</a>.</p>
 </div>
 </div>
 <div id="extras-folder" class="section level2">
 <h2>extras folder</h2>
-<p>The <code>extras</code> folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is <code>PackageMaintenance.R</code>, which contains the code executed when releasing a package.</p>
+<p>The <code>extras</code> folder contains all files used by the package
+developer. These files will not be part of the package once installed. A
+required file in this folder is <code>PackageMaintenance.R</code>, which
+contains the code executed when releasing a package.</p>
 </div>
 <div id="unit-tests" class="section level2">
 <h2>Unit tests</h2>
-<p>OHDSI unit testing for R follows the standard R practice using <code>test_that</code>: A folder named ‘tests’ is created in the root of the package, and this folder contains</p>
+<p>OHDSI unit testing for R follows the standard R practice using
+<code>test_that</code>: A folder named ‘tests’ is created in the root of
+the package, and this folder contains</p>
 <ul>
 <li>A sub-folder called ’testthat`</li>
 <li>A file called ‘testthat.R’</li>
@@ -526,7 +588,10 @@ div.tocify {
 <pre class="r"><code>library(testthat)
 library(&lt;package name&gt;)
 test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
-<p>The sub-folder ‘testthat’ should contain one or more R scripts whose file name starts with ‘test-’ (e.g. ‘test-connection.R’. Each file should contain one or more <code>test_that</code> blocks, for example</p>
+<p>The sub-folder ‘testthat’ should contain one or more R scripts whose
+file name starts with ‘test-’ (e.g. ‘test-connection.R’. Each file
+should contain one or more <code>test_that</code> blocks, for
+example</p>
 <pre class="r"><code>test_that(&quot;Function x returns 2&quot;, {
   expect_equal(x(), 2)
 })</code></pre>
@@ -534,44 +599,66 @@ test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
 <h3>When unit tests are performed</h3>
 <p>Unit tests are triggered when</p>
 <ul>
-<li><p>You manually perform a check of the R package (see the Build tab in R-Studio)</p></li>
-<li><p>When <a href="https://docs.github.com/en/actions/quickstart">Github Actions</a> automatically builds the package after a push to the repository</p></li>
+<li><p>You manually perform a check of the R package (see the Build tab
+in R-Studio)</p></li>
+<li><p>When <a
+href="https://docs.github.com/en/actions/quickstart">Github Actions</a>
+automatically builds the package after a push to the repository</p></li>
 </ul>
-<p>You should only push changes to the GitHub repository if they pass R check locally.</p>
+<p>You should only push changes to the GitHub repository if they pass R
+check locally.</p>
 </div>
 <div id="code-coverage" class="section level3">
 <h3>Code coverage</h3>
-<p>We use <code>codecov</code> in combination with the <code>covr</code> package to measure which lines of codes are covered by at least one unit test.</p>
+<p>We use <code>codecov</code> in combination with the <code>covr</code>
+package to measure which lines of codes are covered by at least one unit
+test.</p>
 </div>
-<div id="testing-functions-requiring-database-access" class="section level3">
+<div id="testing-functions-requiring-database-access"
+class="section level3">
 <h3>Testing functions requiring database access</h3>
-<p>On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you’ll need to specify several environmental variables. These environmental variables should also be available when running tests using Github Actions.</p>
-<p>Some example code in the DatabaseConnector package can be found <a href="https://github.com/OHDSI/DatabaseConnector/blob/main/tests/testthat/test-connection.R">here</a>.</p>
+<p>On the OHDSI Jenkins server there are 3 databases that can be
+accessed from within a unit test, for the 3 main platforms (SQL Server,
+Oracle, PostgreSQL). To access the databases locally, you’ll need to
+specify several environmental variables. These environmental variables
+should also be available when running tests using Github Actions.</p>
+<p>Some example code in the DatabaseConnector package can be found <a
+href="https://github.com/OHDSI/DatabaseConnector/blob/main/tests/testthat/test-connection.R">here</a>.</p>
 </div>
 </div>
 </div>
 <div id="coding-guidelines" class="section level1">
 <h1>Coding guidelines</h1>
 <p>Some general coding guidelines:</p>
-<div id="function-calls-must-not-have-invisible-side-effects" class="section level2">
+<div id="function-calls-must-not-have-invisible-side-effects"
+class="section level2">
 <h2>Function calls must not have invisible side effects</h2>
-<p>When a user calls a function, the effect of that call should be aparent to the user. This means:</p>
+<p>When a user calls a function, the effect of that call should be
+aparent to the user. This means:</p>
 <ul>
-<li><p>Do not call <code>library</code> or <code>require</code> in a function, as this changes the user’s search path.</p></li>
+<li><p>Do not call <code>library</code> or <code>require</code> in a
+function, as this changes the user’s search path.</p></li>
 <li><p>Do not set options.</p></li>
-<li><p>Do not write to files other than those specified by the user in the function call.</p></li>
+<li><p>Do not write to files other than those specified by the user in
+the function call.</p></li>
 <li><p>Do not use global variables.</p></li>
 </ul>
-<p>Intead of using <code>library</code>, always explicitly reference the packge a function belongs to, for example <code>SqlRender::translate()</code>.</p>
+<p>Intead of using <code>library</code>, always explicitly reference the
+packge a function belongs to, for example
+<code>SqlRender::translate()</code>.</p>
 </div>
 <div id="avoid-unnecessary-dependencies" class="section level2">
 <h2>Avoid unnecessary dependencies</h2>
-<p>Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.</p>
-<p>We have more or less accepted we need to depend on the <em>core</em> <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> packages, so any of those packages are allowed.</p>
+<p>Dependencies lead to instability. Only add dependencies to other
+packages if completely unavoidable.</p>
+<p>We have more or less accepted we need to depend on the <em>core</em>
+<a href="https://www.tidyverse.org/"><code>tidyverse</code></a>
+packages, so any of those packages are allowed.</p>
 </div>
 <div id="use-named-arguments" class="section level2">
 <h2>Use named arguments</h2>
-<p>Except for very simple function calls (e.g. <code>print(x)</code>), use named arguments, for example:</p>
+<p>Except for very simple function calls (e.g. <code>print(x)</code>),
+use named arguments, for example:</p>
 <pre class="r"><code>sql &lt;- SqlRender::translate(sql = &quot;SELECT * FROM my_table;&quot;, targetDialect = &quot;postgresql&quot;)</code></pre>
 <p>instead of</p>
 <pre class="r"><code>sql &lt;- SqlRender::translate(&quot;SELECT * FROM my_table;&quot;, &quot;postgresql&quot;)</code></pre>

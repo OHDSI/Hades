@@ -13,7 +13,7 @@ for (i in 1:nrow(packages)) {
   } else {
     availability <- "GitHub"
   }
-  lines <- c(lines, sprintf("| [%s](https://github.com/OHDSI/%s) | [![Version](https://img.shields.io/github/r-package/v/ohdsi/%s?label=%%20)](https://ohdsi.github.io/%s/) | %s | %s | [![Open issues](https://img.shields.io/github/issues-raw/OHDSI/%s?label=%%20)](https://github.com/OHDSI/%s/issues) | [![Open pull-requests](https://img.shields.io/github/issues-pr-raw/OHDSI/%s?label=%%20)](https://github.com/OHDSI/%s/pulls) | [![Build Status](https://github.com/OHDSI/%s/workflows/R%%20check/badge.svg)](https://github.com/OHDSI/%s/actions/workflows/R_CMD_check_main_weekly.yml) | [![codecov.io](https://codecov.io/github/OHDSI/%s/coverage.svg?branch=main)](https://codecov.io/github/OHDSI/%s?branch=main) |", 
+  lines <- c(lines, sprintf("| [%s](https://github.com/OHDSI/%s) | [![Version](https://img.shields.io/github/r-package/v/ohdsi/%s?label=%%20)](https://ohdsi.github.io/%s/) | %s | %s | [![Open issues](https://img.shields.io/github/issues-raw/OHDSI/%s?label=%%20)](https://github.com/OHDSI/%s/issues) | [![Open pull-requests](https://img.shields.io/github/issues-pr-raw/OHDSI/%s?label=%%20)](https://github.com/OHDSI/%s/pulls) | [![Build Status](https://github.com/ohdsi/%s/actions/workflows/R_CMD_check_main_weekly.yaml/badge.svg)](https://github.com/OHDSI/%s/actions/workflows/R_CMD_check_main_weekly.yaml) | [![codecov.io](https://codecov.io/github/OHDSI/%s/coverage.svg?branch=main)](https://codecov.io/github/OHDSI/%s?branch=main) |", 
 							name,
 							name,
 							name,
