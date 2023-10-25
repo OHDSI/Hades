@@ -64,7 +64,7 @@ rToolsUrl <- sprintf("https://cran.r-project.org/bin/windows/Rtools/rtools%s/rto
 
 ## Installing Java
 
-1. Go to [https://java.com/en/download/manual.jsp](https://java.com/en/download/manual.jsp), and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you *must* also install the other (32-bit) version of Java.
+1. Go to [https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html), and select the Windows 64-bit RJE installer as highlighted below. 
    ![](images/downloadJavaWindows.png) 
 
 2. After downloading just run the installer.
