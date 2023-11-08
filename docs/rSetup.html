@@ -479,7 +479,7 @@ versions. It is recommended to only install the 64-bit version of R.
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a
-href="https://cran.r-project.org/bin/windows/base/old/4.2.3/">https://cran.r-project.org/bin/windows/base/old/4.2.3/</a>,
+href="https://cran.r-project.org/bin/windows/base/old/%60r%20rVersion$rVersion%60/">https://cran.r-project.org/bin/windows/base/old/4.2.3/</a>,
 click on ‘R-4.2.3-win.exe’ to download.</p></li>
 <li><p>After the download has completed, run the installer. Use the
 default options everywhere, with two exceptions: First, it is better not
@@ -498,7 +498,7 @@ Menu.</p>
 <h2>Installing RTools</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a
-href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a>,
+href="%60r%20rToolsUrl%60">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a>,
 and download the RTools installer.</p></li>
 <li><p>After downloading has completed run the installer. Select the
 default options everywhere.</p></li>
@@ -507,9 +507,9 @@ default options everywhere.</p></li>
 <div id="installing-rstudio" class="section level2">
 <h2>Installing RStudio</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>,
-select ‘Download RStudio Desktop For Windows’.</p></li>
+<li><p>Go to <a href="https://posit.co/download/rstudio-desktop/"
+class="uri">https://posit.co/download/rstudio-desktop/</a>, select
+‘Download RStudio Desktop For Windows’.</p></li>
 <li><p>After downloading, start the installer, and use the default
 options everywhere.</p></li>
 </ol>
@@ -518,10 +518,24 @@ options everywhere.</p></li>
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a
-href="https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html">https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html</a>,
+href="https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html"
+class="uri">https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html</a>,
 and select the Windows 64-bit JRE installer as highlighted below. <img
 src="images/downloadJavaWindows.png" /></p></li>
 <li><p>After downloading just run the installer.</p></li>
+<li><p>The default maximum Java heap space is very small (only 512MB),
+so to avoid Java out-of-heap-memory errors, we must increase the maximum
+heap size. To set this for all R programs, add this line to the
+<code>.Renviron</code> file:</p>
+<pre><code>_JAVA_OPTIONS=&#39;-Xmx4g&#39;</code></pre>
+<p>The easiest way to edit your <code>.Renviron</code> file is by using
+the <code>usethis</code> package:</p>
+<pre class="r"><code>install.packages(&quot;usethis&quot;)
+library(usethis)
+edit_r_environ()</code></pre>
+<p>This will open <code>.Renviron</code> in a text editor. Add the line,
+save the file, and restart R. Java will now have a maximum of 4GB of
+heap space available.</p></li>
 </ol>
 </div>
 </div>
@@ -530,9 +544,9 @@ src="images/downloadJavaWindows.png" /></p></li>
 <div id="installing-r-1" class="section level2">
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a
-href="https://cran.r-project.org/bin/macosx/base/">https://cran.r-project.org/bin/macosx/base/</a>,
-click on ‘R-4.2.3.pkg’ to download.</p></li>
+<li><p>Go to <a href="https://cran.r-project.org/bin/macosx/base/"
+class="uri">https://cran.r-project.org/bin/macosx/base/</a>, click on
+‘R-4.2.3.pkg’ to download.</p></li>
 <li><p>After the download has completed, run the installer and accept
 all of the default options. You should see a screen indicating that the
 installation was successful.</p>
@@ -559,9 +573,9 @@ Choose the latest version that is compatible with your operating system.
 Verify the installation by opening the terminal and running the command
 <code>gfortran</code>. You should see an error that says “no input
 files”.</p></li>
-<li><p>Go to <a
-href="https://www.xquartz.org/">https://www.xquartz.org/</a>, download
-the .dmg and run the installer.</p></li>
+<li><p>Go to <a href="https://www.xquartz.org/"
+class="uri">https://www.xquartz.org/</a>, download the .dmg and run the
+installer.</p></li>
 <li><p>Verify that build tools are installed and available by opening an
 R console and running</p></li>
 </ol>
@@ -571,16 +585,17 @@ pkgbuild::check_build_tools()</code></pre>
 <div id="installing-rstudio-1" class="section level2">
 <h2>Installing RStudio</h2>
 <ol style="list-style-type: decimal">
-<li>Go to <a
-href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>,
-select ‘Download RStudio Desktop For Mac’.</li>
+<li>Go to <a href="https://posit.co/download/rstudio-desktop/"
+class="uri">https://posit.co/download/rstudio-desktop/</a>, select
+‘Download RStudio Desktop For Mac’.</li>
 </ol>
 </div>
 <div id="installing-java-1" class="section level2">
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a
-href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>,
+href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html"
+class="uri">https://www.oracle.com/java/technologies/javase-jdk15-downloads.html</a>,
 and select the Mac OS installer for the Oracle JDK as highlighted below.
 <img src="images/downloadJavaMac.png" /></p></li>
 <li><p>After downloading just run the installer. Check that java is

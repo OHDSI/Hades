@@ -5,6 +5,7 @@ output:
         toc: TRUE
         toc_float: TRUE
 ---
+
 ```{r echo=FALSE,message=FALSE}
 if (file.exists("../extras/rVersion.csv")) {
   rVersion <- read.csv("../extras/rVersion.csv")
@@ -13,15 +14,14 @@ if (file.exists("../extras/rVersion.csv")) {
 }
 ```
 
-Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed: 
+Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed:
 
-1. **R** is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface. For stability, we've picked one R version that we aim to support for a while moving forward. Since `r rVersion$fromDate` our target is **R `r rVersion$rVersion`**. We highly recommend installing R `r rVersion$rVersion` for maximum compatibility.
-2. **RTools** is a set of programs that is required on Windows to build R packages from source.
-3. **RStudio** is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.
-4. **Java** is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.
+1.  **R** is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface. For stability, we've picked one R version that we aim to support for a while moving forward. Since `r rVersion$fromDate` our target is **R `r rVersion$rVersion`**. We highly recommend installing R `r rVersion$rVersion` for maximum compatibility.
+2.  **RTools** is a set of programs that is required on Windows to build R packages from source.
+3.  **RStudio** is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.
+4.  **Java** is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.
 
 In order to install HADES, you must also set a GitHub Personal Access Token as described [in this section](#github-personal-access-token)
-
 
 # Instructions for Windows
 
@@ -33,16 +33,15 @@ In Windows, older R versions (< 4.2.0) come with both R a 32-bit and a 64-bits a
 
 ## Installing R
 
-1. Go to [https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/](https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/), click on 'R-`r rVersion$rVersion`-win.exe' to download.
+1.  Go to [https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/](https://cran.r-project.org/bin/windows/base/old/%60r%20rVersion$rVersion%60/), click on 'R-`r rVersion$rVersion`-win.exe' to download.
 
+2.  After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, if you're installing an older R version (\< 4.2.0), disable the 32-bit architecture as also shown below.
 
-2. After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, if you're installing an older R version (< 4.2.0), disable the 32-bit architecture as also shown below.
+    ![](images/rDestination.png)
 
-   ![](images/rDestination.png)
-   
-   ![](images/no32Bits.png)
+    ![](images/no32Bits.png)
 
-Once completed, you should be able to select R from your Start Menu. 
+Once completed, you should be able to select R from your Start Menu.
 
 ## Installing RTools
 
@@ -51,63 +50,74 @@ rToolsVersion <- gsub("\\.", "", gsub("\\.[0-9]+$", "", rVersion$rVersion))
 rToolsUrl <- sprintf("https://cran.r-project.org/bin/windows/Rtools/rtools%s/rtools.html", rToolsVersion)
 ```
 
-1. Go to [`r rToolsUrl`](`r rToolsUrl`), and download the RTools installer.
+1.  Go to [`r rToolsUrl`](%60r%20rToolsUrl%60), and download the RTools installer.
 
-2. After downloading has completed run the installer. Select the default options everywhere.
+2.  After downloading has completed run the installer. Select the default options everywhere.
 
-	
 ## Installing RStudio
 
-1. Go to [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/), select 'Download RStudio Desktop For Windows'.
+1.  Go to <https://posit.co/download/rstudio-desktop/>, select 'Download RStudio Desktop For Windows'.
 
-2. After downloading, start the installer, and use the default options everywhere.
+2.  After downloading, start the installer, and use the default options everywhere.
 
 ## Installing Java
 
-1. Go to [https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html), and select the Windows 64-bit JRE installer as highlighted below. 
-   ![](images/downloadJavaWindows.png) 
+1.  Go to <https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html>, and select the Windows 64-bit JRE installer as highlighted below. ![](images/downloadJavaWindows.png)
 
-2. After downloading just run the installer.
+2.  After downloading just run the installer.
 
+3.  The default maximum Java heap space is very small (only 512MB), so to avoid Java out-of-heap-memory errors, we must increase the maximum heap size. To set this for all R programs, add this line to the `.Renviron` file: 
+
+    ```
+    _JAVA_OPTIONS='-Xmx4g'
+    ```
+    
+    The easiest way to edit your `.Renviron` file is by using the `usethis` package:
+
+    ```{r eval=FALSE}
+    install.packages("usethis")
+    library(usethis)
+    edit_r_environ()
+    ```
+
+    This will open `.Renviron` in a text editor. Add the line, save the file, and restart R. Java will now have a maximum of 4GB of heap space available.
 
 # Instructions for Mac
 
 ## Installing R
 
-1. Go to [https://cran.r-project.org/bin/macosx/base/](https://cran.r-project.org/bin/macosx/base/), click on 'R-`r rVersion$rVersion`.pkg' to download.
+1.  Go to <https://cran.r-project.org/bin/macosx/base/>, click on 'R-`r rVersion$rVersion`.pkg' to download.
 
-2. After the download has completed, run the installer and accept all of the default options. You should see a screen indicating that the installation was successful.
+2.  After the download has completed, run the installer and accept all of the default options. You should see a screen indicating that the installation was successful.
 
     ![](images/installRMacSuccess.png)
 
 ## Installing R build tools
 
-We will need to install C and Fortran compilers in order to build R packages from source code. These are included with Xcode which can be downloaded from the Mac App store. 
+We will need to install C and Fortran compilers in order to build R packages from source code. These are included with Xcode which can be downloaded from the Mac App store.
 
-1. Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing Xcode command line tools by following the instructions [here](https://railsapps.github.io/xcode-command-line-tools.html).  Verify that the C compiler gcc is installed by opening the terminal and running the command `clang`. You should see an error that says "no input files".
+1.  Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing Xcode command line tools by following the instructions [here](https://railsapps.github.io/xcode-command-line-tools.html). Verify that the C compiler gcc is installed by opening the terminal and running the command `clang`. You should see an error that says "no input files".
 
-2. Download and install the gfortran compiler .dmg from https://github.com/fxcoudert/gfortran-for-macOS/releases. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command `gfortran`. You should see an error that says "no input files".
+2.  Download and install the gfortran compiler .dmg from <https://github.com/fxcoudert/gfortran-for-macOS/releases>. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command `gfortran`. You should see an error that says "no input files".
 
-3. Go to [https://www.xquartz.org/](https://www.xquartz.org/), download the .dmg and run the installer.
+3.  Go to <https://www.xquartz.org/>, download the .dmg and run the installer.
 
-4. Verify that build tools are installed and available by opening an R console and running
+4.  Verify that build tools are installed and available by opening an R console and running
 
 ```{r, eval=FALSE}
 install.packages("pkgbuild")
 pkgbuild::check_build_tools()
 ```
 
-
 ## Installing RStudio
 
-1. Go to [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/), select 'Download RStudio Desktop For Mac'.
-   
+1.  Go to <https://posit.co/download/rstudio-desktop/>, select 'Download RStudio Desktop For Mac'.
+
 ## Installing Java
 
-1. Go to [https://www.oracle.com/java/technologies/javase-jdk15-downloads.html](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html), and select the Mac OS installer for the Oracle JDK as highlighted below. 
-   ![](images/downloadJavaMac.png) 
+1.  Go to <https://www.oracle.com/java/technologies/javase-jdk15-downloads.html>, and select the Mac OS installer for the Oracle JDK as highlighted below. ![](images/downloadJavaMac.png)
 
-2. After downloading just run the installer. Check that java is installed by opening the terminal and running the command `java`. If you see some helpful output about usage then the installation was successful.
+2.  After downloading just run the installer. Check that java is installed by opening the terminal and running the command `java`. If you see some helpful output about usage then the installation was successful.
 
 # Verifying the installation
 
@@ -118,6 +128,7 @@ install.packages("SqlRender")
 library(SqlRender)
 translate("SELECT TOP 10 * FROM person;", "postgresql")
 ```
+
 ```{r echo=FALSE}
 library(SqlRender)
 translate("SELECT TOP 10 * FROM person;", "postgresql")
@@ -126,12 +137,13 @@ translate("SELECT TOP 10 * FROM person;", "postgresql")
 This function uses Java, so if all goes well we know both R and Java have been installed correctly!
 
 Another test is to see if source packages can be built. Run the following R code to install the `CohortMethod` package from the OHDSI GitHub repository:
-```{r eval=FALSE} 
+
+```{r eval=FALSE}
 install.packages("remotes")
 remotes::install_github("OHDSI/CohortMethod")
 ```
 
-# GitHub Personal Access Token
+# GitHub Personal Access Token {#github-personal-access-token}
 
 Installing HADES packages requires downloads from GitHub. Unfortunately, GitHub has a cap on how many downloads an anonymous user can make in a short amount of time, and this cap is reached when trying to download all HADES packages. To avoid this cap, we need to authenticate ourselves using our GitHub account. A known GitHub user has a much higher download cap, and can install HADES without issues. We can authenticate ourselves by first creating a **Personal Access Token** (PAT), and then providing this to R.
 
@@ -142,7 +154,6 @@ Fortunately, you will need to do this only once. After you've set your PAT in R,
 Before we can create a PAT, you must make sure that you have a valid GitHub account. You can create one for free at [GitHub.com](https://github.com/).
 
 The easiest way to create a GitHub PAT is by using the [usethis](https://usethis.r-lib.org/) package. Running this code will open a browser that allows you to generate a PAT:
-
 
 ```{r eval=FALSE}
 install.packages("usethis")
@@ -156,7 +167,7 @@ You may need to log on to GitHub. Note that the PAT does not require any of the 
 
 Next, we need to make the PAT available to R. For this we need to add a line to the `.Renviron` file that looks like this:
 
-```
+```         
 GITHUB_PAT = 'a1b2c3d4e5f6g7h8g9h0ijklmnopqrstuvwxyz'
 ```
 
