@@ -98,16 +98,23 @@ We will need to install C and Fortran compilers in order to build R packages fro
 
 1.  Open the App Store in Mac OS and install Xcode. Xcode is a large program. If disk space is scarce you could also try only installing Xcode command line tools by following the instructions [here](https://railsapps.github.io/xcode-command-line-tools.html). Verify that the C compiler gcc is installed by opening the terminal and running the command `clang`. You should see an error that says "no input files".
 
-2.  Download and install the gfortran compiler .dmg from <https://github.com/fxcoudert/gfortran-for-macOS/releases>. Choose the latest version that is compatible with your operating system. Verify the installation by opening the terminal and running the command `gfortran`. You should see an error that says "no input files".
+2.  Download and install the gfortran compiler `gfortran-12.2-universal.pkg` from <https://cran.r-project.org/bin/macosx/tools/>. Verify the installation by opening the terminal and running the command `/opt/gfortran/bin/gfortran`. You should see an error that says "no input files". R 4.2.3 will look in the wrong place for gfortran, so you must point it to the right location. Run `usethis::edit_r_makevars()` to open `~.R/Makevars` and add:
+    
+    ```{r, eval=FALSE}
+    F77 = /opt/gfortran/bin/gfortran
+    FC = /opt/gfortran/bin/gfortran
+    
+    FLIBS=-L /opt/gfortran/lib
+    ```
 
 3.  Go to <https://www.xquartz.org/>, download the .dmg and run the installer.
 
 4.  Verify that build tools are installed and available by opening an R console and running
 
-```{r, eval=FALSE}
-install.packages("pkgbuild")
-pkgbuild::check_build_tools()
-```
+    ```{r, eval=FALSE}
+    install.packages("pkgbuild")
+    pkgbuild::check_build_tools()
+    ```
 
 ## Installing RStudio
 

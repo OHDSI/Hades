@@ -566,21 +566,28 @@ href="https://railsapps.github.io/xcode-command-line-tools.html">here</a>.
 Verify that the C compiler gcc is installed by opening the terminal and
 running the command <code>clang</code>. You should see an error that
 says “no input files”.</p></li>
-<li><p>Download and install the gfortran compiler .dmg from <a
-href="https://github.com/fxcoudert/gfortran-for-macOS/releases"
-class="uri">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>.
-Choose the latest version that is compatible with your operating system.
-Verify the installation by opening the terminal and running the command
-<code>gfortran</code>. You should see an error that says “no input
-files”.</p></li>
+<li><p>Download and install the gfortran compiler
+<code>gfortran-12.2-universal.pkg</code> from <a
+href="https://cran.r-project.org/bin/macosx/tools/"
+class="uri">https://cran.r-project.org/bin/macosx/tools/</a>. Verify the
+installation by opening the terminal and running the command
+<code>/opt/gfortran/bin/gfortran</code>. You should see an error that
+says “no input files”. R 4.2.3 will look in the wrong place for
+gfortran, so you must point it to the right location. Run
+<code>usethis::edit_r_makevars()</code> to open
+<code>~.R/Makevars</code> and add:</p>
+<pre class="r"><code>F77 = /opt/gfortran/bin/gfortran
+FC = /opt/gfortran/bin/gfortran
+
+FLIBS=-L /opt/gfortran/lib</code></pre></li>
 <li><p>Go to <a href="https://www.xquartz.org/"
 class="uri">https://www.xquartz.org/</a>, download the .dmg and run the
 installer.</p></li>
 <li><p>Verify that build tools are installed and available by opening an
-R console and running</p></li>
-</ol>
+R console and running</p>
 <pre class="r"><code>install.packages(&quot;pkgbuild&quot;)
-pkgbuild::check_build_tools()</code></pre>
+pkgbuild::check_build_tools()</code></pre></li>
+</ol>
 </div>
 <div id="installing-rstudio-1" class="section level2">
 <h2>Installing RStudio</h2>
