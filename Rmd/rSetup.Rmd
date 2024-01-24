@@ -50,7 +50,7 @@ rToolsVersion <- gsub("\\.", "", gsub("\\.[0-9]+$", "", rVersion$rVersion))
 rToolsUrl <- sprintf("https://cran.r-project.org/bin/windows/Rtools/rtools%s/rtools.html", rToolsVersion)
 ```
 
-1.  Go to [`r rToolsUrl`](%60r%20rToolsUrl%60), and download the RTools installer.
+1.  Go to [`r rToolsUrl`](`r rToolsUrl`), and download the RTools installer.
 
 2.  After downloading has completed run the installer. Select the default options everywhere.
 
