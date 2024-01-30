@@ -9,9 +9,9 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Khera R, Dhingra LS, Aminorroaya A, et al. [Multinational patterns of second line antihyperglycaemic drug initiation across cardiovascular risk groups: federated pharmacoepidemiological evaluation in LEGEND-T2DM](https://pubmed.ncbi.nlm.nih.gov/37829182/) BMJ Med. 2023 Oct 6;2(1):e000651. 
+
 - Voss EA, Shoaibi A, Yin Hui Lai L, et al. [Contextualising adverse events of special interest to characterise the baseline incidence rates in 24 million patients with COVID-19 across 26 databases: a multinational retrospective cohort study](https://doi.org/10.1016/j.eclinm.2023.101932) EClinicalMedicine. 2023 Apr;58:101932. 
-
-
 
 - Chandran U, Reps J, Yang R, et al. [Machine Learning and Real-World Data to Predict Lung Cancer Risk in Routine Care](https://doi.org/10.1158/1055-9965.epi-22-0873) Cancer Epidemiol Biomarkers Prev. 2023 Mar 6;32(3):337-343. 
 
@@ -97,6 +97,14 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Schuemie M, Reps J, Black A, et al. [Health-Analytics Data to Evidence Suite (HADES): Open-Source Software for Observational Research](https://pubmed.ncbi.nlm.nih.gov/38269952/) Stud Health Technol Inform. 2024 Jan 25:310:966-970. 
+
+- Bu F, Schuemie MJ, Nishimura A, et al. [Bayesian safety surveillance with adaptive bias correction](https://pubmed.ncbi.nlm.nih.gov/38010062/) Stat Med. 2024 Jan 30;43(2):395-418.
+
+- Voss EA, Blacketer C, van Sandijk S, et al. [European Health Data & Evidence Network-learnings from building out a standardized international health data network](https://pubmed.ncbi.nlm.nih.gov/37952118/) J Am Med Inform Assoc. 2023 Dec 22;31(1):209-219.
+
+- Gauffin O, Brand JS, Vidlin SH, et al. [Supporting Pharmacovigilance Signal Validation and Prioritization with Analyses of Routinely Collected Health Data: Lessons Learned from an EHDEN Network Study](https://pubmed.ncbi.nlm.nih.gov/37804398/) Drug Saf. 2023 Dec;46(12):1335-1352. 
 
 - Wu Q, Schuemie MJ, Suchard MA, et al. [Pade approximant meets federated learning: A nearly lossless, one-shot algorithm for evidence synthesis in distributed research networks with rare outcomes](https://doi.org/10.1016/j.jbi.2023.104476) J Biomed Inform. 2023 Aug 18:104476. 
 

@@ -1,3 +1,11 @@
 .title {
 	display: none;
 }
+
+.citation {
+  display: block;
+  overflow:hidden; 
+  padding: 0.5em;
+  margin-bottom: 10px;
+  background: #f5f5f5;
+}
