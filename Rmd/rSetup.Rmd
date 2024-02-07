@@ -33,7 +33,7 @@ In Windows, older R versions (< 4.2.0) come with both R a 32-bit and a 64-bits a
 
 ## Installing R
 
-1.  Go to [https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/](https://cran.r-project.org/bin/windows/base/old/%60r%20rVersion$rVersion%60/), click on 'R-`r rVersion$rVersion`-win.exe' to download.
+1.  Go to [https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/](https://cran.r-project.org/bin/windows/base/old/`r rVersion$rVersion`/), click on 'R-`r rVersion$rVersion`-win.exe' to download.
 
 2.  After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, if you're installing an older R version (\< 4.2.0), disable the 32-bit architecture as also shown below.
 
