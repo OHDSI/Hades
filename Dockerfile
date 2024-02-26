@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk liblzma-dev libbz2-dev l
 && rm -rf /var/lib/apt/lists/*
 
 # install utility R packages
-RUN install2.r \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
 	openssl \
 	httr \
 	xml2 \
@@ -23,9 +23,9 @@ RUN --mount=type=secret,id=build_github_pat \
         && cp /tmp/Renviron /usr/local/lib/R/etc/Renviron
 
 # install useful R libraries to help RStudio users to create/use their own GitHub Personal Access Token
-RUN install2.r \
-        usethis \
-        gitcreds \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
+	usethis \
+	gitcreds \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
 
 # create Python virtual environment used by the OHDSI PatientLevelPrediction R package
@@ -38,15 +38,15 @@ EOF
 
 # install shiny and other R packages used by the OHDSI PatientLevelPrediction R package viewPLP() function
 # and additional model related R packages
-RUN install2.r \
-        DT \
-        markdown \
-        plotly \
-        shiny \
-        shinycssloaders \
-        shinydashboard \
-        shinyWidgets \
-        xgboost \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
+	DT \
+	markdown \
+	plotly \
+	shiny \
+	shinycssloaders \
+	shinydashboard \
+	shinyWidgets \
+	xgboost \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
 
 # install the jdbc drivers for database access using the OHDSI DatabaseConnector R package
@@ -54,7 +54,7 @@ ENV DATABASECONNECTOR_JAR_FOLDER="/opt/hades/jdbc_drivers"
 RUN R -e "DatabaseConnector::downloadJdbcDrivers('all');"
 
 # Install Rserve server and client
-RUN install2.r \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
 	Rserve \
 	RSclient \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
