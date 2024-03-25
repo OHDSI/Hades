@@ -54,6 +54,8 @@ navbar:
           href: releaseProcess.html 
         - text: "Package Statuses"
           href: packageStatuses.html 
+        - text: "Test server usage"
+          href: testServerUsage.html 
         - text: "Development Roadmap"
           href: "developmentRoadmap.html"
         - text: "HADES Package Requirements"

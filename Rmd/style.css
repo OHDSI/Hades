@@ -52,3 +52,50 @@
 	text-align: center;
 	margin-bottom: 0px;
 }
+
+#slanttable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 50vw;
+  margin-top: 50px;
+}
+#slanttable table{
+  border-collapse: collapse;
+  --table-border-width: 1px;
+}
+#slanttable th {
+  white-space: nowrap;
+  position: relative;
+}
+#slanttable th > div {
+  /* place div at bottom left of the th parent */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* Make sure short setting names still meet the corner of the parent otherwise you'll get a gap */
+  text-align: left;
+  /* Move the top left corner of the span bottom-border to line up with the top left corner of the td border-right border so that the border corners are matched */
+  /* Rotate -45 degrees about matched border corners */
+  transform: 
+    translate(calc(100% - var(--table-border-width) / 2), var(--table-border-width))
+    rotate(315deg);
+  transform-origin: 0% calc(100% - var(--table-border-width));
+  width: 100%;
+}
+#slanttable th > div > span {
+  /* make sure the bottom of the span is matched up with the bottom of the parent div */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: var(--table-border-width) solid gray;
+}
+#slanttable td {
+    border-right: var(--table-border-width) solid gray;
+    /* make sure this is at least as wide as sqrt(2) * height of your tallest letter or the headers will overlap each other */
+    min-width: 30px;
+    text-align: right;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -20,6 +20,9 @@ source("extras/GenerateSupportPage.R")
 # Generate package status markdown file
 source("extras/GeneratePackageStatusPage.R")
 
+# Generate testing server usage table contents
+source("extras/DatabaseTestServerUsage.R")
+
 # Generate supported platforms markdown file
 source("extras/GenerateSupportedPlatformsPage.R")
 

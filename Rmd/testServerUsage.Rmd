@@ -1,0 +1,44 @@
+---
+title: "Test server usage"
+output: 
+    html_document:
+        toc: FALSE
+---
+
+The table below lists, for each package, which database testing servers it uses as part of its unit tests.
+
+- T means the package uses the database server for testing
+- X means the package does **not** use the database server for testing
+- An empty cell means the package does not directly talk to the database
+
+```{r, results='asis', echo=FALSE}
+data <- readRDS("../extras/DatabaseTestServerUsage.rds")
+data <- data[order(data$package), ]
+dbmss <- colnames(data)
+dbmss <- dbmss[dbmss != "package"]
+
+lines <- c(
+  "<div id=slanttable>",
+  "<table>",
+  "  <thead>",
+  "    <tr>",
+  "      <th>Package</th>",
+  sprintf("      <th><div><span>%s</span></div></th>", dbmss),
+  "    </tr>",
+  "  </thead>",
+  "  <tbody>",
+   sapply(seq_len(nrow(data)), function(i) c("    <tr>",
+                                            sprintf("      <td>%s</td>", data$package[i]),
+                                            sprintf("      <td%s>%s</td>", 
+                                                    ifelse(is.na(data[i, dbmss]), "", ifelse(data[i, dbmss], " style=\"background:#cdf5bf;\"", " style=\"background:#f5c3bf;\"")),
+                                                    ifelse(is.na(data[i, dbmss]), "&nbsp;", ifelse(data[i, dbmss], "T", "X"))
+                                                    ),
+                                            "    </tr>")),
+  "  </tbody>",
+  "</table>",
+  "</div>"
+)
+writeLines(lines)
+```
+
+This table was constructed simply by looking for the environmental variable names of the test server credentials in each package's test code, and may therefore not reflect actual testing. Whether a package connects to a database at all was determined by evaluating whether it imports DatabaseConnector.
