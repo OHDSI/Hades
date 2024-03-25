@@ -51,14 +51,7 @@ RUN install2.r \
 
 # install the jdbc drivers for database access using the OHDSI DatabaseConnector R package
 ENV DATABASECONNECTOR_JAR_FOLDER="/opt/hades/jdbc_drivers"
-RUN R <<EOF
-library(DatabaseConnector);
-downloadJdbcDrivers('postgresql');
-downloadJdbcDrivers('redshift');
-downloadJdbcDrivers('sql server');
-downloadJdbcDrivers('oracle');
-downloadJdbcDrivers('spark');
-EOF
+RUN R -e "DatabaseConnector::downloadJdbcDrivers('all');"
 
 # Install Rserve server and client
 RUN install2.r \
