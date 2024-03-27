@@ -11,7 +11,7 @@ testingServers <- tibble(
            "Snowflake",
            "Spark",
            "BigQuery",
-           "Eunomia"),
+           "SQLite"),
   string = c("CDM5_POSTGRESQL_SERVER",
              "CDM5_SQL_SERVER_SERVER",
              "CDM5_ORACLE_SERVER",
@@ -19,7 +19,15 @@ testingServers <- tibble(
              "CDM_SNOWFLAKE_CONNECTION_STRING",
              "CDM5_SPARK_CONNECTION_STRING",
              "CDM_BIG_QUERY_CONNECTION_STRING",
-             "Eunomia")
+             "Eunomia"),
+  alternativeString = c("postgresql",
+                        "sql server",
+                        "oracle",
+                        "redshift",
+                        "snowflake",
+                        "spark",
+                        "bigquery",
+                        "sqlite")
 )
 
 usesDatabaseConnector <- function(packageName) {
@@ -65,6 +73,7 @@ for (packageName in hadesPackages$name) {
     for (file in listTestFiles(packageName)) {
       page <- loadTestFile(packageName, file)
       serverFound <- serverFound | sapply(testingServers$string, function(string) return(grepl(string, page)[[1]]))
+      serverFound <- serverFound | sapply(testingServers$alternativeString, function(string) return(grepl(string, page)[[1]]))
     }
   }
   names(serverFound) = testingServers$dbms
