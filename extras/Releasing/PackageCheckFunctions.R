@@ -53,7 +53,7 @@ checkPackage <- function(package, inCran) {
     unlink(docDir, recursive = TRUE)
   }
   # devtools::check_built(path = sourcePath)
-  rcmdcheck::rcmdcheck(path = sourcePath, args = c("--no-manual", "--no-multiarch"), error_on = "warning")
+  rcmdcheck::rcmdcheck(path = sourcePath, args = c("--no-manual", "--no-multiarch", "--as-cran"), error_on = "warning")
 }
 
 getPackageDependenciesFromGitHub <- function(package) {

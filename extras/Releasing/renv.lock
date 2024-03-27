@@ -11,37 +11,37 @@
 	"Packages" : {
 		"cli" : {
 			"Package" : "cli",
-			"Version" : "3.6.1",
+			"Version" : "3.6.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"glue" : {
 			"Package" : "glue",
-			"Version" : "1.6.2",
+			"Version" : "1.7.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"rlang" : {
 			"Package" : "rlang",
-			"Version" : "1.1.1",
+			"Version" : "1.1.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"lifecycle" : {
 			"Package" : "lifecycle",
-			"Version" : "1.0.3",
+			"Version" : "1.0.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"fansi" : {
 			"Package" : "fansi",
-			"Version" : "1.0.4",
+			"Version" : "1.0.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"ps" : {
 			"Package" : "ps",
-			"Version" : "1.7.5",
+			"Version" : "1.7.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -53,13 +53,13 @@
 		},
 		"utf8" : {
 			"Package" : "utf8",
-			"Version" : "1.2.3",
+			"Version" : "1.2.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"vctrs" : {
 			"Package" : "vctrs",
-			"Version" : "0.6.3",
+			"Version" : "0.6.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -71,7 +71,7 @@
 		},
 		"digest" : {
 			"Package" : "digest",
-			"Version" : "0.6.33",
+			"Version" : "0.6.35",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -107,19 +107,13 @@
 		},
 		"processx" : {
 			"Package" : "processx",
-			"Version" : "3.8.2",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"rprojroot" : {
-			"Package" : "rprojroot",
-			"Version" : "2.0.3",
+			"Version" : "3.8.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"withr" : {
 			"Package" : "withr",
-			"Version" : "2.5.1",
+			"Version" : "3.0.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -137,13 +131,13 @@
 		},
 		"callr" : {
 			"Package" : "callr",
-			"Version" : "3.7.3",
+			"Version" : "3.7.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"cpp11" : {
 			"Package" : "cpp11",
-			"Version" : "0.4.6",
+			"Version" : "0.4.7",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -155,7 +149,7 @@
 		},
 		"desc" : {
 			"Package" : "desc",
-			"Version" : "1.4.2",
+			"Version" : "1.4.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -179,7 +173,7 @@
 		},
 		"htmltools" : {
 			"Package" : "htmltools",
-			"Version" : "0.5.6",
+			"Version" : "0.5.7",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -197,13 +191,13 @@
 		},
 		"Rcpp" : {
 			"Package" : "Rcpp",
-			"Version" : "1.0.11",
+			"Version" : "1.0.12",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"stringi" : {
 			"Package" : "stringi",
-			"Version" : "1.7.12",
+			"Version" : "1.8.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -215,13 +209,13 @@
 		},
 		"tidyselect" : {
 			"Package" : "tidyselect",
-			"Version" : "1.2.0",
+			"Version" : "1.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"xfun" : {
 			"Package" : "xfun",
-			"Version" : "0.40",
+			"Version" : "0.42",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -251,13 +245,13 @@
 		},
 		"dplyr" : {
 			"Package" : "dplyr",
-			"Version" : "1.1.3",
+			"Version" : "1.1.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"evaluate" : {
 			"Package" : "evaluate",
-			"Version" : "0.22",
+			"Version" : "0.23",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -275,19 +269,19 @@
 		},
 		"jsonlite" : {
 			"Package" : "jsonlite",
-			"Version" : "1.8.7",
+			"Version" : "1.8.8",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"later" : {
 			"Package" : "later",
-			"Version" : "1.3.1",
+			"Version" : "1.3.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"lattice" : {
 			"Package" : "lattice",
-			"Version" : "0.20-45",
+			"Version" : "0.22-5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -305,13 +299,13 @@
 		},
 		"pkgbuild" : {
 			"Package" : "pkgbuild",
-			"Version" : "1.4.2",
+			"Version" : "1.4.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"progress" : {
 			"Package" : "progress",
-			"Version" : "1.2.2",
+			"Version" : "1.2.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -327,15 +321,21 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"rprojroot" : {
+			"Package" : "rprojroot",
+			"Version" : "2.0.4",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"sass" : {
 			"Package" : "sass",
-			"Version" : "0.4.7",
+			"Version" : "0.4.9",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"stringr" : {
 			"Package" : "stringr",
-			"Version" : "1.5.0",
+			"Version" : "1.5.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -353,7 +353,7 @@
 		},
 		"yaml" : {
 			"Package" : "yaml",
-			"Version" : "2.3.7",
+			"Version" : "2.3.8",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -371,19 +371,19 @@
 		},
 		"brio" : {
 			"Package" : "brio",
-			"Version" : "1.1.3",
+			"Version" : "1.1.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"bslib" : {
 			"Package" : "bslib",
-			"Version" : "0.5.1",
+			"Version" : "0.6.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"checkmate" : {
 			"Package" : "checkmate",
-			"Version" : "2.2.0",
+			"Version" : "2.3.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -395,7 +395,7 @@
 		},
 		"DBI" : {
 			"Package" : "DBI",
-			"Version" : "1.1.3",
+			"Version" : "1.2.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -413,7 +413,7 @@
 		},
 		"knitr" : {
 			"Package" : "knitr",
-			"Version" : "1.44",
+			"Version" : "1.45",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -425,7 +425,7 @@
 		},
 		"Matrix" : {
 			"Package" : "Matrix",
-			"Version" : "1.6-0",
+			"Version" : "1.6-1.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -437,13 +437,13 @@
 		},
 		"nlme" : {
 			"Package" : "nlme",
-			"Version" : "3.1-162",
+			"Version" : "3.1-163",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"pkgload" : {
 			"Package" : "pkgload",
-			"Version" : "1.3.3",
+			"Version" : "1.3.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -473,19 +473,19 @@
 		},
 		"rJava" : {
 			"Package" : "rJava",
-			"Version" : "1.0-6",
+			"Version" : "1.0-11",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"tidyr" : {
 			"Package" : "tidyr",
-			"Version" : "1.3.0",
+			"Version" : "1.3.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"tinytex" : {
 			"Package" : "tinytex",
-			"Version" : "0.47",
+			"Version" : "0.50",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -503,13 +503,13 @@
 		},
 		"vroom" : {
 			"Package" : "vroom",
-			"Version" : "1.6.3",
+			"Version" : "1.6.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"waldo" : {
 			"Package" : "waldo",
-			"Version" : "0.5.1",
+			"Version" : "0.5.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -521,25 +521,25 @@
 		},
 		"BH" : {
 			"Package" : "BH",
-			"Version" : "1.81.0-1",
+			"Version" : "1.84.0-0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"commonmark" : {
 			"Package" : "commonmark",
-			"Version" : "1.9.0",
+			"Version" : "1.9.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"curl" : {
 			"Package" : "curl",
-			"Version" : "5.1.0",
+			"Version" : "5.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"dbplyr" : {
 			"Package" : "dbplyr",
-			"Version" : "2.3.4",
+			"Version" : "2.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -551,7 +551,7 @@
 		},
 		"httpuv" : {
 			"Package" : "httpuv",
-			"Version" : "1.6.11",
+			"Version" : "1.6.14",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -569,7 +569,7 @@
 		},
 		"MASS" : {
 			"Package" : "MASS",
-			"Version" : "7.3-58.2",
+			"Version" : "7.3-60",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -581,7 +581,7 @@
 		},
 		"mgcv" : {
 			"Package" : "mgcv",
-			"Version" : "1.8-42",
+			"Version" : "1.9-0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -593,25 +593,25 @@
 		},
 		"readr" : {
 			"Package" : "readr",
-			"Version" : "2.1.4",
+			"Version" : "2.1.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"rmarkdown" : {
 			"Package" : "rmarkdown",
-			"Version" : "2.25",
+			"Version" : "2.26",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"RSQLite" : {
 			"Package" : "RSQLite",
-			"Version" : "2.3.1",
+			"Version" : "2.3.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"scales" : {
 			"Package" : "scales",
-			"Version" : "1.2.1",
+			"Version" : "1.3.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -629,13 +629,13 @@
 		},
 		"SqlRender" : {
 			"Package" : "SqlRender",
-			"Version" : "1.16.1",
+			"Version" : "1.17.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"testthat" : {
 			"Package" : "testthat",
-			"Version" : "3.1.10",
+			"Version" : "3.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -647,7 +647,7 @@
 		},
 		"xml2" : {
 			"Package" : "xml2",
-			"Version" : "1.3.5",
+			"Version" : "1.3.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -659,19 +659,19 @@
 		},
 		"xts" : {
 			"Package" : "xts",
-			"Version" : "0.13.1",
+			"Version" : "0.13.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"zip" : {
 			"Package" : "zip",
-			"Version" : "2.3.0",
+			"Version" : "2.3.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"Andromeda" : {
 			"Package" : "Andromeda",
-			"Version" : "0.6.3",
+			"Version" : "0.6.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -689,19 +689,19 @@
 		},
 		"crosstalk" : {
 			"Package" : "crosstalk",
-			"Version" : "1.2.0",
+			"Version" : "1.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"data.table" : {
 			"Package" : "data.table",
-			"Version" : "1.14.8",
+			"Version" : "1.15.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
-			"Version" : "6.2.4",
+			"Version" : "6.3.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -713,7 +713,7 @@
 		},
 		"ggplot2" : {
 			"Package" : "ggplot2",
-			"Version" : "3.4.3",
+			"Version" : "3.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -725,7 +725,7 @@
 		},
 		"htmlwidgets" : {
 			"Package" : "htmlwidgets",
-			"Version" : "1.6.2",
+			"Version" : "1.6.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -785,7 +785,7 @@
 		},
 		"RcppEigen" : {
 			"Package" : "RcppEigen",
-			"Version" : "0.3.3.9.3",
+			"Version" : "0.3.4.0.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -797,43 +797,37 @@
 		},
 		"reactR" : {
 			"Package" : "reactR",
-			"Version" : "0.4.4",
+			"Version" : "0.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"RJSONIO" : {
 			"Package" : "RJSONIO",
-			"Version" : "1.3-1.8",
+			"Version" : "1.3-1.9",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"shiny" : {
 			"Package" : "shiny",
-			"Version" : "1.7.5",
+			"Version" : "1.8.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"survival" : {
 			"Package" : "survival",
-			"Version" : "3.5-3",
+			"Version" : "3.5-7",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"timechange" : {
 			"Package" : "timechange",
-			"Version" : "0.2.0",
+			"Version" : "0.3.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"TTR" : {
 			"Package" : "TTR",
-			"Version" : "0.24.3",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"assertthat" : {
-			"Package" : "assertthat",
-			"Version" : "0.2.1",
+			"Version" : "0.24.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -845,31 +839,25 @@
 		},
 		"cowplot" : {
 			"Package" : "cowplot",
-			"Version" : "1.1.1",
+			"Version" : "1.1.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"Cyclops" : {
 			"Package" : "Cyclops",
-			"Version" : "3.3.1",
+			"Version" : "3.4.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"distributional" : {
 			"Package" : "distributional",
-			"Version" : "0.3.2",
+			"Version" : "0.4.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"DT" : {
 			"Package" : "DT",
-			"Version" : "0.30",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"filelock" : {
-			"Package" : "filelock",
-			"Version" : "1.0.2",
+			"Version" : "0.32",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -893,7 +881,7 @@
 		},
 		"lme4" : {
 			"Package" : "lme4",
-			"Version" : "1.1-34",
+			"Version" : "1.1-35.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -905,7 +893,7 @@
 		},
 		"markdown" : {
 			"Package" : "markdown",
-			"Version" : "1.9",
+			"Version" : "1.12",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -923,25 +911,25 @@
 		},
 		"plotly" : {
 			"Package" : "plotly",
-			"Version" : "4.10.2",
+			"Version" : "4.10.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"polspline" : {
 			"Package" : "polspline",
-			"Version" : "1.1.23",
+			"Version" : "1.1.24",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"pool" : {
 			"Package" : "pool",
-			"Version" : "1.0.1",
+			"Version" : "1.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"pROC" : {
 			"Package" : "pROC",
-			"Version" : "1.18.4",
+			"Version" : "1.18.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -959,7 +947,7 @@
 		},
 		"quantmod" : {
 			"Package" : "quantmod",
-			"Version" : "0.4.25",
+			"Version" : "0.4.26",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -971,7 +959,7 @@
 		},
 		"reticulate" : {
 			"Package" : "reticulate",
-			"Version" : "1.32.0",
+			"Version" : "1.35.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -989,13 +977,7 @@
 		},
 		"shinyWidgets" : {
 			"Package" : "shinyWidgets",
-			"Version" : "0.8.0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"sodium" : {
-			"Package" : "sodium",
-			"Version" : "1.3.0",
+			"Version" : "0.8.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1019,13 +1001,13 @@
 		},
 		"coda" : {
 			"Package" : "coda",
-			"Version" : "0.19-4",
+			"Version" : "0.19-4.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"EmpiricalCalibration" : {
 			"Package" : "EmpiricalCalibration",
-			"Version" : "3.1.1",
+			"Version" : "3.1.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1037,7 +1019,7 @@
 		},
 		"ggdist" : {
 			"Package" : "ggdist",
-			"Version" : "3.3.0",
+			"Version" : "3.3.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1047,15 +1029,9 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"keyring" : {
-			"Package" : "keyring",
-			"Version" : "1.3.1",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"meta" : {
 			"Package" : "meta",
-			"Version" : "6.5-0",
+			"Version" : "7.0-0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1073,13 +1049,13 @@
 		},
 		"remotes" : {
 			"Package" : "remotes",
-			"Version" : "2.4.2.1",
+			"Version" : "2.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"tseries" : {
 			"Package" : "tseries",
-			"Version" : "0.10-54",
+			"Version" : "0.10-55",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1097,7 +1073,7 @@
 		},
 		"CohortExplorer" : {
 			"Package" : "CohortExplorer",
-			"Version" : "0.0.17",
+			"Version" : "0.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1115,7 +1091,7 @@
 		},
 		"lightgbm" : {
 			"Package" : "lightgbm",
-			"Version" : "3.3.5",
+			"Version" : "4.3.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1127,7 +1103,7 @@
 		},
 		"MatrixModels" : {
 			"Package" : "MatrixModels",
-			"Version" : "0.5-2",
+			"Version" : "0.5-3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1151,7 +1127,7 @@
 		},
 		"nnet" : {
 			"Package" : "nnet",
-			"Version" : "7.3-18",
+			"Version" : "7.3-19",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1193,13 +1169,13 @@
 		},
 		"ggrepel" : {
 			"Package" : "ggrepel",
-			"Version" : "0.9.3",
+			"Version" : "0.9.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"ggsci" : {
 			"Package" : "ggsci",
-			"Version" : "3.0.0",
+			"Version" : "3.0.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1229,7 +1205,7 @@
 		},
 		"mvtnorm" : {
 			"Package" : "mvtnorm",
-			"Version" : "1.2-3",
+			"Version" : "1.2-4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1275,6 +1251,30 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"assertthat" : {
+			"Package" : "assertthat",
+			"Version" : "0.2.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"filelock" : {
+			"Package" : "filelock",
+			"Version" : "1.0.3",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"sodium" : {
+			"Package" : "sodium",
+			"Version" : "1.3.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"keyring" : {
+			"Package" : "keyring",
+			"Version" : "1.3.2",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"aws.signature" : {
 			"Package" : "aws.signature",
 			"Version" : "0.6.0",
@@ -1295,13 +1295,13 @@
 		},
 		"R.oo" : {
 			"Package" : "R.oo",
-			"Version" : "1.25.0",
+			"Version" : "1.26.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"R.utils" : {
 			"Package" : "R.utils",
-			"Version" : "2.12.2",
+			"Version" : "2.12.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -1313,63 +1313,63 @@
 		},
 		"CirceR" : {
 			"Package" : "CirceR",
-			"Version" : "1.3.1",
+			"Version" : "1.3.2",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CirceR",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.3.1"
+			"RemoteRef" : "v1.3.2"
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
-			"Version" : "3.3.1",
+			"Version" : "3.4.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "FeatureExtraction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.3.1"
+			"RemoteRef" : "v3.4.0"
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
-			"Version" : "0.8.0",
+			"Version" : "0.8.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortGenerator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.8.0"
+			"RemoteRef" : "v0.8.1"
 		},
 		"OhdsiShinyModules" : {
 			"Package" : "OhdsiShinyModules",
-			"Version" : "1.1.0",
+			"Version" : "2.1.2",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "OhdsiShinyModules",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.1.0"
+			"RemoteRef" : "v2.1.2"
 		},
 		"PatientLevelPrediction" : {
 			"Package" : "PatientLevelPrediction",
-			"Version" : "6.3.5",
+			"Version" : "6.3.6",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PatientLevelPrediction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v6.3.5"
+			"RemoteRef" : "v6.3.6"
 		},
 		"ResultModelManager" : {
 			"Package" : "ResultModelManager",
-			"Version" : "0.5.1",
+			"Version" : "0.5.6",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "ResultModelManager",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.5.1"
+			"RemoteRef" : "v0.5.6"
 		},
 		"BigKnn" : {
 			"Package" : "BigKnn",
@@ -1393,53 +1393,53 @@
 		},
 		"Characterization" : {
 			"Package" : "Characterization",
-			"Version" : "0.1.1",
+			"Version" : "0.1.3",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Characterization",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.1.1"
+			"RemoteRef" : "v0.1.3"
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "3.2.4",
+			"Version" : "3.2.5",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.2.4"
+			"RemoteRef" : "v3.2.5"
 		},
 		"CohortMethod" : {
 			"Package" : "CohortMethod",
-			"Version" : "5.1.0",
+			"Version" : "5.2.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortMethod",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v5.1.0"
+			"RemoteRef" : "v5.2.1"
 		},
 		"DataQualityDashboard" : {
 			"Package" : "DataQualityDashboard",
-			"Version" : "2.4.0",
+			"Version" : "2.6.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "DataQualityDashboard",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v2.4.0"
+			"RemoteRef" : "v2.6.0"
 		},
 		"DeepPatientLevelPrediction" : {
 			"Package" : "DeepPatientLevelPrediction",
-			"Version" : "2.0.0",
+			"Version" : "2.0.3",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "DeepPatientLevelPrediction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v2.0.0"
+			"RemoteRef" : "v2.0.3"
 		},
 		"EnsemblePatientLevelPrediction" : {
 			"Package" : "EnsemblePatientLevelPrediction",
@@ -1453,13 +1453,13 @@
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
-			"Version" : "1.0.2",
+			"Version" : "1.0.3",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Eunomia",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.0.2"
+			"RemoteRef" : "v1.0.3"
 		},
 		"Hydra" : {
 			"Package" : "Hydra",
@@ -1493,23 +1493,23 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.25.0",
+			"Version" : "3.32.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.25.0"
+			"RemoteRef" : "v3.32.0"
 		},
 		"PheValuator" : {
 			"Package" : "PheValuator",
-			"Version" : "2.2.10",
+			"Version" : "2.2.11",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PheValuator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v2.2.10"
+			"RemoteRef" : "v2.2.11"
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
@@ -1523,13 +1523,13 @@
 		},
 		"SelfControlledCaseSeries" : {
 			"Package" : "SelfControlledCaseSeries",
-			"Version" : "4.2.0",
+			"Version" : "5.1.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "SelfControlledCaseSeries",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v4.2.0"
+			"RemoteRef" : "v5.1.1"
 		},
 		"SelfControlledCohort" : {
 			"Package" : "SelfControlledCohort",
@@ -1543,13 +1543,13 @@
 		},
 		"ShinyAppBuilder" : {
 			"Package" : "ShinyAppBuilder",
-			"Version" : "1.1.2",
+			"Version" : "2.0.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "ShinyAppBuilder",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.1.2"
+			"RemoteRef" : "v2.0.1"
 		},
 		"Hades" : {
 			"Package" : "Hades",
