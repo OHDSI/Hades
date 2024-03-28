@@ -12,3 +12,8 @@ reticulate::py_install("torch")
 # Error in py_module_import(module, convert = convert) : 
 #   TypeError: the first argument must be callable
 
+# PatientLevelPrediction requires Anaconda to be installed ---------------------
+reticulate::install_miniconda()
+# Test:
+reticulate::conda_binary()
+
