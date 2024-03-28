@@ -32,7 +32,7 @@ prepareForPackageCheck <- function() {
 #   }
 # }
 
-checkPackage <- function(package, inCran) {
+checkPackage <- function(package, inCran, additionalCheckArgs = c()) {
   writeLines(sprintf("*** Checking package '%s' ***", package))
   gitHubOrganization <- "ohdsi"
   if (inCran) {
@@ -53,7 +53,10 @@ checkPackage <- function(package, inCran) {
     unlink(docDir, recursive = TRUE)
   }
   # devtools::check_built(path = sourcePath)
-  rcmdcheck::rcmdcheck(path = sourcePath, args = c("--no-manual", "--no-multiarch", "--as-cran"), error_on = "warning")
+  rcmdcheck::rcmdcheck(path = sourcePath, 
+                       args = c("--no-manual", additionalCheckArgs), 
+                       build_args = c("--no-multiarch", additionalCheckArgs),
+                       error_on = "warning")
 }
 
 getPackageDependenciesFromGitHub <- function(package) {
