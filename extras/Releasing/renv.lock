@@ -1323,13 +1323,13 @@
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
-			"Version" : "3.4.0",
+			"Version" : "3.4.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "FeatureExtraction",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.4.0"
+			"RemoteRef" : "v3.4.1"
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
