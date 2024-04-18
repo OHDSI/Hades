@@ -3,49 +3,47 @@ FROM rocker/rstudio:4.2.3
 LABEL Lee Evans <evans@ohdsi.org>
 
 # install OS dependencies including java and python 3
-RUN apt-get update && apt-get install -y openjdk-11-jdk liblzma-dev libbz2-dev libncurses5-dev curl python3-dev python3.venv \
+RUN apt-get update && apt-get install -y openjdk-11-jdk liblzma-dev libbz2-dev libncurses5-dev curl python3-dev python3-virtualenv \
+	cmake libpng-dev libjpeg-dev make libssl-dev libsodium-dev libxml2-dev libicu-dev libsecret-1-dev libcurl4-openssl-dev \
+	pandoc git zlib1g-dev \
 && R CMD javareconf \
 && rm -rf /var/lib/apt/lists/*
 
+# CRAN snapshot date
+ARG POSIT_DATE=2024-03-29
+
 # install utility R packages
-RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
-	openssl \
-	httr \
-	xml2 \
-	remotes \
+RUN install2.r --error --skipinstalled --repos "https://p3m.dev/cran/__linux__/jammy/$POSIT_DATE" \
+	renv \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
 
+# HADES wide release
+ARG HADES_RELEASE=2024Q1
+COPY hadesWideReleases/$HADES_RELEASE/renv.lock /renv.lock
+
 # install OHDSI HADES R packages from CRAN and GitHub, temporarily adding a GitHub Personal Access Token (PAT) to the Renviron file
-RUN --mount=type=secret,id=build_github_pat \
+RUN --mount=type=secret,id=build_github_pat --mount=type=cache,target=/root/.cache/R \
 	cp /usr/local/lib/R/etc/Renviron /tmp/Renviron \
         && echo "GITHUB_PAT=$(cat /run/secrets/build_github_pat)" >> /usr/local/lib/R/etc/Renviron \
-        && R -e "remotes::install_github(repo = 'OHDSI/Hades', upgrade = 'always')" \
-        && cp /tmp/Renviron /usr/local/lib/R/etc/Renviron
+        && R -e "library(renv); options(renv.verbose = TRUE); renv::restore(lockfile='/renv.lock', repos=c(CRAN='https://p3m.dev/cran/__linux__/jammy/$POSIT_DATE'))" \
+        && mv /tmp/Renviron /usr/local/lib/R/etc/Renviron
 
 # install useful R libraries to help RStudio users to create/use their own GitHub Personal Access Token
-RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
+RUN install2.r --error --skipinstalled --repos "https://p3m.dev/cran/__linux__/jammy/$POSIT_DATE" \
         usethis \
         gitcreds \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
 
 # create Python virtual environment used by the OHDSI PatientLevelPrediction R package
 ENV WORKON_HOME="/opt/.virtualenvs"
-RUN R <<EOF
+RUN --mount=type=cache,target=/root/.cache/pip R <<EOF
 reticulate::use_python("/usr/bin/python3", required=T)
 PatientLevelPrediction::configurePython(envname='r-reticulate', envtype='python')
 reticulate::use_virtualenv("/opt/.virtualenvs/r-reticulate")
 EOF
 
-# install shiny and other R packages used by the OHDSI PatientLevelPrediction R package viewPLP() function
-# and additional model related R packages
-RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
-        DT \
-        markdown \
-        plotly \
-        shiny \
-        shinycssloaders \
-        shinydashboard \
-        shinyWidgets \
+# install additional model related R packages
+RUN install2.r --error --skipinstalled --repos "https://p3m.dev/cran/__linux__/jammy/$POSIT_DATE" \
         xgboost \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
 
@@ -54,7 +52,7 @@ ENV DATABASECONNECTOR_JAR_FOLDER="/opt/hades/jdbc_drivers"
 RUN R -e "DatabaseConnector::downloadJdbcDrivers('all');"
 
 # Install Rserve server and client
-RUN install2.r \
+RUN install2.r --error --skipinstalled --repos "https://p3m.dev/cran/__linux__/jammy/$POSIT_DATE" \
 	Rserve \
 	RSclient \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
@@ -68,7 +66,8 @@ EXPOSE 8787
 EXPOSE 6311
 
 # install supervisor process controller
-RUN apt-get update && apt-get install -y supervisor
+RUN apt-get update && apt-get install -y supervisor \
+&& rm -rf /var/lib/apt/lists/*
 
 # start Rserve & RStudio using supervisor
 RUN echo "" >> /etc/supervisor/conf.d/supervisord.conf \
