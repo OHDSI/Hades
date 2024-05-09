@@ -1,3 +1,8 @@
+HADES 1.13.1
+============
+
+- CirceR, Eunomia, and FeatureExtraction are now in CRAN. Removing reference to Github repos.
+
 HADES 1.13.0
 ============
 

@@ -8,7 +8,10 @@ output:
 
 # Validation
 
-Coming soon...
+For validation, HADES mostly relies on an extensive set of unit tests executed as part of its continuous integration. This assures validity on a continuous basis, at every release. A good reference would be our recent HADES paper:
+
+- Schuemie M, Reps J, Black A, et al. [Health-Analytics Data to Evidence Suite (HADES): Open-Source Software for Observational Research](https://ebooks.iospress.nl/doi/10.3233/SHTI231108) Studies in health technology and informatics. 2024 Jan 25:310:966-970. 
+
 
 # Evaluation
 

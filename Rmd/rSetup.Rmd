@@ -62,7 +62,7 @@ rToolsUrl <- sprintf("https://cran.r-project.org/bin/windows/Rtools/rtools%s/rto
 
 ## Installing Java
 
-1.  Go to <https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html>, and select the Windows 64-bit JRE installer as highlighted below. ![](images/downloadJavaWindows.png)
+1.  Go to <https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html>, and select the Windows 64-bit JDK installer as highlighted below. ![](images/downloadJavaWindows.png)
 
 2.  After downloading just run the installer.
 
