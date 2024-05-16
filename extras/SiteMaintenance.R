@@ -31,5 +31,3 @@ source("extras/GenerateSupportedPlatformsPage.R")
 # to running in RStudio:
 rmarkdown::find_pandoc(dir = "C:/Users/mschuemi/AppData/Local/Pandoc")
 rmarkdown::render_site("Rmd")
-dir.create("docs/pare_reports")
-file.copy("extras/pare_reports", "docs", recursive = TRUE)
