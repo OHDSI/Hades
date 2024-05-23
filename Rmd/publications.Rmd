@@ -9,6 +9,10 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Anand TV, Bu F, Schuemie MJ, et al.[Comparative safety and effectiveness of angiotensin converting enzyme inhibitors and thiazides and thiazide-like diuretics under strict monotherapy](https://onlinelibrary.wiley.com/doi/10.1111/jch.14793) J Clin Hypertens (Greenwich). 2024 Apr;26(4):425-430. 
+
+- Cai CX, Nishimura A, Bowring MG, et al. [https://www.sciencedirect.com/science/article/pii/S2468653024001180](Similar Risk of Kidney Failure among Patients with Blinding Diseases Who Receive Ranibizumab, Aflibercept, and Bevacizumab: An Observational Health Data Sciences and Informatics Network Study) Ophthalmol Retina. 2024 Mar 20:S2468-6530(24)00118-0. 
+
 - Khera R, Dhingra LS, Aminorroaya A, et al. [Multinational patterns of second line antihyperglycaemic drug initiation across cardiovascular risk groups: federated pharmacoepidemiological evaluation in LEGEND-T2DM](https://pubmed.ncbi.nlm.nih.gov/37829182/) BMJ Med. 2023 Oct 6;2(1):e000651. 
 
 - Voss EA, Shoaibi A, Yin Hui Lai L, et al. [Contextualising adverse events of special interest to characterise the baseline incidence rates in 24 million patients with COVID-19 across 26 databases: a multinational retrospective cohort study](https://doi.org/10.1016/j.eclinm.2023.101932) EClinicalMedicine. 2023 Apr;58:101932. 
@@ -97,6 +101,10 @@ These papers were written using HADES.
 
 
 # Methods research
+
+- Fridgeirsson EA, Williams R, Rijnbeek P, et al. [https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocae109/7676584?login=false](Comparing penalization methods for linear models on large observational health data) Am Med Inform Assoc. 2024 May 20:ocae109.
+
+
 
 - Schuemie M, Reps J, Black A, et al. [Health-Analytics Data to Evidence Suite (HADES): Open-Source Software for Observational Research](https://pubmed.ncbi.nlm.nih.gov/38269952/) Stud Health Technol Inform. 2024 Jan 25:310:966-970. 
 
