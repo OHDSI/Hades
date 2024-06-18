@@ -58,6 +58,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [IterativeHardThresholding issue tracker](https://github.com/OHDSI/IterativeHardThresholding/issues)
 
+- [Keeper issue tracker](https://github.com/OHDSI/Keeper/issues)
+
 - [MethodEvaluation issue tracker](https://github.com/OHDSI/MethodEvaluation/issues)
 
 - [OhdsiSharing issue tracker](https://github.com/OHDSI/OhdsiSharing/issues)

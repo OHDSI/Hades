@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.13.1
-Date: 2024-05-08
+Version: 1.14.0
+Date: 2024-06-18
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -47,7 +47,8 @@ Imports:
   ShinyAppBuilder,
   DataQualityDashboard,
   BrokenAdaptiveRidge,
-  Achilles
+  Achilles,
+  Keeper
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
@@ -71,7 +72,7 @@ Remotes:
   ohdsi/Characterization,
   ohdsi/ShinyAppBuilder,
   ohdsi/DataQualityDashboard,
-  ohdsi/Achilles
+  ohdsi/Keeper
 LazyData: false
 RoxygenNote: 7.2.0
 Encoding: UTF-8

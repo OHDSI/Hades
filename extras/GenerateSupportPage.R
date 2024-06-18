@@ -1,4 +1,4 @@
-setwd("C:/Temp/Git/Hades")
+# setwd("C:/Temp/Git/Hades")
 packages <- read.csv("extras/packages.csv", stringsAsFactors = FALSE)
 packages <- packages[order(packages$name), ]
 

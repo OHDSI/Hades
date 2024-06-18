@@ -1,3 +1,9 @@
+HADES 1.14.0
+============
+
+- Adding Keeper to HADES
+
+
 HADES 1.13.1
 ============
 
