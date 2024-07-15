@@ -34,6 +34,8 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [CohortGenerator issue tracker](https://github.com/OHDSI/CohortGenerator/issues)
 
+- [CohortIncidence issue tracker](https://github.com/OHDSI/CohortIncidence/issues)
+
 - [CohortMethod issue tracker](https://github.com/OHDSI/CohortMethod/issues)
 
 - [Cyclops issue tracker](https://github.com/OHDSI/Cyclops/issues)
