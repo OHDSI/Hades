@@ -6,7 +6,7 @@ reticulate::use_virtualenv("r-reticulate")
 # Test:  np <- reticulate::import('numpy')
 
 # Packages needed by DeepPatientLevelPrediction --------------------------------
-reticulate::py_install(c("polars", "tqdm", "connectorx", "scikit-learn", "pyarrow"))
+reticulate::py_install(c("polars", "tqdm", "connectorx", "scikit-learn", "pyarrow", "pynvml"))
 reticulate::py_install("torch")
 # Test: torch <- reticulate::import('torch')
 # Error in py_module_import(module, convert = convert) : 

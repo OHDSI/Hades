@@ -46,11 +46,12 @@ These releases are currently captured as [renv](https://rstudio.github.io/renv/a
 - 2023Q1: [renv lock file](https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q1/renv.lock)
 - 2023Q3: [renv lock file](https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2023Q3/renv.lock)
 - 2024Q1: [renv lock file](https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2024Q1/renv.lock)
+- 2024Q3: [renv lock file](https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2024Q3/renv.lock)
 
 To build the R library corresponding to the latest release in your current RStudio project, you can use:
 
 ```r
-download.file("https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2024Q1/renv.lock", "renv.lock")
+download.file("https://raw.githubusercontent.com/OHDSI/Hades/main/hadesWideReleases/2024Q3/renv.lock", "renv.lock")
 install.packages("renv")
 renv::restore()
 ```

@@ -13,7 +13,7 @@
 
 <title>Setting up the R environment</title>
 
-<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -450,8 +450,8 @@ OHDSI R packages. Four things needs to be installed:</p>
 <li><strong>R</strong> is a statistical computing environment. It comes
 with a basic user interface that is primarily a command-line interface.
 For stability, we’ve picked one R version that we aim to support for a
-while moving forward. Since 2023-04-01 our target is <strong>R
-4.2.3</strong>. We highly recommend installing R 4.2.3 for maximum
+while moving forward. Since 2024-06-14 our target is <strong>R
+4.4.1</strong>. We highly recommend installing R 4.4.1 for maximum
 compatibility.</li>
 <li><strong>RTools</strong> is a set of programs that is required on
 Windows to build R packages from source.</li>
@@ -482,8 +482,8 @@ versions. It is recommended to only install the 64-bit version of R.
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a
-href="https://cran.r-project.org/bin/windows/base/old/4.2.3/">https://cran.r-project.org/bin/windows/base/old/4.2.3/</a>,
-click on ‘R-4.2.3-win.exe’ to download.</p></li>
+href="https://cran.r-project.org/bin/windows/base/old/4.4.1/">https://cran.r-project.org/bin/windows/base/old/4.4.1/</a>,
+click on ‘R-4.4.1-win.exe’ to download.</p></li>
 <li><p>After the download has completed, run the installer. Use the
 default options everywhere, with two exceptions: First, it is better not
 to install into program files. Instead, just make R a subfolder of your
@@ -501,7 +501,7 @@ Menu.</p>
 <h2>Installing RTools</h2>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a
-href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a>,
+href="https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html">https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html</a>,
 and download the RTools installer.</p></li>
 <li><p>After downloading has completed run the installer. Select the
 default options everywhere.</p></li>
@@ -549,7 +549,7 @@ heap space available.</p></li>
 <ol style="list-style-type: decimal">
 <li><p>Go to <a href="https://cran.r-project.org/bin/macosx/base/"
 class="uri">https://cran.r-project.org/bin/macosx/base/</a>, click on
-‘R-4.2.3.pkg’ to download.</p></li>
+‘R-4.4.1.pkg’ to download.</p></li>
 <li><p>After the download has completed, run the installer and accept
 all of the default options. You should see a screen indicating that the
 installation was successful.</p>
@@ -575,7 +575,7 @@ href="https://cran.r-project.org/bin/macosx/tools/"
 class="uri">https://cran.r-project.org/bin/macosx/tools/</a>. Verify the
 installation by opening the terminal and running the command
 <code>/opt/gfortran/bin/gfortran</code>. You should see an error that
-says “no input files”. R 4.2.3 will look in the wrong place for
+says “no input files”. R 4.4.1 will look in the wrong place for
 gfortran, so you must point it to the right location. Run
 <code>usethis::edit_r_makevars()</code> to open
 <code>~.R/Makevars</code> and add:</p>
