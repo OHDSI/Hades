@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
-FROM rocker/rstudio:4.2.1
-MAINTAINER Lee Evans <evans@ohdsi.org>
+FROM rocker/rstudio:4.2.3
+LABEL Lee Evans <evans@ohdsi.org>
 
 # install OS dependencies including java and python 3
 RUN apt-get update && apt-get install -y openjdk-11-jdk liblzma-dev libbz2-dev libncurses5-dev curl python3-dev python3.venv \
