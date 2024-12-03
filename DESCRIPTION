@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.15.0
-Date: 2024-07-15
+Version: 1.16.0
+Date: 2024-12-04
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -49,7 +49,8 @@ Imports:
   BrokenAdaptiveRidge,
   Achilles,
   Keeper,
-  CohortIncidence
+  CohortIncidence,
+  Strategus
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
@@ -65,16 +66,14 @@ Remotes:
   ohdsi/PheValuator,
   ohdsi/Hydra,
   ohdsi/Capr,
-  ohdsi/CohortGenerator,
   ohdsi/DeepPatientLevelPrediction,
-  ohdsi/CohortExplorer,
   ohdsi/OhdsiShinyModules,
-  ohdsi/ResultModelManager,
   ohdsi/Characterization,
   ohdsi/ShinyAppBuilder,
   ohdsi/DataQualityDashboard,
   ohdsi/Keeper,
-  ohdsi/CohortIncidence
+  ohdsi/CohortIncidence,
+  ohdsi/Strategus
 LazyData: false
-RoxygenNote: 7.2.0
+RoxygenNote: 7.3.2
 Encoding: UTF-8

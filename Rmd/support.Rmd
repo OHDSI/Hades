@@ -88,3 +88,5 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [SqlRender issue tracker](https://github.com/OHDSI/SqlRender/issues)
 
+- [Strategus issue tracker](https://github.com/OHDSI/Strategus/issues)
+

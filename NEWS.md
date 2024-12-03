@@ -1,3 +1,9 @@
+HADES 1.16.0
+============
+
+- Adding Strategus to HADES
+- CohortExplorer, CohortGenerator, and ResultsModelManager are now in CRAN. Removing reference to Github repos from DESCRIPTION.
+
 HADES 1.15.0
 ============
 
