@@ -9,7 +9,7 @@ renv::activate()
 # Install HADES (from scratch --------------------------------------------------
 install.packages("remotes")
 options(install.packages.compile.from.source = "never")
-remotes::install_github("ohdsi/Hades")
+remotes::install_github("ohdsi/Hades", upgrade = "never")
 
 # Create renv lock file --------------------------------------------------------
 remotes::install_github("ohdsi/OhdsiRTools")
@@ -17,7 +17,7 @@ remotes::install_github("ohdsi/OhdsiRTools")
 packagesUtils <- c("keyring")
 packagesForPlp <- c("lightgbm", "survminer", "parallel")
 packagesForDatabaseConnector <- c("duckdb", "RSQLite", "aws.s3", "R.utils", "odbc")
-install.packages(c(packagesForPlp, packagesUtils, packagesForBulkImport))
+install.packages(c(packagesForPlp, packagesUtils, packagesForDatabaseConnector))
 
 OhdsiRTools::createRenvLockFile(
   rootPackage = "Hades",
