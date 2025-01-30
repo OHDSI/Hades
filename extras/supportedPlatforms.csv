@@ -13,3 +13,4 @@ spark,Apache Spark,Supported,
 sql server,Microsoft SQL Server,Supported,Yes
 sqlite,SQLite,Supported,Yes
 synapse,Azure Synapse Analytics Dedicated,Supported,
+iris,InterSystems IRIS,Supported,Yes

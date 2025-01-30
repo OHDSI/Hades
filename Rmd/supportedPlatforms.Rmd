@@ -25,6 +25,7 @@ Below are the database platforms currently supported by HADES, with the followin
 | DuckDB | duckdb | Supported | Yes |
 | Google BigQuery | bigquery | Supported |  |
 | IBM Netezza | netezza | Deprecated |  |
+| InterSystems IRIS | iris | Supported | Yes |
 | Microsoft Parallel Data Warehouse | pdw | Deprecated |  |
 | Microsoft SQL Server | sql server | Supported | Yes |
 | Oracle | oracle | Supported | Yes |
