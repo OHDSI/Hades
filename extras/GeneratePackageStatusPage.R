@@ -6,6 +6,10 @@ headerFile <- "extras/packageStatusHeader.Rmd"
 lines <- gsub("\r", "", readChar(headerFile, file.info(headerFile)$size))
 lines <- c(lines, "| Package            | Version | Maintainer(s)   | Availability | Open issues | Open pull-requests | Build status | Coverage   | PaRe   |")
 lines <- c(lines, "| :----------------- | :----: |:--------------- | :------: | :------: | :------: | :------------: | :----------: | :------ |")
+rowTemplate <- "| [%pkg%](https://github.com/%org%/%pkg%) | [![Version](https://img.shields.io/github/r-package/v/%org%/%pkg%?label=%20)](https://%org%.github.io/%pkg%/) | %maintainer% | %availability% | [![Open issues](https://img.shields.io/github/issues-raw/%org%/%pkg%?label=%20)](https://github.com/%org%/%pkg%/issues) | [![Open pull-requests](https://img.shields.io/github/issues-pr-raw/%org%/%pkg%?label=%20)](https://github.com/%org%/%pkg%/pulls) | %status% | [![codecov.io](https://codecov.io/github/%org%/%pkg%/coverage.svg?branch=main)](https://codecov.io/github/%org%/%pkg%?branch=main) | [Report](https://%org%.github.io/HadesFiles/pare_reports/%pkg%.html)"
+githubStatusTemplate <- "[![Build Status](https://github.com/%org%/%pkg%/actions/workflows/R_CMD_check_main_weekly.yaml/badge.svg)](https://github.com/%org%/%pkg%/actions/workflows/R_CMD_check_main_weekly.yaml)"
+cranStatusTemplate <- "[![Build Status](https://badges.cranchecks.info/worst/%pkg%.svg)](https://cran.r-project.org/web/checks/check_results_%pkg%.html)"
+
 for (i in 1:nrow(packages)) {
   name <- packages$name[i]
   if (packages$inCran[i]) {
@@ -13,21 +17,11 @@ for (i in 1:nrow(packages)) {
   } else {
     availability <- "GitHub"
   }
-  lines <- c(lines, sprintf("| [%s](https://github.com/OHDSI/%s) | [![Version](https://img.shields.io/github/r-package/v/ohdsi/%s?label=%%20)](https://ohdsi.github.io/%s/) | %s | %s | [![Open issues](https://img.shields.io/github/issues-raw/OHDSI/%s?label=%%20)](https://github.com/OHDSI/%s/issues) | [![Open pull-requests](https://img.shields.io/github/issues-pr-raw/OHDSI/%s?label=%%20)](https://github.com/OHDSI/%s/pulls) | [![Build Status](https://github.com/ohdsi/%s/actions/workflows/R_CMD_check_main_weekly.yaml/badge.svg)](https://github.com/OHDSI/%s/actions/workflows/R_CMD_check_main_weekly.yaml) | [![codecov.io](https://codecov.io/github/OHDSI/%s/coverage.svg?branch=main)](https://codecov.io/github/OHDSI/%s?branch=main) | [Report](https://ohdsi.github.io/HadesFiles/pare_reports/%s.html)", 
-                            name,
-                            name,
-                            name,
-                            name,
-                            packages$maintainers[i], 
-                            availability, 
-                            name, 
-                            name, 
-                            name, 
-                            name, 
-                            name, 
-                            name,
-                            name,
-                            name,
-                            name))
+  lines <- c(lines, gsub("%org%", packages$organization[i], 
+                         gsub("%pkg%", packages$name[i], 
+                              gsub("%maintainer%", packages$maintainers[i],
+                                   gsub("%availability%", availability,
+                                        gsub("%status%", if (packages$inCran[i]) cranStatusTemplate else githubStatusTemplate,
+                                        rowTemplate))))))
 }
 write(lines, "Rmd/packageStatuses.Rmd")

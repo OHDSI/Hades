@@ -1,39 +1,40 @@
-order,name,section,description,inCran,pages,maintainers,CRON
-1,CohortMethod,Population-level estimation,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE,Martijn Schuemie,0 8 * * 6
-2,SelfControlledCaseSeries,Population-level estimation,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE,Martijn Schuemie,0 9 * * 6
-3,SelfControlledCohort,Population-level estimation,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE,Jamie Gilbert,0 10 * * 6
-4,EvidenceSynthesis,Population-level estimation,Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.,TRUE,TRUE,Martijn Schuemie ,0 11 * * 6
-5,PatientLevelPrediction,Patient-level prediction,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE,Egill Friogeirsson & Jenna Reps,0 12 * * 6
-6,DeepPatientLevelPrediction,Patient-level prediction,Performing patient level prediction using deep learning,FALSE,TRUE,Egill Fridgeirsson,0 13 * * 6
-7,EnsemblePatientLevelPrediction,Patient-level prediction,Building and validating ensemble patient-level predictive models.,FALSE,TRUE,Jenna Reps,0 14 * * 6
-8,Characterization,Characterization,Various types of characterizations of a target and outcome cohort.,FALSE,TRUE,Jenna Reps,0 14 * * 0
-9,CohortIncidence,Characterization,Compute incidence rates and proportions,FALSE,TRUE,Chris Knoll,0 20 * * 0
-10,Capr,Cohort construction and evaluation,Develop and manipulate complex cohort definitions in R,FALSE,TRUE,Martin Lavallee,0 15 * * 6
-11,CirceR,Cohort construction and evaluation,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",TRUE,TRUE,Chris Knoll,0 16 * * 6
-12,CohortGenerator,Cohort construction and evaluation,Instantiating cohorts in a database based on a set of cohort definitions.,TRUE,TRUE,Anthony Sena,0 17 * * 6
-13,PhenotypeLibrary,Cohort construction and evaluation,The OHDSI Phenotype Library: a collection of community-maintained pre-definined cohorts.,FALSE,TRUE,Gowtham Rao,0 18 * * 6
-14,CohortDiagnostics,Cohort construction and evaluation,Generate a wide set of diagnostics to evaluate cohort definitions against databases in the CDM.,FALSE,TRUE,Jamie Gilbert,0 19 * * 6
-15,PheValuator,Cohort construction and evaluation,"Semi-automated evaluation of cohorts, producing metrics suchs as sensitivity, specificity, and positive and negative preditive value.",FALSE,TRUE,Joel Swerdel,0 20 * * 6
-16,CohortExplorer,Cohort construction and evaluation,Visually explore all individual-level data of patients in a cohort,TRUE,TRUE,Gowtham Rao,0 21 * * 6
-17,Keeper,Cohort construction and evaluation,Knowledge-Enhanced Electronic Profile Review,FALSE,TRUE,Anna Ostropolets,0 3 * * 0
-18,Achilles,Evidence Quality,Generate descriptive statistics on an entire OMOP CDM database,TRUE,TRUE,Frank DeFalco,0 19 * * 0
-19,DataQualityDashboard,Evidence Quality,Expose and evaluate observational data quality.,FALSE,TRUE,Katy Sadowksi,0 17 * * 0
-20,EmpiricalCalibration,Evidence Quality,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,Martijn Schuemie,0 22 * * 6
-21,MethodEvaluation,Evidence Quality,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie ,0 23 * * 6
-22,Andromeda,Supporting packages,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Martijn Schuemie,0 0 * * 0
-23,BigKnn,Supporting packages,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,Martijn Schuemie ,0 1 * * 0
-24,BrokenAdaptiveRidge,Supporting packages,Broken Adaptive Ridge Regression with Cyclops.,TRUE,TRUE,Marc Suchard,0 18 * * 0
-25,Cyclops,Supporting packages,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,Marc Suchard,0 2 * * 0
-26,DatabaseConnector,Supporting packages,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie ,0 3 * * 0
-27,Eunomia,Supporting packages,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,TRUE,TRUE,Frank DeFalco,0 4 * * 0
-28,FeatureExtraction,Supporting packages,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,TRUE,TRUE,Ger Inberg,0 5 * * 0
-29,Hydra,Supporting packages,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena ,0 6 * * 0
-30,IterativeHardThresholding,Supporting packages,Performing L0-based regressions using Cyclops,TRUE,TRUE,Marc Suchard,0 7 * * 0
-31,OhdsiSharing,Supporting packages,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans,0 8 * * 0
-32,OhdsiShinyModules,Supporting packages,Contains shiny modules that can be used within shiny result interfaces,FALSE,TRUE,Jenna Reps,0 9 * * 0
-33,ParallelLogger,Supporting packages,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie ,0 10 * * 0
-34,ResultModelManager,Supporting packages,A lightweight utility for data migrations allowing old results to work with new shiny apps and data visualisations.,TRUE,TRUE,Jamie Gilbert,0 13 * * 0
-35,ROhdsiWebApi,Supporting packages,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
-36,ShinyAppBuilder,Supporting packages,Interactively view analysis results across different types of analyses.,FALSE,TRUE,Jenna Reps,0 15 * * 0
-37,Strategus,Supporting packages,Coordinating and executing analytics using HADES packages,FALSE,TRUE,Anthony Sena ,0 21 * * 0
-38,SqlRender,Supporting packages,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0
+order,name,section,organization,description,inCran,pages,maintainers,CRON
+1,CohortMethod,Population-level estimation,ohdsi,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE,Martijn Schuemie,0 8 * * 6
+2,SelfControlledCaseSeries,Population-level estimation,ohdsi,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE,Martijn Schuemie,0 9 * * 6
+3,SelfControlledCohort,Population-level estimation,ohdsi,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE,Jamie Gilbert,0 10 * * 6
+4,EvidenceSynthesis,Population-level estimation,ohdsi,Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.,TRUE,TRUE,Martijn Schuemie ,0 11 * * 6
+5,PatientLevelPrediction,Patient-level prediction,ohdsi,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE,Egill Friogeirsson & Jenna Reps,0 12 * * 6
+6,DeepPatientLevelPrediction,Patient-level prediction,ohdsi,Performing patient level prediction using deep learning,FALSE,TRUE,Egill Fridgeirsson,0 13 * * 6
+7,EnsemblePatientLevelPrediction,Patient-level prediction,ohdsi,Building and validating ensemble patient-level predictive models.,FALSE,TRUE,Jenna Reps,0 14 * * 6
+8,Characterization,Characterization,ohdsi,Various types of characterizations of a target and outcome cohort.,FALSE,TRUE,Jenna Reps,0 14 * * 0
+9,CohortIncidence,Characterization,ohdsi,Compute incidence rates and proportions,FALSE,TRUE,Chris Knoll,0 20 * * 0
+10,TreatmentPatterns,Characterization,darwin-eu,Analyze treatment patterns of a study population of interest ,TRUE,TRUE,Maarten van Kessel,
+11,Capr,Cohort construction and evaluation,ohdsi,Develop and manipulate complex cohort definitions in R,FALSE,TRUE,Martin Lavallee,0 15 * * 6
+12,CirceR,Cohort construction and evaluation,ohdsi,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",TRUE,TRUE,Chris Knoll,0 16 * * 6
+13,CohortGenerator,Cohort construction and evaluation,ohdsi,Instantiating cohorts in a database based on a set of cohort definitions.,TRUE,TRUE,Anthony Sena,0 17 * * 6
+14,PhenotypeLibrary,Cohort construction and evaluation,ohdsi,The OHDSI Phenotype Library: a collection of community-maintained pre-definined cohorts.,FALSE,TRUE,Gowtham Rao,0 18 * * 6
+15,CohortDiagnostics,Cohort construction and evaluation,ohdsi,Generate a wide set of diagnostics to evaluate cohort definitions against databases in the CDM.,FALSE,TRUE,Jamie Gilbert,0 19 * * 6
+16,PheValuator,Cohort construction and evaluation,ohdsi,"Semi-automated evaluation of cohorts, producing metrics suchs as sensitivity, specificity, and positive and negative preditive value.",FALSE,TRUE,Joel Swerdel,0 20 * * 6
+17,CohortExplorer,Cohort construction and evaluation,ohdsi,Visually explore all individual-level data of patients in a cohort,TRUE,TRUE,Gowtham Rao,0 21 * * 6
+18,Keeper,Cohort construction and evaluation,ohdsi,Knowledge-Enhanced Electronic Profile Review,FALSE,TRUE,Anna Ostropolets,0 3 * * 0
+19,Achilles,Evidence Quality,ohdsi,Generate descriptive statistics on an entire OMOP CDM database,TRUE,TRUE,Frank DeFalco,0 19 * * 0
+20,DataQualityDashboard,Evidence Quality,ohdsi,Expose and evaluate observational data quality.,FALSE,TRUE,Katy Sadowksi,0 17 * * 0
+21,EmpiricalCalibration,Evidence Quality,ohdsi,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,Martijn Schuemie,0 22 * * 6
+22,MethodEvaluation,Evidence Quality,ohdsi,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,Martijn Schuemie ,0 23 * * 6
+23,Andromeda,Supporting packages,ohdsi,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,Martijn Schuemie,0 0 * * 0
+24,BigKnn,Supporting packages,ohdsi,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,Martijn Schuemie ,0 1 * * 0
+25,BrokenAdaptiveRidge,Supporting packages,ohdsi,Broken Adaptive Ridge Regression with Cyclops.,TRUE,TRUE,Marc Suchard,0 18 * * 0
+26,Cyclops,Supporting packages,ohdsi,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,Marc Suchard,0 2 * * 0
+27,DatabaseConnector,Supporting packages,ohdsi,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,Martijn Schuemie ,0 3 * * 0
+28,Eunomia,Supporting packages,ohdsi,A standard CDM dataset for testing and demonstration purposes that runs on an embedded SQLite database.,TRUE,TRUE,Frank DeFalco,0 4 * * 0
+29,FeatureExtraction,Supporting packages,ohdsi,Automatically extract large sets of features for user-specified cohorts using data in the CDM.,TRUE,TRUE,Ger Inberg,0 5 * * 0
+30,Hydra,Supporting packages,ohdsi,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,Anthony Sena ,0 6 * * 0
+31,IterativeHardThresholding,Supporting packages,ohdsi,Performing L0-based regressions using Cyclops,TRUE,TRUE,Marc Suchard,0 7 * * 0
+32,OhdsiSharing,Supporting packages,ohdsi,Securely sharing (large) files between OHDSI collaborators.,FALSE,TRUE,Lee Evans,0 8 * * 0
+33,OhdsiShinyModules,Supporting packages,ohdsi,Contains shiny modules that can be used within shiny result interfaces,FALSE,TRUE,Jenna Reps,0 9 * * 0
+34,ParallelLogger,Supporting packages,ohdsi,"Support for parallel computation with logging to console, disk, or e-mail.",TRUE,TRUE,Martijn Schuemie ,0 10 * * 0
+35,ResultModelManager,Supporting packages,ohdsi,A lightweight utility for data migrations allowing old results to work with new shiny apps and data visualisations.,TRUE,TRUE,Jamie Gilbert,0 13 * * 0
+36,ROhdsiWebApi,Supporting packages,ohdsi,Interact with OHDSI WebAPI web services.,FALSE,TRUE,Gowtham Rao,0 11 * * 0
+37,ShinyAppBuilder,Supporting packages,ohdsi,Interactively view analysis results across different types of analyses.,FALSE,TRUE,Jenna Reps,0 15 * * 0
+38,Strategus,Supporting packages,ohdsi,Coordinating and executing analytics using HADES packages,FALSE,TRUE,Anthony Sena ,0 21 * * 0
+39,SqlRender,Supporting packages,ohdsi,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,Martijn Schuemie ,0 12 * * 0

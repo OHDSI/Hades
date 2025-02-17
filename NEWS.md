@@ -1,3 +1,8 @@
+HADES 1.17.0
+============
+
+- Adding TreatmentPatterns to HADES
+
 HADES 1.16.0
 ============
 

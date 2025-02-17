@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.16.0
-Date: 2024-12-04
+Version: 1.17.0
+Date: 2025-02-17
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -50,7 +50,8 @@ Imports:
   Achilles,
   Keeper,
   CohortIncidence,
-  Strategus
+  Strategus,
+  TreatmentPatterns
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,

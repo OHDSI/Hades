@@ -16,12 +16,13 @@ for (i in 1:nrow(packages)) {
     # lines <- c(lines, "")
   }
   name <- packages$name[i]
+  organization <- packages$organization[i]
   # pd <- packageDescription(name)
   pd <- packages$description[i]
   if (packages$pages[i]) {
-    url <- sprintf("https://ohdsi.github.io/%s", name)
+    url <- sprintf("https://%s.github.io/%s", organization, name)
   } else {
-    url <- sprintf("https://github.com/OHDSI/%s", name)
+    url <- sprintf("https://github.com/%s/%s", organization, name)
   }
   lines <- c(lines, sprintf("<li><h4><i class=\"fas  fa-cube \"></i> <a href=\"%s\">%s</a></h4>%s</br><a href=\"%s\">Learn more...</a></li>",
                             url, name, pd, url))
