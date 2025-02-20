@@ -51,6 +51,8 @@ navbar:
           href: packageStatuses.html 
         - text: "Test server usage"
           href: testServerUsage.html 
+        - text: "Database platform support policy"
+          href: platformPolicy.html 
         - text: "Development Roadmap"
           href: "developmentRoadmap.html"
         - text: "HADES Package Requirements"

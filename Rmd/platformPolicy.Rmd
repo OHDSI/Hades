@@ -1,0 +1,70 @@
+---
+title: "Database Platform Support Policy"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+
+# Introduction
+
+As a global, open source, open science community, OHDSI strives to include as many organizations and individuals as possible in its mission to collaboratively generate evidence that promotes better health decisions and better care.
+
+As such, the HADES open-source software suite supports a wide variety of database platforms, with the aim of minimizing the number of potential collaborators unable to participate due to lack of support for a given database platform.
+
+Currently supported platforms are listed on the [HADES Database Platforms page](supportedPlatforms.html).
+
+As support of a database platform across HADES requires significant upfront development work and ongoing maintenance, the resources needed to support each platform must be weighed against the value that platform brings to the community.  
+
+The purpose of this document is to outline a policy for how HADES maintainers decide whether or not to add support for a new database platform.
+
+# Requirements for Ongoing Support
+
+All supported database platforms must have a testing server containing a test dataset (i.e., Eunomia) which is made available to all HADES maintainers and OHDSI service accounts on a continuous basis.
+
+# Decision to Support
+
+A formal request for support of a new database platform in HADES must be filed in the [Developers section of the OHDSI Forums](https://forums.ohdsi.org/c/developers/7). The request must include a demonstration of feasibility; estimate of resources required for implementation and maintenance of support; and a community impact statement.
+
+It is recommended that the petitioner consider community impact and resourcing before diving too deep into implementing a potential solution.  Petitioners are encouraged to start a Forums thread to obtain initial feedback from the HADES team before filing a formal request for support.
+
+While the petitioner will play an active role in the development and maintenance of the new integration, a significant amount of work will still be required of HADES maintainers to support the integration.  As such, the decision to support a new platform will largely depend on maintainers’ capacity to undertake the integration and its relative priority (according to community impact).
+
+# Community Impact
+
+The petitioner must quantify the impact that addition of support for the database platform will have on the OHDSI community.  Types of impact could include:
+
+- Institutions with intent to convert their clinical data into the OMOP CDM and actively participate in OHDSI research activities
+- Strategically important initiatives or partnerships
+- Developers with intent to contribute to OHDSI open-source software development
+
+# Demonstration of Feasibility
+
+The petitioner must prove that it is possible for all HADES packages to support the new database platform. To do so, a forked version of the HADES suite must be set up to include support for the new platform. This would at least require forks of SqlRender and DatabaseConnector, with added translation rules and drivers, respectively. These forks should be used to demonstrate:
+
+- Automated remote database tests run and pass on all packages for the new platform
+- Achilles and DataQualityDashboard run without error and produce expected results that can be consumed by downstream applications (ATLAS; ARES)
+- The Strategus [test study package](https://ohdsi.github.io/Strategus/articles/ExecuteStrategus.html) runs on a Eunomia instance in the DBMS without error and produces expected results
+
+# Resource Estimation
+
+The petitioner must provide an estimate of the number of developer hours required to implement the changes from their forked repositories into production HADES packages, and commit to providing the resources to complete this work in collaboration with HADES maintainers.
+
+The petitioner must also provide an estimate of the ongoing maintenance burden that will be required to maintain support for the platform over time, and commit to providing the resources to uphold this burden on an ongoing basis.
+
+# Decision-making Process
+
+- Request is initially reviewed in a HADES Workgroup meeting; feedback provided to requestor.
+    - Requestor is welcomed to present their proposal at the meeting
+- Martijn, HADES WG lead, makes the final decision.
+- The Technical Advisory Board reviews, approves, and documents the final decision.
+
+# Database Platform Support Deprecation
+
+If a previously-supported database platform falls out of compliance with the above requirements, HADES maintainers may elect to deprecate that platform:
+
+- Support will be deprecated if a testing server is not available and accessible to all HADES maintainers
+- Support will be deprecated if the petitioner is no longer able to provide the level of maintenance support they had committed to  
+
+**Deprecation** of support for a database platform will generally not entail any code changes.  Code related to the database platform will be retained in HADES repositories, but no Issues or Pull Requests related to the deprecated platform will be considered.  The platform will be marked as deprecated on the [HADES Database Platforms page](supportedPlatforms.html).
