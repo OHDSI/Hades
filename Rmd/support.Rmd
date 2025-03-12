@@ -64,7 +64,11 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [MethodEvaluation issue tracker](https://github.com/ohdsi/MethodEvaluation/issues)
 
+- [OhdsiReportGenerator issue tracker](https://github.com/ohdsi/OhdsiReportGenerator/issues)
+
 - [OhdsiSharing issue tracker](https://github.com/ohdsi/OhdsiSharing/issues)
+
+- [OhdsiShinyAppBuilder issue tracker](https://github.com/ohdsi/OhdsiShinyAppBuilder/issues)
 
 - [OhdsiShinyModules issue tracker](https://github.com/ohdsi/OhdsiShinyModules/issues)
 

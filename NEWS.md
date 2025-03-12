@@ -1,3 +1,10 @@
+HADES 1.18.0
+============
+
+- Adding OhdsiReportGenerator and OhdsiShinyAppBuilder packages. The latter will eventually replace ShinyAppBuilder when no HADES package depends on it anymore.
+- Updating Characterization, which is now in CRAN. 
+
+
 HADES 1.17.0
 ============
 
