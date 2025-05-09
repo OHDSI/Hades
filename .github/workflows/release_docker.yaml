@@ -2,10 +2,10 @@
 # upload image to Dockerhub.
 #
 # Requires the following repository secrets:
-# - DOCKER_IMAGE - Configured as a secret so it can be configured per fork.
+# - HADES_DOCKER_IMAGE - Configured as a secret so it can be configured per fork.
 # - DOCKER_HUB_USERNAME
 # - DOCKER_HUB_ACCESS_TOKEN
-# - GITHUBPAT - The github account to use for downloading CRAN dependencies.
+# - GH_TOKEN - The github account to use for downloading CRAN dependencies.
 #                      Needed to avoid "API rate limit exceeded" from github.
 name: Release Docker
 
@@ -14,7 +14,7 @@ on:
     types: [published]
   workflow_dispatch:
     inputs:
-      docker_image:
+      hades_docker_image:
         description: 'Override the name of the image to be deployed.'
         default: 'ohdsi/hades'
         type: string
@@ -23,7 +23,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE: ${{ inputs.docker_image || secrets.DOCKER_IMAGE }}
+      HADES_DOCKER_IMAGE: ${{ inputs.hades_docker_image || secrets.HADES_DOCKER_IMAGE }}
     steps:
       - uses: actions/checkout@v2
 
@@ -36,7 +36,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: ${{ env.DOCKER_IMAGE }}
+          images: ${{ env.HADES_DOCKER_IMAGE }}
           tag-match: v(.*)
           tag-match-group: 1
       # Setup docker build environment
@@ -63,7 +63,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           secrets: |
-            build_github_pat=${{ secrets.GITHUBPAT }}
+            build_github_pat=${{ secrets.GH_TOKEN }}
           build-args: |
             GIT_BRANCH=${{ steps.docker_meta.outputs.version }}
             GIT_COMMIT_ID_ABBREV=${{ steps.build_params.outputs.sha8 }}
@@ -77,5 +77,5 @@ jobs:
             org.opencontainers.image.licenses=Apache-2.0
       - name: Inspect image
         run: |
-          docker pull ${{ env.DOCKER_IMAGE }}:${{ steps.docker_meta.outputs.version }}
-          docker image inspect ${{ env.DOCKER_IMAGE }}:${{ steps.docker_meta.outputs.version }}
+          docker pull ${{ env.HADES_DOCKER_IMAGE }}:${{ steps.docker_meta.outputs.version }}
+          docker image inspect ${{ env.HADES_DOCKER_IMAGE }}:${{ steps.docker_meta.outputs.version }}
