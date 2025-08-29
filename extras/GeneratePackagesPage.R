@@ -1,7 +1,4 @@
-# setwd("C:/Temp/Git/Hades")
 packages <- read.csv("extras/packages.csv", stringsAsFactors = FALSE)
-# sections <- read.csv("extras/sections.csv", stringsAsFactors = FALSE)
-
 headerFile <- "extras/packagesHeader.Rmd"
 lines <- gsub("\r", "", readChar(headerFile, file.info(headerFile)$size))
 lines <- c(lines, "")
@@ -11,13 +8,13 @@ for (i in 1:nrow(packages)) {
     section <- packages$section[i]
     lines <- c(lines, "</ul>")
     lines <- c(lines,sprintf("<h2 id=\"pkg_header\">%s</h2>", section))
+    if (grepl("Deprecated", section)) {
+      lines <- c(lines, "<p style=\"text-align: center\">These packages will be removed from Hydra at the next major release</p>")
+    }
     lines <- c(lines, "<ul id=\"pkg\">")
-    # lines <- c(lines, sections$description[sections$section == packages$section[i]])
-    # lines <- c(lines, "")
   }
   name <- packages$name[i]
   organization <- packages$organization[i]
-  # pd <- packageDescription(name)
   pd <- packages$description[i]
   if (packages$pages[i]) {
     url <- sprintf("https://%s.github.io/%s", organization, name)

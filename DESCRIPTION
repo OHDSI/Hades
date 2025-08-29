@@ -1,7 +1,7 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.18.0
+Version: 1.19.0
 Date: 2025-03-12
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
@@ -39,12 +39,10 @@ Imports:
   PheValuator,
   MethodEvaluation,
   OhdsiSharing,
-  Hydra,
   IterativeHardThresholding,
   OhdsiShinyModules,
   ResultModelManager,
   Characterization,
-  ShinyAppBuilder,
   OhdsiShinyAppBuilder,
   DataQualityDashboard,
   BrokenAdaptiveRidge,
@@ -54,6 +52,9 @@ Imports:
   Strategus,
   TreatmentPatterns,
   OhdsiReportGenerator
+Suggests:
+  Hydra,
+  ShinyAppBuilder
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,

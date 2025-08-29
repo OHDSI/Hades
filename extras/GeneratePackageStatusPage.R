@@ -1,4 +1,3 @@
-# setwd("C:/Temp/Git/Hades")
 packages <- read.csv("extras/packages.csv", stringsAsFactors = FALSE)
 packages <- packages[order(packages$name), ]
 
@@ -12,7 +11,9 @@ cranStatusTemplate <- "[![Build Status](https://badges.cranchecks.info/worst/%pk
 
 for (i in 1:nrow(packages)) {
   name <- packages$name[i]
-  if (packages$inCran[i]) {
+  if (packages$deprecated[i]) {
+    availability <- "Deprecated"
+  } else if (packages$inCran[i]) {
     availability <- "CRAN"
   } else {
     availability <- "GitHub"

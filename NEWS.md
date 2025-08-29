@@ -1,3 +1,13 @@
+HADES 1.19.0
+============
+
+- Deprecating `Hydra` because people should no longer use it. `Strategus` is the preferred method for running full studies.
+- Deprecating `ShinyAppBuilder` because it has been renamed to `OhdsiShinyAppBuilder`, but some HADES packages still need to be updated to use the new name.
+
+Deprecation means:
+- The packages are moved from the *Imports* to the *Suggests* section, and will therefore no longer automatically be installed when the `Hades` package is installed.
+- On the [HADES website](https://ohdsi.github.io/Hades), the packages are marked as 'Deprecated', and listed in the 'Deprecated packages' section.
+
 HADES 1.18.0
 ============
 
