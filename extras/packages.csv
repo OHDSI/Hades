@@ -1,9 +1,9 @@
 order,name,section,organization,description,inCran,pages,deprecated,maintainers,CRON
 1,CohortMethod,Population-level estimation,ohdsi,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE,FALSE,Martijn Schuemie,0 8 * * 6
-2,SelfControlledCaseSeries,Population-level estimation,ohdsi,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",FALSE,TRUE,FALSE,Martijn Schuemie,0 9 * * 6
+2,SelfControlledCaseSeries,Population-level estimation,ohdsi,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",TRUE,TRUE,FALSE,Martijn Schuemie,0 9 * * 6
 3,SelfControlledCohort,Population-level estimation,ohdsi,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE,FALSE,Jamie Gilbert,0 10 * * 6
 4,EvidenceSynthesis,Population-level estimation,ohdsi,Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.,TRUE,TRUE,FALSE,Martijn Schuemie ,0 11 * * 6
-5,PatientLevelPrediction,Patient-level prediction,ohdsi,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",FALSE,TRUE,FALSE,Egill Friogeirsson & Jenna Reps,0 12 * * 6
+5,PatientLevelPrediction,Patient-level prediction,ohdsi,"Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.",TRUE,TRUE,FALSE,Egill Friogeirsson & Jenna Reps,0 12 * * 6
 6,DeepPatientLevelPrediction,Patient-level prediction,ohdsi,Performing patient level prediction using deep learning,FALSE,TRUE,FALSE,Egill Fridgeirsson,0 13 * * 6
 7,EnsemblePatientLevelPrediction,Patient-level prediction,ohdsi,Building and validating ensemble patient-level predictive models.,FALSE,TRUE,FALSE,Jenna Reps,0 14 * * 6
 8,Characterization,Characterization,ohdsi,Various types of characterizations of a target and outcome cohort.,TRUE,TRUE,FALSE,Jenna Reps,0 14 * * 0

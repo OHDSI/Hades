@@ -1,6 +1,7 @@
 HADES 1.19.0
 ============
 
+- PatientLevelPrediction and SelfControlledCaseSeries are now in CRAN. Removing reference to Github repos. 
 - Deprecating `Hydra` because people should no longer use it. `Strategus` is the preferred method for running full studies.
 - Deprecating `ShinyAppBuilder` because it has been renamed to `OhdsiShinyAppBuilder`, but some HADES packages still need to be updated to use the new name.
 
