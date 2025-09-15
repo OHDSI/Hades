@@ -1,7 +1,4 @@
-# setwd("C:/Temp/Git/Hades")
 packages <- read.csv("extras/packages.csv", stringsAsFactors = FALSE)
-# sections <- read.csv("extras/sections.csv", stringsAsFactors = FALSE)
-
 headerFile <- "extras/packagesHeader.Rmd"
 lines <- gsub("\r", "", readChar(headerFile, file.info(headerFile)$size))
 lines <- c(lines, "")
@@ -11,17 +8,18 @@ for (i in 1:nrow(packages)) {
     section <- packages$section[i]
     lines <- c(lines, "</ul>")
     lines <- c(lines,sprintf("<h2 id=\"pkg_header\">%s</h2>", section))
+    if (grepl("Deprecated", section)) {
+      lines <- c(lines, "<p style=\"text-align: center\">These packages will be removed from Hydra at the next major release</p>")
+    }
     lines <- c(lines, "<ul id=\"pkg\">")
-    # lines <- c(lines, sections$description[sections$section == packages$section[i]])
-    # lines <- c(lines, "")
   }
   name <- packages$name[i]
-  # pd <- packageDescription(name)
+  organization <- packages$organization[i]
   pd <- packages$description[i]
   if (packages$pages[i]) {
-    url <- sprintf("https://ohdsi.github.io/%s", name)
+    url <- sprintf("https://%s.github.io/%s", organization, name)
   } else {
-    url <- sprintf("https://github.com/OHDSI/%s", name)
+    url <- sprintf("https://github.com/%s/%s", organization, name)
   }
   lines <- c(lines, sprintf("<li><h4><i class=\"fas  fa-cube \"></i> <a href=\"%s\">%s</a></h4>%s</br><a href=\"%s\">Learn more...</a></li>",
                             url, name, pd, url))

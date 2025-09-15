@@ -34,11 +34,6 @@ navbar:
           href: connecting.html
         - text: "Supported Database Platforms"
           href: supportedPlatforms.html
-    - text: "Study packages"
-      icon: fa-flask
-      menu:
-        - text: "Using Renv for Dependencies"
-          href: renv.html
     - text: "Developers"
       icon: fa-wrench
       menu: 
@@ -56,6 +51,8 @@ navbar:
           href: packageStatuses.html 
         - text: "Test server usage"
           href: testServerUsage.html 
+        - text: "Database platform support policy"
+          href: platformPolicy.html 
         - text: "Development Roadmap"
           href: "developmentRoadmap.html"
         - text: "HADES Package Requirements"

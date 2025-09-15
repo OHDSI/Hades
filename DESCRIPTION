@@ -1,8 +1,8 @@
 Package: Hades
 Type: Package
 Title: Health Analytics Data-to-Evidence Suite
-Version: 1.15.0
-Date: 2024-07-15
+Version: 1.19.0
+Date: 2025-03-12
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
   person("Observational Health Data Science and Informatics", role = c("cph"))
@@ -39,42 +39,42 @@ Imports:
   PheValuator,
   MethodEvaluation,
   OhdsiSharing,
-  Hydra,
   IterativeHardThresholding,
   OhdsiShinyModules,
   ResultModelManager,
   Characterization,
-  ShinyAppBuilder,
+  OhdsiShinyAppBuilder,
   DataQualityDashboard,
   BrokenAdaptiveRidge,
   Achilles,
   Keeper,
-  CohortIncidence
+  CohortIncidence,
+  Strategus,
+  TreatmentPatterns,
+  OhdsiReportGenerator
+Suggests:
+  Hydra,
+  ShinyAppBuilder
 Remotes:
   ohdsi/BigKnn,
   ohdsi/ROhdsiWebApi,
   ohdsi/EnsemblePatientLevelPrediction,
   ohdsi/CohortDiagnostics,
   ohdsi/CohortMethod,
-  ohdsi/SelfControlledCaseSeries,
   ohdsi/SelfControlledCohort,
-  ohdsi/PatientLevelPrediction,
   ohdsi/MethodEvaluation,
   ohdsi/OhdsiSharing,
   ohdsi/PhenotypeLibrary,
   ohdsi/PheValuator,
   ohdsi/Hydra,
   ohdsi/Capr,
-  ohdsi/CohortGenerator,
   ohdsi/DeepPatientLevelPrediction,
-  ohdsi/CohortExplorer,
   ohdsi/OhdsiShinyModules,
-  ohdsi/ResultModelManager,
-  ohdsi/Characterization,
   ohdsi/ShinyAppBuilder,
   ohdsi/DataQualityDashboard,
   ohdsi/Keeper,
-  ohdsi/CohortIncidence
+  ohdsi/CohortIncidence,
+  ohdsi/Strategus
 LazyData: false
-RoxygenNote: 7.2.0
+RoxygenNote: 7.3.2
 Encoding: UTF-8
