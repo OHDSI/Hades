@@ -1,10 +1,12 @@
 # Returns the list of reverse dependencies, and installs all dependencies of those packages
 prepareForPackageCheck <- function() {
   packageListUrl <- "https://raw.githubusercontent.com/OHDSI/Hades/main/extras/packages.csv"
-  gitHubOrganization <- "ohdsi"
   hadesPackageList <- read.table(packageListUrl, sep = ",", header = TRUE) 
   
-  dependencies <- lapply(hadesPackageList$name, getPackageDependenciesFromGitHub)
+  dependencies <- list()
+  for (i in seq_len(nrow(hadesPackageList))) {
+    dependencies[[i]] <- getPackageDependenciesFromGitHub(hadesPackageList$name[i], hadesPackageList$organization[i])
+  }
   dependencies <- do.call(rbind, dependencies)
   hadesDependencies <- dependencies[dependencies$dependency %in% hadesPackageList$name & 
                                       dependencies$type != "Suggests", ]
@@ -56,13 +58,13 @@ checkPackage <- function(package, inCran, additionalCheckArgs = c()) {
   rcmdcheck::rcmdcheck(path = sourcePath, 
                        args = c("--no-manual", additionalCheckArgs), 
                        build_args = c("--no-multiarch", additionalCheckArgs),
-                       error_on = "warning")
+                       error_on = "error") # Would like to error on warning, but then I always fail on 'package ... was build under R version'
 }
 
-getPackageDependenciesFromGitHub <- function(package) {
-  descriptionUrlTemplate <- "https://raw.githubusercontent.com/OHDSI/%s/main/DESCRIPTION"
+getPackageDependenciesFromGitHub <- function(package, organization) {
+  descriptionUrlTemplate <- "https://raw.githubusercontent.com/%s/%s/main/DESCRIPTION"
   
-  description <- scan(sprintf(descriptionUrlTemplate, package), what = character(), sep = "|", quiet = TRUE) 
+  description <- scan(sprintf(descriptionUrlTemplate, organization, package), what = character(), sep = "|", quote = "", quiet = TRUE) 
   dependencies <- lapply(X = c("Depends", "Imports", "LinkingTo", "Suggests"), 
                          FUN = extractDependenciesFromDescriptionSection, 
                          description = description)
