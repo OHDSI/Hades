@@ -15,7 +15,7 @@ remotes::install_github("ohdsi/Hades", upgrade = "never")
 remotes::install_github("ohdsi/OhdsiRTools")
 
 packagesUtils <- c("keyring")
-packagesForPlp <- c("lightgbm", "survminer", "parallel")
+packagesForPlp <- c("lightgbm", "survminer", "parallel", "xgboost")
 packagesForDatabaseConnector <- c("duckdb", "RSQLite", "aws.s3", "R.utils", "odbc")
 install.packages(c(packagesForPlp, packagesUtils, packagesForDatabaseConnector))
 
@@ -26,5 +26,7 @@ OhdsiRTools::createRenvLockFile(
   additionalRequiredPackages = c(packagesForPlp, packagesUtils, packagesForDatabaseConnector)
 )
 # Manually fix remoteRef and remoteUserName  of HADES entry!!!!
+
+# Delete the renv folder and .Rprofile file, so we can build the renv library from scratch based on the new lock file
 
 renv::init()

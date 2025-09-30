@@ -13,8 +13,8 @@ source("PackageCheckFunctions.R")
 saveRDS(prepareForPackageCheck(), "Dependencies.rds")
 dependencies <- readRDS("Dependencies.rds")
 dependencies <- dependencies[!dependencies$deprecated, ]
-dependencies <- dependencies |>
-  dplyr::filter(!name %in% c("CohortGenerator"))
+# dependencies <- dependencies |>
+  # dplyr::filter(!name %in% c("CohortGenerator"))
 for (i in 1:nrow(dependencies)) {
   # if (dependencies$name[i] == "DeepPatientLevelPrediction") {
   #   # This package is failing unit tests, it seems because Python modules are 
@@ -22,10 +22,12 @@ for (i in 1:nrow(dependencies)) {
   #   # this out
   #   additionalCheckArgs <- c("--no-tests")
   # } else {
-  #   additionalCheckArgs <- c()
+    additionalCheckArgs <- c()
   # }
   checkPackage(package = dependencies$name[i], 
                inCran = dependencies$inCran[i],
                additionalCheckArgs = additionalCheckArgs)
 }
+
+# DeepPatientLevelPrediction: ModuleNotFoundError: No module named 'polars' 
 unlink("Dependencies.rds")
