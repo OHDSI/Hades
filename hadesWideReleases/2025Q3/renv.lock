@@ -1833,6 +1833,26 @@
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v1.4.1"
 		},
+		"Hydra" : {
+			"Package" : "Hydra",
+			"Version" : "0.4.0",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "Hydra",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v0.4.0"
+		},
+		"ShinyAppBuilder" : {
+			"Package" : "ShinyAppBuilder",
+			"Version" : "3.2.0",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "ShinyAppBuilder",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v3.2.0"
+		},
 		"Hades" : {
 			"Package" : "Hades",
 			"Version" : "1.19.0",
@@ -1841,7 +1861,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "Hades",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.18.0"
+			"RemoteRef" : "v1.19.0"
 		}
 	}
 }
