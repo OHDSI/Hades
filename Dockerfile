@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk liblzma-dev libbz2-dev l
 && rm -rf /var/lib/apt/lists/*
 
 # install utility R packages
-RUN install2.r \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
 	openssl \
 	httr \
 	xml2 \
@@ -23,7 +23,7 @@ RUN --mount=type=secret,id=build_github_pat \
         && cp /tmp/Renviron /usr/local/lib/R/etc/Renviron
 
 # install useful R libraries to help RStudio users to create/use their own GitHub Personal Access Token
-RUN install2.r \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
         usethis \
         gitcreds \
 && rm -rf /tmp/download_packages/ /tmp/*.rds
@@ -38,7 +38,7 @@ EOF
 
 # install shiny and other R packages used by the OHDSI PatientLevelPrediction R package viewPLP() function
 # and additional model related R packages
-RUN install2.r \
+RUN install2.r --error --skipinstalled --repos "https://packagemanager.posit.co/cran/latest" \
         DT \
         markdown \
         plotly \
