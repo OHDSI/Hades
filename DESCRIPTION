@@ -74,7 +74,8 @@ Remotes:
   ohdsi/DataQualityDashboard,
   ohdsi/Keeper,
   ohdsi/CohortIncidence,
-  ohdsi/Strategus
+  ohdsi/Strategus,
+  ohdsi/CohortExplorer
 LazyData: false
 RoxygenNote: 7.3.2
 Encoding: UTF-8
