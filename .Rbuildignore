@@ -12,3 +12,7 @@ compare_versions
 _pkgdown.yml
 .github/
 hadesWideReleases
+.lintr
+Dockerfile
+Rserv.conf
+startRserve.R

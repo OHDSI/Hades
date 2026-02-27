@@ -1,4 +1,8 @@
 linters: linters_with_defaults(
   object_name_linter(styles = "camelCase"),
-  line_length_linter(100L)
+  line_length_linter(120L),
+  return_linter = NULL, # Should explicit return, but only when returning a value
+  commented_code_linter = NULL,
+  object_length_linter(length = 50L),
+  indentation_linter = NULL # Does not conform to most code formatters
   )

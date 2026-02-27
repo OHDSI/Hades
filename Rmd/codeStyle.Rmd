@@ -12,6 +12,8 @@ output:
 
 The [`styler`](https://www.tidyverse.org/blog/2017/12/styler-1.0.0/) package is highly recommended for automatically applying some (but not all) of the style recommendations here. `styler` is available as a stand-alone R package, but also comes with a handy RStudio add-in.
 
+A [`.lintr`](https://github.com/OHDSI/Hades/blob/main/.lintr) file is available.
+
 ## Case
 We use camelCase in R. Function and variable names all start with lowercase. Package names start with uppercase. 
 
