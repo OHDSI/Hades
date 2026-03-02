@@ -22,7 +22,7 @@ order,name,section,organization,description,inCran,pages,deprecated,maintainers,
 21,EmpiricalCalibration,Evidence Quality,ohdsi,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,FALSE,Martijn Schuemie,0 22 * * 6
 22,MethodEvaluation,Evidence Quality,ohdsi,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,FALSE,Martijn Schuemie ,0 23 * * 6
 23,Andromeda,Supporting packages,ohdsi,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,FALSE,Martijn Schuemie,0 0 * * 0
-24,BigKnn,Supporting packages,ohdsi,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,FALSE,Martijn Schuemie ,0 1 * * 0
+24,BigKnn,Supporting packages,ohdsi,A large scale k-nearest neighbor classifier using the Lucene search engine.,FALSE,TRUE,TRUE,Martijn Schuemie ,0 1 * * 0
 25,BrokenAdaptiveRidge,Supporting packages,ohdsi,Broken Adaptive Ridge Regression with Cyclops.,TRUE,TRUE,FALSE,Marc Suchard,0 18 * * 0
 26,Cyclops,Supporting packages,ohdsi,"Highly efficient implementation of regularized logistic, Poisson and Cox regression.",TRUE,TRUE,FALSE,Marc Suchard,0 2 * * 0
 27,DatabaseConnector,Supporting packages,ohdsi,"Connect directly to a wide range of database platforms, including SQL Server, Oracle, and PostgreSQL.",TRUE,TRUE,FALSE,Martijn Schuemie ,0 3 * * 0
@@ -38,5 +38,3 @@ order,name,section,organization,description,inCran,pages,deprecated,maintainers,
 37,Strategus,Supporting packages,ohdsi,Coordinating and executing analytics using HADES packages,FALSE,TRUE,FALSE,Anthony Sena ,0 21 * * 0
 38,SqlRender,Supporting packages,ohdsi,Generate SQL on the fly for the various SQL dialects.,TRUE,TRUE,FALSE,Martijn Schuemie ,0 12 * * 0
 39,OhdsiReportGenerator,Supporting packages,ohdsi,"Extract data from the OHDSI results structure and generate plots, presentations and reports",TRUE,TRUE,FALSE,Jenna Reps,
-40,Hydra,Deprecated packages,ohdsi,Hydrating package skeletons into executable R study packages based on specifications in JSON format.,FALSE,TRUE,TRUE,Anthony Sena ,0 6 * * 0
-41,ShinyAppBuilder,Deprecated packages,ohdsi,Interactively view analysis results across different types of analyses.,FALSE,TRUE,TRUE,Jenna Reps,

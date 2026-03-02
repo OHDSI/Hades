@@ -1,3 +1,10 @@
+HADES 1.20.0
+============
+
+- Deprecating `BigKnn` because rarely used.
+- Removing deprecated packages `Hydra` and `ShinyAppBuilder`.
+- `CohortExplorer` is no longer in CRAN.
+
 HADES 1.19.0
 ============
 

@@ -56,8 +56,6 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 
 - [FeatureExtraction issue tracker](https://github.com/ohdsi/FeatureExtraction/issues)
 
-- [Hydra issue tracker](https://github.com/ohdsi/Hydra/issues)
-
 - [IterativeHardThresholding issue tracker](https://github.com/ohdsi/IterativeHardThresholding/issues)
 
 - [Keeper issue tracker](https://github.com/ohdsi/Keeper/issues)
@@ -87,8 +85,6 @@ Bug reports should be files using the issue tracker of the misbehaving package:
 - [SelfControlledCaseSeries issue tracker](https://github.com/ohdsi/SelfControlledCaseSeries/issues)
 
 - [SelfControlledCohort issue tracker](https://github.com/ohdsi/SelfControlledCohort/issues)
-
-- [ShinyAppBuilder issue tracker](https://github.com/ohdsi/ShinyAppBuilder/issues)
 
 - [SqlRender issue tracker](https://github.com/ohdsi/SqlRender/issues)
 
