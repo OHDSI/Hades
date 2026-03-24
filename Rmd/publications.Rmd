@@ -9,6 +9,18 @@ These papers were written using HADES.
 
 # Clinical application
 
+- Yuan Z, Jeffcoat CH, Ali SR, et al. [Risk of prostatitis in patients with type 2 diabetes mellitus: An observational retrospective cohort study of canagliflozin versus other antihyperglycemic agents using propensity score matching](https://doi.org/10.1371/journal.pone.0341745) PLoS One. 2026 Feb 2;21(2):e0341745.
+
+- Cai CX, Nishimura A, Baxter S, et al. [Semaglutide and diabetic retinopathy: an OHDSI network study](https://doi.org/10.1136/bmjdrc-2025-005424) MJ Open Diabetes Res Care. 2025 Nov 4;13(6):e005424. 
+
+- Morales DR, Bu F, Viernes B, et al. [Risk of Thyroid Tumors With GLP-1 Receptor Agonists: A Retrospective Cohort Study](https://doi.org/10.2337/dc25-0154) Diabetes Care. 2025 Aug 1;48(8):1386-1394. 
+
+- Cai CX, Hribar M, Baxter S, et al. [Semaglutide and Nonarteritic Anterior Ischemic Optic Neuropathy](https://doi.org/10.1001/jamaophthalmol.2024.6555) JAMA Ophthalmol. 2025 Apr 1;143(4):304-314. 
+
+- Janetzki JL, Kim JH, Minty E, et al. [Risk of aortic aneurysm or dissection following use of fluoroquinolones: a retrospective multinational network cohort study](https://doi.org/10.1016/j.eclinm.2025.103096) EClinicalMedicine. 2025 Feb 1;81:103096. 
+
+- Khera R, Aminorroaya A, Dhingra LS, et al. [Comparative Effectiveness of Second-Line Antihyperglycemic Agents for Cardiovascular Outcomes: A Multinational, Federated Analysis of LEGEND-T2DM](https://doi.org/10.1016/j.jacc.2024.05.069) J Am Coll Cardiol. 2024 Sep 3;84(10):904-917. 
+
 - Anand TV, Bu F, Schuemie MJ, et al.[Comparative safety and effectiveness of angiotensin converting enzyme inhibitors and thiazides and thiazide-like diuretics under strict monotherapy](https://onlinelibrary.wiley.com/doi/10.1111/jch.14793) J Clin Hypertens (Greenwich). 2024 Apr;26(4):425-430. 
 
 - Cai CX, Nishimura A, Bowring MG, et al. [https://www.sciencedirect.com/science/article/pii/S2468653024001180](Similar Risk of Kidney Failure among Patients with Blinding Diseases Who Receive Ranibizumab, Aflibercept, and Bevacizumab: An Observational Health Data Sciences and Informatics Network Study) Ophthalmol Retina. 2024 Mar 20:S2468-6530(24)00118-0. 
@@ -102,9 +114,36 @@ These papers were written using HADES.
 
 # Methods research
 
+- Zhang B, Wu Q, Reps JM, et al. [A lossless one-shot distributed algorithm for addressing heterogeneity in multi-site generalized linear models](https://doi.org/10.1093/jamia/ocaf198) Am Med Inform Assoc. 2026 Mar 1;33(3):700-709. 
+
+- Li KM, Reps JM, Nishimura A, et al. [Transfer-learning on federated observational healthcare data for prediction models using Bayesian sparse logistic regression with informed priors](https://doi.org/10.1093/jamia/ocaf146) J Am Med Inform Assoc. 2026 Feb 1;33(2):409-423. 
+
+- Blacketer C, DeFalco FJ, Conover MM, et al. [Evaluation of the impact of defining observable time in real-world data on outcome incidence](https://doi.org/10.1093/jamia/ocaf119) J Am Med Inform Assoc. 2025 Sep 1;32(9):1434-1444. 
+
+- Blacketer C, Schuemie MJ, Moinat M, et al. [Advancing Real-World Evidence Through a Federated Health Data Network (EHDEN): Descriptive Study](https://doi.org/10.2196/74119) J Med Internet Res. 2025 Aug 7;27:e74119.
+
+- Hripcsak G, Zhang L, Chen Y, et al. [Assessing Covariate Balance With Small Sample Sizes](https://doi.org/10.1002/sim.70212) Stat Med. 2025 Aug;44(18-19):e70212. 
+
+- Wu Q, Reps JM, Li L, et al. [COLA-GLM: collaborative one-shot and lossless algorithms of generalized linear models for decentralized observational healthcare data](https://doi.org/10.1038/s41746-025-01781-1) NPJ Digit Med. 2025 Jul 15;8(1):442.
+
+- Newbern EC, Shoaibi A, Haynes K, et al. [A rapid cycle analytics framework for vaccine safety surveillance within a real-world data network: Experience with enhanced surveillance of the Janssen COVID-19 vaccine](https://doi.org/10.1016/j.vaccine.2025.127044) Vaccine. 2025 May 10;55:127044. 
+
+- Reps JM, Rijnbeek PR, Ryan PB [Can we develop real-world prognostic models using observational healthcare data? Large-scale experiment to investigate model sensitivity to database and phenotypes](https://doi.org/10.1186/s41512-025-00191-x) Diagn Progn Res. 2025 Apr 17;9(1):10. 
+
+- El-Hay T, Reps JM, Yanover C. [Extensive benchmarking of a method that estimates external model performance from limited statistical characteristics](https://doi.org/10.1038/s41746-024-01414-z) NPJ Digit Med. 2025 Jan 27;8(1):59. 
+
+- Rao GA, Shoaibi A, Makadia R, et al. [CohortDiagnostics: Phenotype evaluation across a network of observational data sources using population-level characterization](https://doi.org/10.1371/journal.pone.0310634) PLoS One. 2025 Jan 16;20(1):e0310634. 
+
+- Conover MM, Ryan PB, Chen Y, et al. [Objective study validity diagnostics: a framework requiring pre-specified, empirical verification to increase trust in the reliability of real-world evidence](https://doi.org/10.1093/jamia/ocae317) J Am Med Inform Assoc. 2025 Mar 1;32(3):518-525. 
+
+- Schuemie MJ, Ostropolets A, Zhuk A, et al. [Standardized patient profile review using large language models for case adjudication in observational research](https://doi.org/10.1038/s41746-025-01433-4) NPJ Digit Med. 2025 Jan 9;8(1):18. 
+
+- John LH, Fridgeirsson EA, Kors JA, et al. [Development and validation of a patient-level model to predict dementia across a network of observational databases](https://doi.org/10.1186/s12916-024-03530-9) BMC Med. 2024 Jul 29;22(1):308.
+
+- Fridgeirsson EA, Williams R, Rijnbeek P, et al. [Comparing penalization methods for linear models on large observational health data](https://doi.org/10.1093/jamia/ocae109) J Am Med Inform Assoc. 2024 Jun 20;31(7):1514-1521. 
+
+- Yang J, Schuemie MJ, Ji X, et al. [Massive Parallelization of Massive Sample-size Survival Analysis](https://doi.org/10.1080/10618600.2023.2213279) J Comput Graph Stat. 2024;33(1):289-302. 
 - Fridgeirsson EA, Williams R, Rijnbeek P, et al. [https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocae109/7676584?login=false](Comparing penalization methods for linear models on large observational health data) Am Med Inform Assoc. 2024 May 20:ocae109.
-
-
 
 - Schuemie M, Reps J, Black A, et al. [Health-Analytics Data to Evidence Suite (HADES): Open-Source Software for Observational Research](https://pubmed.ncbi.nlm.nih.gov/38269952/) Stud Health Technol Inform. 2024 Jan 25:310:966-970. 
 

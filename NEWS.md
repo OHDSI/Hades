@@ -1,3 +1,8 @@
+HADES 1.21.0
+============
+
+- CohortMethod and DataQualityDashboard are now in CRAN.
+
 HADES 1.20.0
 ============
 

@@ -1,5 +1,5 @@
 order,name,section,organization,description,inCran,pages,deprecated,maintainers,CRON
-1,CohortMethod,Population-level estimation,ohdsi,New-user cohort studies using large-scale regression for propensity and outcome models.,FALSE,TRUE,FALSE,Martijn Schuemie,0 8 * * 6
+1,CohortMethod,Population-level estimation,ohdsi,New-user cohort studies using large-scale regression for propensity and outcome models.,TRUE,TRUE,FALSE,Martijn Schuemie,0 8 * * 6
 2,SelfControlledCaseSeries,Population-level estimation,ohdsi,"Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.",TRUE,TRUE,FALSE,Martijn Schuemie,0 9 * * 6
 3,SelfControlledCohort,Population-level estimation,ohdsi,"A self-controlled cohort design, where time preceding exposure is used as control.",FALSE,TRUE,FALSE,Jamie Gilbert,0 10 * * 6
 4,EvidenceSynthesis,Population-level estimation,ohdsi,Routines for combining causal effect estimates and study diagnostics across multiple data sites in a distributed study.,TRUE,TRUE,FALSE,Martijn Schuemie ,0 11 * * 6
@@ -8,7 +8,7 @@ order,name,section,organization,description,inCran,pages,deprecated,maintainers,
 7,EnsemblePatientLevelPrediction,Patient-level prediction,ohdsi,Building and validating ensemble patient-level predictive models.,FALSE,TRUE,FALSE,Jenna Reps,0 14 * * 6
 8,Characterization,Characterization,ohdsi,Various types of characterizations of a target and outcome cohort.,TRUE,TRUE,FALSE,Jenna Reps,0 14 * * 0
 9,CohortIncidence,Characterization,ohdsi,Compute incidence rates and proportions,FALSE,TRUE,FALSE,Chris Knoll,0 20 * * 0
-10,TreatmentPatterns,Characterization,darwin-eu,Analyze treatment patterns of a study population of interest ,TRUE,TRUE,FALSE,Maarten van Kessel,
+10,TreatmentPatterns,Characterization,darwin-eu,Analyze treatment patterns of a study population of interest?,TRUE,TRUE,FALSE,Maarten van Kessel,
 11,Capr,Cohort construction and evaluation,ohdsi,Develop and manipulate complex cohort definitions in R,FALSE,TRUE,FALSE,Martin Lavallee,0 15 * * 6
 12,CirceR,Cohort construction and evaluation,ohdsi,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",TRUE,TRUE,FALSE,Chris Knoll,0 16 * * 6
 13,CohortGenerator,Cohort construction and evaluation,ohdsi,Instantiating cohorts in a database based on a set of cohort definitions.,TRUE,TRUE,FALSE,Anthony Sena,0 17 * * 6
@@ -18,7 +18,7 @@ order,name,section,organization,description,inCran,pages,deprecated,maintainers,
 17,CohortExplorer,Cohort construction and evaluation,ohdsi,Visually explore all individual-level data of patients in a cohort,FALSE,TRUE,FALSE,Gowtham Rao,0 21 * * 6
 18,Keeper,Cohort construction and evaluation,ohdsi,Knowledge-Enhanced Electronic Profile Review,FALSE,TRUE,FALSE,Anna Ostropolets,0 3 * * 0
 19,Achilles,Evidence Quality,ohdsi,Generate descriptive statistics on an entire OMOP CDM database,TRUE,TRUE,FALSE,Frank DeFalco,0 19 * * 0
-20,DataQualityDashboard,Evidence Quality,ohdsi,Expose and evaluate observational data quality.,FALSE,TRUE,FALSE,Katy Sadowksi,0 17 * * 0
+20,DataQualityDashboard,Evidence Quality,ohdsi,Expose and evaluate observational data quality.,TRUE,TRUE,FALSE,Katy Sadowksi,0 17 * * 0
 21,EmpiricalCalibration,Evidence Quality,ohdsi,Use negative control exposure-outcome pairs to profile and calibrate a particular analysis design.,TRUE,TRUE,FALSE,Martijn Schuemie,0 22 * * 6
 22,MethodEvaluation,Evidence Quality,ohdsi,Use real data and established reference sets as well as simulations injected in real data to evaluate the performance of methods.,FALSE,TRUE,FALSE,Martijn Schuemie ,0 23 * * 6
 23,Andromeda,Supporting packages,ohdsi,"Storing very large data objects on a local drive, while still making it possible to manipulate the data in an efficient manner.",TRUE,TRUE,FALSE,Martijn Schuemie,0 0 * * 0
