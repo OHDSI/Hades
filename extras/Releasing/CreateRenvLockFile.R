@@ -15,15 +15,17 @@ remotes::install_github("ohdsi/Hades", upgrade = "never")
 remotes::install_github("ohdsi/OhdsiRTools")
 
 packagesUtils <- c("keyring")
-packagesForPlp <- c("lightgbm", "survminer", "parallel", "xgboost")
+packagesForPlp <- c("lightgbm", "survminer", "parallel", "xgboost", "reticulate", "mgcv", "polspline")
 packagesForDatabaseConnector <- c("duckdb", "RSQLite", "aws.s3", "R.utils", "odbc")
-install.packages(c(packagesForPlp, packagesUtils, packagesForDatabaseConnector))
+packagesForKeeper <- c("ellmer", "shinyjs", "bslib",  "plotly", "pool")
+additionalPackages <- c(packagesForPlp, packagesUtils, packagesForDatabaseConnector, packagesForKeeper)
+install.packages(additionalPackages)
 
 OhdsiRTools::createRenvLockFile(
   rootPackage = "Hades",
   mode = "description",
   includeRootPackage = TRUE,
-  additionalRequiredPackages = c(packagesForPlp, packagesUtils, packagesForDatabaseConnector)
+  additionalRequiredPackages = additionalPackages
 )
 # Manually fix remoteRef and remoteUserName  of HADES entry!!!!
 
