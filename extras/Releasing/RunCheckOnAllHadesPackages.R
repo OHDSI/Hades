@@ -15,15 +15,16 @@ dependencies <- readRDS("Dependencies.rds")
 dependencies <- dependencies[!dependencies$deprecated, ]
 # dependencies <- dependencies |>
   # dplyr::filter(!name %in% c("CohortGenerator"))
+which(dependencies$name == "DatabaseConnector")
 for (i in 1:nrow(dependencies)) {
-  # if (dependencies$name[i] == "DeepPatientLevelPrediction") {
-  #   # This package is failing unit tests, it seems because Python modules are 
-  #   # missing. Skipping for now. Hoping DeepPlp users are savy enough to figure
-  #   # this out
-  #   additionalCheckArgs <- c("--no-tests")
-  # } else {
+  if (dependencies$name[i] == "DeepPatientLevelPrediction") {
+    # This package is failing unit tests, it seems because Python modules are
+    # missing. Skipping for now. Hoping DeepPlp users are savy enough to figure
+    # this out
+    additionalCheckArgs <- c("--no-tests")
+  } else {
     additionalCheckArgs <- c()
-  # }
+  }
   checkPackage(package = dependencies$name[i], 
                inCran = dependencies$inCran[i],
                additionalCheckArgs = additionalCheckArgs)
