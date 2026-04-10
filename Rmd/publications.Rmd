@@ -138,12 +138,13 @@ These papers were written using HADES.
 
 - Schuemie MJ, Ostropolets A, Zhuk A, et al. [Standardized patient profile review using large language models for case adjudication in observational research](https://doi.org/10.1038/s41746-025-01433-4) NPJ Digit Med. 2025 Jan 9;8(1):18. 
 
+- Reps JM, Wong J, Fridgeirsson EA, et al. [Finding a constrained number of predictor phenotypes for multiple outcome prediction](https://doi.org/10.1136/bmjhci-2024-101227) BMJ Health Care Inform. 2025 Jan 16;32(1):e101227. 
+
 - John LH, Fridgeirsson EA, Kors JA, et al. [Development and validation of a patient-level model to predict dementia across a network of observational databases](https://doi.org/10.1186/s12916-024-03530-9) BMC Med. 2024 Jul 29;22(1):308.
 
 - Fridgeirsson EA, Williams R, Rijnbeek P, et al. [Comparing penalization methods for linear models on large observational health data](https://doi.org/10.1093/jamia/ocae109) J Am Med Inform Assoc. 2024 Jun 20;31(7):1514-1521. 
 
 - Yang J, Schuemie MJ, Ji X, et al. [Massive Parallelization of Massive Sample-size Survival Analysis](https://doi.org/10.1080/10618600.2023.2213279) J Comput Graph Stat. 2024;33(1):289-302. 
-- Fridgeirsson EA, Williams R, Rijnbeek P, et al. [https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocae109/7676584?login=false](Comparing penalization methods for linear models on large observational health data) Am Med Inform Assoc. 2024 May 20:ocae109.
 
 - Schuemie M, Reps J, Black A, et al. [Health-Analytics Data to Evidence Suite (HADES): Open-Source Software for Observational Research](https://pubmed.ncbi.nlm.nih.gov/38269952/) Stud Health Technol Inform. 2024 Jan 25:310:966-970. 
 
