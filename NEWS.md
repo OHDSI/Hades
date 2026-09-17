@@ -1,3 +1,8 @@
+HADES 1.22.0
+============
+
+- CohortIncidence now in CRAN.
+
 HADES 1.21.0
 ============
 

@@ -7,7 +7,7 @@ order,name,section,organization,description,inCran,pages,deprecated,maintainers,
 6,DeepPatientLevelPrediction,Patient-level prediction,ohdsi,Performing patient level prediction using deep learning,FALSE,TRUE,FALSE,Egill Fridgeirsson,0 13 * * 6
 7,EnsemblePatientLevelPrediction,Patient-level prediction,ohdsi,Building and validating ensemble patient-level predictive models.,FALSE,TRUE,FALSE,Jenna Reps,0 14 * * 6
 8,Characterization,Characterization,ohdsi,Various types of characterizations of a target and outcome cohort.,TRUE,TRUE,FALSE,Jenna Reps,0 14 * * 0
-9,CohortIncidence,Characterization,ohdsi,Compute incidence rates and proportions,FALSE,TRUE,FALSE,Chris Knoll,0 20 * * 0
+9,CohortIncidence,Characterization,ohdsi,Compute incidence rates and proportions,TRUE,TRUE,FALSE,Chris Knoll,0 20 * * 0
 10,TreatmentPatterns,Characterization,darwin-eu,Analyze treatment patterns of a study population of interest?,TRUE,TRUE,FALSE,Maarten van Kessel,
 11,Capr,Cohort construction and evaluation,ohdsi,Develop and manipulate complex cohort definitions in R,FALSE,TRUE,FALSE,Martin Lavallee,0 15 * * 6
 12,CirceR,Cohort construction and evaluation,ohdsi,"An R wrapper for Circe, a library for creating cohort definitions, expressing them as JSON, SQL, or Markdown.",TRUE,TRUE,FALSE,Chris Knoll,0 16 * * 6
