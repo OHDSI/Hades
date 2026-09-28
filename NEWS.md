@@ -1,3 +1,8 @@
+HADES 1.23.0
+============
+
+- Removing deprecated package `BigKnn`.
+
 HADES 1.22.0
 ============
 
