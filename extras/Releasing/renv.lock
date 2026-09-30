@@ -2281,7 +2281,8 @@
       "Description": "Provides color schemes for maps (and other graphics) designed by Cynthia Brewer as described at http://colorbrewer2.org.",
       "License": "Apache License 2.0",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Encoding": "UTF-8"
     },
     "RJSONIO": {
       "Package": "RJSONIO",
@@ -2971,8 +2972,8 @@
     },
     "TreatmentPatterns": {
       "Package": "TreatmentPatterns",
-      "Version": "3.1.2",
-      "Source": "Repository",
+      "Version": "3.1.1",
+      "Source": "GitHub",
       "Type": "Package",
       "Title": "Analyzes Real-World Treatment Patterns of a Study Population of Interest",
       "Authors@R": "c(person(\"Aniek\", \"Markus\", , role = c(\"aut\"), comment = c(ORCID = \"0000-0001-5779-4794\")), person(\"Maarten\", \"van Kessel\", email = \"m.l.vankessel@erasmusmc.nl\", role = c(\"cre\"), comment = c(ORCID = \"0009-0006-8832-6030\")))",
@@ -2985,17 +2986,20 @@
         "R (>= 4.2)"
       ],
       "Imports": [
-        "utils",
-        "stats",
-        "R6",
-        "stringi",
-        "jsonlite",
         "checkmate",
         "dplyr",
-        "tidyr",
-        "dbplyr",
+        "stringr",
+        "utils",
+        "stats",
         "Andromeda",
-        "CDMConnector (>= 2.2.0)"
+        "tidyr",
+        "R6",
+        "sunburstR",
+        "networkD3",
+        "htmlwidgets",
+        "ggplot2",
+        "dbplyr",
+        "jsonlite"
       ],
       "Suggests": [
         "knitr",
@@ -3004,7 +3008,8 @@
         "testthat (>= 3.0.0)",
         "usethis",
         "Eunomia",
-        "DatabaseConnector (>= 7.0.0)",
+        "CDMConnector",
+        "DatabaseConnector (>= 6.0.0)",
         "SqlRender",
         "CohortGenerator",
         "ResultModelManager",
@@ -3014,23 +3019,24 @@
         "DBI",
         "withr",
         "plotly",
-        "sunburstR",
-        "networkD3",
-        "ggplot2",
-        "htmlwidgets",
-        "visOmopResults",
         "PaRe"
       ],
       "License": "Apache License (>= 2)",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.3",
+      "RoxygenNote": "7.3.2",
       "VignetteBuilder": "knitr",
       "Config/testthat/edition": "3",
       "Config/testthat/parallel": "true",
-      "Collate": "'CDMInterface.R' 'TreatmentPatterns-package.R' 'TreatmentPatternsResults.R' 'attrition.R' 'computePathways.R' 'constructPathways.R' 'createSankeyDiagram.R' 'createSunburstPlot.R' 'executeTreatmentPatterns.R' 'export.R' 'exportPatientLevel.R' 'getResultsDataModelSpecification.R' 'ggSunburst.R' 'plotEventDuration.R' 'utils.R'",
+      "Roxygen": "list(markdown = TRUE)",
+      "Collate": "'CDMInterface.R' 'TreatmentPatterns-package.R' 'TreatmentPatternsResults.R' 'attrition.R' 'computePathways.R' 'constructPathways.R' 'createSankeyDiagram.R' 'createSunburstPlot.R' 'executeTreatmentPatterns.R' 'export.R' 'exportPatientLevel.R' 'getResultsDataModelSpecification.R' 'ggSunburst.R' 'plotEventDuration.R'",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "TreatmentPatterns",
+      "RemoteUsername": "darwin-eu",
+      "RemoteRef": "v3.1.1",
+      "RemoteSha": "7ac1b192d0a217eb6887a61b2ba7f2975eb19724",
       "NeedsCompilation": "no",
-      "Author": "Aniek Markus [aut] (ORCID: <https://orcid.org/0000-0001-5779-4794>), Maarten van Kessel [cre] (ORCID: <https://orcid.org/0009-0006-8832-6030>)",
-      "Repository": "CRAN"
+      "Author": "Aniek Markus [aut] (ORCID: <https://orcid.org/0000-0001-5779-4794>), Maarten van Kessel [cre] (ORCID: <https://orcid.org/0009-0006-8832-6030>)"
     },
     "V8": {
       "Package": "V8",
@@ -3307,7 +3313,8 @@
       "URL": "https://www.rforge.net/base64enc",
       "BugReports": "https://github.com/s-u/base64enc/issues",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Encoding": "UTF-8"
     },
     "bigD": {
       "Package": "bigD",
@@ -4378,6 +4385,44 @@
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
     },
+    "d3r": {
+      "Package": "d3r",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "'d3.js' Utilities for R",
+      "Date": "2023-10-01",
+      "Authors@R": "c( person( \"Mike\", \"Bostock\" , role = c(\"aut\", \"cph\") , comment = \"d3.js library in htmlwidgets/lib, http://d3js.org\" ), person( \"Kent\", \"Russell\" , role = c(\"aut\", \"cre\", \"cph\") , comment = \"R interface\" , email = \"kent.russell@timelyportfolio.com\" ), person( \"Gregor\", \"Aisch\" , role = c(\"aut\", \"cph\") , comment = \"d3-jetpack creator, https://github.com/gka/d3-jetpack\" ), person( \"Adam\", \"Pearce\" , role = c(\"aut\") , comment = \"core contributor to d3-jetpack\" ), person( \"Ben\", \"Ortiz\" , role = c(\"ctb\") ) )",
+      "Maintainer": "Kent Russell <kent.russell@timelyportfolio.com>",
+      "URL": "https://github.com/timelyportfolio/d3r",
+      "BugReports": "https://github.com/timelyportfolio/d3r/issues",
+      "Description": "Provides a suite of functions to help ease the use of 'd3.js' in R. These helpers include 'htmltools::htmlDependency' functions, hierarchy builders, and conversion tools for 'partykit', 'igraph,' 'table', and 'data.frame' R objects into the 'JSON' that 'd3.js' expects.",
+      "License": "BSD_3_clause + file LICENSE",
+      "Encoding": "UTF-8",
+      "Imports": [
+        "dplyr",
+        "htmltools",
+        "tidyr (>= 0.8.3)"
+      ],
+      "Suggests": [
+        "httr",
+        "jsonlite",
+        "listviewer",
+        "purrr",
+        "testthat"
+      ],
+      "Enhances": [
+        "igraph",
+        "partykit",
+        "rpart",
+        "treemap",
+        "V8"
+      ],
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Mike Bostock [aut, cph] (d3.js library in htmlwidgets/lib, http://d3js.org), Kent Russell [aut, cre, cph] (R interface), Gregor Aisch [aut, cph] (d3-jetpack creator, https://github.com/gka/d3-jetpack), Adam Pearce [aut] (core contributor to d3-jetpack), Ben Ortiz [ctb]",
+      "Repository": "CRAN"
+    },
     "data.table": {
       "Package": "data.table",
       "Version": "1.18.6.1",
@@ -4410,6 +4455,58 @@
       "NeedsCompilation": "yes",
       "Author": "Tyson Barrett [aut, cre] (ORCID: <https://orcid.org/0000-0002-2137-1391>), Matt Dowle [aut], Arun Srinivasan [aut], Jan Gorecki [aut], Michael Chirico [aut] (ORCID: <https://orcid.org/0000-0003-0787-087X>), Toby Hocking [aut] (ORCID: <https://orcid.org/0000-0002-3146-0865>), Benjamin Schwendinger [aut] (ORCID: <https://orcid.org/0000-0003-3315-8114>), Ivan Krylov [aut] (ORCID: <https://orcid.org/0000-0002-0172-3812>), Pasha Stetsenko [ctb], Tom Short [ctb], Steve Lianoglou [ctb], Eduard Antonyan [ctb], Markus Bonsch [ctb], Hugh Parsonage [ctb], Scott Ritchie [ctb], Kun Ren [ctb], Xianying Tan [ctb], Rick Saporta [ctb], Otto Seiskari [ctb], Xianghui Dong [ctb], Michel Lang [ctb], Watal Iwasaki [ctb], Seth Wenchel [ctb], Karl Broman [ctb], Tobias Schmidt [ctb], David Arenburg [ctb], Ethan Smith [ctb], Francois Cocquemas [ctb], Matthieu Gomez [ctb], Philippe Chataignon [ctb], Nello Blaser [ctb], Dmitry Selivanov [ctb], Andrey Riabushenko [ctb], Cheng Lee [ctb], Declan Groves [ctb], Daniel Possenriede [ctb], Felipe Parages [ctb], Denes Toth [ctb], Mus Yaramaz-David [ctb], Ayappan Perumal [ctb], James Sams [ctb], Martin Morgan [ctb], Michael Quinn [ctb], @javrucebo [ctb] (GitHub user), Marc Halperin [ctb], Roy Storey [ctb], Manish Saraswat [ctb], Morgan Jacob [ctb], Michael Schubmehl [ctb], Davis Vaughan [ctb], Leonardo Silvestri [ctb], Jim Hester [ctb], Anthony Damico [ctb], Sebastian Freundt [ctb], David Simons [ctb], Elliott Sales de Andrade [ctb], Cole Miller [ctb], Jens Peder Meldgaard [ctb], Vaclav Tlapak [ctb], Kevin Ushey [ctb], Dirk Eddelbuettel [ctb], Tony Fischetti [ctb], Ofek Shilon [ctb], Vadim Khotilovich [ctb], Hadley Wickham [ctb], Bennet Becker [ctb], Kyle Haynes [ctb], Boniface Christian Kamgang [ctb], Olivier Delmarcell [ctb], Josh O'Brien [ctb], Dereck Mezquita [ctb] (ORCID: <https://orcid.org/0000-0002-9307-6762>), Michael Czekanski [ctb], Dmitry Shemetov [ctb], Nitish Jha [ctb], Joshua Wu [ctb], Iago Giné-Vázquez [ctb], Anirban Chetia [ctb], Doris Amoakohene [ctb], Angel Feliz [ctb], Michael Young [ctb], Mark Seeto [ctb], Philippe Grosjean [ctb], Vincent Runge [ctb], Christian Wia [ctb], Elise Maigné [ctb], Vincent Rocher [ctb], Vijay Lulla [ctb], Aljaž Sluga [ctb], Bill Evans [ctb], Reino Bruner [ctb], @badasahog [ctb] (GitHub user), Vinit Thakur [ctb], Mukul Kumar [ctb], Ildikó Czeller [ctb], Manmita Das [ctb], Tarun Thammisetty [ctb], Marco Colombo [ctb] (ORCID: <https://orcid.org/0000-0001-6672-0623>), Tim Taylor [ctb] (ORCID: <https://orcid.org/0000-0002-8587-7113>)",
       "Maintainer": "Tyson Barrett <t.barrett88@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "data.tree": {
+      "Package": "data.tree",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "General Purpose Hierarchical Data Structure",
+      "Language": "en-US",
+      "Date": "2025-08-06",
+      "Authors@R": "c( person( \"Russ\", \"Hyde\", role = c(\"ctb\"), comment = \"improve dependencies\" ), person( \"Chris\", \"Hammill\", role = c(\"ctb\"), comment = \"improve getting\" ), person( \"Facundo\", \"Munoz\", role = c(\"ctb\"), comment = \"improve list conversion\" ), person( \"Markus\", \"Wamser\" , role = c(\"ctb\") , comment = \"fixed some typos\" ), person( \"Pierre\", \"Formont\" , role = c(\"ctb\") , comment = \"additional features\" ), person( \"Kent\", \"Russel\" , role = c(\"ctb\") , comment = \"documentation\" ), person( \"Noam\", \"Ross\" , role = c(\"ctb\") , comment = \"fixes\" ), person( \"Duncan\", \"Garmonsway\" , role = c(\"ctb\") , comment = \"fixes\" ), person( \"Christoph\", \"Glur\" , role = c(\"aut\", \"cre\") , comment = \"R interface\" , email = \"christoph.glur@powerpartners.pro\" ) )",
+      "VignetteBuilder": "knitr, rmarkdown",
+      "Imports": [
+        "R6",
+        "stringi",
+        "methods"
+      ],
+      "Suggests": [
+        "Formula",
+        "graphics",
+        "testthat",
+        "knitr",
+        "rmarkdown",
+        "ape",
+        "yaml",
+        "networkD3",
+        "jsonlite",
+        "treemap",
+        "party",
+        "partykit",
+        "doParallel",
+        "foreach",
+        "htmlwidgets",
+        "DiagrammeR (>= 1.0.0)",
+        "mockery",
+        "rpart"
+      ],
+      "Enhances": [
+        "igraph"
+      ],
+      "Description": "Create tree structures from hierarchical data, and traverse the tree in various orders. Aggregate, cumulate, print, plot, convert to and from data.frame and more. Useful for decision trees, machine learning, finance, conversion from and to JSON, and many other applications.",
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/gluc/data.tree",
+      "BugReports": "https://github.com/gluc/data.tree/issues",
+      "Depends": [
+        "R (>= 3.5)"
+      ],
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Russ Hyde [ctb] (improve dependencies), Chris Hammill [ctb] (improve getting), Facundo Munoz [ctb] (improve list conversion), Markus Wamser [ctb] (fixed some typos), Pierre Formont [ctb] (additional features), Kent Russel [ctb] (documentation), Noam Ross [ctb] (fixes), Duncan Garmonsway [ctb] (fixes), Christoph Glur [aut, cre] (R interface)",
+      "Maintainer": "Christoph Glur <christoph.glur@powerpartners.pro>",
       "Repository": "CRAN"
     },
     "dbplyr": {
@@ -6129,6 +6226,74 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
+    "igraph": {
+      "Package": "igraph",
+      "Version": "2.3.3",
+      "Source": "Repository",
+      "Title": "Network Analysis and Visualization",
+      "Authors@R": "c( person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-7098-9676\")), person(\"Tamás\", \"Nepusz\", , \"ntamas@gmail.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1451-338X\")), person(\"Vincent\", \"Traag\", role = \"aut\", comment = c(ORCID = \"0000-0003-3170-3879\")), person(\"Szabolcs\", \"Horvát\", , \"szhorvat@gmail.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-3100-523X\")), person(\"Fabio\", \"Zanini\", , \"fabio.zanini@unsw.edu.au\", role = \"aut\", comment = c(ORCID = \"0000-0001-7097-8539\")), person(\"Daniel\", \"Noom\", role = \"aut\"), person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-1416-3412\")), person(\"Michael\", \"Antonov\", role = \"ctb\"), person(\"Chan Zuckerberg Initiative\", role = \"fnd\", comment = c(ROR = \"02qenvm24\")), person(\"David\", \"Schoch\", , \"david.schoch@cynkra.com\", role = \"aut\", comment = c(ORCID = \"0000-0003-2952-4812\")), person(\"Maëlle\", \"Salmon\", , \"maelle@cynkra.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2815-0399\")), person(\"R Consortium\", role = \"fnd\", comment = c(ROR = \"01z833950\")) )",
+      "Description": "Routines for simple graphs and network analysis. It can handle large graphs very well and provides functions for generating random and regular graphs, graph visualization, centrality methods and much more.",
+      "License": "GPL (>= 2)",
+      "URL": "https://r.igraph.org/, https://igraph.org/, https://igraph.discourse.group/",
+      "BugReports": "https://github.com/igraph/rigraph/issues",
+      "Depends": [
+        "methods",
+        "R (>= 3.5.0)"
+      ],
+      "Imports": [
+        "cli",
+        "graphics",
+        "grDevices",
+        "lifecycle",
+        "magrittr",
+        "Matrix",
+        "pkgconfig (>= 2.0.0)",
+        "rlang (>= 1.1.0)",
+        "stats",
+        "utils",
+        "vctrs"
+      ],
+      "Suggests": [
+        "ape (>= 5.7-0.1)",
+        "callr",
+        "decor",
+        "digest",
+        "igraphdata",
+        "knitr",
+        "rgl (>= 1.3.14)",
+        "rmarkdown",
+        "scales",
+        "stats4",
+        "tcltk",
+        "testthat",
+        "vdiffr",
+        "withr"
+      ],
+      "Enhances": [
+        "graph"
+      ],
+      "LinkingTo": [
+        "cpp11 (>= 0.5.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/build/compilation-database": "false",
+      "Config/build/never-clean": "true",
+      "Config/comment/compilation-database": "Generate manually with pkgload:::generate_db() for faster pkgload::load_all()",
+      "Config/Needs/build": "devtools, irlba, pkgconfig",
+      "Config/Needs/coverage": "covr",
+      "Config/Needs/roxygen2": "r-lib/roxygen2, igraph/igraph.r2cdocs, moodymudskipper/devtag",
+      "Config/Needs/website": "here, readr, tibble, xmlparsedata, xml2",
+      "Config/testthat/edition": "3",
+      "Config/testthat/parallel": "true",
+      "Config/testthat/start-first": "aaa-auto, vs-es, scan, vs-operators, weakref, watts.strogatz.game",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3.9000",
+      "SystemRequirements": "libxml2 (optional), glpk (>= 4.57, optional)",
+      "NeedsCompilation": "yes",
+      "Author": "Gábor Csárdi [aut] (ORCID: <https://orcid.org/0000-0001-7098-9676>), Tamás Nepusz [aut] (ORCID: <https://orcid.org/0000-0002-1451-338X>), Vincent Traag [aut] (ORCID: <https://orcid.org/0000-0003-3170-3879>), Szabolcs Horvát [aut] (ORCID: <https://orcid.org/0000-0002-3100-523X>), Fabio Zanini [aut] (ORCID: <https://orcid.org/0000-0001-7097-8539>), Daniel Noom [aut], Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Michael Antonov [ctb], Chan Zuckerberg Initiative [fnd] (ROR: <https://ror.org/02qenvm24>), David Schoch [aut] (ORCID: <https://orcid.org/0000-0003-2952-4812>), Maëlle Salmon [aut] (ORCID: <https://orcid.org/0000-0002-2815-0399>), R Consortium [fnd] (ROR: <https://ror.org/01z833950>)",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "CRAN"
+    },
     "isoband": {
       "Package": "isoband",
       "Version": "0.3.0",
@@ -6499,7 +6664,8 @@
         "stats",
         "graphics"
       ],
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Encoding": "UTF-8"
     },
     "later": {
       "Package": "later",
@@ -7034,7 +7200,8 @@
       "BugReports": "https://github.com/shinra-dev/memuse/issues",
       "RoxygenNote": "7.1.2",
       "Author": "Drew Schmidt [aut, cre], Christian Heckendorf [ctb] (FreeBSD improvements to meminfo), Wei-Chen Chen [ctb] (Windows build fixes), Dan Burgess [ctb] (donation of a Mac for development and testing)",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Encoding": "UTF-8"
     },
     "meta": {
       "Package": "meta",
@@ -7390,6 +7557,44 @@
       "NeedsCompilation": "yes",
       "Author": "Alan Genz [aut], Frank Bretz [aut], Tetsuhisa Miwa [aut], Xuefei Mi [aut], Friedrich Leisch [ctb], Fabian Scheipl [ctb], Bjoern Bornkamp [ctb] (ORCID: <https://orcid.org/0000-0002-6294-8185>), Martin Maechler [ctb] (ORCID: <https://orcid.org/0000-0002-8685-9910>), Torsten Hothorn [aut, cre] (ORCID: <https://orcid.org/0000-0001-8301-0471>)",
       "Maintainer": "Torsten Hothorn <Torsten.Hothorn@R-project.org>",
+      "Repository": "CRAN"
+    },
+    "networkD3": {
+      "Package": "networkD3",
+      "Version": "0.4.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "D3 JavaScript Network Graphs from R",
+      "Description": "Creates 'D3' 'JavaScript' network, tree, dendrogram, and Sankey graphs from 'R'.",
+      "Date": "2025-04-14",
+      "Authors@R": "c( person(\"J.J.\", \"Allaire\", role = \"aut\"), person(\"Peter\", \"Ellis\", role = \"ctb\"), person(\"Christopher\", \"Gandrud\", email = \"christopher.gandrud@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Kevin\", \"Kuo\", role = \"ctb\"), person(\"B.W.\", \"Lewis\", role = \"ctb\"), person(\"Jonathan\", \"Owen\", role = \"ctb\"), person(\"Kenton\", \"Russell\", role = \"aut\"), person(\"Jennifer\",\"Rogers\", role = \"ctb\"), person(\"Charles\", \"Sese\", role = \"ctb\"), person(\"CJ\", \"Yetman\", email = \"cj@cjyetman.com\", role = \"aut\") )",
+      "URL": "https://christophergandrud.github.io/networkD3/, https://github.com/christophergandrud/networkD3",
+      "BugReports": "https://github.com/christophergandrud/networkD3/issues",
+      "License": "GPL (>= 3)",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Imports": [
+        "data.tree",
+        "htmlwidgets (>= 0.3.2)",
+        "igraph",
+        "jsonlite",
+        "magrittr"
+      ],
+      "Suggests": [
+        "htmltools (>= 0.2.6)",
+        "tibble"
+      ],
+      "Encoding": "UTF-8",
+      "Enhances": [
+        "knitr",
+        "shiny"
+      ],
+      "LazyData": "true",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "J.J. Allaire [aut], Peter Ellis [ctb], Christopher Gandrud [aut, cre], Kevin Kuo [ctb], B.W. Lewis [ctb], Jonathan Owen [ctb], Kenton Russell [aut], Jennifer Rogers [ctb], Charles Sese [ctb], CJ Yetman [aut]",
+      "Maintainer": "Christopher Gandrud <christopher.gandrud@gmail.com>",
       "Repository": "CRAN"
     },
     "nlme": {
@@ -9743,6 +9948,43 @@
       "NeedsCompilation": "no",
       "Author": "Hadley Wickham [aut, cre, cph], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "CRAN"
+    },
+    "sunburstR": {
+      "Package": "sunburstR",
+      "Version": "2.1.8",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Sunburst 'Htmlwidget'",
+      "Date": "2023-02-05",
+      "Authors@R": "c( person( \"Mike\", \"Bostock\" , role = c(\"aut\", \"cph\") , comment = \"d3.js library, http://d3js.org\" ), person( \"Kerry\", \"Rodden\" , role = c(\"aut\", \"cph\") , comment = \"sequences library in htmlwidgets/lib, https://gist.github.com/kerryrodden/7090426\" ), person( \"Kevin\", \"Warne\" , role = c(\"aut\", \"cph\") , comment = \"d2b sunburst library in htmlwidgets/lib, https://github.com/d2bjs/d2b\" ), person( \"Kent\", \"Russell\" , role = c(\"aut\", \"cre\") , comment = \"R interface\" , email = \"kent.russell@timelyportfolio.com\" ), person( \"Florian\", \"Breitwieser\" , role = c(\"ctb\") , comment = \"R interface\" ), person( \"CJ\", \"Yetman\" , role = c(\"ctb\") , comment = c(\"R interface\", ORCID = \"0000-0001-5099-9500\") , email = \"cj@cjyetman.com\" ) )",
+      "Maintainer": "Kent Russell <kent.russell@timelyportfolio.com>",
+      "URL": "https://github.com/timelyportfolio/sunburstR",
+      "BugReports": "https://github.com/timelyportfolio/sunburstR/issues",
+      "Description": "Make interactive 'd3.js' sequence sunburst diagrams in R with the convenience and infrastructure of an 'htmlwidget'.",
+      "License": "MIT + file LICENSE",
+      "Imports": [
+        "d3r (>= 0.6.9)",
+        "dplyr",
+        "htmlwidgets",
+        "htmltools"
+      ],
+      "Suggests": [
+        "jsonlite",
+        "knitr",
+        "markdown",
+        "pipeR",
+        "testthat",
+        "tidyr (>= 0.7.0)",
+        "rmarkdown"
+      ],
+      "Enhances": [
+        "treemap"
+      ],
+      "RoxygenNote": "7.2.3",
+      "VignetteBuilder": "knitr",
+      "NeedsCompilation": "no",
+      "Author": "Mike Bostock [aut, cph] (d3.js library, http://d3js.org), Kerry Rodden [aut, cph] (sequences library in htmlwidgets/lib, https://gist.github.com/kerryrodden/7090426), Kevin Warne [aut, cph] (d2b sunburst library in htmlwidgets/lib, https://github.com/d2bjs/d2b), Kent Russell [aut, cre] (R interface), Florian Breitwieser [ctb] (R interface), CJ Yetman [ctb] (R interface, <https://orcid.org/0000-0001-5099-9500>)",
       "Repository": "CRAN"
     },
     "survival": {

@@ -14,6 +14,9 @@ remotes::install_github("ohdsi/Hades", upgrade = "never")
 # This time: install soon-to-be-released DatabaseConnector version:
 # remotes::install_github("ohdsi/DatabaseConnector", ref = "win_auth")
 
+# This time: install older version of TreatmentPatterns as new one does not conform to HADES standards:
+# remotes::install_github("darwin-eu/TreatmentPatterns", ref = "v3.1.1")
+
 
 # Install additional packages sometimes needed by HADES ------------------------
 packagesUtils <- c("keyring")
@@ -38,3 +41,6 @@ renv::snapshot(type = "all", dev = FALSE)
 # Delete the renv folder and .Rprofile file, so we can build the renv library from scratch based on the new lock file
 
 renv::init()
+
+
+# renv::snapshot(packages = "TreatmentPatterns", dev = FALSE, update = TRUE)
