@@ -35,7 +35,10 @@ install.packages(additionalPackages)
 #   additionalRequiredPackages = additionalPackages
 # )
 # Manually fix remoteRef and remoteUserName  of HADES entry!!!!
+
 renv::snapshot(type = "all", dev = FALSE)
+# To update 1 or 2 packages only:
+# renv::snapshot(packages = c("DatabaseConnector", "duckdb"), update = TRUE, type = "custom", dev = FALSE)
 
 
 # Delete the renv folder and .Rprofile file, so we can build the renv library from scratch based on the new lock file
