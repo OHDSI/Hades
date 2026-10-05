@@ -62,7 +62,7 @@ rToolsUrl <- sprintf("https://cran.r-project.org/bin/windows/Rtools/rtools%s/rto
 
 ## Installing Java
 
-1.  Go to <https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html>, and select the Windows 64-bit JDK installer as highlighted below. ![](images/downloadJavaWindows.png)
+1.  Go to <https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/downloads-list.html>, and select the Windows 64-bit JDK installer as highlighted below. ![](images/downloadJavaWindows.png)
 
 2.  After downloading just run the installer.
 
@@ -122,7 +122,7 @@ We will need to install C and Fortran compilers in order to build R packages fro
 
 ## Installing Java
 
-1.  Go to <https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html>, and select the Mac OS installer for your architecture.
+1.  Go to <https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html>, and select the Mac OS installer for your architecture.
 
 2.  After downloading just run the installer. Check that java is installed by opening the terminal and running the command `java`. If you see some helpful output about usage then the installation was successful.
 
