@@ -1,5 +1,5 @@
 abbreviation,platform,status,testingInGithubActions
-bigquery,Google BigQuery,Supported,
+bigquery,Google BigQuery,Supported,Yes
 duckdb,DuckDB,Supported,Yes
 hive,Apache Hive,Deprecated,
 impala,Apache Impala,Deprecated,
@@ -8,8 +8,8 @@ oracle,Oracle,Supported,Yes
 pdw,Microsoft Parallel Data Warehouse,Deprecated,
 postgresql,PostgreSQL,Supported,Yes
 redshift,Amazon RedShift,Supported,Yes
-snowflake,Snowflake,Supported,
-spark,Apache Spark,Supported,
+snowflake,Snowflake,Supported,Yes
+spark,Apache Spark,Supported,Yes
 sql server,Microsoft SQL Server,Supported,Yes
 sqlite,SQLite,Supported,Yes
 synapse,Azure Synapse Analytics Dedicated,Supported,
